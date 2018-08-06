@@ -1,0 +1,170 @@
+﻿<UserControl x:Class="ToolTestIPCamera_Ver1.UserControls.ucManual"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ToolTestIPCamera_Ver1.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+
+    <UserControl.Resources>
+
+        <Style TargetType="{x:Type TabItem}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TabItem}">
+                        <Grid>
+                            <Border  Name="Border" Margin="0,0,-4,0" BorderThickness="1,1,1,1" CornerRadius="2,12,0,0" >
+                                <ContentPresenter x:Name="ContentSite" VerticalAlignment="Center" HorizontalAlignment="Center" ContentSource="Header" Margin="12,2,12,2" RecognizesAccessKey="True"/>
+                            </Border>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter Property="Panel.ZIndex" Value="100"/>
+                                <Setter TargetName="Border" Property="Background" Value="#43d854" />
+                                <Setter TargetName="Border" Property="BorderThickness" Value="1,1,1,0" />
+                            </Trigger>
+
+                            <Trigger Property="IsSelected" Value="False">
+                                <Setter TargetName="Border" Property="Background" Value="#FFEEEEEE" />
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Border" Property="Background" Value="Orange" />
+                            </Trigger>
+
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+    </UserControl.Resources>
+
+    <Border BorderBrush="{StaticResource colorBorder}" BorderThickness="0.5" CornerRadius="5" Background="{StaticResource colorBackground}">
+        <TabControl  SelectionChanged="TabControl_SelectionChanged" Margin="2" BorderThickness="0" Background="{StaticResource colorBackground}"
+                     TabStripPlacement="Top">
+            <!--Nạp phiên bản firmware-->
+            <TabItem>
+                <TabItem.Header>
+                    <Grid Height="30">
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15" Text="Upload Firmware" FontWeight="SemiBold"/>
+                    </Grid>
+                </TabItem.Header>
+                <Border Background="Transparent" CornerRadius="0,0,5,5" BorderBrush="{StaticResource colorBorder}" BorderThickness="1">
+                   
+                </Border>
+            </TabItem>
+
+            <!--Check MAC-->
+            <TabItem>
+                <TabItem.Header>
+                    <Grid Height="30">
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15" Text="Check MAC" FontWeight="SemiBold"/>
+                    </Grid>
+                </TabItem.Header>
+                <Border Background="Transparent" CornerRadius="0,0,5,5" BorderBrush="{StaticResource colorBorder}" BorderThickness="1">
+
+                </Border>
+            </TabItem>
+
+            <!--Check WIFI-->
+            <TabItem>
+                <TabItem.Header>
+                    <Grid Height="30">
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15" Text="Check WIFI" FontWeight="SemiBold"/>
+                    </Grid>
+                </TabItem.Header>
+                <Border Background="Transparent" CornerRadius="0,0,5,5" BorderBrush="{StaticResource colorBorder}" BorderThickness="1">
+
+                </Border>
+            </TabItem>
+
+            <!--Check SD Card-->
+            <TabItem>
+                <TabItem.Header>
+                    <Grid Height="30">
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15" Text="Check SD Card" FontWeight="SemiBold"/>
+                    </Grid>
+                </TabItem.Header>
+                <Border Background="Transparent" CornerRadius="0,0,5,5" BorderBrush="{StaticResource colorBorder}" BorderThickness="1">
+
+                </Border>
+            </TabItem>
+
+            <!--Check Ethernet-->
+            <TabItem>
+                <TabItem.Header>
+                    <Grid Height="30">
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15" Text="Check Ethernet" FontWeight="SemiBold"/>
+                    </Grid>
+                </TabItem.Header>
+                <Border Background="Transparent" CornerRadius="0,0,5,5" BorderBrush="{StaticResource colorBorder}" BorderThickness="1">
+
+                </Border>
+            </TabItem>
+
+            <!--Check Audio-->
+            <TabItem>
+                <TabItem.Header>
+                    <Grid Height="30">
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15" Text="Check Audio" FontWeight="SemiBold"/>
+                    </Grid>
+                </TabItem.Header>
+                <Border Background="Transparent" CornerRadius="0,0,5,5" BorderBrush="{StaticResource colorBorder}" BorderThickness="1">
+
+                </Border>
+            </TabItem>
+
+            <!--Check LED RGB-->
+            <TabItem>
+                <TabItem.Header>
+                    <Grid Height="30">
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15" Text="Check RGB LED" FontWeight="SemiBold"/>
+                    </Grid>
+                </TabItem.Header>
+                <Border Background="Transparent" CornerRadius="0,0,5,5" BorderBrush="{StaticResource colorBorder}" BorderThickness="1">
+
+                </Border>
+            </TabItem>
+
+            <!--Check LED Hồng Ngoại-->
+            <TabItem>
+                <TabItem.Header>
+                    <Grid Height="30">
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15" Text="Check Infrared LED" FontWeight="SemiBold"/>
+                    </Grid>
+                </TabItem.Header>
+                <Border Background="Transparent" CornerRadius="0,0,5,5" BorderBrush="{StaticResource colorBorder}" BorderThickness="1">
+
+                </Border>
+            </TabItem>
+
+            <!--Check Nút nhấn-->
+            <TabItem>
+                <TabItem.Header>
+                    <Grid Height="30">
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15" Text="Check Button" FontWeight="SemiBold"/>
+                    </Grid>
+                </TabItem.Header>
+                <Border Background="Transparent" CornerRadius="0,0,5,5" BorderBrush="{StaticResource colorBorder}" BorderThickness="1">
+
+                </Border>
+            </TabItem>
+
+            <!--Check cảm biến ánh sáng-->
+            <TabItem>
+                <TabItem.Header>
+                    <Grid Height="30">
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15" Text="Check Light Sensor" FontWeight="SemiBold"/>
+                    </Grid>
+                </TabItem.Header>
+                <Border Background="Transparent" CornerRadius="0,0,5,5" BorderBrush="{StaticResource colorBorder}" BorderThickness="1">
+
+                </Border>
+            </TabItem>
+
+        </TabControl>
+    </Border>
+    
+</UserControl>
