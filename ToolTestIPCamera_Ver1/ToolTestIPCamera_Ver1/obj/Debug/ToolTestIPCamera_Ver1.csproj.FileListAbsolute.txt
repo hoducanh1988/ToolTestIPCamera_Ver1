@@ -1,0 +1,15 @@
+C:\Users\anhho\source\repos\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\bin\Debug\ToolTestIPCamera_Ver1.exe.config
+C:\Users\anhho\source\repos\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\bin\Debug\ToolTestIPCamera_Ver1.exe
+C:\Users\anhho\source\repos\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\bin\Debug\ToolTestIPCamera_Ver1.pdb
+C:\Users\anhho\source\repos\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\obj\Debug\ToolTestIPCamera_Ver1.csprojAssemblyReference.cache
+C:\Users\anhho\source\repos\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\obj\Debug\MainWindow.g.cs
+C:\Users\anhho\source\repos\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\obj\Debug\App.g.cs
+C:\Users\anhho\source\repos\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\obj\Debug\ToolTestIPCamera_Ver1_MarkupCompile.cache
+C:\Users\anhho\source\repos\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\obj\Debug\ToolTestIPCamera_Ver1_MarkupCompile.lref
+C:\Users\anhho\source\repos\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\obj\Debug\MainWindow.baml
+C:\Users\anhho\source\repos\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\obj\Debug\ToolTestIPCamera_Ver1.g.resources
+C:\Users\anhho\source\repos\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\obj\Debug\ToolTestIPCamera_Ver1.Properties.Resources.resources
+C:\Users\anhho\source\repos\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\obj\Debug\ToolTestIPCamera_Ver1.csproj.GenerateResource.cache
+C:\Users\anhho\source\repos\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\obj\Debug\ToolTestIPCamera_Ver1.csproj.CoreCompileInputs.cache
+C:\Users\anhho\source\repos\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\obj\Debug\ToolTestIPCamera_Ver1.exe
+C:\Users\anhho\source\repos\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\obj\Debug\ToolTestIPCamera_Ver1.pdb

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Blend for Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToolTestIPCamera_Ver1", "ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1.csproj", "{FA832457-1AD5-48F2-9211-F471D1EAB8FD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FA832457-1AD5-48F2-9211-F471D1EAB8FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA832457-1AD5-48F2-9211-F471D1EAB8FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA832457-1AD5-48F2-9211-F471D1EAB8FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA832457-1AD5-48F2-9211-F471D1EAB8FD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {503BD27F-0E4C-4279-A27D-E29D24FC2EE1}
+	EndGlobalSection
+EndGlobal
