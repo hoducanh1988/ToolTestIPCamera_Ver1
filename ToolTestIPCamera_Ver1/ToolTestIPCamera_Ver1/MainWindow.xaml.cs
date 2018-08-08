@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ToolTestIPCamera_Ver1.Function;
 
 namespace ToolTestIPCamera_Ver1 {
     /// <summary>
@@ -73,9 +74,12 @@ namespace ToolTestIPCamera_Ver1 {
 
         public MainWindow() {
             InitializeComponent();
-
+            //
             this.SetStartupLocation();
             this.BringUCtoFront(0);
+            //
+            this.DataContext = GlobalData.mainWindowInfo;
+
         }
 
         private void Border_MouseDown(object sender, MouseButtonEventArgs e) {

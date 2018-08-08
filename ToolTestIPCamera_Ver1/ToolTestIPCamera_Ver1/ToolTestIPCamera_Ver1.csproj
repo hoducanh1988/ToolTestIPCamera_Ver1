@@ -63,6 +63,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Function\Base\BaseFunction.cs" />
+    <Compile Include="Function\Base\GlobalData.cs" />
+    <Compile Include="Function\Base\Parameters.cs" />
+    <Compile Include="Function\Custom\Custom.cs" />
+    <Compile Include="Function\Protocol\Network.cs" />
+    <Compile Include="Function\Protocol\Serial.cs" />
+    <Compile Include="Function\Protocol\Telnet.cs" />
     <Compile Include="UserControls\ucAbout.xaml.cs">
       <DependentUpon>ucAbout.xaml</DependentUpon>
     </Compile>
@@ -229,14 +236,11 @@
     <Resource Include="Asset\Images\user.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Function\Base\" />
-    <Folder Include="Function\Custom\" />
     <Folder Include="Function\DUT\" />
     <Folder Include="Function\Excute\PCBA\" />
     <Folder Include="Function\Excute\Product\" />
     <Folder Include="Function\Instrument\" />
     <Folder Include="Function\IO\" />
-    <Folder Include="Function\Protocol\" />
     <Folder Include="SubWindow\" />
   </ItemGroup>
   <ItemGroup>

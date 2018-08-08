@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ToolTestIPCamera_Ver1.Function;
 
 namespace ToolTestIPCamera_Ver1.UserControls {
     /// <summary>
@@ -20,10 +22,52 @@ namespace ToolTestIPCamera_Ver1.UserControls {
     public partial class ucSetting : UserControl {
         public ucSetting() {
             InitializeComponent();
+            this.cbbStation.ItemsSource = Parameters.ListStation;
+            this.DataContext = GlobalData.initSetting;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e) {
+            Button b = sender as Button;
+            switch (b.Content) {
+                case "SAVE SETTING": {
+                        GlobalData.initSetting.SaveSetting();
+                        MessageBox.Show("Success.","SAVE SETTING", MessageBoxButton.OK, MessageBoxImage.Information);
+                        break;
+                    }
+            }
 
+            switch (b.Name) {
+                case "btnselectlinux": {
+                        OpenFileDialog openFileDialog = new OpenFileDialog();
+                        openFileDialog.Filter = "firmware *.bin|*.bin";
+                        openFileDialog.Title = "Select path of file 'linux.bin'";
+                        openFileDialog.FileName = "linux.bin";
+                        if (openFileDialog.ShowDialog() == true) {
+                            GlobalData.initSetting.linuxpath = openFileDialog.FileName;
+                        }
+                        break;
+                    }
+                case "btnselectmcu": {
+                        OpenFileDialog openFileDialog = new OpenFileDialog();
+                        openFileDialog.Filter = "firmware *.bin|*.bin";
+                        openFileDialog.Title = "Select path of file 'mcu.bin'";
+                        openFileDialog.FileName = "mcu.bin";
+                        if (openFileDialog.ShowDialog() == true) {
+                            GlobalData.initSetting.mcupath = openFileDialog.FileName;
+                        }
+                        break;
+                    }
+                case "btnselectldc": {
+                        OpenFileDialog openFileDialog = new OpenFileDialog();
+                        openFileDialog.Filter = "firmware *.bin|*.bin";
+                        openFileDialog.Title = "Select path of file 'ldc.bin'";
+                        openFileDialog.FileName = "ldc.bin";
+                        if (openFileDialog.ShowDialog() == true) {
+                            GlobalData.initSetting.ldcpath = openFileDialog.FileName;
+                        }
+                        break;
+                    }
+            }
         }
     }
 }

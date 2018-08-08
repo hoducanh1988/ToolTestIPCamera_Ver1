@@ -64,7 +64,7 @@
                                 <StackPanel Grid.Column="0">
                                     <Label Foreground="{StaticResource colorBorder}" FontSize="14" FontWeight="Bold" Content="CÀI ĐẶT TRẠM TEST:"></Label>
                                     <Label Content="Tên trạm test" FontSize="13"></Label>
-                                    <ComboBox Height="30" VerticalContentAlignment="Center" Background="#fffdbf" FontSize="13" FontWeight="Bold" Padding="5,0,0,0" Text="{Binding Path=MAC6DIGIT, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></ComboBox>
+                                    <ComboBox x:Name="cbbStation" Height="30" VerticalContentAlignment="Center" Background="#fffdbf" FontSize="13" FontWeight="Bold" Padding="5,0,0,0" Text="{Binding Path=station, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></ComboBox>
                                 </StackPanel>
                                 <Grid Grid.Column="1" Margin="10">
                                     <!--<Image Source="/Asset/Images/BOSA.jpg"/>-->
@@ -84,9 +84,9 @@
                                 <StackPanel Grid.Column="0">
                                     <Label Foreground="{StaticResource colorBorder}" FontSize="14" FontWeight="Bold" Content="CÀI ĐẶT THÔNG TIN ĐỊA CHỈ MAC:"></Label>
                                     <Label Content="Tổng số kí tự trên tem Mac Address" FontSize="13"></Label>
-                                    <TextBox IsEnabled="False" CharacterCasing="Upper" FontSize="13" FontWeight="Bold" Padding="5,0,0,0" Text="{Binding Path=MACLEN, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" ></TextBox>
+                                    <TextBox IsEnabled="False" CharacterCasing="Upper" FontSize="13" FontWeight="Bold" Padding="5,0,0,0" Text="{Binding Path=maclen, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" ></TextBox>
                                     <Label Content="Định dạng 6 kí tự đầu tiên trên tem Mac Address" FontSize="13"></Label>
-                                    <TextBox Background="#fffdbf" FontSize="13" FontWeight="Bold" Padding="5,0,0,0" Text="{Binding Path=MAC6DIGIT, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></TextBox>
+                                    <TextBox Background="#fffdbf" FontSize="13" FontWeight="Bold" Padding="5,0,0,0" Text="{Binding Path=macsixdigit, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></TextBox>
                                 </StackPanel>
                                 <Grid Grid.Column="1" Margin="10">
                                     <!--<Image Source="/Asset/Images/BOSA.jpg"/>-->
@@ -107,19 +107,19 @@
                                     <Label Foreground="{StaticResource colorBorder}" FontSize="14" FontWeight="Bold" Content="CÀI ĐẶT FIRMWARE:"></Label>
                                     <Label Content="Đường dẫn file firmware linux.bin" FontSize="13"></Label>
                                     <Grid>
-                                        <Button Width="100" HorizontalAlignment="Left" Content="Browser..."></Button>
-                                        <TextBox Margin="110,0,0,0" Background="#fffdbf" CharacterCasing="Normal" FontSize="13" FontWeight="Bold" Padding="5,0,0,0" Text="{Binding Path=ONTLOGINUSER, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></TextBox>
+                                        <Button x:Name="btnselectlinux" Click="Button_Click" Width="100" HorizontalAlignment="Left" Content="Browser..."></Button>
+                                        <TextBox IsReadOnly="True" Margin="110,0,0,0" Background="#fffdbf" CharacterCasing="Normal" FontSize="13" FontWeight="Bold" Padding="5,0,0,0" Text="{Binding Path=linuxpath, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></TextBox>
                                     </Grid>
                                     
                                     <Label Content="Đường dẫn file firmware mcu.bin" FontSize="13"></Label>
                                     <Grid>
-                                        <Button Width="100" HorizontalAlignment="Left" Content="Browser..."></Button>
-                                        <TextBox Margin="110,0,0,0" Background="#fffdbf" CharacterCasing="Normal" FontSize="13" FontWeight="Bold" Padding="5,0,0,0" Text="{Binding Path=ONTLOGINUSER, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></TextBox>
+                                        <Button x:Name="btnselectmcu" Click="Button_Click" Width="100" HorizontalAlignment="Left" Content="Browser..."></Button>
+                                        <TextBox IsReadOnly="True" Margin="110,0,0,0" Background="#fffdbf" CharacterCasing="Normal" FontSize="13" FontWeight="Bold" Padding="5,0,0,0" Text="{Binding Path=mcupath, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></TextBox>
                                     </Grid>
                                     <Label Content="Đường dẫn file firmware ldc.bin" FontSize="13"></Label>
                                     <Grid>
-                                        <Button Width="100" HorizontalAlignment="Left" Content="Browser..."></Button>
-                                        <TextBox Margin="110,0,0,0" Background="#fffdbf" CharacterCasing="Normal" FontSize="13" FontWeight="Bold" Padding="5,0,0,0" Text="{Binding Path=ONTLOGINUSER, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></TextBox>
+                                        <Button x:Name="btnselectldc" Click="Button_Click" Width="100" HorizontalAlignment="Left" Content="Browser..."></Button>
+                                        <TextBox IsReadOnly="True" Margin="110,0,0,0" Background="#fffdbf" CharacterCasing="Normal" FontSize="13" FontWeight="Bold" Padding="5,0,0,0" Text="{Binding Path=ldcpath, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></TextBox>
                                     </Grid>
                                     
                                 </StackPanel>
@@ -141,11 +141,11 @@
                                 <StackPanel Grid.Column="0">
                                     <Label Foreground="{StaticResource colorBorder}" FontSize="14" FontWeight="Bold" Content="CÀI ĐẶT CHO SẢN PHẨM (IP Camera):"></Label>
                                     <Label Content="IP Address" FontSize="13"></Label>
-                                    <TextBox Background="#fffdbf" CharacterCasing="Normal" FontSize="13" FontWeight="Bold" Padding="5,0,0,0" Text="{Binding Path=ONTLOGINUSER, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></TextBox>
+                                    <TextBox Background="#fffdbf" CharacterCasing="Normal" FontSize="13" FontWeight="Bold" Padding="5,0,0,0" Text="{Binding Path=dutip, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></TextBox>
                                     <Label Content="Tên đăng nhập" FontSize="13"></Label>
-                                    <TextBox Background="#fffdbf" CharacterCasing="Normal" FontSize="13" FontWeight="Bold" Padding="5,0,0,0" Text="{Binding Path=ONTLOGINUSER, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></TextBox>
+                                    <TextBox Background="#fffdbf" CharacterCasing="Normal" FontSize="13" FontWeight="Bold" Padding="5,0,0,0" Text="{Binding Path=dutuser, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></TextBox>
                                     <Label Content="Mã đăng nhập" FontSize="13"></Label>
-                                    <TextBox Background="#fffdbf" CharacterCasing="Normal" FontSize="13" FontWeight="Bold" Padding="5,0,0,0" Text="{Binding Path=ONTLOGINPASS, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></TextBox>
+                                    <TextBox Background="#fffdbf" CharacterCasing="Normal" FontSize="13" FontWeight="Bold" Padding="5,0,0,0" Text="{Binding Path=dutpass, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></TextBox>
 
                                 </StackPanel>
                                 <Grid Grid.Column="1" Margin="10">
@@ -166,9 +166,9 @@
                                 <StackPanel Grid.Column="0">
                                     <Label Foreground="{StaticResource colorBorder}" FontSize="14" FontWeight="Bold" Content="CÀI ĐẶT WIFI ROUTER:"></Label>
                                     <Label Content="IP Address" FontSize="13"></Label>
-                                    <TextBox Background="#fffdbf" CharacterCasing="Normal" FontSize="13" FontWeight="Bold" Padding="5,0,0,0" Text="{Binding Path=ONTLOGINUSER, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></TextBox>
+                                    <TextBox Background="#fffdbf" CharacterCasing="Normal" FontSize="13" FontWeight="Bold" Padding="5,0,0,0" Text="{Binding Path=routerip, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></TextBox>
                                     <Label Content="SSID" FontSize="13"></Label>
-                                    <TextBox Background="#fffdbf" CharacterCasing="Normal" FontSize="13" FontWeight="Bold" Padding="5,0,0,0" Text="{Binding Path=ONTLOGINUSER, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></TextBox>
+                                    <TextBox Background="#fffdbf" CharacterCasing="Normal" FontSize="13" FontWeight="Bold" Padding="5,0,0,0" Text="{Binding Path=routerssid, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></TextBox>
                                 </StackPanel>
                                 <Grid Grid.Column="1" Margin="10">
                                     <!--<Image Source="/Asset/Images/igate.png"/>-->
@@ -189,17 +189,18 @@
                     </TabItem.Header>
                     <ScrollViewer Margin="5,5,5,5">
                         <StackPanel Margin="0,0,5,0">
-                            <!--MINUS-->
-                            <Label FontSize="15" FontWeight="Bold" Content="-"></Label>
-
+                            
                             <Grid>
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="2*"/>
+                                    <ColumnDefinition Width="3*"/>
                                     <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
 
                                 <StackPanel Grid.Column="0">
-
+                                    <Label Content="Firmware version" FontSize="13"></Label>
+                                    <TextBox Background="#fffdbf" FontSize="13" FontWeight="Bold" Padding="5,0,0,0" Text="{Binding Path=fwversion, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></TextBox>
+                                    <Label Content="Light Sensor ADC Value" FontSize="13"></Label>
+                                    <TextBox Background="#fffdbf" FontSize="13" FontWeight="Bold" Padding="5,0,0,0" Text="{Binding Path=adcvalue, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></TextBox>
                                 </StackPanel>
                             </Grid>
 
@@ -217,31 +218,28 @@
                     </TabItem.Header>
                     <ScrollViewer Margin="5,5,5,5">
                         <StackPanel Margin="0,0,5,0">
-                            <Grid Height="450">
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="*"/>
-                                    <RowDefinition Height="*"/>
-                                    <RowDefinition Height="*"/>
-                                    <RowDefinition Height="*"/>
-                                    <RowDefinition Height="*"/>
-                                    <RowDefinition Height="*"/>
-                                    <RowDefinition Height="*"/>
-                                    <RowDefinition Height="*"/>
-                                    <RowDefinition Height="*"/>
-                                    <RowDefinition Height="*"/>
-                                    <RowDefinition Height="*"/>
-                                    <RowDefinition Height="*"/>
-                                </Grid.RowDefinitions>
+
+                            <!--Write MAC-->
+                            <Grid Height="40">
+                                <Grid.Style>
+                                    <Style TargetType="Grid">
+                                        <Setter Property="Visibility" Value="Collapsed"/>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding Path=station}" Value="PCBA-LAYER3">
+                                                <Setter Property="Visibility" Value="Visible"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Grid.Style>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*"/>
                                     <ColumnDefinition Width="100"/>
                                     <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
 
-                                <!--Write MAC-->
-                                <Label Grid.Row="0" Grid.Column="0" FontSize="20" FontWeight="SemiBold" HorizontalAlignment="Right">Write MAC:</Label>
-                                <ToggleButton Grid.Row="0" Grid.Column="1" x:Name="togwm" Margin="-20,0,0,0" Height="30" Style="{StaticResource iosToggleButton}" IsChecked="{Binding Path=ENABLEWRITEAPD, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></ToggleButton>
-                                <Label Grid.Row="0" Grid.Column="2" FontSize="25" FontWeight="Bold">
+                                <Label Grid.Column="0" FontSize="20" FontWeight="SemiBold" HorizontalAlignment="Right">Write MAC:</Label>
+                                <ToggleButton Grid.Column="1" x:Name="togwm" Margin="-20,0,0,0" Height="30" Style="{StaticResource iosToggleButton}" IsChecked="{Binding Path=writemacoption, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></ToggleButton>
+                                <Label Grid.Column="2" FontSize="25" FontWeight="Bold">
                                     <Label.Style>
                                         <Style TargetType="Label">
                                             <Style.Triggers>
@@ -257,11 +255,29 @@
                                         </Style>
                                     </Label.Style>
                                 </Label>
+                            </Grid>
 
-                                <!--Upload FW-->
-                                <Label Grid.Row="1" Grid.Column="0" FontSize="20" FontWeight="SemiBold" HorizontalAlignment="Right">Upload FW:</Label>
-                                <ToggleButton Grid.Row="1" Grid.Column="1" x:Name="togufw" Margin="-20,0,0,0" Height="30" Style="{StaticResource iosToggleButton}" IsChecked="{Binding Path=ENABLEWRITEAPD, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></ToggleButton>
-                                <Label Grid.Row="1" Grid.Column="2" FontSize="25" FontWeight="Bold">
+                            <!--Upload FW-->
+                            <Grid Height="40">
+                                <Grid.Style>
+                                    <Style TargetType="Grid">
+                                        <Setter Property="Visibility" Value="Collapsed"/>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding Path=station}" Value="PCBA-LAYER3">
+                                                <Setter Property="Visibility" Value="Visible"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Grid.Style>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="100"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Label Grid.Column="0" FontSize="20" FontWeight="SemiBold" HorizontalAlignment="Right">Upload FW:</Label>
+                                <ToggleButton Grid.Column="1" x:Name="togufw" Margin="-20,0,0,0" Height="30" Style="{StaticResource iosToggleButton}" IsChecked="{Binding Path=uploadfirmwareoption, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></ToggleButton>
+                                <Label Grid.Column="2" FontSize="25" FontWeight="Bold">
                                     <Label.Style>
                                         <Style TargetType="Label">
                                             <Style.Triggers>
@@ -277,10 +293,28 @@
                                         </Style>
                                     </Label.Style>
                                 </Label>
+                            </Grid>
 
-                                <!--Check WIFI-->
+                            <!--Check WIFI-->
+                            <Grid Height="40">
+                                <Grid.Style>
+                                    <Style TargetType="Grid">
+                                        <Setter Property="Visibility" Value="Visible"/>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding Path=station}" Value="PCBA-LAYER3">
+                                                <Setter Property="Visibility" Value="Collapsed"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Grid.Style>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="100"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
                                 <Label Grid.Row="2" Grid.Column="0" FontSize="20" FontWeight="SemiBold" HorizontalAlignment="Right">Check WIFI:</Label>
-                                <ToggleButton Grid.Row="2" Grid.Column="1" x:Name="togckwifi" Margin="-20,0,0,0" Height="30" Style="{StaticResource iosToggleButton}" IsChecked="{Binding Path=ENABLEWRITEAPD, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></ToggleButton>
+                                <ToggleButton Grid.Row="2" Grid.Column="1" x:Name="togckwifi" Margin="-20,0,0,0" Height="30" Style="{StaticResource iosToggleButton}" IsChecked="{Binding Path=checkwifioption, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></ToggleButton>
                                 <Label Grid.Row="2" Grid.Column="2" FontSize="25" FontWeight="Bold">
                                     <Label.Style>
                                         <Style TargetType="Label">
@@ -297,11 +331,29 @@
                                         </Style>
                                     </Label.Style>
                                 </Label>
+                            </Grid>
 
-                                <!--Check FW Version-->
-                                <Label Grid.Row="3" Grid.Column="0" FontSize="20" FontWeight="SemiBold" HorizontalAlignment="Right">Check Firmware Version:</Label>
-                                <ToggleButton Grid.Row="3" Grid.Column="1" x:Name="togckfwver" Margin="-20,0,0,0" Height="30" Style="{StaticResource iosToggleButton}" IsChecked="{Binding Path=ENABLEWRITEAPD, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></ToggleButton>
-                                <Label Grid.Row="3" Grid.Column="2" FontSize="25" FontWeight="Bold">
+                            <!--Check FW Version-->
+                            <Grid Height="40">
+                                <Grid.Style>
+                                    <Style TargetType="Grid">
+                                        <Setter Property="Visibility" Value="Collapsed"/>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding Path=station}" Value="SAU-DONG-VO">
+                                                <Setter Property="Visibility" Value="Visible"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Grid.Style>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="100"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Label Grid.Column="0" FontSize="20" FontWeight="SemiBold" HorizontalAlignment="Right">Check Firmware Version:</Label>
+                                <ToggleButton Grid.Column="1" x:Name="togckfwver" Margin="-20,0,0,0" Height="30" Style="{StaticResource iosToggleButton}" IsChecked="{Binding Path=checkfirmwareversionoption, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></ToggleButton>
+                                <Label Grid.Column="2" FontSize="25" FontWeight="Bold">
                                     <Label.Style>
                                         <Style TargetType="Label">
                                             <Style.Triggers>
@@ -317,11 +369,29 @@
                                         </Style>
                                     </Label.Style>
                                 </Label>
+                            </Grid>
 
-                                <!--Check LAN-->
-                                <Label Grid.Row="4" Grid.Column="0" FontSize="20" FontWeight="SemiBold" HorizontalAlignment="Right">Check LAN:</Label>
-                                <ToggleButton Grid.Row="4" Grid.Column="1" x:Name="togcklan" Margin="-20,0,0,0" Height="30" Style="{StaticResource iosToggleButton}" IsChecked="{Binding Path=ENABLEWRITEAPD, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></ToggleButton>
-                                <Label Grid.Row="4" Grid.Column="2" FontSize="25" FontWeight="Bold">
+                            <!--Check LAN-->
+                            <Grid Height="40">
+                                <Grid.Style>
+                                    <Style TargetType="Grid">
+                                        <Setter Property="Visibility" Value="Collapsed"/>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding Path=station}" Value="PCBA-LAYER2">
+                                                <Setter Property="Visibility" Value="Visible"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Grid.Style>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="100"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Label Grid.Column="0" FontSize="20" FontWeight="SemiBold" HorizontalAlignment="Right">Check LAN:</Label>
+                                <ToggleButton Grid.Column="1" x:Name="togcklan" Margin="-20,0,0,0" Height="30" Style="{StaticResource iosToggleButton}" IsChecked="{Binding Path=checklanoption, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></ToggleButton>
+                                <Label Grid.Column="2" FontSize="25" FontWeight="Bold">
                                     <Label.Style>
                                         <Style TargetType="Label">
                                             <Style.Triggers>
@@ -337,11 +407,29 @@
                                         </Style>
                                     </Label.Style>
                                 </Label>
+                            </Grid>
 
-                                <!--Check SD Card-->
-                                <Label Grid.Row="5" Grid.Column="0" FontSize="20" FontWeight="SemiBold" HorizontalAlignment="Right">Check SD Card:</Label>
-                                <ToggleButton Grid.Row="5" Grid.Column="1" x:Name="togcksdcard" Margin="-20,0,0,0" Height="30" Style="{StaticResource iosToggleButton}" IsChecked="{Binding Path=ENABLEWRITEAPD, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></ToggleButton>
-                                <Label Grid.Row="5" Grid.Column="2" FontSize="25" FontWeight="Bold">
+                            <!--Check SD Card-->
+                            <Grid Height="40">
+                                <Grid.Style>
+                                    <Style TargetType="Grid">
+                                        <Setter Property="Visibility" Value="Visible"/>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding Path=station}" Value="PCBA-LAYER3">
+                                                <Setter Property="Visibility" Value="Collapsed"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Grid.Style>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="100"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Label Grid.Column="0" FontSize="20" FontWeight="SemiBold" HorizontalAlignment="Right">Check SD Card:</Label>
+                                <ToggleButton Grid.Column="1" x:Name="togcksdcard" Margin="-20,0,0,0" Height="30" Style="{StaticResource iosToggleButton}" IsChecked="{Binding Path=checksdcardoption, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></ToggleButton>
+                                <Label Grid.Column="2" FontSize="25" FontWeight="Bold">
                                     <Label.Style>
                                         <Style TargetType="Label">
                                             <Style.Triggers>
@@ -357,10 +445,28 @@
                                         </Style>
                                     </Label.Style>
                                 </Label>
+                            </Grid>
 
-                                <!--Check USB-->
+                            <!--Check USB-->
+                            <Grid Height="40">
+                                <Grid.Style>
+                                    <Style TargetType="Grid">
+                                        <Setter Property="Visibility" Value="Collapsed"/>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding Path=station}" Value="PCBA-LAYER3">
+                                                <Setter Property="Visibility" Value="Visible"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Grid.Style>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="100"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
                                 <Label Grid.Row="6" Grid.Column="0" FontSize="20" FontWeight="SemiBold" HorizontalAlignment="Right">Check USB:</Label>
-                                <ToggleButton Grid.Row="6" Grid.Column="1" x:Name="togckusb" Margin="-20,0,0,0" Height="30" Style="{StaticResource iosToggleButton}" IsChecked="{Binding Path=ENABLEWRITEAPD, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></ToggleButton>
+                                <ToggleButton Grid.Row="6" Grid.Column="1" x:Name="togckusb" Margin="-20,0,0,0" Height="30" Style="{StaticResource iosToggleButton}" IsChecked="{Binding Path=checkusboption, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></ToggleButton>
                                 <Label Grid.Row="6" Grid.Column="2" FontSize="25" FontWeight="Bold">
                                     <Label.Style>
                                         <Style TargetType="Label">
@@ -377,10 +483,28 @@
                                         </Style>
                                     </Label.Style>
                                 </Label>
+                            </Grid>
 
-                                <!--Check RGB LED-->
+                            <!--Check RGB LED-->
+                            <Grid Height="40">
+                                <Grid.Style>
+                                    <Style TargetType="Grid">
+                                        <Setter Property="Visibility" Value="Collapsed"/>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding Path=station}" Value="PCBA-LAYER2">
+                                                <Setter Property="Visibility" Value="Visible"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Grid.Style>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="100"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
                                 <Label Grid.Row="7" Grid.Column="0" FontSize="20" FontWeight="SemiBold" HorizontalAlignment="Right">Check RGB LED:</Label>
-                                <ToggleButton Grid.Row="7" Grid.Column="1" x:Name="togckrgbled" Margin="-20,0,0,0" Height="30" Style="{StaticResource iosToggleButton}" IsChecked="{Binding Path=ENABLEWRITEAPD, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></ToggleButton>
+                                <ToggleButton Grid.Row="7" Grid.Column="1" x:Name="togckrgbled" Margin="-20,0,0,0" Height="30" Style="{StaticResource iosToggleButton}" IsChecked="{Binding Path=checkrgbledoption, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></ToggleButton>
                                 <Label Grid.Row="7" Grid.Column="2" FontSize="25" FontWeight="Bold">
                                     <Label.Style>
                                         <Style TargetType="Label">
@@ -397,10 +521,28 @@
                                         </Style>
                                     </Label.Style>
                                 </Label>
+                            </Grid>
 
-                                <!--Check Light Sensor-->
+                            <!--Check Light Sensor-->
+                            <Grid Height="40">
+                                <Grid.Style>
+                                    <Style TargetType="Grid">
+                                        <Setter Property="Visibility" Value="Visible"/>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding Path=station}" Value="PCBA-LAYER2">
+                                                <Setter Property="Visibility" Value="Collapsed"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Grid.Style>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="100"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
                                 <Label Grid.Row="8" Grid.Column="0" FontSize="20" FontWeight="SemiBold" HorizontalAlignment="Right">Check Light Sensor:</Label>
-                                <ToggleButton Grid.Row="8" Grid.Column="1" x:Name="togcklightsensor" Margin="-20,0,0,0" Height="30" Style="{StaticResource iosToggleButton}" IsChecked="{Binding Path=ENABLEWRITEAPD, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></ToggleButton>
+                                <ToggleButton Grid.Row="8" Grid.Column="1" x:Name="togcklightsensor" Margin="-20,0,0,0" Height="30" Style="{StaticResource iosToggleButton}" IsChecked="{Binding Path=checklightsensoroption, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></ToggleButton>
                                 <Label Grid.Row="8" Grid.Column="2" FontSize="25" FontWeight="Bold">
                                     <Label.Style>
                                         <Style TargetType="Label">
@@ -418,9 +560,28 @@
                                     </Label.Style>
                                 </Label>
 
-                                <!--Check Speaker, Microphone-->
+                            </Grid>
+
+                            <!--Check Speaker, Microphone-->
+                            <Grid Height="40">
+                                <Grid.Style>
+                                    <Style TargetType="Grid">
+                                        <Setter Property="Visibility" Value="Visible"/>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding Path=station}" Value="PCBA-LAYER2">
+                                                <Setter Property="Visibility" Value="Collapsed"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Grid.Style>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="100"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
                                 <Label Grid.Row="9" Grid.Column="0" FontSize="20" FontWeight="SemiBold" HorizontalAlignment="Right">Check Speaker, Microphone:</Label>
-                                <ToggleButton Grid.Row="9" Grid.Column="1" x:Name="togckspeaker" Margin="-20,0,0,0" Height="30" Style="{StaticResource iosToggleButton}" IsChecked="{Binding Path=ENABLEWRITEAPD, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></ToggleButton>
+                                <ToggleButton Grid.Row="9" Grid.Column="1" x:Name="togckspeaker" Margin="-20,0,0,0" Height="30" Style="{StaticResource iosToggleButton}" IsChecked="{Binding Path=checkspeakermicoption, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></ToggleButton>
                                 <Label Grid.Row="9" Grid.Column="2" FontSize="25" FontWeight="Bold">
                                     <Label.Style>
                                         <Style TargetType="Label">
@@ -438,9 +599,28 @@
                                     </Label.Style>
                                 </Label>
 
-                                <!--Check Image sensor-->
+                            </Grid>
+
+                            <!--Check Image sensor-->
+                            <Grid Height="40">
+                                <Grid.Style>
+                                    <Style TargetType="Grid">
+                                        <Setter Property="Visibility" Value="Visible"/>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding Path=station}" Value="PCBA-LAYER2">
+                                                <Setter Property="Visibility" Value="Collapsed"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Grid.Style>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="100"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
                                 <Label Grid.Row="10" Grid.Column="0" FontSize="20" FontWeight="SemiBold" HorizontalAlignment="Right">Check Image Sensor:</Label>
-                                <ToggleButton Grid.Row="10" Grid.Column="1" x:Name="togckimgsensor" Margin="-20,0,0,0" Height="30" Style="{StaticResource iosToggleButton}" IsChecked="{Binding Path=ENABLEWRITEAPD, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></ToggleButton>
+                                <ToggleButton Grid.Row="10" Grid.Column="1" x:Name="togckimgsensor" Margin="-20,0,0,0" Height="30" Style="{StaticResource iosToggleButton}" IsChecked="{Binding Path=checkimagesensoroption, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></ToggleButton>
                                 <Label Grid.Row="10" Grid.Column="2" FontSize="25" FontWeight="Bold">
                                     <Label.Style>
                                         <Style TargetType="Label">
@@ -457,10 +637,29 @@
                                         </Style>
                                     </Label.Style>
                                 </Label>
-                                
-                                <!--Check Button-->
+
+                            </Grid>
+
+                            <!--Check Button-->
+                            <Grid Height="40">
+                                <Grid.Style>
+                                    <Style TargetType="Grid">
+                                        <Setter Property="Visibility" Value="Visible"/>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding Path=station}" Value="PCBA-LAYER3">
+                                                <Setter Property="Visibility" Value="Collapsed"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Grid.Style>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="100"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
                                 <Label Grid.Row="11" Grid.Column="0" FontSize="20" FontWeight="SemiBold" HorizontalAlignment="Right">Check Button:</Label>
-                                <ToggleButton Grid.Row="11" Grid.Column="1" x:Name="togckbutton" Margin="-20,0,0,0" Height="30" Style="{StaticResource iosToggleButton}" IsChecked="{Binding Path=ENABLEWRITEAPD, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></ToggleButton>
+                                <ToggleButton Grid.Row="11" Grid.Column="1" x:Name="togckbutton" Margin="-20,0,0,0" Height="30" Style="{StaticResource iosToggleButton}" IsChecked="{Binding Path=checkbuttonoption, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></ToggleButton>
                                 <Label Grid.Row="11" Grid.Column="2" FontSize="25" FontWeight="Bold">
                                     <Label.Style>
                                         <Style TargetType="Label">
@@ -477,8 +676,6 @@
                                         </Style>
                                     </Label.Style>
                                 </Label>
-
-
 
                             </Grid>
 

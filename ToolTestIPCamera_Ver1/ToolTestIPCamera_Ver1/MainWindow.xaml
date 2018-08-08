@@ -54,7 +54,7 @@
                     <RowDefinition Height="27"/>
                     <RowDefinition Height="3"/>
                 </Grid.RowDefinitions>
-                <Label Grid.Row="0" FontSize="26" Foreground="{StaticResource colorTextTitle}" VerticalAlignment="Center" Content="{Binding Path=WINDOWTITLE, UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}"></Label>
+                <Label Grid.Row="0" FontSize="26" Foreground="{StaticResource colorTextTitle}" VerticalAlignment="Center" Content="{Binding Path=windowtitle, UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}"></Label>
                 <Grid Grid.Row="1">
                     <WrapPanel Margin="0,-2,0,0">
                         <Label MouseDown="Label_MouseDown" Width="100" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="{StaticResource colorTextTitle}" FontSize="15" FontWeight="SemiBold">TEST ALL</Label>
