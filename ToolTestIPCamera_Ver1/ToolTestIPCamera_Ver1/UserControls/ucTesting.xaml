@@ -5,8 +5,436 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ToolTestIPCamera_Ver1.UserControls"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-            
-    </Grid>
+             d:DesignHeight="768" d:DesignWidth="1366">
+
+    <Border BorderBrush="{StaticResource colorBorder}" BorderThickness="0.5" CornerRadius="5" Background="{StaticResource colorBackground}">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="7*"/>
+                <ColumnDefinition Width="3"/>
+                <ColumnDefinition Width="4*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="5*"/>
+                </Grid.RowDefinitions>
+
+                <StackPanel Grid.Column="0" Margin="5,15,0,0">
+                    <Label FontSize="22" FontWeight="Bold">Nhập địa chỉ MAC của IP Camera:</Label>
+                    <TextBox CharacterCasing="Upper" FontWeight="Bold" Height="60" FontSize="40"></TextBox>
+                    <!--<TextBox x:Name="txtMacAddress" Text="{Binding Path=MACINPUTED, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" KeyDown="TextBox_KeyDown" TextChanged="TextBox_TextChanged" IsEnabled="{Binding Path=ENABLEINPUTMAC, UpdateSourceTrigger=PropertyChanged}" CharacterCasing="Upper" Foreground="#FF333333" FontWeight="Bold" FontSize="30" Height="40" Width="300" HorizontalAlignment="Left" Style="{StaticResource hintRoundTextBox}" Tag="Nhập địa chỉ MAC trên tem của ONT vào đây"></TextBox>-->
+                    <Label x:Name="lblOldMAC" Margin="10,0,0,0" VerticalAlignment="Center" FontSize="20" FontWeight="SemiBold" Foreground="#FF00BCD4"></Label>
+                    <!--<WrapPanel>
+                    </WrapPanel>-->
+                </StackPanel>
+
+                <!--system log-->
+                <Border BorderBrush="{StaticResource colorBorder}" BorderThickness="0" CornerRadius="5" Grid.Row="2" Margin="5,0,5,5">
+                    <Grid>
+                        <!--<Border Background="#DADADA" Height="180" VerticalAlignment="Top" BorderBrush="{StaticResource colorBorder}" BorderThickness="0,0,0,0.5" CornerRadius="5">
+                            <StackPanel>
+                                <Grid VerticalAlignment="Top" HorizontalAlignment="Stretch">
+                                    <Label FontWeight="Bold" FontSize="22">THÔNG BÁO HỆ THỐNG:</Label>
+                                    <CheckBox Visibility="Collapsed" VerticalAlignment="Center" HorizontalAlignment="Right" Background="#FF00796B" IsChecked="{Binding Path=DEVCOUNTER, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Content="Auto scroll ">
+                                    </CheckBox>
+                                </Grid>
+                                <RichTextBox x:Name="rtbResultInfo" IsReadOnly="True" FontWeight="SemiBold" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="Transparent" BorderThickness="0" Block.LineHeight="1">
+                                </RichTextBox>
+                                --><!--<Label FontWeight="SemiBold" FontSize="15" Foreground="Red" Content="{Binding Path=ERRORMESSAGE, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></Label>-->
+                                <!--<Label VerticalAlignment="Center" HorizontalAlignment="Right" Content="{Binding Path=DEVCOUNTER, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></Label>--><!--
+                            </StackPanel>
+                        </Border>-->
+                        <ScrollViewer Margin="0,5,5,5" x:Name="_scrollViewer">
+                            <RichTextBox  Background="Transparent" BorderThickness="0" IsReadOnly="True" Block.LineHeight="1" Padding="5,5,5,5">
+                                <FlowDocument PageHeight="180">
+                                    <Paragraph>
+                                        <Run Foreground="#050928" FontWeight="Normal" Text="{Binding LOGSYSTEM, Mode=TwoWay}"/>
+                                    </Paragraph>
+                                </FlowDocument>
+                            </RichTextBox>
+                        </ScrollViewer>
+                    </Grid>
+                </Border>
+
+            </Grid>
+
+            <!--splitter-->
+            <GridSplitter Background="Transparent" Grid.Column="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+
+            <!--test result-->
+            <Border Margin="0,5,5,5" Grid.Column="2" CornerRadius="5" BorderBrush="{StaticResource colorBorder}" BorderThickness="0.5">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                        <GradientStop Color="#444444" Offset="0.25"/>
+                        <GradientStop Color="#666666" Offset="0.85"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <Grid Margin="0,5,0,10" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1.3*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="6*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    
+                    <!--WRITE MAC-->
+                    <Label Foreground="{StaticResource colorTextYellow}" HorizontalAlignment="Right"  Margin="0,-5,0,0" Grid.Row="1" Grid.Column="0" FontSize="30" FontWeight="SemiBold">WRITE MAC:</Label>
+                    <Label x:Name="lblNum1" HorizontalAlignment="Left"  Margin="0,-5,0,0" Grid.Row="1" Grid.Column="1" FontSize="30" FontWeight="Bold" Content="PASS">
+                        <Label.Style>
+                            <Style TargetType="Label">
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding ElementName=lblNum1, Path=Content}" Value="PASS">
+                                        <Setter Property="Foreground" Value="{StaticResource colorTextOK}"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding ElementName=lblNum1, Path=Content}" Value="FAIL">
+                                        <Setter Property="Foreground" Value="{StaticResource colorTextNG}"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding ElementName=lblNum1, Path=Content}" Value="wait">
+                                        <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding ElementName=lblNum1, Path=Content}" Value="NONE">
+                                        <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding ElementName=lblNum1, Path=Content}" Value="--">
+                                        <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Label.Style>
+                    </Label>
+                    
+                    <!--UPLOAD FW-->
+                    <Label Foreground="{StaticResource colorTextYellow}" HorizontalAlignment="Right"  Margin="0,-5,0,0" Grid.Row="2" Grid.Column="0" FontSize="30" FontWeight="SemiBold">UPLOAD FW:</Label>
+                    <Label x:Name="lblNum2" HorizontalAlignment="Left"  Margin="0,-5,0,0" Grid.Row="2" Grid.Column="1" FontSize="30" FontWeight="Bold" Content="PASS">
+                        <Label.Style>
+                            <Style TargetType="Label">
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding ElementName=lblNum2, Path=Content}" Value="PASS">
+                                        <Setter Property="Foreground" Value="{StaticResource colorTextOK}"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding ElementName=lblNum2, Path=Content}" Value="FAIL">
+                                        <Setter Property="Foreground" Value="{StaticResource colorTextNG}"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding ElementName=lblNum2, Path=Content}" Value="wait">
+                                        <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding ElementName=lblNum2, Path=Content}" Value="NONE">
+                                        <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding ElementName=lblNum2, Path=Content}" Value="--">
+                                        <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Label.Style>
+                    </Label>
+                    
+                    <!--WIFI-->
+                    <Label Foreground="{StaticResource colorTextYellow}" HorizontalAlignment="Right"  Margin="0,-5,0,0" Grid.Row="3" Grid.Column="0" FontSize="30" FontWeight="SemiBold">WIFI:</Label>
+                    <Label x:Name="lblNum3" HorizontalAlignment="Left"  Margin="0,-5,0,0" Grid.Row="3" Grid.Column="1" FontSize="30" FontWeight="Bold" Content="PASS">
+                        <Label.Style>
+                            <Style TargetType="Label">
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding ElementName=lblNum3, Path=Content}" Value="PASS">
+                                        <Setter Property="Foreground" Value="{StaticResource colorTextOK}"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding ElementName=lblNum3, Path=Content}" Value="FAIL">
+                                        <Setter Property="Foreground" Value="{StaticResource colorTextNG}"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding ElementName=lblNum3, Path=Content}" Value="wait">
+                                        <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding ElementName=lblNum3, Path=Content}" Value="NONE">
+                                        <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding ElementName=lblNum3, Path=Content}" Value="--">
+                                        <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Label.Style>
+                    </Label>
+                    
+                    <!--FW VERSION-->
+                    <Label Foreground="{StaticResource colorTextYellow}" HorizontalAlignment="Right"  Margin="0,-5,0,0" Grid.Row="4" Grid.Column="0" FontSize="30" FontWeight="SemiBold">FW VER:</Label>
+                    <Label x:Name="lblNum4" HorizontalAlignment="Left"  Margin="0,-5,0,0" Grid.Row="4" Grid.Column="1" FontSize="30" FontWeight="Bold" Content="PASS">
+                        <Label.Style>
+                            <Style TargetType="Label">
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding ElementName=lblNum4, Path=Content}" Value="PASS">
+                                        <Setter Property="Foreground" Value="{StaticResource colorTextOK}"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding ElementName=lblNum4, Path=Content}" Value="FAIL">
+                                        <Setter Property="Foreground" Value="{StaticResource colorTextNG}"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding ElementName=lblNum4, Path=Content}" Value="wait">
+                                        <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding ElementName=lblNum4, Path=Content}" Value="NONE">
+                                        <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding ElementName=lblNum4, Path=Content}" Value="--">
+                                        <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Label.Style>
+                    </Label>
+                    
+                    <!--LAN-->
+                    <Label Foreground="{StaticResource colorTextYellow}" HorizontalAlignment="Right"  Margin="0,-5,0,0" Grid.Row="5" Grid.Column="0" FontSize="30" FontWeight="SemiBold">LAN:</Label>
+                    <Label x:Name="lblNum5" HorizontalAlignment="Left"  Margin="0,-5,0,0" Grid.Row="5" Grid.Column="1" FontSize="30" FontWeight="Bold" Content="PASS">
+                        <Label.Style>
+                            <Style TargetType="Label">
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding ElementName=lblNum5, Path=Content}" Value="PASS">
+                                        <Setter Property="Foreground" Value="{StaticResource colorTextOK}"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding ElementName=lblNum5, Path=Content}" Value="FAIL">
+                                        <Setter Property="Foreground" Value="{StaticResource colorTextNG}"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding ElementName=lblNum5, Path=Content}" Value="wait">
+                                        <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding ElementName=lblNum5, Path=Content}" Value="NONE">
+                                        <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding ElementName=lblNum5, Path=Content}" Value="--">
+                                        <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Label.Style>
+                    </Label>
+                    
+                    <!--SD CARD-->
+                    <Label Foreground="{StaticResource colorTextYellow}" HorizontalAlignment="Right"  Margin="0,-5,0,0" Grid.Row="6" Grid.Column="0" FontSize="30" FontWeight="SemiBold">SD CARD:</Label>
+                    <Label x:Name="lblNum6" HorizontalAlignment="Left"  Margin="0,-5,0,0" Grid.Row="6" Grid.Column="1" FontSize="30" FontWeight="Bold" Content="PASS">
+                        <Label.Style>
+                            <Style TargetType="Label">
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding ElementName=lblNum6, Path=Content}" Value="PASS">
+                                        <Setter Property="Foreground" Value="{StaticResource colorTextOK}"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding ElementName=lblNum6, Path=Content}" Value="FAIL">
+                                        <Setter Property="Foreground" Value="{StaticResource colorTextNG}"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding ElementName=lblNum6, Path=Content}" Value="wait">
+                                        <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding ElementName=lblNum6, Path=Content}" Value="NONE">
+                                        <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding ElementName=lblNum6, Path=Content}" Value="--">
+                                        <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Label.Style>
+                    </Label>
+                    
+                    <!--USB-->
+                    <Label Foreground="{StaticResource colorTextYellow}" HorizontalAlignment="Right"  Margin="0,-5,0,0" Grid.Row="7" Grid.Column="0" FontSize="30" FontWeight="SemiBold">USB:</Label>
+                    <Label x:Name="lblNum7" HorizontalAlignment="Left"  Margin="0,-5,0,0" Grid.Row="7" Grid.Column="1" FontSize="30" FontWeight="Bold" Content="PASS">
+                        <Label.Style>
+                            <Style TargetType="Label">
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding ElementName=lblNum7, Path=Content}" Value="PASS">
+                                        <Setter Property="Foreground" Value="{StaticResource colorTextOK}"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding ElementName=lblNum7, Path=Content}" Value="FAIL">
+                                        <Setter Property="Foreground" Value="{StaticResource colorTextNG}"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding ElementName=lblNum7, Path=Content}" Value="wait">
+                                        <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding ElementName=lblNum7, Path=Content}" Value="NONE">
+                                        <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding ElementName=lblNum7, Path=Content}" Value="--">
+                                        <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Label.Style>
+                    </Label>
+
+                    <!--RGB LED-->
+                    <Label Foreground="{StaticResource colorTextYellow}" HorizontalAlignment="Right"  Margin="0,-5,0,0" Grid.Row="8" Grid.Column="0" FontSize="30" FontWeight="SemiBold">RGB LED:</Label>
+                    <Label x:Name="lblNum8" HorizontalAlignment="Left"  Margin="0,-5,0,0" Grid.Row="8" Grid.Column="1" FontSize="30" FontWeight="Bold" Content="PASS">
+                        <Label.Style>
+                            <Style TargetType="Label">
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding ElementName=lblNum8, Path=Content}" Value="PASS">
+                                        <Setter Property="Foreground" Value="{StaticResource colorTextOK}"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding ElementName=lblNum8, Path=Content}" Value="FAIL">
+                                        <Setter Property="Foreground" Value="{StaticResource colorTextNG}"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding ElementName=lblNum8, Path=Content}" Value="wait">
+                                        <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding ElementName=lblNum8, Path=Content}" Value="NONE">
+                                        <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding ElementName=lblNum8, Path=Content}" Value="--">
+                                        <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Label.Style>
+                    </Label>
+
+                    <!--Light Sensor-->
+                    <Label Foreground="{StaticResource colorTextYellow}" HorizontalAlignment="Right"  Margin="0,-5,0,0" Grid.Row="9" Grid.Column="0" FontSize="30" FontWeight="SemiBold">LIGHT SENSOR:</Label>
+                    <Label x:Name="lblNum9" HorizontalAlignment="Left"  Margin="0,-5,0,0" Grid.Row="9" Grid.Column="1" FontSize="30" FontWeight="Bold" Content="PASS">
+                        <Label.Style>
+                            <Style TargetType="Label">
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding ElementName=lblNum9, Path=Content}" Value="PASS">
+                                        <Setter Property="Foreground" Value="{StaticResource colorTextOK}"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding ElementName=lblNum9, Path=Content}" Value="FAIL">
+                                        <Setter Property="Foreground" Value="{StaticResource colorTextNG}"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding ElementName=lblNum9, Path=Content}" Value="wait">
+                                        <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding ElementName=lblNum9, Path=Content}" Value="NONE">
+                                        <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding ElementName=lblNum9, Path=Content}" Value="--">
+                                        <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Label.Style>
+                    </Label>
+
+                    <!--Speaker, Microphone-->
+                    <Label Foreground="{StaticResource colorTextYellow}" HorizontalAlignment="Right"  Margin="0,-5,0,0" Grid.Row="10" Grid.Column="0" FontSize="30" FontWeight="SemiBold">SPEAKER, MIC:</Label>
+                    <Label x:Name="lblNum10" HorizontalAlignment="Left"  Margin="0,-5,0,0" Grid.Row="10" Grid.Column="1" FontSize="30" FontWeight="Bold" Content="PASS">
+                        <Label.Style>
+                            <Style TargetType="Label">
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding ElementName=lblNum10, Path=Content}" Value="PASS">
+                                        <Setter Property="Foreground" Value="{StaticResource colorTextOK}"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding ElementName=lblNum10, Path=Content}" Value="FAIL">
+                                        <Setter Property="Foreground" Value="{StaticResource colorTextNG}"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding ElementName=lblNum10, Path=Content}" Value="wait">
+                                        <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding ElementName=lblNum10, Path=Content}" Value="NONE">
+                                        <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding ElementName=lblNum10, Path=Content}" Value="--">
+                                        <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Label.Style>
+                    </Label>
+
+                    <!--Image sensor-->
+                    <Label Foreground="{StaticResource colorTextYellow}" HorizontalAlignment="Right"  Margin="0,-5,0,0" Grid.Row="11" Grid.Column="0" FontSize="30" FontWeight="SemiBold">IMAGE SENSOR:</Label>
+                    <Label x:Name="lblNum11" HorizontalAlignment="Left"  Margin="0,-5,0,0" Grid.Row="11" Grid.Column="1" FontSize="30" FontWeight="Bold" Content="PASS">
+                        <Label.Style>
+                            <Style TargetType="Label">
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding ElementName=lblNum11, Path=Content}" Value="PASS">
+                                        <Setter Property="Foreground" Value="{StaticResource colorTextOK}"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding ElementName=lblNum11, Path=Content}" Value="FAIL">
+                                        <Setter Property="Foreground" Value="{StaticResource colorTextNG}"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding ElementName=lblNum11, Path=Content}" Value="wait">
+                                        <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding ElementName=lblNum11, Path=Content}" Value="NONE">
+                                        <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding ElementName=lblNum11, Path=Content}" Value="--">
+                                        <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Label.Style>
+                    </Label>
+
+                    <!--Button-->
+                    <Label Foreground="{StaticResource colorTextYellow}" HorizontalAlignment="Right"  Margin="0,-5,0,0" Grid.Row="12" Grid.Column="0" FontSize="30" FontWeight="SemiBold">BUTTON:</Label>
+                    <Label x:Name="lblNum12" HorizontalAlignment="Left"  Margin="0,-5,0,0" Grid.Row="12" Grid.Column="1" FontSize="30" FontWeight="Bold" Content="PASS">
+                        <Label.Style>
+                            <Style TargetType="Label">
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding ElementName=lblNum12, Path=Content}" Value="PASS">
+                                        <Setter Property="Foreground" Value="{StaticResource colorTextOK}"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding ElementName=lblNum12, Path=Content}" Value="FAIL">
+                                        <Setter Property="Foreground" Value="{StaticResource colorTextNG}"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding ElementName=lblNum12, Path=Content}" Value="wait">
+                                        <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding ElementName=lblNum12, Path=Content}" Value="NONE">
+                                        <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding ElementName=lblNum12, Path=Content}" Value="--">
+                                        <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Label.Style>
+                    </Label>
+
+
+                    <StackPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
+                        <Label Foreground="{StaticResource colorTextYellow}" VerticalAlignment="Center" HorizontalAlignment="Left"  Margin="0,0,0,0" Grid.Row="14" Grid.Column="0" FontSize="20" FontWeight="SemiBold">Phán định tổng:</Label>
+                        <Label x:Name="lblTestResult" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="170" Grid.Row="14" Grid.Column="1" FontWeight="Bold" Content="PASS" Margin="0,-20,0,0">
+                            <Label.Style>
+                                <Style TargetType="Label">
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding ElementName=lblTestResult, Path=Content}" Value="PASS">
+                                            <Setter Property="Foreground" Value="{StaticResource colorTextOK}"/>
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding ElementName=lblTestResult, Path=Content}" Value="FAIL">
+                                            <Setter Property="Foreground" Value="{StaticResource colorTextNG}"/>
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding ElementName=lblTestResult, Path=Content}" Value="wait">
+                                            <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding ElementName=lblTestResult, Path=Content}" Value="NONE">
+                                            <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding ElementName=lblTestResult, Path=Content}" Value="--">
+                                            <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Label.Style>
+                        </Label>
+                    </StackPanel>
+
+                </Grid>
+            </Border>
+        </Grid>
+    </Border>
+    
 </UserControl>

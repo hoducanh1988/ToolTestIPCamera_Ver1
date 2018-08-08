@@ -25,5 +25,9 @@ namespace ToolTestIPCamera_Ver1.UserControls {
         private void TabControl_SelectionChanged(object sender, SelectionChangedEventArgs e) {
 
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e) {
+
+        }
     }
 }

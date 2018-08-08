@@ -232,7 +232,8 @@
     <Folder Include="Function\Base\" />
     <Folder Include="Function\Custom\" />
     <Folder Include="Function\DUT\" />
-    <Folder Include="Function\Excute\" />
+    <Folder Include="Function\Excute\PCBA\" />
+    <Folder Include="Function\Excute\Product\" />
     <Folder Include="Function\Instrument\" />
     <Folder Include="Function\IO\" />
     <Folder Include="Function\Protocol\" />

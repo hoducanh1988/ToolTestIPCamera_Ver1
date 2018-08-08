@@ -30,7 +30,7 @@ namespace ToolTestIPCamera_Ver1.UserControls {
                 CONTENT = "- Phát hành lần đầu",
                 DATE = "06/08/2018",
                 CHANGETYPE = "Tạo mới",
-                PERSON = "Hồ Đức Anh"
+                PERSON = "Lê Việt Lợi, Hồ Đức Anh"
             });
             this.GridAbout.ItemsSource = listHist;
         }

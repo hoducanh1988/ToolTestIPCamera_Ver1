@@ -21,5 +21,14 @@ namespace ToolTestIPCamera_Ver1.UserControls {
         public ucTesting() {
             InitializeComponent();
         }
+
+        private void TextBox_KeyDown(object sender, KeyEventArgs e) {
+
+        }
+
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e) {
+
+        }
     }
 }
