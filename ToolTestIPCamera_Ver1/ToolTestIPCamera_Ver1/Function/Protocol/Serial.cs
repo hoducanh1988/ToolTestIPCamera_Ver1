@@ -34,7 +34,7 @@ namespace ToolTestIPCamera_Ver1.Function.Protocol
             try {
                 this._serialport = new SerialPort();
                 this._serialport.PortName = _PortName;
-                this._serialport.BaudRate = 115200;
+                this._serialport.BaudRate = 57600;
                 this._serialport.DataBits = 8;
                 this._serialport.Parity = Parity.None;
                 this._serialport.StopBits = StopBits.One;

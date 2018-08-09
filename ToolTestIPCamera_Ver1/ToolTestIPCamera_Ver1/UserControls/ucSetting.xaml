@@ -295,44 +295,6 @@
                                 </Label>
                             </Grid>
 
-                            <!--Check WIFI-->
-                            <Grid Height="40">
-                                <Grid.Style>
-                                    <Style TargetType="Grid">
-                                        <Setter Property="Visibility" Value="Visible"/>
-                                        <Style.Triggers>
-                                            <DataTrigger Binding="{Binding Path=station}" Value="PCBA-LAYER3">
-                                                <Setter Property="Visibility" Value="Collapsed"/>
-                                            </DataTrigger>
-                                        </Style.Triggers>
-                                    </Style>
-                                </Grid.Style>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="*"/>
-                                    <ColumnDefinition Width="100"/>
-                                    <ColumnDefinition Width="*"/>
-                                </Grid.ColumnDefinitions>
-
-                                <Label Grid.Row="2" Grid.Column="0" FontSize="20" FontWeight="SemiBold" HorizontalAlignment="Right">Check WIFI:</Label>
-                                <ToggleButton Grid.Row="2" Grid.Column="1" x:Name="togckwifi" Margin="-20,0,0,0" Height="30" Style="{StaticResource iosToggleButton}" IsChecked="{Binding Path=checkwifioption, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></ToggleButton>
-                                <Label Grid.Row="2" Grid.Column="2" FontSize="25" FontWeight="Bold">
-                                    <Label.Style>
-                                        <Style TargetType="Label">
-                                            <Style.Triggers>
-                                                <DataTrigger Binding="{Binding ElementName=togckwifi, Path=IsChecked}" Value="true">
-                                                    <Setter Property="Content" Value="ON"/>
-                                                    <Setter Property="Foreground" Value="{StaticResource colorContentOK}"/>
-                                                </DataTrigger>
-                                                <DataTrigger Binding="{Binding ElementName=togckwifi, Path=IsChecked}" Value="false">
-                                                    <Setter Property="Content" Value="OFF"/>
-                                                    <Setter Property="Foreground" Value="{StaticResource colorTextNG}"/>
-                                                </DataTrigger>
-                                            </Style.Triggers>
-                                        </Style>
-                                    </Label.Style>
-                                </Label>
-                            </Grid>
-
                             <!--Check FW Version-->
                             <Grid Height="40">
                                 <Grid.Style>
@@ -638,6 +600,44 @@
                                     </Label.Style>
                                 </Label>
 
+                            </Grid>
+
+                            <!--Check WIFI-->
+                            <Grid Height="40">
+                                <Grid.Style>
+                                    <Style TargetType="Grid">
+                                        <Setter Property="Visibility" Value="Visible"/>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding Path=station}" Value="PCBA-LAYER3">
+                                                <Setter Property="Visibility" Value="Collapsed"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Grid.Style>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="100"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Label Grid.Row="2" Grid.Column="0" FontSize="20" FontWeight="SemiBold" HorizontalAlignment="Right">Check WIFI:</Label>
+                                <ToggleButton Grid.Row="2" Grid.Column="1" x:Name="togckwifi" Margin="-20,0,0,0" Height="30" Style="{StaticResource iosToggleButton}" IsChecked="{Binding Path=checkwifioption, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></ToggleButton>
+                                <Label Grid.Row="2" Grid.Column="2" FontSize="25" FontWeight="Bold">
+                                    <Label.Style>
+                                        <Style TargetType="Label">
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding ElementName=togckwifi, Path=IsChecked}" Value="true">
+                                                    <Setter Property="Content" Value="ON"/>
+                                                    <Setter Property="Foreground" Value="{StaticResource colorContentOK}"/>
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Binding ElementName=togckwifi, Path=IsChecked}" Value="false">
+                                                    <Setter Property="Content" Value="OFF"/>
+                                                    <Setter Property="Foreground" Value="{StaticResource colorTextNG}"/>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Label.Style>
+                                </Label>
                             </Grid>
 
                             <!--Check Button-->

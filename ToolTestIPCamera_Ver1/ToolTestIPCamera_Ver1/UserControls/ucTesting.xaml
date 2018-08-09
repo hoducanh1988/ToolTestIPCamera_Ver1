@@ -50,7 +50,7 @@
                             <RichTextBox  Background="Transparent" BorderThickness="0" IsReadOnly="True" Block.LineHeight="1" Padding="5,5,5,5">
                                 <FlowDocument PageHeight="180">
                                     <Paragraph>
-                                        <Run Foreground="#050928" FontWeight="Normal" Text="{Binding LOGSYSTEM, Mode=TwoWay}"/>
+                                        <Run Foreground="#050928" FontWeight="Normal" Text="{Binding SYSTEMLOG, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
                                     </Paragraph>
                                 </FlowDocument>
                             </RichTextBox>
@@ -98,7 +98,7 @@
                             </Grid.ColumnDefinitions>
 
                             <Label Foreground="{StaticResource colorTextYellow}" HorizontalAlignment="Right"  Margin="0,-5,0,0" Grid.Column="0" FontSize="30" FontWeight="SemiBold">WRITE MAC:</Label>
-                            <Label x:Name="lblNum1" HorizontalAlignment="Left"  Margin="0,-5,0,0" Grid.Column="1" FontSize="30" FontWeight="Bold" Content="PASS">
+                            <Label x:Name="lblNum1" HorizontalAlignment="Left"  Margin="0,-5,0,0" Grid.Column="1" FontSize="30" FontWeight="Bold" Content="{Binding Path=WRITEMACRESULT, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}">
                                 <Label.Style>
                                     <Style TargetType="Label">
                                         <Style.Triggers>
@@ -142,7 +142,7 @@
                             </Grid.ColumnDefinitions>
 
                             <Label Foreground="{StaticResource colorTextYellow}" HorizontalAlignment="Right"  Margin="0,-5,0,0" Grid.Row="2" Grid.Column="0" FontSize="30" FontWeight="SemiBold">UPLOAD FW:</Label>
-                            <Label x:Name="lblNum2" HorizontalAlignment="Left"  Margin="0,-5,0,0" Grid.Row="2" Grid.Column="1" FontSize="30" FontWeight="Bold" Content="PASS">
+                            <Label x:Name="lblNum2" HorizontalAlignment="Left"  Margin="0,-5,0,0" Grid.Row="2" Grid.Column="1" FontSize="30" FontWeight="Bold" Content="{Binding Path=UPLOADFWRESULT, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}">
                                 <Label.Style>
                                     <Style TargetType="Label">
                                         <Style.Triggers>
@@ -159,50 +159,6 @@
                                                 <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
                                             </DataTrigger>
                                             <DataTrigger Binding="{Binding ElementName=lblNum2, Path=Content}" Value="-">
-                                                <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
-                                            </DataTrigger>
-                                        </Style.Triggers>
-                                    </Style>
-                                </Label.Style>
-                            </Label>
-
-                        </Grid>
-
-                        <!--WIFI-->
-                        <Grid Height="50">
-                            <Grid.Style>
-                                <Style TargetType="Grid">
-                                    <Setter Property="Visibility" Value="Visible"/>
-                                    <Style.Triggers>
-                                        <DataTrigger Binding="{Binding Path=station}" Value="PCBA-LAYER3">
-                                            <Setter Property="Visibility" Value="Collapsed"/>
-                                        </DataTrigger>
-                                    </Style.Triggers>
-                                </Style>
-                            </Grid.Style>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="1.3*"/>
-                                <ColumnDefinition Width="1*"/>
-                            </Grid.ColumnDefinitions>
-
-                            <Label Foreground="{StaticResource colorTextYellow}" HorizontalAlignment="Right"  Margin="0,-5,0,0" Grid.Row="3" Grid.Column="0" FontSize="30" FontWeight="SemiBold">WIFI:</Label>
-                            <Label x:Name="lblNum3" HorizontalAlignment="Left"  Margin="0,-5,0,0" Grid.Row="3" Grid.Column="1" FontSize="30" FontWeight="Bold" Content="PASS">
-                                <Label.Style>
-                                    <Style TargetType="Label">
-                                        <Style.Triggers>
-                                            <DataTrigger Binding="{Binding ElementName=lblNum3, Path=Content}" Value="PASS">
-                                                <Setter Property="Foreground" Value="{StaticResource colorTextOK}"/>
-                                            </DataTrigger>
-                                            <DataTrigger Binding="{Binding ElementName=lblNum3, Path=Content}" Value="FAIL">
-                                                <Setter Property="Foreground" Value="{StaticResource colorTextNG}"/>
-                                            </DataTrigger>
-                                            <DataTrigger Binding="{Binding ElementName=lblNum3, Path=Content}" Value="wait">
-                                                <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
-                                            </DataTrigger>
-                                            <DataTrigger Binding="{Binding ElementName=lblNum3, Path=Content}" Value="NONE">
-                                                <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
-                                            </DataTrigger>
-                                            <DataTrigger Binding="{Binding ElementName=lblNum3, Path=Content}" Value="-">
                                                 <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
                                             </DataTrigger>
                                         </Style.Triggers>
@@ -230,7 +186,7 @@
                             </Grid.ColumnDefinitions>
 
                             <Label Foreground="{StaticResource colorTextYellow}" HorizontalAlignment="Right"  Margin="0,-5,0,0" Grid.Row="4" Grid.Column="0" FontSize="30" FontWeight="SemiBold">FW VER:</Label>
-                            <Label x:Name="lblNum4" HorizontalAlignment="Left"  Margin="0,-5,0,0" Grid.Row="4" Grid.Column="1" FontSize="30" FontWeight="Bold" Content="PASS">
+                            <Label x:Name="lblNum4" HorizontalAlignment="Left"  Margin="0,-5,0,0" Grid.Row="4" Grid.Column="1" FontSize="30" FontWeight="Bold" Content="{Binding Path=FWVERSIONRESULT, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}">
                                 <Label.Style>
                                     <Style TargetType="Label">
                                         <Style.Triggers>
@@ -274,7 +230,7 @@
                             </Grid.ColumnDefinitions>
 
                             <Label Foreground="{StaticResource colorTextYellow}" HorizontalAlignment="Right"  Margin="0,-5,0,0" Grid.Row="5" Grid.Column="0" FontSize="30" FontWeight="SemiBold">LAN:</Label>
-                            <Label x:Name="lblNum5" HorizontalAlignment="Left"  Margin="0,-5,0,0" Grid.Row="5" Grid.Column="1" FontSize="30" FontWeight="Bold" Content="PASS">
+                            <Label x:Name="lblNum5" HorizontalAlignment="Left"  Margin="0,-5,0,0" Grid.Row="5" Grid.Column="1" FontSize="30" FontWeight="Bold" Content="{Binding Path=LANRESULT, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}">
                                 <Label.Style>
                                     <Style TargetType="Label">
                                         <Style.Triggers>
@@ -318,7 +274,7 @@
                             </Grid.ColumnDefinitions>
 
                             <Label Foreground="{StaticResource colorTextYellow}" HorizontalAlignment="Right"  Margin="0,-5,0,0" Grid.Row="6" Grid.Column="0" FontSize="30" FontWeight="SemiBold">SD CARD:</Label>
-                            <Label x:Name="lblNum6" HorizontalAlignment="Left"  Margin="0,-5,0,0" Grid.Row="6" Grid.Column="1" FontSize="30" FontWeight="Bold" Content="PASS">
+                            <Label x:Name="lblNum6" HorizontalAlignment="Left"  Margin="0,-5,0,0" Grid.Row="6" Grid.Column="1" FontSize="30" FontWeight="Bold" Content="{Binding Path=SDCARDRESULT, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}">
                                 <Label.Style>
                                     <Style TargetType="Label">
                                         <Style.Triggers>
@@ -362,7 +318,7 @@
                             </Grid.ColumnDefinitions>
 
                             <Label Foreground="{StaticResource colorTextYellow}" HorizontalAlignment="Right"  Margin="0,-5,0,0" Grid.Row="7" Grid.Column="0" FontSize="30" FontWeight="SemiBold">USB:</Label>
-                            <Label x:Name="lblNum7" HorizontalAlignment="Left"  Margin="0,-5,0,0" Grid.Row="7" Grid.Column="1" FontSize="30" FontWeight="Bold" Content="PASS">
+                            <Label x:Name="lblNum7" HorizontalAlignment="Left"  Margin="0,-5,0,0" Grid.Row="7" Grid.Column="1" FontSize="30" FontWeight="Bold" Content="{Binding Path=USBRESULT, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}">
                                 <Label.Style>
                                     <Style TargetType="Label">
                                         <Style.Triggers>
@@ -406,7 +362,7 @@
                             </Grid.ColumnDefinitions>
 
                             <Label Foreground="{StaticResource colorTextYellow}" HorizontalAlignment="Right"  Margin="0,-5,0,0" Grid.Row="8" Grid.Column="0" FontSize="30" FontWeight="SemiBold">RGB LED:</Label>
-                            <Label x:Name="lblNum8" HorizontalAlignment="Left"  Margin="0,-5,0,0" Grid.Row="8" Grid.Column="1" FontSize="30" FontWeight="Bold" Content="PASS">
+                            <Label x:Name="lblNum8" HorizontalAlignment="Left"  Margin="0,-5,0,0" Grid.Row="8" Grid.Column="1" FontSize="30" FontWeight="Bold" Content="{Binding Path=RGBLEDRESULT, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}">
                                 <Label.Style>
                                     <Style TargetType="Label">
                                         <Style.Triggers>
@@ -450,7 +406,7 @@
                             </Grid.ColumnDefinitions>
 
                             <Label Foreground="{StaticResource colorTextYellow}" HorizontalAlignment="Right"  Margin="0,-5,0,0" Grid.Row="9" Grid.Column="0" FontSize="30" FontWeight="SemiBold">LIGHT SENSOR:</Label>
-                            <Label x:Name="lblNum9" HorizontalAlignment="Left"  Margin="0,-5,0,0" Grid.Row="9" Grid.Column="1" FontSize="30" FontWeight="Bold" Content="PASS">
+                            <Label x:Name="lblNum9" HorizontalAlignment="Left"  Margin="0,-5,0,0" Grid.Row="9" Grid.Column="1" FontSize="30" FontWeight="Bold" Content="{Binding Path=LIGHTSENSORRESULT, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}">
                                 <Label.Style>
                                     <Style TargetType="Label">
                                         <Style.Triggers>
@@ -494,7 +450,7 @@
                             </Grid.ColumnDefinitions>
 
                             <Label Foreground="{StaticResource colorTextYellow}" HorizontalAlignment="Right"  Margin="0,-5,0,0" Grid.Row="10" Grid.Column="0" FontSize="30" FontWeight="SemiBold">SPEAKER, MIC:</Label>
-                            <Label x:Name="lblNum10" HorizontalAlignment="Left"  Margin="0,-5,0,0" Grid.Row="10" Grid.Column="1" FontSize="30" FontWeight="Bold" Content="PASS">
+                            <Label x:Name="lblNum10" HorizontalAlignment="Left"  Margin="0,-5,0,0" Grid.Row="10" Grid.Column="1" FontSize="30" FontWeight="Bold" Content="{Binding Path=SPEAKERMICRESULT, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}">
                                 <Label.Style>
                                     <Style TargetType="Label">
                                         <Style.Triggers>
@@ -538,7 +494,7 @@
                             </Grid.ColumnDefinitions>
 
                             <Label Foreground="{StaticResource colorTextYellow}" HorizontalAlignment="Right"  Margin="0,-5,0,0" Grid.Row="11" Grid.Column="0" FontSize="30" FontWeight="SemiBold">IMAGE SENSOR:</Label>
-                            <Label x:Name="lblNum11" HorizontalAlignment="Left"  Margin="0,-5,0,0" Grid.Row="11" Grid.Column="1" FontSize="30" FontWeight="Bold" Content="PASS">
+                            <Label x:Name="lblNum11" HorizontalAlignment="Left"  Margin="0,-5,0,0" Grid.Row="11" Grid.Column="1" FontSize="30" FontWeight="Bold" Content="{Binding Path=IMAGESENSORRESULT, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}">
                                 <Label.Style>
                                     <Style TargetType="Label">
                                         <Style.Triggers>
@@ -555,6 +511,50 @@
                                                 <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
                                             </DataTrigger>
                                             <DataTrigger Binding="{Binding ElementName=lblNum11, Path=Content}" Value="-">
+                                                <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Label.Style>
+                            </Label>
+
+                        </Grid>
+
+                        <!--WIFI-->
+                        <Grid Height="50">
+                            <Grid.Style>
+                                <Style TargetType="Grid">
+                                    <Setter Property="Visibility" Value="Visible"/>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Path=station}" Value="PCBA-LAYER3">
+                                            <Setter Property="Visibility" Value="Collapsed"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Grid.Style>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1.3*"/>
+                                <ColumnDefinition Width="1*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Label Foreground="{StaticResource colorTextYellow}" HorizontalAlignment="Right"  Margin="0,-5,0,0" Grid.Row="3" Grid.Column="0" FontSize="30" FontWeight="SemiBold">WIFI:</Label>
+                            <Label x:Name="lblNum3" HorizontalAlignment="Left"  Margin="0,-5,0,0" Grid.Row="3" Grid.Column="1" FontSize="30" FontWeight="Bold" Content="{Binding Path=WIFIRESULT, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}">
+                                <Label.Style>
+                                    <Style TargetType="Label">
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding ElementName=lblNum3, Path=Content}" Value="PASS">
+                                                <Setter Property="Foreground" Value="{StaticResource colorTextOK}"/>
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding ElementName=lblNum3, Path=Content}" Value="FAIL">
+                                                <Setter Property="Foreground" Value="{StaticResource colorTextNG}"/>
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding ElementName=lblNum3, Path=Content}" Value="wait">
+                                                <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding ElementName=lblNum3, Path=Content}" Value="NONE">
+                                                <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding ElementName=lblNum3, Path=Content}" Value="-">
                                                 <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
                                             </DataTrigger>
                                         </Style.Triggers>
@@ -582,7 +582,7 @@
                             </Grid.ColumnDefinitions>
 
                             <Label Foreground="{StaticResource colorTextYellow}" HorizontalAlignment="Right"  Margin="0,-5,0,0" Grid.Row="12" Grid.Column="0" FontSize="30" FontWeight="SemiBold">BUTTON:</Label>
-                            <Label x:Name="lblNum12" HorizontalAlignment="Left"  Margin="0,-5,0,0" Grid.Row="12" Grid.Column="1" FontSize="30" FontWeight="Bold" Content="PASS">
+                            <Label x:Name="lblNum12" HorizontalAlignment="Left"  Margin="0,-5,0,0" Grid.Row="12" Grid.Column="1" FontSize="30" FontWeight="Bold" Content="{Binding Path=BUTTONRESULT, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}">
                                 <Label.Style>
                                     <Style TargetType="Label">
                                         <Style.Triggers>
@@ -614,7 +614,7 @@
 
                     <StackPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
                         <Label Foreground="{StaticResource colorTextYellow}" VerticalAlignment="Center" HorizontalAlignment="Left"  Margin="0,0,0,0" Grid.Row="14" Grid.Column="0" FontSize="20" FontWeight="SemiBold">Phán định tổng:</Label>
-                        <Label x:Name="lblTestResult" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="170" Grid.Row="14" Grid.Column="1" FontWeight="Bold" Content="PASS" Margin="0,-20,0,0">
+                        <Label x:Name="lblTestResult" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="170" Grid.Row="14" Grid.Column="1" FontWeight="Bold" Content="{Binding Path=TOTALRESULT, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Margin="0,-20,0,0">
                             <Label.Style>
                                 <Style TargetType="Label">
                                     <Style.Triggers>

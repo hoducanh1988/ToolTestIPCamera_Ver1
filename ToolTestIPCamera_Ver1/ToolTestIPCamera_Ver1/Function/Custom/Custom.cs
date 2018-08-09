@@ -253,6 +253,7 @@ namespace ToolTestIPCamera_Ver1.Function {
 
     public class testinginfo : INotifyPropertyChanged {
 
+        //INotifyPropertyChanged implement
         public event PropertyChangedEventHandler PropertyChanged;
         protected virtual void OnPropertyChanged(string propertyName = null) {
             PropertyChangedEventHandler handler = PropertyChanged;
@@ -261,10 +262,13 @@ namespace ToolTestIPCamera_Ver1.Function {
             }
         }
 
+        //Constructor
         public testinginfo() {
             station = GlobalData.initSetting.station;
+            Initialization();
         }
 
+        //station
         string _station;
         public string station {
             get { return _station; }
@@ -273,6 +277,188 @@ namespace ToolTestIPCamera_Ver1.Function {
                 OnPropertyChanged(nameof(station));
             }
         }
+
+        //mac address
+        string _macaddress;
+        public string MACADDRESS {
+            get { return _macaddress; }
+            set {
+                _macaddress = value;
+                OnPropertyChanged(nameof(MACADDRESS));
+            }
+        }
+
+        //result
+        #region RESULT
+
+        string _writemac;
+        public string WRITEMACRESULT {
+            get { return _writemac; }
+            set {
+                _writemac = value;
+                OnPropertyChanged(nameof(WRITEMACRESULT));
+            }
+        }
+        string _uploadfirmware;
+        public string UPLOADFWRESULT {
+            get { return _uploadfirmware; }
+            set {
+                _uploadfirmware = value;
+                OnPropertyChanged(nameof(UPLOADFWRESULT));
+            }
+        }
+        string _wifi;
+        public string WIFIRESULT {
+            get { return _wifi; }
+            set {
+                _wifi = value;
+                OnPropertyChanged(nameof(WIFIRESULT));
+            }
+        }
+        string _firmwareversion;
+        public string FWVERSIONRESULT {
+            get { return _firmwareversion; }
+            set {
+                _firmwareversion = value;
+                OnPropertyChanged(nameof(FWVERSIONRESULT));
+            }
+        }
+        string _lan;
+        public string LANRESULT {
+            get { return _lan; }
+            set {
+                _lan = value;
+                OnPropertyChanged(nameof(LANRESULT));
+            }
+        }
+        string _sdcard;
+        public string SDCARDRESULT {
+            get { return _sdcard; }
+            set {
+                _sdcard = value;
+                OnPropertyChanged(nameof(SDCARDRESULT));
+            }
+        }
+        string _usb;
+        public string USBRESULT {
+            get { return _usb; }
+            set {
+                _usb = value;
+                OnPropertyChanged(nameof(USBRESULT));
+            }
+        }
+        string _rgbled;
+        public string RGBLEDRESULT {
+            get { return _rgbled; }
+            set {
+                _rgbled = value;
+                OnPropertyChanged(nameof(RGBLEDRESULT));
+            }
+        }
+        string _lightsensor;
+        public string LIGHTSENSORRESULT {
+            get { return _lightsensor; }
+            set {
+                _lightsensor = value;
+                OnPropertyChanged(nameof(LIGHTSENSORRESULT));
+            }
+        }
+        string _speakermic;
+        public string SPEAKERMICRESULT {
+            get { return _speakermic; }
+            set {
+                _speakermic = value;
+                OnPropertyChanged(nameof(SPEAKERMICRESULT));
+            }
+        }
+        string _imagesensor;
+        public string IMAGESENSORRESULT {
+            get { return _imagesensor; }
+            set {
+                _imagesensor = value;
+                OnPropertyChanged(nameof(IMAGESENSORRESULT));
+            }
+        }
+        string _button;
+        public string BUTTONRESULT {
+            get { return _button; }
+            set {
+                _button = value;
+                OnPropertyChanged(nameof(BUTTONRESULT));
+            }
+        }
+        string _totalresult;
+        public string TOTALRESULT {
+            get { return _totalresult; }
+            set {
+                _totalresult = value;
+                OnPropertyChanged(nameof(TOTALRESULT));
+            }
+        }
+
+        #endregion
+
+        //log
+        #region LOG
+
+        string _systemlog;
+        public string SYSTEMLOG {
+            get { return _systemlog; }
+            set {
+                _systemlog = value;
+                OnPropertyChanged(nameof(SYSTEMLOG));
+            }
+        }
+        string _errorcode;
+        public string ERRORCODE {
+            get { return _errorcode; }
+            set {
+                _errorcode = value;
+                OnPropertyChanged(nameof(ERRORCODE));
+            }
+        }
+        string _ontlog;
+        public string ONTLOG {
+            get { return _ontlog; }
+            set {
+                _ontlog = value;
+                OnPropertyChanged(nameof(ONTLOG));
+            }
+        }
+        string _totaltime;
+        public string TOTALTIME {
+            get { return _totaltime; }
+            set {
+                _totaltime = value;
+                OnPropertyChanged(nameof(TOTALTIME));
+            }
+        }
+
+        #endregion
+
+        public void Initialization() {
+            this.TOTALTIME = "0";
+            this.MACADDRESS = "-";
+
+            this.WRITEMACRESULT = Parameters.testStatus.NONE.ToString();
+            this.UPLOADFWRESULT = Parameters.testStatus.NONE.ToString();
+            this.WIFIRESULT = Parameters.testStatus.NONE.ToString();
+            this.FWVERSIONRESULT = Parameters.testStatus.NONE.ToString();
+            this.LANRESULT = Parameters.testStatus.NONE.ToString();
+            this.SDCARDRESULT = Parameters.testStatus.NONE.ToString();
+            this.USBRESULT = Parameters.testStatus.NONE.ToString();
+            this.RGBLEDRESULT = Parameters.testStatus.NONE.ToString();
+            this.LIGHTSENSORRESULT = Parameters.testStatus.NONE.ToString();
+            this.SPEAKERMICRESULT = Parameters.testStatus.NONE.ToString();
+            this.IMAGESENSORRESULT = Parameters.testStatus.NONE.ToString();
+            this.BUTTONRESULT = Parameters.testStatus.NONE.ToString();
+            this.TOTALRESULT = Parameters.testStatus.NONE.ToString();
+
+            this.SYSTEMLOG = "";
+            this.ONTLOG = "";
+            this.ERRORCODE = "";
+        }
+
     }
 
 }
