@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ToolTestIPCamera_Ver1.Function.Protocol
 {
-    public class Serial
+    public class Serial : IProtocol
     {
         SerialPort _serialport = null;
         string _PortName = "";
@@ -144,5 +144,25 @@ namespace ToolTestIPCamera_Ver1.Function.Protocol
             }
         }
 
+
+        public bool Connection() {
+            throw new NotImplementedException();
+        }
+
+        public bool sendListCommand(params string[] _listcmd) {
+            throw new NotImplementedException();
+        }
+
+        public bool sendListCommand(IEnumerable<string> _listcmd) {
+            throw new NotImplementedException();
+        }
+
+        public bool sendListCommand(IEnumerable<string> _listcmd, out string msg) {
+            throw new NotImplementedException();
+        }
+
+        public string Read0() {
+            throw new NotImplementedException();
+        }
     }
 }

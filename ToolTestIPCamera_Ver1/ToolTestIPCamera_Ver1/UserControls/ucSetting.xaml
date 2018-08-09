@@ -156,6 +156,30 @@
                             <!--MINUS-->
                             <Label FontSize="15" FontWeight="Bold" Content="-"></Label>
 
+                            <!--USB DEBUG-->
+                            <Grid Height="100">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="3*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <StackPanel Grid.Column="0">
+                                    <WrapPanel>
+                                        <Label Foreground="{StaticResource colorBorder}" FontSize="14" FontWeight="Bold" Content="CÀI ĐẶT CHO USB DEBUG:"></Label>
+                                        <!--<Button Style="{StaticResource roundCornerButton}" Content="Hỗ trợ cài đặt" Click="Button_Click"></Button>-->
+                                    </WrapPanel>
+                                    <Label Content="USB Debug - DUT #01" FontSize="13"></Label>
+                                    <ComboBox Padding="5,0,0,0" Background="#fffdbf" Height="30" VerticalContentAlignment="Center" x:Name="cbbUsbdebug1" FontSize="13" FontWeight="Bold" Text="{Binding Path=usbdebug1, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></ComboBox>
+                                   
+                                </StackPanel>
+                                <Grid Grid.Column="1" Margin="20">
+                                    <!--<Image Source="/Asset/Images/usbDebug.png" Margin="50"/>-->
+                                </Grid>
+                            </Grid>
+
+                            <!--MINUS-->
+                            <Label FontSize="15" FontWeight="Bold" Content="-"></Label>
+
                             <!--WIFI Router-->
                             <Grid Height="160">
                                 <Grid.ColumnDefinitions>

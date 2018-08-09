@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ToolTestIPCamera_Ver1.Function.Protocol
 {
-    public abstract class Telnet
+    public class Telnet : IProtocol
     {
 
         public bool IsConnected {
@@ -78,19 +78,21 @@ namespace ToolTestIPCamera_Ver1.Function.Protocol
         /// Write data to TCP Server
         /// </summary>
         /// <param name="_cmd"></param>
-        public void Write(string _cmd) {
-            if (!IsConnected) return;
+        public bool Write(string _cmd) {
+            if (!IsConnected) return false;
             byte[] buf = System.Text.ASCIIEncoding.ASCII.GetBytes(_cmd.Replace("\0xFF", "\0xFF\0xFF")); //convert string to array[bytes]
             this.clients.GetStream().Write(buf, 0, buf.Length);
-
+            return true;
         }
 
         /// <summary>
         /// Write data to TCP Server line by line
         /// </summary>
         /// <param name="_cmd"></param>
-        public void WriteLine(string _cmd) {
+        public bool WriteLine(string _cmd) {
+            if (!IsConnected) return false;
             this.Write(_cmd + "\r\n");
+            return true;
         }
 
         /// <summary>
@@ -256,9 +258,22 @@ namespace ToolTestIPCamera_Ver1.Function.Protocol
         /// <summary>
         /// Close connection with TCP Server
         /// </summary>
-        public void Close() {
-            this.clients.Close();
+        public bool Close() {
+            try {
+                this.clients.Close();
+                return true;
+            } catch {
+                return false;
+            }
         }
 
+
+        public bool Open(out string _message) {
+            throw new NotImplementedException();
+        }
+
+        public bool WriteLineAndWaitComplete(string _cmd, ref string msg) {
+            throw new NotImplementedException();
+        }
     }
 }

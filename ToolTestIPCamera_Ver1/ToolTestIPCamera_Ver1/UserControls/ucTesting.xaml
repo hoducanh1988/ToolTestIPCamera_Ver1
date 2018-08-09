@@ -7,6 +7,38 @@
              mc:Ignorable="d" 
              d:DesignHeight="768" d:DesignWidth="1366">
 
+    <UserControl.Resources>
+        <Style TargetType="{x:Type TabItem}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TabItem}">
+                        <Grid>
+                            <Border  Name="Border" Margin="0,0,-4,0" BorderThickness="1,1,1,1" CornerRadius="2,12,0,0" >
+                                <ContentPresenter x:Name="ContentSite" VerticalAlignment="Center" HorizontalAlignment="Center" ContentSource="Header" Margin="12,2,12,2" RecognizesAccessKey="True"/>
+                            </Border>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter Property="Panel.ZIndex" Value="100"/>
+                                <Setter TargetName="Border" Property="Background" Value="#43d854" />
+                                <Setter TargetName="Border" Property="BorderThickness" Value="1,1,1,0" />
+                            </Trigger>
+                            <Trigger Property="IsSelected" Value="False">
+                                <Setter TargetName="Border" Property="Background" Value="#FFEEEEEE" />
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Border" Property="Background" Value="Orange" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        
+        
+    </UserControl.Resources>
+    
+    
     <Border BorderBrush="{StaticResource colorBorder}" BorderThickness="0.5" CornerRadius="5" Background="{StaticResource colorBackground}">
         <Grid>
             <Grid.ColumnDefinitions>
@@ -23,7 +55,7 @@
 
                 <StackPanel Grid.Column="0" Margin="5,15,0,0">
                     <Label FontSize="22" FontWeight="Bold">Nhập địa chỉ MAC của IP Camera:</Label>
-                    <TextBox CharacterCasing="Upper" FontWeight="Bold" Height="60" FontSize="40"></TextBox>
+                    <TextBox CharacterCasing="Upper" FontWeight="Bold" Height="60" FontSize="40" KeyDown="TextBox_KeyDown"></TextBox>
                     <!--<TextBox x:Name="txtMacAddress" Text="{Binding Path=MACINPUTED, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" KeyDown="TextBox_KeyDown" TextChanged="TextBox_TextChanged" IsEnabled="{Binding Path=ENABLEINPUTMAC, UpdateSourceTrigger=PropertyChanged}" CharacterCasing="Upper" Foreground="#FF333333" FontWeight="Bold" FontSize="30" Height="40" Width="300" HorizontalAlignment="Left" Style="{StaticResource hintRoundTextBox}" Tag="Nhập địa chỉ MAC trên tem của ONT vào đây"></TextBox>-->
                     <Label x:Name="lblOldMAC" Margin="10,0,0,0" VerticalAlignment="Center" FontSize="20" FontWeight="SemiBold" Foreground="#FF00BCD4"></Label>
                     <!--<WrapPanel>
@@ -31,9 +63,24 @@
                 </StackPanel>
 
                 <!--system log-->
-                <Border BorderBrush="{StaticResource colorBorder}" BorderThickness="0" CornerRadius="5" Grid.Row="2" Margin="5,0,5,5">
-                    <Grid>
-                        <!--<Border Background="#DADADA" Height="180" VerticalAlignment="Top" BorderBrush="{StaticResource colorBorder}" BorderThickness="0,0,0,0.5" CornerRadius="5">
+
+                <TabControl Grid.Row="1" TabStripPlacement="Bottom">
+                    <TabControl.Resources>
+                        <Style TargetType="{x:Type TabPanel}">
+                            <Setter Property="HorizontalAlignment" Value="Center" />
+                        </Style>
+                    </TabControl.Resources>
+
+                    <TabItem>
+                        <TabItem.Header>
+                            <Grid Height="30">
+                                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15" Text="SYSTEM LOG" FontWeight="SemiBold"/>
+                            </Grid>
+                        </TabItem.Header>
+                        
+                        <Border BorderBrush="{StaticResource colorBorder}" BorderThickness="0" CornerRadius="5" Margin="5,0,5,5">
+                            <Grid>
+                                <!--<Border Background="#DADADA" Height="180" VerticalAlignment="Top" BorderBrush="{StaticResource colorBorder}" BorderThickness="0,0,0,0.5" CornerRadius="5">
                             <StackPanel>
                                 <Grid VerticalAlignment="Top" HorizontalAlignment="Stretch">
                                     <Label FontWeight="Bold" FontSize="22">THÔNG BÁO HỆ THỐNG:</Label>
@@ -42,21 +89,67 @@
                                 </Grid>
                                 <RichTextBox x:Name="rtbResultInfo" IsReadOnly="True" FontWeight="SemiBold" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="Transparent" BorderThickness="0" Block.LineHeight="1">
                                 </RichTextBox>
-                                --><!--<Label FontWeight="SemiBold" FontSize="15" Foreground="Red" Content="{Binding Path=ERRORMESSAGE, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></Label>-->
-                                <!--<Label VerticalAlignment="Center" HorizontalAlignment="Right" Content="{Binding Path=DEVCOUNTER, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></Label>--><!--
+                                -->
+                                <!--<Label FontWeight="SemiBold" FontSize="15" Foreground="Red" Content="{Binding Path=ERRORMESSAGE, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></Label>-->
+                                <!--<Label VerticalAlignment="Center" HorizontalAlignment="Right" Content="{Binding Path=DEVCOUNTER, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></Label>-->
+                                <!--
                             </StackPanel>
                         </Border>-->
-                        <ScrollViewer Margin="0,5,5,5" x:Name="_scrollViewer">
-                            <RichTextBox  Background="Transparent" BorderThickness="0" IsReadOnly="True" Block.LineHeight="1" Padding="5,5,5,5">
-                                <FlowDocument PageHeight="180">
-                                    <Paragraph>
-                                        <Run Foreground="#050928" FontWeight="Normal" Text="{Binding SYSTEMLOG, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
-                                    </Paragraph>
-                                </FlowDocument>
-                            </RichTextBox>
-                        </ScrollViewer>
-                    </Grid>
-                </Border>
+                                <ScrollViewer Margin="0,5,5,5" x:Name="_scrollViewer1">
+                                    <RichTextBox  Background="Transparent" BorderThickness="0" IsReadOnly="True" Block.LineHeight="1" Padding="5,5,5,5">
+                                        <FlowDocument PageHeight="180">
+                                            <Paragraph>
+                                                <Run Foreground="#050928" FontWeight="Normal" Text="{Binding SYSTEMLOG, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
+                                            </Paragraph>
+                                        </FlowDocument>
+                                    </RichTextBox>
+                                </ScrollViewer>
+                            </Grid>
+                        </Border>
+
+                    </TabItem>
+
+                    <TabItem>
+                        <TabItem.Header>
+                            <Grid Height="30">
+                                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15" Text="UART LOG" FontWeight="SemiBold"/>
+                            </Grid>
+                        </TabItem.Header>
+
+                        <Border BorderBrush="{StaticResource colorBorder}" BorderThickness="0" CornerRadius="5" Margin="5,0,5,5">
+                            <Grid>
+                                <!--<Border Background="#DADADA" Height="180" VerticalAlignment="Top" BorderBrush="{StaticResource colorBorder}" BorderThickness="0,0,0,0.5" CornerRadius="5">
+                            <StackPanel>
+                                <Grid VerticalAlignment="Top" HorizontalAlignment="Stretch">
+                                    <Label FontWeight="Bold" FontSize="22">THÔNG BÁO HỆ THỐNG:</Label>
+                                    <CheckBox Visibility="Collapsed" VerticalAlignment="Center" HorizontalAlignment="Right" Background="#FF00796B" IsChecked="{Binding Path=DEVCOUNTER, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Content="Auto scroll ">
+                                    </CheckBox>
+                                </Grid>
+                                <RichTextBox x:Name="rtbResultInfo" IsReadOnly="True" FontWeight="SemiBold" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="Transparent" BorderThickness="0" Block.LineHeight="1">
+                                </RichTextBox>
+                                -->
+                                <!--<Label FontWeight="SemiBold" FontSize="15" Foreground="Red" Content="{Binding Path=ERRORMESSAGE, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></Label>-->
+                                <!--<Label VerticalAlignment="Center" HorizontalAlignment="Right" Content="{Binding Path=DEVCOUNTER, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></Label>-->
+                                <!--
+                            </StackPanel>
+                        </Border>-->
+                                <ScrollViewer Margin="0,5,5,5" x:Name="_scrollViewer2">
+                                    <RichTextBox  Background="Transparent" BorderThickness="0" IsReadOnly="True" Block.LineHeight="1" Padding="5,5,5,5">
+                                        <FlowDocument PageHeight="180">
+                                            <Paragraph>
+                                                <Run Foreground="#050928" FontWeight="Normal" Text="{Binding UARTLOG, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
+                                            </Paragraph>
+                                        </FlowDocument>
+                                    </RichTextBox>
+                                </ScrollViewer>
+                            </Grid>
+                        </Border>
+
+                    </TabItem>
+
+
+                </TabControl>
+                
 
             </Grid>
 
@@ -117,6 +210,9 @@
                                             <DataTrigger Binding="{Binding ElementName=lblNum1, Path=Content}" Value="-">
                                                 <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
                                             </DataTrigger>
+                                            <DataTrigger Binding="{Binding ElementName=lblNum1, Path=Content}" Value="X">
+                                                <Setter Property="Foreground" Value="Black"/>
+                                            </DataTrigger>
                                         </Style.Triggers>
                                     </Style>
                                 </Label.Style>
@@ -160,6 +256,9 @@
                                             </DataTrigger>
                                             <DataTrigger Binding="{Binding ElementName=lblNum2, Path=Content}" Value="-">
                                                 <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding ElementName=lblNum2, Path=Content}" Value="X">
+                                                <Setter Property="Foreground" Value="Black"/>
                                             </DataTrigger>
                                         </Style.Triggers>
                                     </Style>
@@ -205,6 +304,9 @@
                                             <DataTrigger Binding="{Binding ElementName=lblNum4, Path=Content}" Value="-">
                                                 <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
                                             </DataTrigger>
+                                            <DataTrigger Binding="{Binding ElementName=lblNum4, Path=Content}" Value="X">
+                                                <Setter Property="Foreground" Value="Black"/>
+                                            </DataTrigger>
                                         </Style.Triggers>
                                     </Style>
                                 </Label.Style>
@@ -249,6 +351,9 @@
                                             <DataTrigger Binding="{Binding ElementName=lblNum5, Path=Content}" Value="-">
                                                 <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
                                             </DataTrigger>
+                                            <DataTrigger Binding="{Binding ElementName=lblNum5, Path=Content}" Value="X">
+                                                <Setter Property="Foreground" Value="Black"/>
+                                            </DataTrigger>
                                         </Style.Triggers>
                                     </Style>
                                 </Label.Style>
@@ -278,6 +383,7 @@
                                 <Label.Style>
                                     <Style TargetType="Label">
                                         <Style.Triggers>
+
                                             <DataTrigger Binding="{Binding ElementName=lblNum6, Path=Content}" Value="PASS">
                                                 <Setter Property="Foreground" Value="{StaticResource colorTextOK}"/>
                                             </DataTrigger>
@@ -293,6 +399,10 @@
                                             <DataTrigger Binding="{Binding ElementName=lblNum6, Path=Content}" Value="-">
                                                 <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
                                             </DataTrigger>
+                                            <DataTrigger Binding="{Binding ElementName=lblNum6, Path=Content}" Value="X">
+                                                <Setter Property="Foreground" Value="Black"/>
+                                            </DataTrigger>
+
                                         </Style.Triggers>
                                     </Style>
                                 </Label.Style>
@@ -336,6 +446,9 @@
                                             </DataTrigger>
                                             <DataTrigger Binding="{Binding ElementName=lblNum7, Path=Content}" Value="-">
                                                 <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding ElementName=lblNum7, Path=Content}" Value="X">
+                                                <Setter Property="Foreground" Value="Black"/>
                                             </DataTrigger>
                                         </Style.Triggers>
                                     </Style>
@@ -381,6 +494,9 @@
                                             <DataTrigger Binding="{Binding ElementName=lblNum8, Path=Content}" Value="-">
                                                 <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
                                             </DataTrigger>
+                                            <DataTrigger Binding="{Binding ElementName=lblNum8, Path=Content}" Value="X">
+                                                <Setter Property="Foreground" Value="Black"/>
+                                            </DataTrigger>
                                         </Style.Triggers>
                                     </Style>
                                 </Label.Style>
@@ -424,6 +540,9 @@
                                             </DataTrigger>
                                             <DataTrigger Binding="{Binding ElementName=lblNum9, Path=Content}" Value="-">
                                                 <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding ElementName=lblNum9, Path=Content}" Value="X">
+                                                <Setter Property="Foreground" Value="Black"/>
                                             </DataTrigger>
                                         </Style.Triggers>
                                     </Style>
@@ -469,6 +588,9 @@
                                             <DataTrigger Binding="{Binding ElementName=lblNum10, Path=Content}" Value="-">
                                                 <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
                                             </DataTrigger>
+                                            <DataTrigger Binding="{Binding ElementName=lblNum10, Path=Content}" Value="X">
+                                                <Setter Property="Foreground" Value="Black"/>
+                                            </DataTrigger>
                                         </Style.Triggers>
                                     </Style>
                                 </Label.Style>
@@ -512,6 +634,9 @@
                                             </DataTrigger>
                                             <DataTrigger Binding="{Binding ElementName=lblNum11, Path=Content}" Value="-">
                                                 <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding ElementName=lblNum11, Path=Content}" Value="X">
+                                                <Setter Property="Foreground" Value="Black"/>
                                             </DataTrigger>
                                         </Style.Triggers>
                                     </Style>
@@ -557,6 +682,9 @@
                                             <DataTrigger Binding="{Binding ElementName=lblNum3, Path=Content}" Value="-">
                                                 <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
                                             </DataTrigger>
+                                            <DataTrigger Binding="{Binding ElementName=lblNum3, Path=Content}" Value="X">
+                                                <Setter Property="Foreground" Value="Black"/>
+                                            </DataTrigger>
                                         </Style.Triggers>
                                     </Style>
                                 </Label.Style>
@@ -600,6 +728,9 @@
                                             </DataTrigger>
                                             <DataTrigger Binding="{Binding ElementName=lblNum12, Path=Content}" Value="-">
                                                 <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding ElementName=lblNum12, Path=Content}" Value="X">
+                                                <Setter Property="Foreground" Value="Black"/>
                                             </DataTrigger>
                                         </Style.Triggers>
                                     </Style>

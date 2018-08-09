@@ -25,12 +25,25 @@ namespace ToolTestIPCamera_Ver1.UserControls {
         }
 
         private void TextBox_KeyDown(object sender, KeyEventArgs e) {
-
-        }
-
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e) {
-
+            if (e.Key == Key.Enter) {
+                //Check MAC Address is valid or not
+                
+                //Test Function
+                switch (GlobalData.initSetting.station) {
+                    case "PCBA-LAYER2": {
+                            bool ret = Function.Excute.ExcuteTestLayer2.Excute();
+                            break;
+                        }
+                    case "PCBA-LAYER3": {
+                            bool ret = Function.Excute.ExcuteTestLayer3.Excute();
+                            break;
+                        }
+                    case "SAU-DONG-VO": {
+                            bool ret = Function.Excute.ExcuteTestProduct.Excute();
+                            break;
+                        }
+                }
+            }
         }
     }
 }

@@ -10,6 +10,8 @@ namespace ToolTestIPCamera_Ver1.Function
     {
 
         public static List<string> ListStation = new List<string>() { "PCBA-LAYER2", "PCBA-LAYER3", "SAU-DONG-VO" };
-        public enum testStatus { NONE = 0, Wait = 1, PASS = 2, FAIL = 3 };
+        public enum testStatus { NONE = 0, Wait = 1, PASS = 2, FAIL = 3, X = 4 };
+        public static List<string> ListUsbComport = BaseFunction.get_Array_Of_SerialPort();
+
     }
 }

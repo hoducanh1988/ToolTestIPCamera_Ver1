@@ -23,7 +23,9 @@ namespace ToolTestIPCamera_Ver1.UserControls {
         public ucSetting() {
             InitializeComponent();
             this.cbbStation.ItemsSource = Parameters.ListStation;
+            this.cbbUsbdebug1.ItemsSource = Parameters.ListUsbComport;
             this.DataContext = GlobalData.initSetting;
+            BaseFunction.SelectCameraProtocol(GlobalData.initSetting.station);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e) {
@@ -31,6 +33,7 @@ namespace ToolTestIPCamera_Ver1.UserControls {
             switch (b.Content) {
                 case "SAVE SETTING": {
                         GlobalData.initSetting.SaveSetting();
+                        BaseFunction.SelectCameraProtocol(GlobalData.initSetting.station);
                         MessageBox.Show("Success.","SAVE SETTING", MessageBoxButton.OK, MessageBoxImage.Information);
                         break;
                     }

@@ -114,6 +114,13 @@ namespace ToolTestIPCamera_Ver1.Function {
                 OnPropertyChanged(nameof(dutpass));
             }
         }
+        public string usbdebug1 {
+            get { return Properties.Settings.Default.Usbdebug1; }
+            set {
+                Properties.Settings.Default.Usbdebug1 = value;
+                OnPropertyChanged(nameof(usbdebug1));
+            }
+        }
         public string routerip {
             get { return Properties.Settings.Default.RouterIP; }
             set {
@@ -157,6 +164,8 @@ namespace ToolTestIPCamera_Ver1.Function {
             get { return Properties.Settings.Default.wmOption; }
             set {
                 Properties.Settings.Default.wmOption = value;
+                GlobalData.testingDataDUT.WRITEMACRESULT = value == true ? Parameters.testStatus.NONE.ToString() : Parameters.testStatus.X.ToString();
+                //GlobalData.testingDataDUT.writemacoption = value;
                 OnPropertyChanged(nameof(writemacoption));
             }
         }
@@ -164,6 +173,8 @@ namespace ToolTestIPCamera_Ver1.Function {
             get { return Properties.Settings.Default.ufOption; }
             set {
                 Properties.Settings.Default.ufOption = value;
+                GlobalData.testingDataDUT.UPLOADFWRESULT = value == true ? Parameters.testStatus.NONE.ToString() : Parameters.testStatus.X.ToString();
+                //GlobalData.testingDataDUT.uploadfirmwareoption = value;
                 OnPropertyChanged(nameof(uploadfirmwareoption));
             }
         }
@@ -171,6 +182,8 @@ namespace ToolTestIPCamera_Ver1.Function {
             get { return Properties.Settings.Default.cwOption; }
             set {
                 Properties.Settings.Default.cwOption = value;
+                GlobalData.testingDataDUT.WIFIRESULT = value == true ? Parameters.testStatus.NONE.ToString() : Parameters.testStatus.X.ToString();
+                //GlobalData.testingDataDUT.checkwifioption = value;
                 OnPropertyChanged(nameof(checkwifioption));
             }
         }
@@ -178,6 +191,8 @@ namespace ToolTestIPCamera_Ver1.Function {
             get { return Properties.Settings.Default.cfvOption; }
             set {
                 Properties.Settings.Default.cfvOption = value;
+                GlobalData.testingDataDUT.FWVERSIONRESULT = value == true ? Parameters.testStatus.NONE.ToString() : Parameters.testStatus.X.ToString();
+                //GlobalData.testingDataDUT.checkfirmwareversionoption = value;
                 OnPropertyChanged(nameof(checkfirmwareversionoption));
             }
         }
@@ -185,6 +200,8 @@ namespace ToolTestIPCamera_Ver1.Function {
             get { return Properties.Settings.Default.clOption; }
             set {
                 Properties.Settings.Default.clOption = value;
+                GlobalData.testingDataDUT.LANRESULT = value == true ? Parameters.testStatus.NONE.ToString() : Parameters.testStatus.X.ToString();
+                //GlobalData.testingDataDUT.checklanoption = value;
                 OnPropertyChanged(nameof(checklanoption));
             }
         }
@@ -192,6 +209,8 @@ namespace ToolTestIPCamera_Ver1.Function {
             get { return Properties.Settings.Default.cscOption; }
             set {
                 Properties.Settings.Default.cscOption = value;
+                GlobalData.testingDataDUT.SDCARDRESULT = value == true ? Parameters.testStatus.NONE.ToString() : Parameters.testStatus.X.ToString();
+                //GlobalData.testingDataDUT.checksdcardoption = value;
                 OnPropertyChanged(nameof(checksdcardoption));
             }
         }
@@ -199,6 +218,8 @@ namespace ToolTestIPCamera_Ver1.Function {
             get { return Properties.Settings.Default.cuOption; }
             set {
                 Properties.Settings.Default.cuOption = value;
+                GlobalData.testingDataDUT.USBRESULT = value == true ? Parameters.testStatus.NONE.ToString() : Parameters.testStatus.X.ToString();
+                //GlobalData.testingDataDUT.checkusboption = value;
                 OnPropertyChanged(nameof(checkusboption));
             }
         }
@@ -206,6 +227,8 @@ namespace ToolTestIPCamera_Ver1.Function {
             get { return Properties.Settings.Default.crlOption; }
             set {
                 Properties.Settings.Default.crlOption = value;
+                GlobalData.testingDataDUT.RGBLEDRESULT = value == true ? Parameters.testStatus.NONE.ToString() : Parameters.testStatus.X.ToString();
+                //GlobalData.testingDataDUT.checkrgbledoption = value;
                 OnPropertyChanged(nameof(checkrgbledoption));
             }
         }
@@ -213,6 +236,8 @@ namespace ToolTestIPCamera_Ver1.Function {
             get { return Properties.Settings.Default.clsOption; }
             set {
                 Properties.Settings.Default.clsOption = value;
+                GlobalData.testingDataDUT.LIGHTSENSORRESULT = value == true ? Parameters.testStatus.NONE.ToString() : Parameters.testStatus.X.ToString();
+                //GlobalData.testingDataDUT.checklightsensoroption = value;
                 OnPropertyChanged(nameof(checklightsensoroption));
             }
         }
@@ -220,6 +245,8 @@ namespace ToolTestIPCamera_Ver1.Function {
             get { return Properties.Settings.Default.csmOption; }
             set {
                 Properties.Settings.Default.csmOption = value;
+                GlobalData.testingDataDUT.SPEAKERMICRESULT = value == true ? Parameters.testStatus.NONE.ToString() : Parameters.testStatus.X.ToString();
+                //GlobalData.testingDataDUT.checkspeakermicoption = value;
                 OnPropertyChanged(nameof(checkspeakermicoption));
             }
         }
@@ -227,6 +254,9 @@ namespace ToolTestIPCamera_Ver1.Function {
             get { return Properties.Settings.Default.cisOption; }
             set {
                 Properties.Settings.Default.cisOption = value;
+                GlobalData.testingDataDUT.IMAGESENSORRESULT = value == true ? Parameters.testStatus.NONE.ToString() : Parameters.testStatus.X.ToString();
+                
+                //GlobalData.testingDataDUT.checkimagesensoroption = value;
                 OnPropertyChanged(nameof(checkimagesensoroption));
             }
         }
@@ -234,6 +264,8 @@ namespace ToolTestIPCamera_Ver1.Function {
             get { return Properties.Settings.Default.cbOption; }
             set {
                 Properties.Settings.Default.cbOption = value;
+                GlobalData.testingDataDUT.BUTTONRESULT = value == true ? Parameters.testStatus.NONE.ToString() : Parameters.testStatus.X.ToString();
+                //GlobalData.testingDataDUT.checkbuttonoption = value;
                 OnPropertyChanged(nameof(checkbuttonoption));
             }
         }
@@ -265,6 +297,7 @@ namespace ToolTestIPCamera_Ver1.Function {
         //Constructor
         public testinginfo() {
             station = GlobalData.initSetting.station;
+            
             Initialization();
         }
 
@@ -287,6 +320,7 @@ namespace ToolTestIPCamera_Ver1.Function {
                 OnPropertyChanged(nameof(MACADDRESS));
             }
         }
+
 
         //result
         #region RESULT
@@ -418,11 +452,11 @@ namespace ToolTestIPCamera_Ver1.Function {
             }
         }
         string _ontlog;
-        public string ONTLOG {
+        public string UARTLOG {
             get { return _ontlog; }
             set {
                 _ontlog = value;
-                OnPropertyChanged(nameof(ONTLOG));
+                OnPropertyChanged(nameof(UARTLOG));
             }
         }
         string _totaltime;
@@ -440,22 +474,22 @@ namespace ToolTestIPCamera_Ver1.Function {
             this.TOTALTIME = "0";
             this.MACADDRESS = "-";
 
-            this.WRITEMACRESULT = Parameters.testStatus.NONE.ToString();
-            this.UPLOADFWRESULT = Parameters.testStatus.NONE.ToString();
-            this.WIFIRESULT = Parameters.testStatus.NONE.ToString();
-            this.FWVERSIONRESULT = Parameters.testStatus.NONE.ToString();
-            this.LANRESULT = Parameters.testStatus.NONE.ToString();
-            this.SDCARDRESULT = Parameters.testStatus.NONE.ToString();
-            this.USBRESULT = Parameters.testStatus.NONE.ToString();
-            this.RGBLEDRESULT = Parameters.testStatus.NONE.ToString();
-            this.LIGHTSENSORRESULT = Parameters.testStatus.NONE.ToString();
-            this.SPEAKERMICRESULT = Parameters.testStatus.NONE.ToString();
-            this.IMAGESENSORRESULT = Parameters.testStatus.NONE.ToString();
-            this.BUTTONRESULT = Parameters.testStatus.NONE.ToString();
+            this.WRITEMACRESULT =  GlobalData.initSetting.writemacoption == true ? Parameters.testStatus.NONE.ToString() : Parameters.testStatus.X.ToString();
+            this.UPLOADFWRESULT = GlobalData.initSetting.uploadfirmwareoption == true ? Parameters.testStatus.NONE.ToString() : Parameters.testStatus.X.ToString();
+            this.WIFIRESULT = GlobalData.initSetting.checkwifioption == true ? Parameters.testStatus.NONE.ToString() : Parameters.testStatus.X.ToString();
+            this.FWVERSIONRESULT = GlobalData.initSetting.checkfirmwareversionoption == true ? Parameters.testStatus.NONE.ToString() : Parameters.testStatus.X.ToString();
+            this.LANRESULT = GlobalData.initSetting.checklanoption == true ? Parameters.testStatus.NONE.ToString() : Parameters.testStatus.X.ToString();
+            this.SDCARDRESULT = GlobalData.initSetting.checksdcardoption == true ? Parameters.testStatus.NONE.ToString() : Parameters.testStatus.X.ToString();
+            this.USBRESULT = GlobalData.initSetting.checkusboption == true ? Parameters.testStatus.NONE.ToString() : Parameters.testStatus.X.ToString();
+            this.RGBLEDRESULT = GlobalData.initSetting.checkrgbledoption == true ? Parameters.testStatus.NONE.ToString() : Parameters.testStatus.X.ToString();
+            this.LIGHTSENSORRESULT = GlobalData.initSetting.checklightsensoroption == true ? Parameters.testStatus.NONE.ToString() : Parameters.testStatus.X.ToString();
+            this.SPEAKERMICRESULT = GlobalData.initSetting.checkspeakermicoption == true ? Parameters.testStatus.NONE.ToString() : Parameters.testStatus.X.ToString();
+            this.IMAGESENSORRESULT = GlobalData.initSetting.checkimagesensoroption == true ? Parameters.testStatus.NONE.ToString() : Parameters.testStatus.X.ToString();
+            this.BUTTONRESULT = GlobalData.initSetting.checkbuttonoption == true ? Parameters.testStatus.NONE.ToString() : Parameters.testStatus.X.ToString();
             this.TOTALRESULT = Parameters.testStatus.NONE.ToString();
 
             this.SYSTEMLOG = "";
-            this.ONTLOG = "";
+            this.UARTLOG = "";
             this.ERRORCODE = "";
         }
 

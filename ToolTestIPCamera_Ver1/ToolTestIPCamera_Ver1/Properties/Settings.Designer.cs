@@ -322,5 +322,17 @@ namespace ToolTestIPCamera_Ver1.Properties {
                 this["cbOption"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Usbdebug1 {
+            get {
+                return ((string)(this["Usbdebug1"]));
+            }
+            set {
+                this["Usbdebug1"] = value;
+            }
+        }
     }
 }
