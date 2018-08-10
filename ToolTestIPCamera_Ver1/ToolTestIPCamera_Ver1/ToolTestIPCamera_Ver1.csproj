@@ -42,6 +42,9 @@
     <Reference Include="MaterialDesignThemes.Wpf, Version=2.4.1.1101, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MaterialDesignThemes.2.4.1.1101\lib\net45\MaterialDesignThemes.Wpf.dll</HintPath>
     </Reference>
+    <Reference Include="NAudio, Version=1.8.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NAudio.1.8.4\lib\net35\NAudio.dll</HintPath>
+    </Reference>
     <Reference Include="reachframework" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -71,6 +74,7 @@
     <Compile Include="Function\Excute\PCBA\ExcuteTestLayer2.cs" />
     <Compile Include="Function\Excute\PCBA\ExcuteTestLayer3.cs" />
     <Compile Include="Function\Excute\Product\ExcuteTestProduct.cs" />
+    <Compile Include="Function\Instrument\Speaker.cs" />
     <Compile Include="Function\IO\SystemLog.cs" />
     <Compile Include="Function\IO\TestLog.cs" />
     <Compile Include="Function\IO\UARTLog.cs" />
@@ -244,7 +248,6 @@
     <Resource Include="Asset\Images\user.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Function\Instrument\" />
     <Folder Include="SubWindow\" />
   </ItemGroup>
   <ItemGroup>

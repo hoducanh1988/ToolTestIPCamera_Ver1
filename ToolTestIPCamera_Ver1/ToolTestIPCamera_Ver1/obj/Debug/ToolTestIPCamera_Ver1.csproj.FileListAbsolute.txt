@@ -61,3 +61,5 @@ C:\Users\anhho\source\repos\GitHub\IPCamera_Project\ToolTestIPCamera_Ver1\ToolTe
 C:\Users\anhho\source\repos\GitHub\IPCamera_Project\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\obj\Debug\UserControls\ucManual.baml
 C:\Users\anhho\source\repos\GitHub\IPCamera_Project\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\obj\Debug\UserControls\ucSetting.baml
 C:\Users\anhho\source\repos\GitHub\IPCamera_Project\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\obj\Debug\UserControls\ucTesting.baml
+C:\Users\anhho\source\repos\GitHub\IPCamera_Project\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\bin\Debug\NAudio.dll
+C:\Users\anhho\source\repos\GitHub\IPCamera_Project\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\bin\Debug\NAudio.xml
