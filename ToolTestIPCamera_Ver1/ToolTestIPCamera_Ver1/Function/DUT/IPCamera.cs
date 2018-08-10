@@ -13,6 +13,8 @@ namespace ToolTestIPCamera_Ver1.Function.DUT {
 
         //Check Layer2
         #region CHECK PCBA LAYER2
+        ButtonWindow btnwindow = null;
+        RGBLEDWindow rgbwindow = null;
 
         /// <summary>
         /// CHECK IP CAMERA BOOT COMPLETE
@@ -21,20 +23,20 @@ namespace ToolTestIPCamera_Ver1.Function.DUT {
         /// FALSE = CAMERA BOOT NG
         /// </summary>
         /// <returns></returns>
-        protected bool WaitCameraBootComplete() {
-            int count = 0;
-            bool ret = false;
-            REP:
-            count++;
-            ret = GlobalData.testingDataDUT.UARTLOG.Contains("Please press Enter to activate this console. md configuration done.");
-            if (!ret) {
-                if (count < 60) {
-                    Thread.Sleep(1000);
-                    goto REP;
-                }
-            }
-            return ret;
-        }
+        //protected bool WaitCameraBootComplete() {
+        //    int count = 0;
+        //    bool ret = false;
+        //    REP:
+        //    count++;
+        //    ret = GlobalData.testingDataDUT.UARTLOG.Contains("Please press Enter to activate this console. md configuration done.");
+        //    if (!ret) {
+        //        if (count < 60) {
+        //            Thread.Sleep(1000);
+        //            goto REP;
+        //        }
+        //    }
+        //    return ret;
+        //}
 
 
         /// <summary>
@@ -46,12 +48,28 @@ namespace ToolTestIPCamera_Ver1.Function.DUT {
         /// <returns>TRUE/FALSE</returns>
         protected bool CheckLAN(ref string _message) {
             try {
-                bool ret = GlobalData.testingDataDUT.UARTLOG.Contains("rtl8168: eth0: link up");
+                GlobalData.testingDataDUT.SYSTEMLOG += "\r\nKIỂM TRA CỔNG LAN CỦA IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\r\n";
+                GlobalData.testingDataDUT.SYSTEMLOG += "Phần mềm gửi lệnh: ifconfig eth0 up\r\n";
+                GlobalData.testingDataDUT.CAMERALOG = "";
+                GlobalData.camera.WriteLine("ifconfig eth0 up");
+                GlobalData.testingDataDUT.SYSTEMLOG += "Delay 500 ms\r\n";
+                Thread.Sleep(500);
+                GlobalData.testingDataDUT.SYSTEMLOG += "CAMERA Feedback:\r\n" + GlobalData.testingDataDUT.CAMERALOG + "\r\n";
+                GlobalData.testingDataDUT.CAMERALOG = "";
+                GlobalData.testingDataDUT.SYSTEMLOG += "Phần mềm gửi lệnh: ping -c 4 192.168.1.100\r\n";
+                GlobalData.camera.WriteLine("ping -c 4 192.168.1.100");
+                GlobalData.testingDataDUT.SYSTEMLOG += "Delay 5000 ms\r\n";
+                Thread.Sleep(5000);
+                GlobalData.testingDataDUT.SYSTEMLOG += "CAMERA Feedback:\r\n" + GlobalData.testingDataDUT.CAMERALOG + "\r\n";
+                bool ret = GlobalData.testingDataDUT.UARTLOG.Contains("64 bytes from 192.168.1.100:");
                 GlobalData.testingDataDUT.LANRESULT = ret == true ? Parameters.testStatus.PASS.ToString() : Parameters.testStatus.FAIL.ToString();
+                GlobalData.testingDataDUT.SYSTEMLOG += string.Format("KẾT QUẢ KIỂM TRA CỔNG LAN: {0}\r\n",ret == true ? "PASS": "FAIL");
                 return ret;
             }
             catch (Exception ex) {
                 _message = ex.ToString();
+                GlobalData.testingDataDUT.SYSTEMLOG +=_message + "\r\n";
+                GlobalData.testingDataDUT.SYSTEMLOG += string.Format("KẾT QUẢ KIỂM TRA CỔNG LAN: FAIL\r\n");
                 GlobalData.testingDataDUT.LANRESULT = Parameters.testStatus.FAIL.ToString();
                 return false;
             }
@@ -66,14 +84,18 @@ namespace ToolTestIPCamera_Ver1.Function.DUT {
         /// <returns></returns>
         protected bool CheckSDCard(ref string _message) {
             try {
-                GlobalData.camera.WriteLine("");
-                Thread.Sleep(100);
-                GlobalData.camera.WriteLine("mount");
+                GlobalData.testingDataDUT.SYSTEMLOG += "\r\n Kiểm tra thẻ nhớ SD Card của IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\r\n";
                 int count = 0;
                 bool ret = false;
                 REP:
                 count++;
-                ret = GlobalData.testingDataDUT.UARTLOG.Contains("/dev/mmcblk0p1 on /media/sdcard type vfat (rw,relatime,fmask=0000,dmask=0000,allow_utime=00)");
+                GlobalData.testingDataDUT.SYSTEMLOG +=string.Format("Phần mềm gửi lệnh: mount  LẦN {0}\r\n",count);
+                GlobalData.testingDataDUT.CAMERALOG = "";
+                GlobalData.camera.WriteLine("mount");
+                GlobalData.testingDataDUT.SYSTEMLOG += "Delay 1000 ms \r\n";
+                Thread.Sleep(1000);
+                GlobalData.testingDataDUT.SYSTEMLOG += "CAMERA Feedback:\r\n" + GlobalData.testingDataDUT.CAMERALOG + "\r\n";
+                ret = GlobalData.testingDataDUT.UARTLOG.Contains("/dev/mmcblk0p1 on /media/sdcard type vfat (rw,relatime,fmask=0000,dmask=0000");
                 if (!ret) {
                     if(count < 5) {
                         Thread.Sleep(1000);
@@ -81,10 +103,13 @@ namespace ToolTestIPCamera_Ver1.Function.DUT {
                     }
                 }
                 GlobalData.testingDataDUT.SDCARDRESULT = ret == true ? Parameters.testStatus.PASS.ToString() : Parameters.testStatus.FAIL.ToString();
+                GlobalData.testingDataDUT.SDCARDRESULT += string.Format("KẾT QUẢ KIỂM TRA THẺ NHỚ SD card: {0}\r\n", ret == true ? "PASS" : "FAIL");
                 return ret;
             }
             catch (Exception ex) {
                 _message = ex.ToString();
+                GlobalData.testingDataDUT.SYSTEMLOG += _message + "\r\n";
+                GlobalData.testingDataDUT.SYSTEMLOG += string.Format("KẾT QUẢ KIỂM TRA THẺ NHỚ SD card: FAIL\r\n");
                 GlobalData.testingDataDUT.SDCARDRESULT = Parameters.testStatus.FAIL.ToString();
                 return false;
             }
@@ -100,11 +125,19 @@ namespace ToolTestIPCamera_Ver1.Function.DUT {
         /// <returns></returns>
         protected bool CheckRGBLED(ref string _message) {
             try {
-                //code here
-                return true;
+                bool ret = false;
+                App.Current.Dispatcher.Invoke(new Action(() => {
+                    rgbwindow = new RGBLEDWindow();
+                    rgbwindow.ShowDialog();
+                    ret = rgbwindow.GreenLED && rgbwindow.RedLED;
+                }));
+
+                GlobalData.testingDataDUT.RGBLEDRESULT = ret == true ? Parameters.testStatus.PASS.ToString() : Parameters.testStatus.FAIL.ToString();
+                return ret;
             }
             catch (Exception ex) {
                 _message = ex.ToString();
+                GlobalData.testingDataDUT.RGBLEDRESULT = Parameters.testStatus.FAIL.ToString();
                 return false;
             }
         }
@@ -119,32 +152,47 @@ namespace ToolTestIPCamera_Ver1.Function.DUT {
         /// <returns></returns>
         protected bool CheckWIFI(ref string _message) {
             try {
-                GlobalData.testingDataDUT.SYSTEMLOG += string.Format("CHECK WIFI...\r\n");
+                GlobalData.testingDataDUT.SYSTEMLOG += string.Format("Kiểm tra kết nối WIFI của IP CAMERA...\r\n");
+                GlobalData.testingDataDUT.SYSTEMLOG += string.Format("Phần mềm gửi lệnh: ifconfig eth0 down  \r\n");
+                GlobalData.testingDataDUT.CAMERALOG = "";
                 GlobalData.camera.WriteLine("ifconfig eth0 down");
+                GlobalData.testingDataDUT.SYSTEMLOG += "Delay 1000 ms \r\n";
                 Thread.Sleep(1000);
+                GlobalData.testingDataDUT.SYSTEMLOG += "CAMERA Feedback:\r\n" + GlobalData.testingDataDUT.CAMERALOG + "\r\n";
+                GlobalData.testingDataDUT.SYSTEMLOG += string.Format("Phần mềm gửi lệnh: nm_cfg client IPCAM-Test-1  \r\n");
+                GlobalData.testingDataDUT.CAMERALOG = "";
                 GlobalData.camera.WriteLine("nm_cfg client IPCAM-Test-1");
+                GlobalData.testingDataDUT.SYSTEMLOG += "Delay 1000 ms \r\n";
                 Thread.Sleep(1000);
+                GlobalData.testingDataDUT.SYSTEMLOG += "CAMERA Feedback:\r\n" + GlobalData.testingDataDUT.CAMERALOG + "\r\n";
                 bool ret = false;
                 int count = 0;
                 REP:
-                GlobalData.testingDataDUT.SYSTEMLOG += string.Format("LAN {0}\r\n", count);
+                GlobalData.testingDataDUT.SYSTEMLOG += string.Format("Kiểm tra kết nối LẦN {0}\r\n", count);
                 count++;
+                GlobalData.testingDataDUT.SYSTEMLOG += string.Format("Phần mềm gửi lệnh: nm_cfg status  \r\n");
                 GlobalData.camera.WriteLine("nm_cfg status");
+                GlobalData.testingDataDUT.CAMERALOG = "";
+                GlobalData.testingDataDUT.SYSTEMLOG += "Delay 500 ms \r\n";
                 Thread.Sleep(500);
+                GlobalData.testingDataDUT.SYSTEMLOG += "CAMERA Feedback:\r\n" + GlobalData.testingDataDUT.CAMERALOG + "\r\n";
                 ret = GlobalData.testingDataDUT.UARTLOG.Contains("status	= connect");
-                GlobalData.testingDataDUT.SYSTEMLOG += string.Format("...{0}\r\n", ret == true ? "PASS" : "FAIL");
                 if (!ret) {
                     if(count < 20) {
                         Thread.Sleep(500);
                         goto REP;
                     }
                 }
+                GlobalData.testingDataDUT.SYSTEMLOG += string.Format("KẾT QUẢ KIỂM TRA WIFI: {0}\r\n", ret == true ? "PASS" : "FAIL");
                 GlobalData.testingDataDUT.WIFIRESULT = ret == true ? Parameters.testStatus.PASS.ToString() : Parameters.testStatus.FAIL.ToString();
                 return ret;
             }
             catch (Exception ex) {
                 _message = ex.ToString();
+                GlobalData.testingDataDUT.SYSTEMLOG += _message + "\r\n";
+                GlobalData.testingDataDUT.SYSTEMLOG += string.Format("KẾT QUẢ KIỂM TRA THẺ NHỚ SD card: FAIL\r\n");
                 GlobalData.testingDataDUT.WIFIRESULT = Parameters.testStatus.FAIL.ToString();
+
                 return false;
             }
         }
@@ -159,11 +207,36 @@ namespace ToolTestIPCamera_Ver1.Function.DUT {
         /// <returns></returns>
         protected bool CheckButton(ref string _message) {
             try {
-                //code here
-                return true;
+                int _max = 15;
+                App.Current.Dispatcher.Invoke(new Action(() => {
+                    btnwindow = new ButtonWindow(_max);
+                    btnwindow.Show();
+                }));
+                GlobalData.testingDataDUT.SYSTEMLOG += string.Format("Kiểm tra nút bấm của IP CAMERA...\r\n");
+                int count = 0;
+                REP:
+                count++;
+                GlobalData.testingDataDUT.SYSTEMLOG += string.Format("Đang chờ người dùng thực hiện nhấn nút bấm...  \r\n");
+                GlobalData.testingDataDUT.SYSTEMLOG += string.Format("Thời gian chờ {0} s ...  \r\n",count);
+                bool ret = GlobalData.testingDataDUT.UARTLOG.Contains("time_process = 0");
+                if (!ret) {
+                    if (count <= _max) {
+                        Thread.Sleep(1000);
+                        goto REP;
+                    }
+                }
+                else {
+                    App.Current.Dispatcher.Invoke(new Action(() => { btnwindow.Close(); }));
+                }
+                GlobalData.testingDataDUT.SYSTEMLOG += string.Format("KẾT QUẢ KIỂM TRA NÚT BẤM: {0}\r\n", ret == true ? "PASS" : "FAIL");
+                GlobalData.testingDataDUT.BUTTONRESULT = ret == true ? Parameters.testStatus.PASS.ToString() : Parameters.testStatus.FAIL.ToString();
+                return ret;
             }
             catch (Exception ex) {
                 _message = ex.ToString();
+                GlobalData.testingDataDUT.SYSTEMLOG += _message + "\r\n";
+                GlobalData.testingDataDUT.BUTTONRESULT = Parameters.testStatus.FAIL.ToString();
+                GlobalData.testingDataDUT.SYSTEMLOG += string.Format("KẾT QUẢ KIỂM TRA THẺ NHỚ SD card: FAIL\r\n");
                 return false;
             }
         }
@@ -174,12 +247,135 @@ namespace ToolTestIPCamera_Ver1.Function.DUT {
         //Check Layer3
         #region CHECK PCBA LAYER3
 
+        /// <summary>
+        /// Write MAC
+        /// </summary>
+        /// <param name="_message"></param>
+        /// <returns></returns>
+        protected bool WriteMAC(ref string _message) {
+            try {
+                return true;
+            }
+            catch(Exception ex) {
+                _message = ex.ToString();
+                return false;
+            }
+        }
+
+
+        protected bool UpFirmWare(ref string _message) {
+            try {
+                return true;
+            }
+            catch (Exception ex) {
+                _message = ex.ToString();
+                return false;
+            }
+        }
+
+        
+        /// <summary>
+        /// CHECK CONNECT USB
+        /// TRUE = CONNECT USB SUCSSCES
+        /// FALSE = CONNECT USB FAIL
+        /// </summary>
+        /// <param name="_message"></param>
+        /// <returns></returns>
+        protected bool CheckUSB(ref string _message) {
+            try {
+                return true;
+            }
+            catch(Exception ex) {
+                _message = ex.ToString();
+                return false;
+            }
+        }
+
+
+        /// <summary>
+        /// CHECK LINGT SENSOR 
+        /// </summary>
+        /// <param name="_message"></param>
+        /// <returns></returns>
+        protected bool CheckLingtSensor(ref string _message) {
+            try {
+                return true;
+            }
+            catch(Exception ex) {
+                _message = ex.ToString();
+                return false;
+            }
+        }
+
+
+        /// <summary>
+        /// CHECK SPEAKER AND MIC CAMERA
+        /// </summary>
+        /// <param name="_message"></param>
+        /// <returns></returns>
+        protected bool CheckSpeakerMIC(ref string _message) {
+            try {
+                return true;
+            }
+            catch(Exception ex) {
+                _message = ex.ToString();
+                return false;
+            }
+        }
+
+
+        /// <summary>
+        /// CHECK IMAGE "IP CAMERA"
+        /// </summary>
+        /// <param name="_message"></param>
+        /// <returns></returns>
+        protected bool CheckImageSensor(ref string _message) {
+            try {
+                return true;
+            }
+            catch(Exception ex) {
+                _message = ex.ToString();
+                return false;
+            }
+        }
         #endregion
 
         #endregion
 
 
         #region check Product
+
+
+        /// <summary>
+        /// CHECK WIFI LAYER3
+        /// TRUE = LED GREEN BLINKING
+        /// FALSE = LED NO BILINKING
+        /// </summary>
+        /// <param name="_message"></param>
+        /// <returns></returns>
+        protected bool CheckWifiLayer3(ref string _message) {
+            try {
+                return true;
+            }
+            catch {
+                return false;
+            }
+        }
+
+
+        /// <summary>
+        /// CHECK BUTTON LAYER 3
+        /// </summary>
+        /// <param name="_message"></param>
+        /// <returns></returns>
+        protected bool CheckButtonLayer3(ref string _message) {
+            try {
+                return true;
+            }
+            catch {
+                return false;
+            }
+        }
 
         #endregion
 

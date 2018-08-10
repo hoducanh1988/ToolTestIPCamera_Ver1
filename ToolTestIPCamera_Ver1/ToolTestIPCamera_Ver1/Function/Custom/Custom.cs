@@ -451,12 +451,20 @@ namespace ToolTestIPCamera_Ver1.Function {
                 OnPropertyChanged(nameof(ERRORCODE));
             }
         }
-        string _ontlog;
+        string _uartlog;
         public string UARTLOG {
-            get { return _ontlog; }
+            get { return _uartlog; }
             set {
-                _ontlog = value;
+                _uartlog = value;
                 OnPropertyChanged(nameof(UARTLOG));
+            }
+        }
+        string _cameralog;
+        public string CAMERALOG {
+            get { return _cameralog; }
+            set {
+                _cameralog = value;
+                OnPropertyChanged(nameof(CAMERALOG));
             }
         }
         string _totaltime;
@@ -490,6 +498,7 @@ namespace ToolTestIPCamera_Ver1.Function {
 
             this.SYSTEMLOG = "";
             this.UARTLOG = "";
+            this.CAMERALOG = "";
             this.ERRORCODE = "";
         }
 
@@ -513,6 +522,7 @@ namespace ToolTestIPCamera_Ver1.Function {
             this.TOTALRESULT = Parameters.testStatus.Wait.ToString();
 
             this.UARTLOG = "";
+            this.CAMERALOG = "";
             this.ERRORCODE = "";
         }
 

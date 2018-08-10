@@ -58,6 +58,7 @@ namespace ToolTestIPCamera_Ver1.Function.Protocol
             if (receiveData != string.Empty)
             {
                 GlobalData.testingDataDUT.UARTLOG += receiveData;
+                GlobalData.testingDataDUT.CAMERALOG += receiveData;
             }
             Thread.Sleep(100);
         }
@@ -89,6 +90,16 @@ namespace ToolTestIPCamera_Ver1.Function.Protocol
             catch {
                 return false;
             }
+        }
+
+        public bool WriteCtrlBreak() {
+            try {
+                this._serialport.Write("^C");
+                return true;
+            }catch {
+                return false;
+            }
+
         }
 
         /// <summary>

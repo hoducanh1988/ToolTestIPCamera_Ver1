@@ -36,12 +36,18 @@ namespace ToolTestIPCamera_Ver1.Function.Excute
                 }
 
                 //check RGB LED
+                if (GlobalData.initSetting.checkrgbledoption == true) {
+                    if (!CheckRGBLED(ref message)) goto NG;
+                }
 
                 //Check WIFI
                 if(GlobalData.initSetting.checkwifioption == true) {
                     if (!CheckWIFI(ref message)) goto NG;
                 }
                 //Check Button
+                if (GlobalData.initSetting.checkbuttonoption == true) {
+                    if (!CheckButton(ref message)) goto NG;
+                }
 
                 goto OK;
             } catch {
@@ -50,13 +56,13 @@ namespace ToolTestIPCamera_Ver1.Function.Excute
 
             OK:
             GlobalData.camera.Close();
-            GlobalData.testingDataDUT.SYSTEMLOG += ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\r\n\r\n";
+            GlobalData.testingDataDUT.SYSTEMLOG += ">>>\r\n\r\n";
             GlobalData.testingDataDUT.SYSTEMLOG += "PHÁN ĐỊNH TỔNG LÀ : PASS\r\n";
             return true;
 
             NG:
             GlobalData.camera.Close();
-            GlobalData.testingDataDUT.SYSTEMLOG += ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\r\n\r\n";
+            GlobalData.testingDataDUT.SYSTEMLOG += ">>>\r\n\r\n";
             GlobalData.testingDataDUT.SYSTEMLOG += "PHÁN ĐỊNH TỔNG LÀ : FAIL\r\n";
             return false;
         }
