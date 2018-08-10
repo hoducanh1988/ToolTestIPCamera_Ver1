@@ -28,7 +28,11 @@ namespace ToolTestIPCamera_Ver1.UserControls {
             DispatcherTimer timer = new DispatcherTimer();
             timer.Interval = new TimeSpan(0, 0, 1);
             timer.Tick += ((sender, e) => {
-                _scrollViewer2.ScrollToEnd();
+                if (GlobalData.testingDataDUT.TOTALRESULT == Parameters.testStatus.Wait.ToString()) {
+                    _scrollViewer1.ScrollToEnd();
+                    _scrollViewer2.ScrollToEnd();
+                }
+                    
             });
             timer.Start();
         }
@@ -63,4 +67,5 @@ namespace ToolTestIPCamera_Ver1.UserControls {
             }
         }
     }
+
 }

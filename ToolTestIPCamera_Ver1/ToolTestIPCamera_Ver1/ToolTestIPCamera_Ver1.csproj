@@ -78,6 +78,24 @@
     <Compile Include="Function\Protocol\IProtocol.cs" />
     <Compile Include="Function\Protocol\Serial.cs" />
     <Compile Include="Function\Protocol\Telnet.cs" />
+    <Compile Include="SubWindow\ButtonWindow.xaml.cs">
+      <DependentUpon>ButtonWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SubWindow\ImageSensorWindow.xaml.cs">
+      <DependentUpon>ImageSensorWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SubWindow\LightSensorWindow.xaml.cs">
+      <DependentUpon>LightSensorWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SubWindow\RGBLEDWindow.xaml.cs">
+      <DependentUpon>RGBLEDWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SubWindow\SpeakerMicWindow.xaml.cs">
+      <DependentUpon>SpeakerMicWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SubWindow\WIFIWindow.xaml.cs">
+      <DependentUpon>WIFIWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\ucAbout.xaml.cs">
       <DependentUpon>ucAbout.xaml</DependentUpon>
     </Compile>
@@ -159,6 +177,30 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="SubWindow\ButtonWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SubWindow\ImageSensorWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SubWindow\LightSensorWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SubWindow\RGBLEDWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SubWindow\SpeakerMicWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SubWindow\WIFIWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControls\ucAbout.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -245,7 +287,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Function\Instrument\" />
-    <Folder Include="SubWindow\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Asset\Icons\ipcamera.ico" />

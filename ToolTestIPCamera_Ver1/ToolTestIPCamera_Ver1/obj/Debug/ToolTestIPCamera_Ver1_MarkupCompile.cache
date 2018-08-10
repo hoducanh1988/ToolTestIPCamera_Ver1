@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\Git\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\App.xaml
-201870359274
+26-982446656
 
-27-1512419598
+3396515566
 16-1294624131
-Asset\Resources\Button.xaml;Asset\Resources\CheckBox.xaml;Asset\Resources\Combobox.xaml;Asset\Resources\customWindow.xaml;Asset\Resources\DataGrid.xaml;Asset\Resources\Label.xaml;Asset\Resources\Listbox.xaml;Asset\Resources\RadioButton.xaml;Asset\Resources\Slider.xaml;Asset\Resources\TabControl.xaml;Asset\Resources\Textbox.xaml;Asset\Resources\ToggleButton.xaml;MainWindow.xaml;UserControls\ucAbout.xaml;UserControls\ucHelp.xaml;UserControls\ucLog.xaml;UserControls\ucLogin.xaml;UserControls\ucManual.xaml;UserControls\ucSetting.xaml;UserControls\ucTesting.xaml;
+Asset\Resources\Button.xaml;Asset\Resources\CheckBox.xaml;Asset\Resources\Combobox.xaml;Asset\Resources\customWindow.xaml;Asset\Resources\DataGrid.xaml;Asset\Resources\Label.xaml;Asset\Resources\Listbox.xaml;Asset\Resources\RadioButton.xaml;Asset\Resources\Slider.xaml;Asset\Resources\TabControl.xaml;Asset\Resources\Textbox.xaml;Asset\Resources\ToggleButton.xaml;MainWindow.xaml;SubWindow\ButtonWindow.xaml;SubWindow\ImageSensorWindow.xaml;SubWindow\LightSensorWindow.xaml;SubWindow\RGBLEDWindow.xaml;SubWindow\SpeakerMicWindow.xaml;SubWindow\WIFIWindow.xaml;UserControls\ucAbout.xaml;UserControls\ucHelp.xaml;UserControls\ucLog.xaml;UserControls\ucLogin.xaml;UserControls\ucManual.xaml;UserControls\ucSetting.xaml;UserControls\ucTesting.xaml;
 
 False
 

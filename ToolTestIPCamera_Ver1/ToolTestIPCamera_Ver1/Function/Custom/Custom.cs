@@ -495,6 +495,9 @@ namespace ToolTestIPCamera_Ver1.Function {
 
 
         public void InitControlForChecking() {
+            this.TOTALTIME = "0";
+            this.MACADDRESS = "-";
+
             this.WRITEMACRESULT = GlobalData.initSetting.writemacoption == true ? Parameters.testStatus.Wait.ToString() : Parameters.testStatus.X.ToString();
             this.UPLOADFWRESULT = GlobalData.initSetting.uploadfirmwareoption == true ? Parameters.testStatus.Wait.ToString() : Parameters.testStatus.X.ToString();
             this.WIFIRESULT = GlobalData.initSetting.checkwifioption == true ? Parameters.testStatus.Wait.ToString() : Parameters.testStatus.X.ToString();
@@ -508,6 +511,9 @@ namespace ToolTestIPCamera_Ver1.Function {
             this.IMAGESENSORRESULT = GlobalData.initSetting.checkimagesensoroption == true ? Parameters.testStatus.Wait.ToString() : Parameters.testStatus.X.ToString();
             this.BUTTONRESULT = GlobalData.initSetting.checkbuttonoption == true ? Parameters.testStatus.Wait.ToString() : Parameters.testStatus.X.ToString();
             this.TOTALRESULT = Parameters.testStatus.Wait.ToString();
+
+            this.UARTLOG = "";
+            this.ERRORCODE = "";
         }
 
     }

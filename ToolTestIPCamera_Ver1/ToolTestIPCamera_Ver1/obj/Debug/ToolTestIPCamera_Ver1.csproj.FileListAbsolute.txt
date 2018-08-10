@@ -109,3 +109,15 @@ D:\Git\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\obj\Deb
 D:\Git\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\obj\Debug\ToolTestIPCamera_Ver1.csproj.CopyComplete
 D:\Git\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\obj\Debug\ToolTestIPCamera_Ver1.exe
 D:\Git\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\obj\Debug\ToolTestIPCamera_Ver1.pdb
+D:\Git\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\obj\Debug\SubWindow\ButtonWindow.g.cs
+D:\Git\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\obj\Debug\SubWindow\RGBLEDWindow.g.cs
+D:\Git\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\obj\Debug\SubWindow\ButtonWindow.baml
+D:\Git\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\obj\Debug\SubWindow\RGBLEDWindow.baml
+D:\Git\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\obj\Debug\SubWindow\LightSensorWindow.g.cs
+D:\Git\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\obj\Debug\SubWindow\WIFIWindow.g.cs
+D:\Git\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\obj\Debug\SubWindow\LightSensorWindow.baml
+D:\Git\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\obj\Debug\SubWindow\WIFIWindow.baml
+D:\Git\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\obj\Debug\SubWindow\ImageSensorWindow.g.cs
+D:\Git\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\obj\Debug\SubWindow\SpeakerMicWindow.g.cs
+D:\Git\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\obj\Debug\SubWindow\ImageSensorWindow.baml
+D:\Git\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\obj\Debug\SubWindow\SpeakerMicWindow.baml

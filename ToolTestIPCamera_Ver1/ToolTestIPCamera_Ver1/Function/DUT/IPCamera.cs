@@ -119,11 +119,32 @@ namespace ToolTestIPCamera_Ver1.Function.DUT {
         /// <returns></returns>
         protected bool CheckWIFI(ref string _message) {
             try {
-                //code here
-                return true;
+                GlobalData.testingDataDUT.SYSTEMLOG += string.Format("CHECK WIFI...\r\n");
+                GlobalData.camera.WriteLine("ifconfig eth0 down");
+                Thread.Sleep(1000);
+                GlobalData.camera.WriteLine("nm_cfg client IPCAM-Test-1");
+                Thread.Sleep(1000);
+                bool ret = false;
+                int count = 0;
+                REP:
+                GlobalData.testingDataDUT.SYSTEMLOG += string.Format("LAN {0}\r\n", count);
+                count++;
+                GlobalData.camera.WriteLine("nm_cfg status");
+                Thread.Sleep(500);
+                ret = GlobalData.testingDataDUT.UARTLOG.Contains("status	= connect");
+                GlobalData.testingDataDUT.SYSTEMLOG += string.Format("...{0}\r\n", ret == true ? "PASS" : "FAIL");
+                if (!ret) {
+                    if(count < 20) {
+                        Thread.Sleep(500);
+                        goto REP;
+                    }
+                }
+                GlobalData.testingDataDUT.WIFIRESULT = ret == true ? Parameters.testStatus.PASS.ToString() : Parameters.testStatus.FAIL.ToString();
+                return ret;
             }
             catch (Exception ex) {
                 _message = ex.ToString();
+                GlobalData.testingDataDUT.WIFIRESULT = Parameters.testStatus.FAIL.ToString();
                 return false;
             }
         }

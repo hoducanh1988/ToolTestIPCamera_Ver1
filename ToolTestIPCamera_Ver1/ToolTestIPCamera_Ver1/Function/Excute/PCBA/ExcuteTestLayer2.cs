@@ -10,6 +10,8 @@ namespace ToolTestIPCamera_Ver1.Function.Excute
         
         public bool Excute() {
             try {
+                GlobalData.testingDataDUT.SYSTEMLOG = "";
+
                 //open IP camera uart port
                 string message = "";
                 bool ret = GlobalData.camera.Open(out message);
@@ -21,7 +23,7 @@ namespace ToolTestIPCamera_Ver1.Function.Excute
                 GlobalData.testingDataDUT.InitControlForChecking();
 
                 //wait camera boot complete
-                if (!WaitCameraBootComplete()) goto NG;
+                //if (!WaitCameraBootComplete()) goto NG;
 
                 //check LAN
                 if (GlobalData.initSetting.checklanoption == true) {
@@ -36,7 +38,9 @@ namespace ToolTestIPCamera_Ver1.Function.Excute
                 //check RGB LED
 
                 //Check WIFI
-
+                if(GlobalData.initSetting.checkwifioption == true) {
+                    if (!CheckWIFI(ref message)) goto NG;
+                }
                 //Check Button
 
                 goto OK;
