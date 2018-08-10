@@ -493,6 +493,23 @@ namespace ToolTestIPCamera_Ver1.Function {
             this.ERRORCODE = "";
         }
 
+
+        public void InitControlForChecking() {
+            this.WRITEMACRESULT = GlobalData.initSetting.writemacoption == true ? Parameters.testStatus.Wait.ToString() : Parameters.testStatus.X.ToString();
+            this.UPLOADFWRESULT = GlobalData.initSetting.uploadfirmwareoption == true ? Parameters.testStatus.Wait.ToString() : Parameters.testStatus.X.ToString();
+            this.WIFIRESULT = GlobalData.initSetting.checkwifioption == true ? Parameters.testStatus.Wait.ToString() : Parameters.testStatus.X.ToString();
+            this.FWVERSIONRESULT = GlobalData.initSetting.checkfirmwareversionoption == true ? Parameters.testStatus.Wait.ToString() : Parameters.testStatus.X.ToString();
+            this.LANRESULT = GlobalData.initSetting.checklanoption == true ? Parameters.testStatus.Wait.ToString() : Parameters.testStatus.X.ToString();
+            this.SDCARDRESULT = GlobalData.initSetting.checksdcardoption == true ? Parameters.testStatus.Wait.ToString() : Parameters.testStatus.X.ToString();
+            this.USBRESULT = GlobalData.initSetting.checkusboption == true ? Parameters.testStatus.Wait.ToString() : Parameters.testStatus.X.ToString();
+            this.RGBLEDRESULT = GlobalData.initSetting.checkrgbledoption == true ? Parameters.testStatus.Wait.ToString() : Parameters.testStatus.X.ToString();
+            this.LIGHTSENSORRESULT = GlobalData.initSetting.checklightsensoroption == true ? Parameters.testStatus.Wait.ToString() : Parameters.testStatus.X.ToString();
+            this.SPEAKERMICRESULT = GlobalData.initSetting.checkspeakermicoption == true ? Parameters.testStatus.Wait.ToString() : Parameters.testStatus.X.ToString();
+            this.IMAGESENSORRESULT = GlobalData.initSetting.checkimagesensoroption == true ? Parameters.testStatus.Wait.ToString() : Parameters.testStatus.X.ToString();
+            this.BUTTONRESULT = GlobalData.initSetting.checkbuttonoption == true ? Parameters.testStatus.Wait.ToString() : Parameters.testStatus.X.ToString();
+            this.TOTALRESULT = Parameters.testStatus.Wait.ToString();
+        }
+
     }
 
 }

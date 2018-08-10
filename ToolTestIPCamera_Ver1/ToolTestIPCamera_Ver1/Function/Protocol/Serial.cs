@@ -37,9 +37,9 @@ namespace ToolTestIPCamera_Ver1.Function.Protocol
                 this._serialport.BaudRate = 57600;
                 this._serialport.DataBits = 8;
                 this._serialport.Parity = Parity.None;
-                this._serialport.StopBits = StopBits.One;
+                this._serialport.StopBits = StopBits.Two;
                 this._serialport.Open();
-                //_serialport.DataReceived += new SerialDataReceivedEventHandler(serial_OnReceiveData);
+                _serialport.DataReceived += new SerialDataReceivedEventHandler(serial_OnReceiveData);
                 result = _serialport.IsOpen;
             }
             catch (Exception ex) {
@@ -47,7 +47,19 @@ namespace ToolTestIPCamera_Ver1.Function.Protocol
                 result = false;
             }
             if (!result) { if (count < 3) { Thread.Sleep(100); goto REP; } }
+            else _message = string.Format("Login to comport {0} success.", _PortName);
             return result;
+        }
+
+        private void serial_OnReceiveData(object sender, SerialDataReceivedEventArgs e)
+        {
+            SerialPort s = (SerialPort)sender;
+            string receiveData = s.ReadExisting();
+            if (receiveData != string.Empty)
+            {
+                GlobalData.testingDataDUT.UARTLOG += receiveData;
+            }
+            Thread.Sleep(100);
         }
 
         /// <summary>

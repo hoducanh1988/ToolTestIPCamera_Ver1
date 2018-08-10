@@ -201,7 +201,7 @@
                                             <DataTrigger Binding="{Binding ElementName=lblNum1, Path=Content}" Value="FAIL">
                                                 <Setter Property="Foreground" Value="{StaticResource colorTextNG}"/>
                                             </DataTrigger>
-                                            <DataTrigger Binding="{Binding ElementName=lblNum1, Path=Content}" Value="wait">
+                                            <DataTrigger Binding="{Binding ElementName=lblNum1, Path=Content}" Value="Wait">
                                                 <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
                                             </DataTrigger>
                                             <DataTrigger Binding="{Binding ElementName=lblNum1, Path=Content}" Value="NONE">
@@ -248,7 +248,7 @@
                                             <DataTrigger Binding="{Binding ElementName=lblNum2, Path=Content}" Value="FAIL">
                                                 <Setter Property="Foreground" Value="{StaticResource colorTextNG}"/>
                                             </DataTrigger>
-                                            <DataTrigger Binding="{Binding ElementName=lblNum2, Path=Content}" Value="wait">
+                                            <DataTrigger Binding="{Binding ElementName=lblNum2, Path=Content}" Value="Wait">
                                                 <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
                                             </DataTrigger>
                                             <DataTrigger Binding="{Binding ElementName=lblNum2, Path=Content}" Value="NONE">
@@ -295,7 +295,7 @@
                                             <DataTrigger Binding="{Binding ElementName=lblNum4, Path=Content}" Value="FAIL">
                                                 <Setter Property="Foreground" Value="{StaticResource colorTextNG}"/>
                                             </DataTrigger>
-                                            <DataTrigger Binding="{Binding ElementName=lblNum4, Path=Content}" Value="wait">
+                                            <DataTrigger Binding="{Binding ElementName=lblNum4, Path=Content}" Value="Wait">
                                                 <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
                                             </DataTrigger>
                                             <DataTrigger Binding="{Binding ElementName=lblNum4, Path=Content}" Value="NONE">
@@ -342,7 +342,7 @@
                                             <DataTrigger Binding="{Binding ElementName=lblNum5, Path=Content}" Value="FAIL">
                                                 <Setter Property="Foreground" Value="{StaticResource colorTextNG}"/>
                                             </DataTrigger>
-                                            <DataTrigger Binding="{Binding ElementName=lblNum5, Path=Content}" Value="wait">
+                                            <DataTrigger Binding="{Binding ElementName=lblNum5, Path=Content}" Value="Wait">
                                                 <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
                                             </DataTrigger>
                                             <DataTrigger Binding="{Binding ElementName=lblNum5, Path=Content}" Value="NONE">
@@ -390,7 +390,7 @@
                                             <DataTrigger Binding="{Binding ElementName=lblNum6, Path=Content}" Value="FAIL">
                                                 <Setter Property="Foreground" Value="{StaticResource colorTextNG}"/>
                                             </DataTrigger>
-                                            <DataTrigger Binding="{Binding ElementName=lblNum6, Path=Content}" Value="wait">
+                                            <DataTrigger Binding="{Binding ElementName=lblNum6, Path=Content}" Value="Wait">
                                                 <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
                                             </DataTrigger>
                                             <DataTrigger Binding="{Binding ElementName=lblNum6, Path=Content}" Value="NONE">
@@ -438,7 +438,7 @@
                                             <DataTrigger Binding="{Binding ElementName=lblNum7, Path=Content}" Value="FAIL">
                                                 <Setter Property="Foreground" Value="{StaticResource colorTextNG}"/>
                                             </DataTrigger>
-                                            <DataTrigger Binding="{Binding ElementName=lblNum7, Path=Content}" Value="wait">
+                                            <DataTrigger Binding="{Binding ElementName=lblNum7, Path=Content}" Value="Wait">
                                                 <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
                                             </DataTrigger>
                                             <DataTrigger Binding="{Binding ElementName=lblNum7, Path=Content}" Value="NONE">
@@ -485,7 +485,7 @@
                                             <DataTrigger Binding="{Binding ElementName=lblNum8, Path=Content}" Value="FAIL">
                                                 <Setter Property="Foreground" Value="{StaticResource colorTextNG}"/>
                                             </DataTrigger>
-                                            <DataTrigger Binding="{Binding ElementName=lblNum8, Path=Content}" Value="wait">
+                                            <DataTrigger Binding="{Binding ElementName=lblNum8, Path=Content}" Value="Wait">
                                                 <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
                                             </DataTrigger>
                                             <DataTrigger Binding="{Binding ElementName=lblNum8, Path=Content}" Value="NONE">
@@ -532,7 +532,7 @@
                                             <DataTrigger Binding="{Binding ElementName=lblNum9, Path=Content}" Value="FAIL">
                                                 <Setter Property="Foreground" Value="{StaticResource colorTextNG}"/>
                                             </DataTrigger>
-                                            <DataTrigger Binding="{Binding ElementName=lblNum9, Path=Content}" Value="wait">
+                                            <DataTrigger Binding="{Binding ElementName=lblNum9, Path=Content}" Value="Wait">
                                                 <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
                                             </DataTrigger>
                                             <DataTrigger Binding="{Binding ElementName=lblNum9, Path=Content}" Value="NONE">
@@ -579,7 +579,7 @@
                                             <DataTrigger Binding="{Binding ElementName=lblNum10, Path=Content}" Value="FAIL">
                                                 <Setter Property="Foreground" Value="{StaticResource colorTextNG}"/>
                                             </DataTrigger>
-                                            <DataTrigger Binding="{Binding ElementName=lblNum10, Path=Content}" Value="wait">
+                                            <DataTrigger Binding="{Binding ElementName=lblNum10, Path=Content}" Value="Wait">
                                                 <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
                                             </DataTrigger>
                                             <DataTrigger Binding="{Binding ElementName=lblNum10, Path=Content}" Value="NONE">
@@ -626,7 +626,7 @@
                                             <DataTrigger Binding="{Binding ElementName=lblNum11, Path=Content}" Value="FAIL">
                                                 <Setter Property="Foreground" Value="{StaticResource colorTextNG}"/>
                                             </DataTrigger>
-                                            <DataTrigger Binding="{Binding ElementName=lblNum11, Path=Content}" Value="wait">
+                                            <DataTrigger Binding="{Binding ElementName=lblNum11, Path=Content}" Value="Wait">
                                                 <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
                                             </DataTrigger>
                                             <DataTrigger Binding="{Binding ElementName=lblNum11, Path=Content}" Value="NONE">
@@ -673,7 +673,7 @@
                                             <DataTrigger Binding="{Binding ElementName=lblNum3, Path=Content}" Value="FAIL">
                                                 <Setter Property="Foreground" Value="{StaticResource colorTextNG}"/>
                                             </DataTrigger>
-                                            <DataTrigger Binding="{Binding ElementName=lblNum3, Path=Content}" Value="wait">
+                                            <DataTrigger Binding="{Binding ElementName=lblNum3, Path=Content}" Value="Wait">
                                                 <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
                                             </DataTrigger>
                                             <DataTrigger Binding="{Binding ElementName=lblNum3, Path=Content}" Value="NONE">
@@ -720,7 +720,7 @@
                                             <DataTrigger Binding="{Binding ElementName=lblNum12, Path=Content}" Value="FAIL">
                                                 <Setter Property="Foreground" Value="{StaticResource colorTextNG}"/>
                                             </DataTrigger>
-                                            <DataTrigger Binding="{Binding ElementName=lblNum12, Path=Content}" Value="wait">
+                                            <DataTrigger Binding="{Binding ElementName=lblNum12, Path=Content}" Value="Wait">
                                                 <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
                                             </DataTrigger>
                                             <DataTrigger Binding="{Binding ElementName=lblNum12, Path=Content}" Value="NONE">
@@ -755,7 +755,7 @@
                                         <DataTrigger Binding="{Binding ElementName=lblTestResult, Path=Content}" Value="FAIL">
                                             <Setter Property="Foreground" Value="{StaticResource colorTextNG}"/>
                                         </DataTrigger>
-                                        <DataTrigger Binding="{Binding ElementName=lblTestResult, Path=Content}" Value="wait">
+                                        <DataTrigger Binding="{Binding ElementName=lblTestResult, Path=Content}" Value="Wait">
                                             <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
                                         </DataTrigger>
                                         <DataTrigger Binding="{Binding ElementName=lblTestResult, Path=Content}" Value="NONE">

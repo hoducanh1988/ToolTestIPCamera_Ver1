@@ -8,7 +8,7 @@ namespace ToolTestIPCamera_Ver1.Function.Excute
 {
     public class ExcuteTestProduct : DUT.IPCamera {
 
-        public static bool Excute() {
+        public bool Excute() {
             try {
                 return true;
             }
