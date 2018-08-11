@@ -10,9 +10,8 @@ namespace ToolTestIPCamera_Ver1.Function.Excute
         
         public bool Excute() {
             try {
-                GlobalData.testingDataDUT.SYSTEMLOG = "";
-
                 //open IP camera uart port
+                GlobalData.testingDataDUT.SYSTEMLOG += "\r\nMỞ CỔNG COM IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\r\n";
                 string message = "";
                 bool ret = GlobalData.camera.Open(out message);
                 GlobalData.testingDataDUT.SYSTEMLOG += message + "\r\n\r\n";

@@ -10,21 +10,26 @@ namespace ToolTestIPCamera_Ver1.Function.Excute
 
         public bool Excute() {
             try {
-                GlobalData.testingDataDUT.SYSTEMLOG = "";
-                //Open IP camera UART port
+                //open IP camera uart port
+                GlobalData.testingDataDUT.SYSTEMLOG += "\r\nMỞ CỔNG COM IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\r\n";
                 string message = "";
                 bool ret = GlobalData.camera.Open(out message);
                 GlobalData.testingDataDUT.SYSTEMLOG += message + "\r\n\r\n";
-                if (!ret) GlobalData.testingDataDUT.SYSTEMLOG += "Không thể kết nối đến cổng COM \r\n";
+                if (!ret) GlobalData.testingDataDUT.SYSTEMLOG += "Không thể kết nối tới cổng COM\r\n";
                 if (!ret) goto NG;
 
-                //refresh display
+                //refresh hien thi
                 GlobalData.testingDataDUT.InitControlForChecking();
 
-                //Check Write MAC
+                //Write MAC
+                if (GlobalData.initSetting.writemacoption == true) {
+                    if (!WriteMAC(ref message)) goto NG;
+                }
 
-                //Check UpFW
-
+                //Upload Firmware
+                if (GlobalData.initSetting.uploadfirmwareoption == true) {
+                    if (!UpFirmWare(ref message)) goto NG;
+                }
                 //Check USB
 
                 //Check Light Sensor

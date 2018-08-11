@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ToolTestIPCamera_Ver1.UserControls"
              mc:Ignorable="d" 
-             d:DesignHeight="768" d:DesignWidth="1366">
+             d:DesignHeight="768" d:DesignWidth="1366" Loaded="UserControl_Loaded">
 
     <UserControl.Resources>
         <Style TargetType="{x:Type TabItem}">
@@ -49,17 +49,14 @@
 
             <Grid Grid.Column="0">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="1*"/>
-                    <RowDefinition Height="5*"/>
+                    <RowDefinition Height="180"/>
+                    <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
                 <StackPanel Grid.Column="0" Margin="5,15,0,0">
                     <Label FontSize="22" FontWeight="Bold">Nhập địa chỉ MAC của IP Camera:</Label>
-                    <TextBox CharacterCasing="Upper" FontWeight="Bold" Height="60" FontSize="40" KeyDown="TextBox_KeyDown"></TextBox>
-                    <!--<TextBox x:Name="txtMacAddress" Text="{Binding Path=MACINPUTED, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" KeyDown="TextBox_KeyDown" TextChanged="TextBox_TextChanged" IsEnabled="{Binding Path=ENABLEINPUTMAC, UpdateSourceTrigger=PropertyChanged}" CharacterCasing="Upper" Foreground="#FF333333" FontWeight="Bold" FontSize="30" Height="40" Width="300" HorizontalAlignment="Left" Style="{StaticResource hintRoundTextBox}" Tag="Nhập địa chỉ MAC trên tem của ONT vào đây"></TextBox>-->
-                    <Label x:Name="lblOldMAC" Margin="10,0,0,0" VerticalAlignment="Center" FontSize="20" FontWeight="SemiBold" Foreground="#FF00BCD4"></Label>
-                    <!--<WrapPanel>
-                    </WrapPanel>-->
+                    <TextBox x:Name="txtMAC" CharacterCasing="Upper" FontWeight="Bold" Height="60" FontSize="40" KeyDown="TextBox_KeyDown" Text="{Binding Path=MACADDRESS, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" IsEnabled="{Binding Path=ENABLETEXTBOX, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></TextBox>
+                    <Label Margin="10,5,0,0" VerticalAlignment="Center" FontSize="20" FontWeight="SemiBold" Foreground="#FF00BCD4" Content="{Binding Path=OLDMAC, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></Label>
                 </StackPanel>
 
                 <!--system log-->

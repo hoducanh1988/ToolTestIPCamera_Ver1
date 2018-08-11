@@ -1,0 +1,1 @@
+tftp -i 192.168.1.253 put E:\Data_VNPT\IPCAM\Firmware\ldc.bin

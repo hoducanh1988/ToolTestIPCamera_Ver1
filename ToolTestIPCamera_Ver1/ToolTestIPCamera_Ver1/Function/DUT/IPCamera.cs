@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading;
+using System.IO;
+using System.Diagnostics;
 
 namespace ToolTestIPCamera_Ver1.Function.DUT {
     public class IPCamera {
@@ -75,6 +77,7 @@ namespace ToolTestIPCamera_Ver1.Function.DUT {
             }
         }
 
+
         /// <summary>
         /// CHECK KET NOI SD CARD CUA IP CAMERA
         /// TRUE = connect
@@ -84,7 +87,7 @@ namespace ToolTestIPCamera_Ver1.Function.DUT {
         /// <returns></returns>
         protected bool CheckSDCard(ref string _message) {
             try {
-                GlobalData.testingDataDUT.SYSTEMLOG += "\r\n Kiểm tra thẻ nhớ SD Card của IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\r\n";
+                GlobalData.testingDataDUT.SYSTEMLOG += "\r\nKIỂM TRA THẺ NHỚ SD CARD CỦA IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\r\n";
                 int count = 0;
                 bool ret = false;
                 REP:
@@ -124,20 +127,26 @@ namespace ToolTestIPCamera_Ver1.Function.DUT {
         /// <param name="_message"></param>
         /// <returns></returns>
         protected bool CheckRGBLED(ref string _message) {
+            GlobalData.testingDataDUT.SYSTEMLOG += "\r\nKIỂM TRA RGB LED CỦA IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\r\n";
             try {
                 bool ret = false;
                 App.Current.Dispatcher.Invoke(new Action(() => {
                     rgbwindow = new RGBLEDWindow();
                     rgbwindow.ShowDialog();
                     ret = rgbwindow.GreenLED && rgbwindow.RedLED;
+                    GlobalData.testingDataDUT.SYSTEMLOG += string.Format("GREEN LED: {0}\r\n", rgbwindow.GreenLED == true ? "PASS" : "FAIL");
+                    GlobalData.testingDataDUT.SYSTEMLOG += string.Format("RED LED: {0}\r\n", rgbwindow.RedLED == true ? "PASS" : "FAIL");
                 }));
 
                 GlobalData.testingDataDUT.RGBLEDRESULT = ret == true ? Parameters.testStatus.PASS.ToString() : Parameters.testStatus.FAIL.ToString();
+                GlobalData.testingDataDUT.SYSTEMLOG += string.Format("KẾT QUẢ KIỂM TRA RGB LED: {0}\r\n", ret == true ? "PASS" : "FAIL");
                 return ret;
             }
             catch (Exception ex) {
                 _message = ex.ToString();
                 GlobalData.testingDataDUT.RGBLEDRESULT = Parameters.testStatus.FAIL.ToString();
+                GlobalData.testingDataDUT.SYSTEMLOG += _message + "\r\n";
+                GlobalData.testingDataDUT.SYSTEMLOG += string.Format("KẾT QUẢ KIỂM TRA RGB LED: FAIL\r\n");
                 return false;
             }
         }
@@ -152,7 +161,7 @@ namespace ToolTestIPCamera_Ver1.Function.DUT {
         /// <returns></returns>
         protected bool CheckWIFI(ref string _message) {
             try {
-                GlobalData.testingDataDUT.SYSTEMLOG += string.Format("Kiểm tra kết nối WIFI của IP CAMERA...\r\n");
+                GlobalData.testingDataDUT.SYSTEMLOG += "\r\nKIỂM TRA KẾT NỐI WIFI CỦA IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\r\n";
                 GlobalData.testingDataDUT.SYSTEMLOG += string.Format("Phần mềm gửi lệnh: ifconfig eth0 down  \r\n");
                 GlobalData.testingDataDUT.CAMERALOG = "";
                 GlobalData.camera.WriteLine("ifconfig eth0 down");
@@ -190,7 +199,7 @@ namespace ToolTestIPCamera_Ver1.Function.DUT {
             catch (Exception ex) {
                 _message = ex.ToString();
                 GlobalData.testingDataDUT.SYSTEMLOG += _message + "\r\n";
-                GlobalData.testingDataDUT.SYSTEMLOG += string.Format("KẾT QUẢ KIỂM TRA THẺ NHỚ SD card: FAIL\r\n");
+                GlobalData.testingDataDUT.SYSTEMLOG += string.Format("KẾT QUẢ KIỂM TRA WIFI: FAIL\r\n");
                 GlobalData.testingDataDUT.WIFIRESULT = Parameters.testStatus.FAIL.ToString();
 
                 return false;
@@ -212,13 +221,15 @@ namespace ToolTestIPCamera_Ver1.Function.DUT {
                     btnwindow = new ButtonWindow(_max);
                     btnwindow.Show();
                 }));
-                GlobalData.testingDataDUT.SYSTEMLOG += string.Format("Kiểm tra nút bấm của IP CAMERA...\r\n");
+                GlobalData.testingDataDUT.SYSTEMLOG += "\r\nKIỂM TRA NÚT BẤM CỦA IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\r\n";
+                GlobalData.testingDataDUT.SYSTEMLOG += string.Format("Đang chờ người dùng thực hiện nhấn nút bấm...  \r\n");
+                GlobalData.testingDataDUT.CAMERALOG = "";
                 int count = 0;
                 REP:
                 count++;
-                GlobalData.testingDataDUT.SYSTEMLOG += string.Format("Đang chờ người dùng thực hiện nhấn nút bấm...  \r\n");
                 GlobalData.testingDataDUT.SYSTEMLOG += string.Format("Thời gian chờ {0} s ...  \r\n",count);
-                bool ret = GlobalData.testingDataDUT.UARTLOG.Contains("time_process = 0");
+                GlobalData.testingDataDUT.SYSTEMLOG += "CAMERA Feedback:\r\n" + GlobalData.testingDataDUT.CAMERALOG + "\r\n";
+                bool ret = GlobalData.testingDataDUT.UARTLOG.Contains("time_process = 0") || GlobalData.testingDataDUT.UARTLOG.Contains("time_process = 1");
                 if (!ret) {
                     if (count <= _max) {
                         Thread.Sleep(1000);
@@ -236,7 +247,7 @@ namespace ToolTestIPCamera_Ver1.Function.DUT {
                 _message = ex.ToString();
                 GlobalData.testingDataDUT.SYSTEMLOG += _message + "\r\n";
                 GlobalData.testingDataDUT.BUTTONRESULT = Parameters.testStatus.FAIL.ToString();
-                GlobalData.testingDataDUT.SYSTEMLOG += string.Format("KẾT QUẢ KIỂM TRA THẺ NHỚ SD card: FAIL\r\n");
+                GlobalData.testingDataDUT.SYSTEMLOG += string.Format("KẾT QUẢ KIỂM TRA NÚT BẤM: FAIL\r\n");
                 return false;
             }
         }
@@ -254,10 +265,57 @@ namespace ToolTestIPCamera_Ver1.Function.DUT {
         /// <returns></returns>
         protected bool WriteMAC(ref string _message) {
             try {
-                return true;
+                bool ret = false;
+                int count = 0, _max = 200;
+                REP:
+                //Access to uboot (timeout = 20s)
+                count++;
+                ret = GlobalData.testingDataDUT.CAMERALOG.Contains("Hit any key to stop autoboot:");
+                if (!ret) {
+                    if (count < _max) {
+                        Thread.Sleep(100);
+                        goto REP;
+                    }
+                }
+                //Write MAC
+                if (ret) {
+                    //Set MAC for Camera (retry 3 times)
+                    GlobalData.camera.WriteLine("\n");
+                    Thread.Sleep(500);
+                    string _mac = GlobalData.testingDataDUT.MACADDRESS;
+                    string _longmac = string.Format("{0}:{1}:{2}:{3}:{4}:{5}", _mac.Substring(0,2), _mac.Substring(2, 2), _mac.Substring(4, 2), _mac.Substring(6, 2), _mac.Substring(8, 2), _mac.Substring(10, 2)).ToUpper();
+                    count = 0;
+                    REP1:
+                    count++;
+                    GlobalData.testingDataDUT.CAMERALOG = "";
+                    GlobalData.camera.WriteLine(string.Format("setethaddr {0}", _longmac));
+                    Thread.Sleep(500);
+                    GlobalData.testingDataDUT.SYSTEMLOG += "CAMERA Feedback:\r\n" + GlobalData.testingDataDUT.CAMERALOG + "\r\n";
+                    ret = GlobalData.testingDataDUT.CAMERALOG.Contains(string.Format("New MAC address: {0}", _longmac));
+                    if (!ret) {
+                        if (count < 3) goto REP1;
+                    }
+                    else {
+                        //Save MAC for Camera (retry 3 times)
+                        count = 0;
+                        REP2:
+                        count++;
+                        GlobalData.testingDataDUT.CAMERALOG = "";
+                        GlobalData.camera.WriteLine("saveenv");
+                        Thread.Sleep(1000);
+                        GlobalData.testingDataDUT.SYSTEMLOG += "CAMERA Feedback:\r\n" + GlobalData.testingDataDUT.CAMERALOG + "\r\n";
+                        ret = GlobalData.testingDataDUT.CAMERALOG.Contains("saveenv done");
+                        if (!ret) {
+                            if (count < 3) goto REP2;
+                        }
+                    }
+                }
+                GlobalData.testingDataDUT.WRITEMACRESULT = ret == true ? Parameters.testStatus.PASS.ToString() : Parameters.testStatus.FAIL.ToString();
+                return ret;
             }
             catch(Exception ex) {
                 _message = ex.ToString();
+                GlobalData.testingDataDUT.WRITEMACRESULT = Parameters.testStatus.FAIL.ToString();
                 return false;
             }
         }
@@ -265,10 +323,90 @@ namespace ToolTestIPCamera_Ver1.Function.DUT {
 
         protected bool UpFirmWare(ref string _message) {
             try {
-                return true;
+                bool ret = false;
+                GlobalData.testingDataDUT.CAMERALOG = "";
+                int _count = 0, _timeout = 90;
+                string _cmdPath = string.Format("{0}UPLOAD\\cmd.txt", System.AppDomain.CurrentDomain.BaseDirectory);
+                string _wpsPath = string.Format("{0}UPLOAD\\wps.txt", System.AppDomain.CurrentDomain.BaseDirectory);
+                string _runPath = string.Format("{0}UPLOAD\\RunPowerShell.exe", System.AppDomain.CurrentDomain.BaseDirectory);
+
+                //Set IP Camera ve che do Upload FW
+                GlobalData.camera.WriteLine("setipaddr 192.168.1.253");
+                Thread.Sleep(500);
+                GlobalData.camera.WriteLine("saveenv");
+                Thread.Sleep(500);
+                GlobalData.camera.WriteLine("update all");
+                Thread.Sleep(1000);
+
+                //Upload file linux.bin
+                //********************************************//
+                //1. Set đường dẫn file FW
+                File.WriteAllText(_cmdPath, string.Format("tftp -i 192.168.1.253 put {0}", GlobalData.initSetting.linuxpath));
+                Thread.Sleep(100);
+                Process.Start(_runPath);
+
+                GlobalData.testingDataDUT.CAMERALOG = "";
+                REP:
+                _count++;
+                ret = GlobalData.testingDataDUT.CAMERALOG.Contains("update all done");
+                if (!ret) {
+                    if (_count < _timeout) {
+                        Thread.Sleep(1000);
+                        goto REP;
+                    }
+                }
+                GlobalData.testingDataDUT.SYSTEMLOG += string.Format("KẾT QUẢ UPLOAD FILE linux.bin: {0}\r\n", ret == true ? "PASS" : "FAIL");
+
+                //Upload file mcu.bin
+                //********************************************//
+                GlobalData.camera.WriteLine("update fw");
+                Thread.Sleep(1000);
+                File.WriteAllText(_cmdPath, string.Format("tftp -i 192.168.1.253 put {0}", GlobalData.initSetting.mcupath));
+                Thread.Sleep(100);
+                Process.Start(_runPath);
+
+                GlobalData.testingDataDUT.CAMERALOG = "";
+                REP1:
+                _count++;
+                ret = GlobalData.testingDataDUT.CAMERALOG.Contains("update fw done");
+                if (!ret) {
+                    if (_count < _timeout) {
+                        Thread.Sleep(1000);
+                        goto REP1;
+                    }
+                }
+                GlobalData.testingDataDUT.SYSTEMLOG += string.Format("KẾT QUẢ UPLOAD FILE mcu.bin: {0}\r\n", ret == true ? "PASS" : "FAIL");
+
+
+                //Upload file ldc.bin
+                //********************************************//
+                GlobalData.camera.WriteLine("update ldc");
+                Thread.Sleep(1000);
+                File.WriteAllText(_cmdPath, string.Format("tftp -i 192.168.1.253 put {0}", GlobalData.initSetting.ldcpath));
+                Thread.Sleep(100);
+                Process.Start(_runPath);
+
+                GlobalData.testingDataDUT.CAMERALOG = "";
+                REP2:
+                _count++;
+                ret = GlobalData.testingDataDUT.CAMERALOG.Contains("update ldc done");
+                if (!ret) {
+                    if (_count < _timeout) {
+                        Thread.Sleep(1000);
+                        goto REP2;
+                    }
+                }
+                GlobalData.testingDataDUT.SYSTEMLOG += string.Format("KẾT QUẢ UPLOAD FILE ldc.bin: {0}\r\n", ret == true ? "PASS" : "FAIL");
+
+
+                GlobalData.testingDataDUT.SYSTEMLOG += string.Format("KẾT QUẢ UPLOAD FIRMWARE: {0}\r\n", ret == true ? "PASS" : "FAIL");
+                GlobalData.testingDataDUT.UPLOADFWRESULT = ret == true ? Parameters.testStatus.PASS.ToString() : Parameters.testStatus.FAIL.ToString();
+                return ret;
             }
             catch (Exception ex) {
                 _message = ex.ToString();
+                GlobalData.testingDataDUT.SYSTEMLOG += string.Format("KẾT QUẢ UPLOAD FIRMWARE: FAIL\r\n");
+                GlobalData.testingDataDUT.UPLOADFWRESULT = Parameters.testStatus.FAIL.ToString();
                 return false;
             }
         }

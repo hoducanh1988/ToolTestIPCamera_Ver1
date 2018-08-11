@@ -320,7 +320,23 @@ namespace ToolTestIPCamera_Ver1.Function {
                 OnPropertyChanged(nameof(MACADDRESS));
             }
         }
+        bool _enabletextbox;
+        public bool ENABLETEXTBOX {
+            get { return _enabletextbox; }
+            set {
+                _enabletextbox = value;
+                OnPropertyChanged(nameof(ENABLETEXTBOX));
+            }
+        }
 
+        string _oldmac;
+        public string OLDMAC {
+            get { return _oldmac; }
+            set {
+                _oldmac = value;
+                OnPropertyChanged(nameof(OLDMAC));
+            }
+        }
 
         //result
         #region RESULT
@@ -480,7 +496,9 @@ namespace ToolTestIPCamera_Ver1.Function {
 
         public void Initialization() {
             this.TOTALTIME = "0";
-            this.MACADDRESS = "-";
+            this.MACADDRESS = "";
+            this.OLDMAC = "";
+            this.ENABLETEXTBOX = true;
 
             this.WRITEMACRESULT =  GlobalData.initSetting.writemacoption == true ? Parameters.testStatus.NONE.ToString() : Parameters.testStatus.X.ToString();
             this.UPLOADFWRESULT = GlobalData.initSetting.uploadfirmwareoption == true ? Parameters.testStatus.NONE.ToString() : Parameters.testStatus.X.ToString();
@@ -505,7 +523,9 @@ namespace ToolTestIPCamera_Ver1.Function {
 
         public void InitControlForChecking() {
             this.TOTALTIME = "0";
-            this.MACADDRESS = "-";
+            //this.MACADDRESS = "";
+            this.OLDMAC = "";
+            this.ENABLETEXTBOX = false;
 
             this.WRITEMACRESULT = GlobalData.initSetting.writemacoption == true ? Parameters.testStatus.Wait.ToString() : Parameters.testStatus.X.ToString();
             this.UPLOADFWRESULT = GlobalData.initSetting.uploadfirmwareoption == true ? Parameters.testStatus.Wait.ToString() : Parameters.testStatus.X.ToString();

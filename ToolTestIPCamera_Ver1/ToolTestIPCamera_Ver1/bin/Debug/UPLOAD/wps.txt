@@ -1,0 +1,2 @@
+Transfer successful: 522816 bytes in 1 second(s), 522816 bytes/s
+
