@@ -121,3 +121,17 @@ D:\Git\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\obj\Deb
 D:\Git\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\obj\Debug\SubWindow\SpeakerMicWindow.g.cs
 D:\Git\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\obj\Debug\SubWindow\ImageSensorWindow.baml
 D:\Git\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\obj\Debug\SubWindow\SpeakerMicWindow.baml
+C:\Users\anhho\source\repos\GitHub\IPCamera_Project\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\obj\Debug\SubWindow\ButtonWindow.g.cs
+C:\Users\anhho\source\repos\GitHub\IPCamera_Project\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\obj\Debug\SubWindow\ImageSensorWindow.g.cs
+C:\Users\anhho\source\repos\GitHub\IPCamera_Project\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\obj\Debug\SubWindow\LightSensorWindow.g.cs
+C:\Users\anhho\source\repos\GitHub\IPCamera_Project\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\obj\Debug\SubWindow\RGBLEDWindow.g.cs
+C:\Users\anhho\source\repos\GitHub\IPCamera_Project\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\obj\Debug\SubWindow\SpeakerMicWindow.g.cs
+C:\Users\anhho\source\repos\GitHub\IPCamera_Project\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\obj\Debug\SubWindow\WIFIWindow.g.cs
+C:\Users\anhho\source\repos\GitHub\IPCamera_Project\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\obj\Debug\SubWindow\ButtonWindow.baml
+C:\Users\anhho\source\repos\GitHub\IPCamera_Project\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\obj\Debug\SubWindow\ImageSensorWindow.baml
+C:\Users\anhho\source\repos\GitHub\IPCamera_Project\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\obj\Debug\SubWindow\LightSensorWindow.baml
+C:\Users\anhho\source\repos\GitHub\IPCamera_Project\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\obj\Debug\SubWindow\RGBLEDWindow.baml
+C:\Users\anhho\source\repos\GitHub\IPCamera_Project\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\obj\Debug\SubWindow\SpeakerMicWindow.baml
+C:\Users\anhho\source\repos\GitHub\IPCamera_Project\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\obj\Debug\SubWindow\WIFIWindow.baml
+C:\Users\anhho\source\repos\GitHub\IPCamera_Project\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\bin\Debug\NAudio.dll
+C:\Users\anhho\source\repos\GitHub\IPCamera_Project\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\bin\Debug\NAudio.xml

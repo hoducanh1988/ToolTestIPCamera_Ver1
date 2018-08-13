@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("asset/icons/ipcamera.ico")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("asset/sounds/beep.wav")]
 
 

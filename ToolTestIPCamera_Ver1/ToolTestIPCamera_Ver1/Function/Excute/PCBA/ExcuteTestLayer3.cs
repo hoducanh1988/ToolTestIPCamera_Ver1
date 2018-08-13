@@ -30,6 +30,9 @@ namespace ToolTestIPCamera_Ver1.Function.Excute
                 if (GlobalData.initSetting.uploadfirmwareoption == true) {
                     if (!UpFirmWare(ref message)) goto NG;
                 }
+
+
+
                 //Check USB
 
                 //Check Light Sensor

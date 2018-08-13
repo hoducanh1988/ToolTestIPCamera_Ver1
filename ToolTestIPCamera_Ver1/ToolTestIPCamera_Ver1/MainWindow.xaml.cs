@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -113,6 +113,17 @@ namespace ToolTestIPCamera_Ver1 {
 
         private void lblMax_MouseDown(object sender, MouseButtonEventArgs e) {
             this.SetStartupLocation();
+        }
+
+        private void Image_MouseDown(object sender, MouseButtonEventArgs e) {
+            Thread t = new Thread(new ThreadStart(() => {
+                string msg = "";
+                Speaker speaker = new Speaker();
+                speaker.PlaySound(ref msg);
+            }));
+
+            t.IsBackground = true;
+            t.Start();
         }
     }
 }

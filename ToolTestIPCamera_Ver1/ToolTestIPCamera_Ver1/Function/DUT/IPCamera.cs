@@ -11,13 +11,6 @@ namespace ToolTestIPCamera_Ver1.Function.DUT {
 
         #region CHECK PCBA
 
-
-
-        //Check Layer2
-        #region CHECK PCBA LAYER2
-        ButtonWindow btnwindow = null;
-        RGBLEDWindow rgbwindow = null;
-
         /// <summary>
         /// CHECK IP CAMERA BOOT COMPLETE
         /// TIMEOUT = 60s
@@ -25,21 +18,31 @@ namespace ToolTestIPCamera_Ver1.Function.DUT {
         /// FALSE = CAMERA BOOT NG
         /// </summary>
         /// <returns></returns>
-        //protected bool WaitCameraBootComplete() {
-        //    int count = 0;
-        //    bool ret = false;
-        //    REP:
-        //    count++;
-        //    ret = GlobalData.testingDataDUT.UARTLOG.Contains("Please press Enter to activate this console. md configuration done.");
-        //    if (!ret) {
-        //        if (count < 60) {
-        //            Thread.Sleep(1000);
-        //            goto REP;
-        //        }
-        //    }
-        //    return ret;
+        protected bool WaitCameraBootComplete() {
+            int count = 0;
+            bool ret = false;
+            REP:
+            count++;
+            ret = GlobalData.testingDataDUT.UARTLOG.Contains("Please press Enter to activate this console. md configuration done.");
+            if (!ret) {
+                if (count < 60) {
+                    Thread.Sleep(1000);
+                    goto REP;
+                }
+            }
+            return ret;
+        }
+
+        //protected bool RebootCamera() {
+
         //}
 
+
+        //Check Layer2
+        #region CHECK PCBA LAYER2
+
+        ButtonWindow btnwindow = null;
+        RGBLEDWindow rgbwindow = null;
 
         /// <summary>
         /// CHECK CONG LAN CUA IP CAMERA Link Up/Down 

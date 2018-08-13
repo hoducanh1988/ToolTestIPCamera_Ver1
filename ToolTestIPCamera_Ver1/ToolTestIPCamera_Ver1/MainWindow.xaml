@@ -19,7 +19,7 @@
             <!--Software infomation-->
             <Grid Grid.Row="0" Margin="5,0,0,0">
                 <WrapPanel HorizontalAlignment="Left">
-                    <Image Source="/Asset/Images/logovnpt.png"></Image>
+                    <Image Source="/Asset/Images/logovnpt.png" MouseDown="Image_MouseDown"></Image>
                     <Label VerticalAlignment="Center" Foreground="{StaticResource colorTextTitle}" Content=" Phiên bản 1.0.0.0"></Label>
                     <Label VerticalAlignment="Center" Foreground="{StaticResource colorTextTitle}" Content=" Ngày tạo 06/08/2018"></Label>
                     <Label VerticalAlignment="Center" Foreground="{StaticResource colorTextTitle}" Content=" Bản quyền công ty VNPT Technology 2018"></Label>
