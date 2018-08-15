@@ -116,14 +116,8 @@ namespace ToolTestIPCamera_Ver1 {
         }
 
         private void Image_MouseDown(object sender, MouseButtonEventArgs e) {
-            Thread t = new Thread(new ThreadStart(() => {
-                string msg = "";
-                Speaker speaker = new Speaker();
-                speaker.PlaySound(ref msg);
-            }));
-
-            t.IsBackground = true;
-            t.Start();
+            WIFIWindow w = new WIFIWindow();
+            w.ShowDialog();
         }
     }
 }

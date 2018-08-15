@@ -91,6 +91,9 @@
     <Compile Include="SubWindow\LightSensorWindow.xaml.cs">
       <DependentUpon>LightSensorWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SubWindow\ReButtonWindow.xaml.cs">
+      <DependentUpon>ReButtonWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SubWindow\RGBLEDWindow.xaml.cs">
       <DependentUpon>RGBLEDWindow.xaml</DependentUpon>
     </Compile>
@@ -190,6 +193,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="SubWindow\LightSensorWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SubWindow\ReButtonWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

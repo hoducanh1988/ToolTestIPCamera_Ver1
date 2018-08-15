@@ -1,11 +1,11 @@
-﻿<Window x:Class="ToolTestIPCamera_Ver1.WIFIWindow"
+﻿<Window x:Class="ToolTestIPCamera_Ver1.ReButtonWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ToolTestIPCamera_Ver1"
         mc:Ignorable="d"
-        Title="WIFIWindow" Height="450" Width="800" Style="{StaticResource customWindow}" WindowStartupLocation="CenterScreen" Topmost="True" ShowActivated="False" ShowInTaskbar="False" Loaded="Window_Loaded" Unloaded="Window_Unloaded">
+        Title="ReButtonWindow" Height="450" Width="800" Style="{StaticResource customWindow}" WindowStartupLocation="CenterScreen" Topmost="True" ShowActivated="False" ShowInTaskbar="False" Loaded="Window_Loaded" Unloaded="Window_Unloaded">
 
 
     <Border x:Name="MainBorder" CornerRadius="5" Background="{StaticResource colorBackground}" BorderBrush="{StaticResource colorBorder}"  BorderThickness="2,2,2,2">
@@ -17,7 +17,7 @@
 
             <Border Grid.Row="0" Background="#B94A0E" CornerRadius="5,5,0,0">
                 <Grid>
-                    <Label x:Name="lblTitle" VerticalContentAlignment="Center" HorizontalAlignment="Left" FontSize="25" FontWeight="SemiBold" Content="KIỂM TRA WIFI CỦA IP CAMERA" Foreground="White"/>
+                    <Label x:Name="lblTitle" VerticalContentAlignment="Center" HorizontalAlignment="Left" FontSize="25" FontWeight="SemiBold" Content="KIỂM TRA NÚT NHẤN CỦA IP CAMERA" Foreground="White"/>
                     <Label HorizontalAlignment="Right" MouseDown="Label_MouseDown" FontSize="40" Width="50" FontWeight="Bold" Margin="0,-5,5,0"  Foreground="{StaticResource colorTextTitle}" ToolTipService.ToolTip="Tắt ứng dụng" Content="X"></Label>
                 </Grid>
             </Border>
@@ -37,7 +37,7 @@
 
                     <StackPanel Grid.Row="0" Margin="5,10,0,0">
                         <!--WIFI-->
-                        <Label Content="KẾT QUẢ KIỂM TRA WIFI:" FontSize="25" FontWeight="Bold" Foreground="Green"/>
+                        <Label Content="KẾT QUẢ KIỂM TRA NÚT NHẤN:" FontSize="25" FontWeight="Bold" Foreground="Green"/>
                         <Border Height="2" Width="400" HorizontalAlignment="Left" Background="Lime">
                             <Border.Style>
                                 <Style TargetType="Border">
@@ -75,7 +75,7 @@
                             <TextBlock  x:Name="tbTimeOut" Padding="5,5,5,5" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="40" TextWrapping="Wrap" Text="30"></TextBlock>
                             <TextBlock Padding="5,5,5,5" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="40" TextWrapping="Wrap" Text="s"></TextBlock>
                         </WrapPanel>
-                        
+
                     </StackPanel>
 
                     <!--BUTTON OK-->
@@ -87,15 +87,15 @@
 
                 <!--Giai thich phuong phap check-->
                 <StackPanel Grid.Column="1">
-                    <TextBlock TextWrapping="Wrap" FontSize="20" Foreground="Black" Padding="5,5,5,5" Text="Quan sát LED trạng thái IP Camera (LED nằm ở phía sau, gần cổng LAN):"/>
-                    <TextBlock Margin="0,20,0,0" TextWrapping="Wrap" FontSize="20" Foreground="Black" Padding="5,5,5,5" Text="- Nhấp nháy màu xanh : WIFI PASS" FontStyle="Italic"/>
-                    <TextBlock Margin="0,5,0,0" TextWrapping="Wrap" FontSize="20" Foreground="Black" Padding="5,0,5,5" Text="- Các trường hợp khác : WIFI FAIL." FontStyle="Italic"/>
+                    <TextBlock TextWrapping="Wrap" FontSize="20" Foreground="Black" Padding="5,5,5,5" Text="Nhấn và giữ nút nhấn trong khoảng 5s. Nhả nút nhấn và quan sát đèn trạng thái:"/>
+                    <TextBlock Margin="0,20,0,0" TextWrapping="Wrap" FontSize="20" Foreground="Black" Padding="5,5,5,5" Text="- Nhấp nháy màu đỏ : Nút nhấn PASS" FontStyle="Italic"/>
+                    <TextBlock Margin="0,5,0,0" TextWrapping="Wrap" FontSize="20" Foreground="Black" Padding="5,0,5,5" Text="- Các trường hợp khác : Nút nhấn FAIL." FontStyle="Italic"/>
                     <TextBlock Margin="0,20,0,0" TextWrapping="Wrap" FontSize="20" Foreground="Black" Padding="5,0,5,5" Text="Click nút OK để hoàn thành." FontWeight="Bold"/>
                 </StackPanel>
 
             </Grid>
         </Grid>
     </Border>
-
-
+    
+    
 </Window>

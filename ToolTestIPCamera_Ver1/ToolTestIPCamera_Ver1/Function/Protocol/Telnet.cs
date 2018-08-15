@@ -62,14 +62,41 @@ namespace ToolTestIPCamera_Ver1.Function.Protocol
         /// Connect to TCP server
         /// </summary>
         /// <returns></returns>
-        public bool Connection() {
+        public bool Connection(ref string _message) {
             this.clients = new TcpClient();
             this.configTCP();
             try {
                 this.clients.ConnectAsync(host, port).Wait(1000);
+                _message = "Connect to Camera success.";
                 return this.clients.Connected;
+                
             }
-            catch {
+            catch (Exception ex) {
+                _message = ex.ToString();
+                return false;
+            }
+        }
+
+        public bool LoginToCamera(ref string _message) {
+            try {
+                bool ret = false;
+                this.Write("\n");
+                Thread.Sleep(500);
+                string data = this.Read0();
+                GlobalData.testingDataDUT.SYSTEMLOG += string.Format("{0}\r\n", data);
+                if (data.Contains("login:")) {
+                    //nhap user
+                    this.WriteLine(GlobalData.initSetting.dutuser);
+                    Thread.Sleep(500);
+                    data = this.Read0();
+                    GlobalData.testingDataDUT.SYSTEMLOG += string.Format("{0}\r\n", data);
+                    if (data.Contains("~ #")) ret = true;
+                }
+                else if (data.Contains("~ #")) ret = true;
+                _message = ret == true ? "Login to Camera success." : "Login to Camera fail";
+                return ret;
+            } catch (Exception ex) {
+                _message = ex.ToString();
                 return false;
             }
         }

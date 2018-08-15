@@ -1,4 +1,4 @@
-﻿
+﻿D:\Git\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\obj\Debug\GeneratedInternalTypeHelper.g.i.cs
 FD:\Git\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\App.xaml;;
 FD:\Git\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\Asset\Resources\customWindow.xaml;;
 FD:\Git\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\Asset\Resources\Label.xaml;;
@@ -6,6 +6,7 @@ FD:\Git\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\MainWi
 FD:\Git\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\SubWindow\ButtonWindow.xaml;;
 FD:\Git\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\SubWindow\ImageSensorWindow.xaml;;
 FD:\Git\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\SubWindow\LightSensorWindow.xaml;;
+FD:\Git\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\SubWindow\ReButtonWindow.xaml;;
 FD:\Git\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\SubWindow\RGBLEDWindow.xaml;;
 FD:\Git\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\SubWindow\SpeakerMicWindow.xaml;;
 FD:\Git\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\SubWindow\WIFIWindow.xaml;;
@@ -16,5 +17,4 @@ FD:\Git\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\UserCo
 FD:\Git\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\UserControls\ucManual.xaml;;
 FD:\Git\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\UserControls\ucSetting.xaml;;
 FD:\Git\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\UserControls\ucTesting.xaml;;
-FD:\Git\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\SubWindow\ReButtonWindow.xaml;;
 

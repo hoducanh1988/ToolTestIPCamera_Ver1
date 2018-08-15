@@ -15,18 +15,18 @@ using System.Windows.Threading;
 
 namespace ToolTestIPCamera_Ver1 {
     /// <summary>
-    /// Interaction logic for WIFIWindow.xaml
+    /// Interaction logic for ReButtonWindow.xaml
     /// </summary>
-    public partial class WIFIWindow : Window {
+    public partial class ReButtonWindow : Window {
+        public ReButtonWindow() {
+            InitializeComponent();
+        }
 
         int _count = 0;
         DispatcherTimer timer = null;
-        public bool wifiResult = false;
+        public bool buttonResult = false;
 
 
-        public WIFIWindow() {
-            InitializeComponent();
-        }
 
         private void Window_Loaded(object sender, RoutedEventArgs e) {
             timer = new DispatcherTimer();
@@ -44,7 +44,7 @@ namespace ToolTestIPCamera_Ver1 {
             Button b = (Button)sender;
             switch (b.Content) {
                 case "OK": {
-                        wifiResult = bdResult.Background == Brushes.Lime ? true : false;
+                        buttonResult = bdResult.Background == Brushes.Lime ? true : false;
                         this.Close();
                         break;
                     }
@@ -54,7 +54,7 @@ namespace ToolTestIPCamera_Ver1 {
         private void dispatcherTimer_Tick(object sender, EventArgs e) {
             this._count++;
             this.MainBorder.Background = this._count % 2 == 1 ? (SolidColorBrush)new BrushConverter().ConvertFrom("#EEEEEE") : (SolidColorBrush)new BrushConverter().ConvertFrom("#FFE738");
-            tbTimeOut.Text = string.Format("{0}", 30 - (this._count /2));
+            tbTimeOut.Text = string.Format("{0}", 30 - (this._count / 2));
 
             if (30 - (this._count / 2) < 0) {
                 timer.Stop();
@@ -71,5 +71,6 @@ namespace ToolTestIPCamera_Ver1 {
             if (b.Background == Brushes.Lime) b.Background = Brushes.Red;
             else b.Background = Brushes.Lime;
         }
+
     }
 }

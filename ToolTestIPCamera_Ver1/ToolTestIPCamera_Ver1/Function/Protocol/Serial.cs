@@ -168,9 +168,7 @@ namespace ToolTestIPCamera_Ver1.Function.Protocol
         }
 
 
-        public bool Connection() {
-            throw new NotImplementedException();
-        }
+      
 
         public bool sendListCommand(params string[] _listcmd) {
             throw new NotImplementedException();
@@ -185,6 +183,20 @@ namespace ToolTestIPCamera_Ver1.Function.Protocol
         }
 
         public string Read0() {
+            try {
+                return this._serialport.ReadExisting();
+            }
+            catch (Exception ex) {
+                System.Windows.MessageBox.Show(ex.ToString(), "ERROR", System.Windows.MessageBoxButton.OK, System.Windows.MessageBoxImage.Error);
+                return "";
+            }
+        }
+
+        public bool Connection(ref string _message) {
+            throw new NotImplementedException();
+        }
+
+        public bool LoginToCamera(ref string _message) {
             throw new NotImplementedException();
         }
     }
