@@ -33,6 +33,7 @@ namespace ToolTestIPCamera_Ver1.UserControls {
             switch (b.Content) {
                 case "SAVE SETTING": {
                         GlobalData.initSetting.SaveSetting();
+                        GlobalData.testingDataDUT.Initialization();
                         BaseFunction.SelectCameraProtocol(GlobalData.initSetting.station);
                         MessageBox.Show("Success.","SAVE SETTING", MessageBoxButton.OK, MessageBoxImage.Information);
                         break;

@@ -24,9 +24,9 @@ namespace ToolTestIPCamera_Ver1.Function.DUT {
         protected bool WaitCameraBootComplete() {
             int count = 0;
             bool ret = false;
-        REP:
+            REP:
             count++;
-            ret = GlobalData.testingDataDUT.UARTLOG.Contains("Please press Enter to activate this console. md configuration done.");
+            ret = GlobalData.testingDataDUT.UARTLOG.Contains("Please press Enter to activate this console.");
             if (!ret) {
                 if (count < 60) {
                     Thread.Sleep(1000);
@@ -36,9 +36,34 @@ namespace ToolTestIPCamera_Ver1.Function.DUT {
             return ret;
         }
 
-        //protected bool RebootCamera() {
 
-        //}
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        protected bool RebootCamera() {
+            try {
+                int count = 0;
+                bool ret = false;
+                GlobalData.testingDataDUT.SYSTEMLOG += "Reboot IP Camera...\r\n";
+                REP:
+                count++;
+                GlobalData.testingDataDUT.CAMERALOG = "";
+                GlobalData.camera.WriteLine("bootm 0xbc120000");
+                Thread.Sleep(3000);
+                GlobalData.testingDataDUT.SYSTEMLOG += GlobalData.testingDataDUT.CAMERALOG + "\r\n";
+                ret = GlobalData.testingDataDUT.CAMERALOG.Contains("Starting kernel ...");
+                if (!ret) {
+                    if (count < 3) goto REP;
+                }
+                return ret;
+            }
+            catch {
+                return false;
+            }
+        }
+
+
 
 
         //Check Layer2
@@ -159,7 +184,7 @@ namespace ToolTestIPCamera_Ver1.Function.DUT {
                 bool ret = false;
                 int count = 0, _max = 200;
                 GlobalData.testingDataDUT.SYSTEMLOG += "\r\nĐANG GHI MAC VÀO IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\r\n";
-            REP:
+                REP:
                 //Access to uboot (timeout = 20s)
                 GlobalData.testingDataDUT.SYSTEMLOG += "Đang chờ thiết bị khởi động...\r\n";
                 count++;
@@ -181,7 +206,7 @@ namespace ToolTestIPCamera_Ver1.Function.DUT {
                     string _longmac = string.Format("{0}:{1}:{2}:{3}:{4}:{5}", _mac.Substring(0, 2), _mac.Substring(2, 2), _mac.Substring(4, 2), _mac.Substring(6, 2), _mac.Substring(8, 2), _mac.Substring(10, 2)).ToUpper();
                     GlobalData.testingDataDUT.SYSTEMLOG += string.Format("Địa chỉ MAC bắn vào: {0}\r\n", _longmac);
                     count = 0;
-                REP1:
+                    REP1:
                     count++;
                     GlobalData.testingDataDUT.CAMERALOG = "";
                     GlobalData.testingDataDUT.SYSTEMLOG += string.Format("Phần mềm gửi lệnh: setethaddr {0}\r\n", _longmac);
@@ -196,7 +221,7 @@ namespace ToolTestIPCamera_Ver1.Function.DUT {
                     else {
                         //Save MAC for Camera (retry 3 times)
                         count = 0;
-                    REP2:
+                        REP2:
                         count++;
                         GlobalData.testingDataDUT.CAMERALOG = "";
                         GlobalData.testingDataDUT.SYSTEMLOG += "Phần mềm gửi lệnh: saveenv\r\n";
@@ -265,7 +290,7 @@ namespace ToolTestIPCamera_Ver1.Function.DUT {
                 Process.Start(_runPath);
 
                 GlobalData.testingDataDUT.CAMERALOG = "";
-            REP:
+                REP:
                 _count++;
                 ret = GlobalData.testingDataDUT.CAMERALOG.Contains("update all done");
                 if (!ret) {
@@ -291,7 +316,7 @@ namespace ToolTestIPCamera_Ver1.Function.DUT {
 
                 GlobalData.testingDataDUT.CAMERALOG = "";
                 _count = 0;
-            REP1:
+                REP1:
                 _count++;
                 ret = GlobalData.testingDataDUT.CAMERALOG.Contains("update fw done");
                 if (!ret) {
@@ -318,7 +343,7 @@ namespace ToolTestIPCamera_Ver1.Function.DUT {
 
                 GlobalData.testingDataDUT.CAMERALOG = "";
                 _count = 0;
-            REP2:
+                REP2:
                 _count++;
                 ret = GlobalData.testingDataDUT.CAMERALOG.Contains("update ldc done");
                 if (!ret) {
@@ -357,7 +382,7 @@ namespace ToolTestIPCamera_Ver1.Function.DUT {
                 bool ret = false;
                 int count = 0;
                 GlobalData.testingDataDUT.SYSTEMLOG += "\r\nKIỂM TRA KẾT NỐI USB CỦA IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\r\n";
-            REP:
+                REP:
                 count++;
                 GlobalData.testingDataDUT.SYSTEMLOG += string.Format("Kiểm tra USB lần thứ {0}\r\n", count + 1);
                 GlobalData.testingDataDUT.CAMERALOG = "";
@@ -435,7 +460,7 @@ namespace ToolTestIPCamera_Ver1.Function.DUT {
             try {
                 GlobalData.testingDataDUT.SYSTEMLOG += "\r\nKIỂM TRA IMAGE SENSOR CỦA IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\r\n";
                 bool ret = false;
-                int count = 0, timeout = 40;
+                int count = 0, timeout = 65;
                 GlobalData.testingDataDUT.SYSTEMLOG += "Lưu địa chỉ MAC vào MAC.txt\r\n";
                 File.WriteAllText("MAC.txt", GlobalData.testingDataDUT.MACADDRESS);
                 GlobalData.testingDataDUT.SYSTEMLOG += "Lọc file Result.txt\r\n";
@@ -449,7 +474,7 @@ namespace ToolTestIPCamera_Ver1.Function.DUT {
                 REP:
                 count++;
                 if (!File.Exists("Result.txt")) {
-                    GlobalData.testingDataDUT.SYSTEMLOG += string.Format("Chờ {0} s \r\n",count);
+                    GlobalData.testingDataDUT.SYSTEMLOG += string.Format("Chờ {0} s \r\n", count);
                     if (count < timeout) {
                         Thread.Sleep(1000);
                         goto REP;
@@ -478,35 +503,41 @@ namespace ToolTestIPCamera_Ver1.Function.DUT {
 
         #region check Product
 
-        /// <summary>
-        /// Kiểm tra phiên bản FW version
-        /// </summary>
-        /// <param name="_message"></param>
-        /// <returns></returns>
-        protected bool CheckFormware(ref string _message) {
+        protected bool CheckMACAddress(ref string _message) {
             try {
+                bool ret = false;
+                GlobalData.testingDataDUT.SYSTEMLOG += "\r\nKIỂM TRA MAC ADDRESS CỦA IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\r\n";
+                string _macinstamp = GlobalData.testingDataDUT.MACADDRESS;
+                string _macincamera = "";
+                int count = 0;
 
-                return true;
-            }
-            catch(Exception ex) {
-                _message = ex.ToString();
-                return false;
-            }
-        }
+                //Get MAC from camera
+                REP:
+                count++;
+                GlobalData.camera.WriteLine("ifconfig");
+                Thread.Sleep(1000);
+                string data = GlobalData.camera.Read0();
+                if (!data.Contains("eth0") || !data.Contains("lo")) {
+                    if (count < 3) goto REP;
+                }
+                else {
+                    data = data.Split(new string[] { "eth0" }, StringSplitOptions.None)[1];
+                    data = data.Split(new string[] { "lo" }, StringSplitOptions.None)[0];
+                    data = data.Split(new string[] { "Link encap:Ethernet  HWaddr" }, StringSplitOptions.None)[1];
+                    data = data.Trim();
+                    _macincamera = data.Substring(0, 17).Replace(":","").Trim();
+                }
 
-
-        /// <summary>
-        /// Kiểm tra đèn nhấp nháy xanh
-        /// </summary>
-        /// <param name="_message"></param>
-        /// <returns></returns>
-        protected bool WifiSauDongVo(ref string _message) {
-            try {
-
-                return true;
+                //
+                ret = _macincamera.ToUpper().Replace(":", "").Trim() == _macinstamp.ToUpper().Replace(":", "").Trim();
+                GlobalData.testingDataDUT.MACRESULT = ret == true ? Parameters.testStatus.PASS.ToString() : Parameters.testStatus.FAIL.ToString();
+                GlobalData.testingDataDUT.SYSTEMLOG += string.Format("KẾT QUẢ KIỂM TRA MAC: {0} \r\n", ret == true ? "PASS" : "FAIL");
+                return ret;
             }
             catch (Exception ex) {
-                _message = ex.ToString();
+                GlobalData.testingDataDUT.MACRESULT = Parameters.testStatus.FAIL.ToString();
+                GlobalData.testingDataDUT.SYSTEMLOG += _message + "\r\n";
+                GlobalData.testingDataDUT.SYSTEMLOG += string.Format("KẾT QUẢ KIỂM TRA MAC: FAIL\r\n");
                 return false;
             }
         }
@@ -515,3 +546,6 @@ namespace ToolTestIPCamera_Ver1.Function.DUT {
 
     }
 }
+
+
+

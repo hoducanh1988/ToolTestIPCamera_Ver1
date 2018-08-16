@@ -311,6 +311,54 @@
 
                         </Grid>
 
+
+                        <!--CHECK MAC-->
+                        <Grid Height="50">
+                            <Grid.Style>
+                                <Style TargetType="Grid">
+                                    <Setter Property="Visibility" Value="Collapsed"/>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Path=station}" Value="SAU-DONG-VO">
+                                            <Setter Property="Visibility" Value="Visible"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Grid.Style>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1.3*"/>
+                                <ColumnDefinition Width="1*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Label Foreground="{StaticResource colorTextYellow}" HorizontalAlignment="Right"  Margin="0,-5,0,0" Grid.Row="4" Grid.Column="0" FontSize="30" FontWeight="SemiBold">MAC:</Label>
+                            <Label x:Name="lblNum14" HorizontalAlignment="Left"  Margin="0,-5,0,0" Grid.Row="4" Grid.Column="1" FontSize="30" FontWeight="Bold" Content="{Binding Path=MACRESULT, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}">
+                                <Label.Style>
+                                    <Style TargetType="Label">
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding ElementName=lblNum14, Path=Content}" Value="PASS">
+                                                <Setter Property="Foreground" Value="{StaticResource colorTextOK}"/>
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding ElementName=lblNum14, Path=Content}" Value="FAIL">
+                                                <Setter Property="Foreground" Value="{StaticResource colorTextNG}"/>
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding ElementName=lblNum14, Path=Content}" Value="Wait">
+                                                <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding ElementName=lblNum14, Path=Content}" Value="NONE">
+                                                <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding ElementName=lblNum14, Path=Content}" Value="-">
+                                                <Setter Property="Foreground" Value="{StaticResource colorTextYellow}"/>
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding ElementName=lblNum14, Path=Content}" Value="X">
+                                                <Setter Property="Foreground" Value="Black"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Label.Style>
+                            </Label>
+
+                        </Grid>
+
                         <!--LAN-->
                         <Grid Height="50">
                             <Grid.Style>

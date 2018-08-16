@@ -196,6 +196,15 @@ namespace ToolTestIPCamera_Ver1.Function {
                 OnPropertyChanged(nameof(checkfirmwareversionoption));
             }
         }
+        public bool checkmacoption {
+            get { return Properties.Settings.Default.cmOption; }
+            set {
+                Properties.Settings.Default.cmOption = value;
+                GlobalData.testingDataDUT.MACRESULT = value == true ? Parameters.testStatus.NONE.ToString() : Parameters.testStatus.X.ToString();
+                OnPropertyChanged(nameof(checkmacoption));
+            }
+        }
+
         public bool checklanoption {
             get { return Properties.Settings.Default.clOption; }
             set {
@@ -373,6 +382,14 @@ namespace ToolTestIPCamera_Ver1.Function {
                 OnPropertyChanged(nameof(FWVERSIONRESULT));
             }
         }
+        string _macresult;
+        public string MACRESULT {
+            get { return _macresult; }
+            set {
+                _macresult = value;
+                OnPropertyChanged(nameof(MACRESULT));
+            }
+        }
         string _lan;
         public string LANRESULT {
             get { return _lan; }
@@ -504,6 +521,7 @@ namespace ToolTestIPCamera_Ver1.Function {
             this.UPLOADFWRESULT = GlobalData.initSetting.uploadfirmwareoption == true ? Parameters.testStatus.NONE.ToString() : Parameters.testStatus.X.ToString();
             this.WIFIRESULT = GlobalData.initSetting.checkwifioption == true ? Parameters.testStatus.NONE.ToString() : Parameters.testStatus.X.ToString();
             this.FWVERSIONRESULT = GlobalData.initSetting.checkfirmwareversionoption == true ? Parameters.testStatus.NONE.ToString() : Parameters.testStatus.X.ToString();
+            this.MACRESULT = GlobalData.initSetting.checkmacoption == true ? Parameters.testStatus.NONE.ToString() : Parameters.testStatus.X.ToString();
             this.LANRESULT = GlobalData.initSetting.checklanoption == true ? Parameters.testStatus.NONE.ToString() : Parameters.testStatus.X.ToString();
             this.SDCARDRESULT = GlobalData.initSetting.checksdcardoption == true ? Parameters.testStatus.NONE.ToString() : Parameters.testStatus.X.ToString();
             this.USBRESULT = GlobalData.initSetting.checkusboption == true ? Parameters.testStatus.NONE.ToString() : Parameters.testStatus.X.ToString();
@@ -531,6 +549,7 @@ namespace ToolTestIPCamera_Ver1.Function {
             this.UPLOADFWRESULT = GlobalData.initSetting.uploadfirmwareoption == true ? Parameters.testStatus.Wait.ToString() : Parameters.testStatus.X.ToString();
             this.WIFIRESULT = GlobalData.initSetting.checkwifioption == true ? Parameters.testStatus.Wait.ToString() : Parameters.testStatus.X.ToString();
             this.FWVERSIONRESULT = GlobalData.initSetting.checkfirmwareversionoption == true ? Parameters.testStatus.Wait.ToString() : Parameters.testStatus.X.ToString();
+            this.MACRESULT = GlobalData.initSetting.checkmacoption == true ? Parameters.testStatus.Wait.ToString() : Parameters.testStatus.X.ToString();
             this.LANRESULT = GlobalData.initSetting.checklanoption == true ? Parameters.testStatus.Wait.ToString() : Parameters.testStatus.X.ToString();
             this.SDCARDRESULT = GlobalData.initSetting.checksdcardoption == true ? Parameters.testStatus.Wait.ToString() : Parameters.testStatus.X.ToString();
             this.USBRESULT = GlobalData.initSetting.checkusboption == true ? Parameters.testStatus.Wait.ToString() : Parameters.testStatus.X.ToString();
@@ -544,6 +563,61 @@ namespace ToolTestIPCamera_Ver1.Function {
             this.UARTLOG = "";
             this.CAMERALOG = "";
             this.ERRORCODE = "";
+        }
+
+        public void FinishCheck() {
+
+            if (this.WRITEMACRESULT == Parameters.testStatus.Wait.ToString()) {
+                this.WRITEMACRESULT = Parameters.testStatus.NONE.ToString();
+            }
+
+            if (this.UPLOADFWRESULT == Parameters.testStatus.Wait.ToString()) {
+                this.UPLOADFWRESULT = Parameters.testStatus.NONE.ToString();
+            }
+
+            if (this.WIFIRESULT == Parameters.testStatus.Wait.ToString()) {
+                this.WIFIRESULT = Parameters.testStatus.NONE.ToString();
+            }
+
+            if (this.FWVERSIONRESULT == Parameters.testStatus.Wait.ToString()) {
+                this.FWVERSIONRESULT = Parameters.testStatus.NONE.ToString();
+            }
+
+            if (this.MACRESULT == Parameters.testStatus.Wait.ToString()) {
+                this.MACRESULT = Parameters.testStatus.NONE.ToString();
+            }
+
+            if (this.LANRESULT == Parameters.testStatus.Wait.ToString()) {
+                this.LANRESULT = Parameters.testStatus.NONE.ToString();
+            }
+
+            if (this.SDCARDRESULT == Parameters.testStatus.Wait.ToString()) {
+                this.SDCARDRESULT = Parameters.testStatus.NONE.ToString();
+            }
+
+            if (this.USBRESULT == Parameters.testStatus.Wait.ToString()) {
+                this.USBRESULT = Parameters.testStatus.NONE.ToString();
+            }
+
+            if (this.RGBLEDRESULT == Parameters.testStatus.Wait.ToString()) {
+                this.RGBLEDRESULT = Parameters.testStatus.NONE.ToString();
+            }
+
+            if (this.LIGHTSENSORRESULT == Parameters.testStatus.Wait.ToString()) {
+                this.LIGHTSENSORRESULT = Parameters.testStatus.NONE.ToString();
+            }
+
+            if (this.SPEAKERMICRESULT == Parameters.testStatus.Wait.ToString()) {
+                this.SPEAKERMICRESULT = Parameters.testStatus.NONE.ToString();
+            }
+
+            if (this.IMAGESENSORRESULT == Parameters.testStatus.Wait.ToString()) {
+                this.IMAGESENSORRESULT = Parameters.testStatus.NONE.ToString();
+            }
+
+            if (this.BUTTONRESULT == Parameters.testStatus.Wait.ToString()) {
+                this.BUTTONRESULT = Parameters.testStatus.NONE.ToString();
+            }
         }
 
     }

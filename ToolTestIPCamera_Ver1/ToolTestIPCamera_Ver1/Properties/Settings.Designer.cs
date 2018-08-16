@@ -334,5 +334,17 @@ namespace ToolTestIPCamera_Ver1.Properties {
                 this["Usbdebug1"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool cmOption {
+            get {
+                return ((bool)(this["cmOption"]));
+            }
+            set {
+                this["cmOption"] = value;
+            }
+        }
     }
 }

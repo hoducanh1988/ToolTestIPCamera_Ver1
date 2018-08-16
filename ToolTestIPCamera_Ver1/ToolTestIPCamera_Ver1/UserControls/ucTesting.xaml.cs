@@ -86,6 +86,7 @@ namespace ToolTestIPCamera_Ver1.UserControls {
                     GlobalData.testingDataDUT.ENABLETEXTBOX = true;
                     GlobalData.testingDataDUT.OLDMAC = string.Format("Old MAC: {0}, {1}", _mac, ret == true ? "PASS" : "FAIL");
                     GlobalData.testingDataDUT.TOTALRESULT = ret == true ? Parameters.testStatus.PASS.ToString() : Parameters.testStatus.FAIL.ToString();
+                    GlobalData.testingDataDUT.FinishCheck();
                     st.Stop();
                     GlobalData.testingDataDUT.SYSTEMLOG += string.Format("\r\nTổng thời gian test là: {0} giây\r\n", st.ElapsedMilliseconds / 1000);
                 }));

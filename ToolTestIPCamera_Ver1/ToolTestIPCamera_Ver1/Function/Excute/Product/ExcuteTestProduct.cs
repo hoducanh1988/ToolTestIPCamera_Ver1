@@ -36,7 +36,9 @@ namespace ToolTestIPCamera_Ver1.Function.Excute
                 }
 
                 //Check MAC Address
-
+                if(GlobalData.initSetting.checkmacoption == true) {
+                    if (!CheckMACAddress(ref message)) goto NG;
+                }
 
                 //Check SD card
                 if (GlobalData.initSetting.checksdcardoption == true) {

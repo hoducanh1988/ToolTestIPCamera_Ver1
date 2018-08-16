@@ -19,17 +19,28 @@ namespace ToolTestIPCamera_Ver1.Function.Excute
                 if (!ret) GlobalData.testingDataDUT.SYSTEMLOG += "Không thể kết nối tới cổng COM\r\n";
                 if (!ret) goto NG;
 
+                bool IsReboot = false;
+
                 //refresh hien thi
                 GlobalData.testingDataDUT.InitControlForChecking();
 
                 //Write MAC
                 if (GlobalData.initSetting.writemacoption == true) {
+                    IsReboot = true;
                     if (!WriteMAC(ref message)) goto NG;
                 }
 
                 //Upload Firmware
                 if (GlobalData.initSetting.uploadfirmwareoption == true) {
+                    IsReboot = true;
                     if (!UpFirmWare(ref message)) goto NG;
+                }
+
+                //Reboot sau nap firmware
+                if (IsReboot && (GlobalData.initSetting.checkusboption == true || GlobalData.initSetting.checklightsensoroption == true || GlobalData.initSetting.checkimagesensoroption == true || GlobalData.initSetting.checkspeakermicoption == true)) {
+                    base.RebootCamera();
+                    base.WaitCameraBootComplete();
+                    Thread.Sleep(3000);
                 }
 
 
@@ -44,6 +55,7 @@ namespace ToolTestIPCamera_Ver1.Function.Excute
                 }
 
                 //Check Speaker & MIC
+
 
                 //Check Image Sensor
                 if (GlobalData.initSetting.checkimagesensoroption == true) {
