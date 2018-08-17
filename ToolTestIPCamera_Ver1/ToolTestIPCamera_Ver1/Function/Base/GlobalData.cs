@@ -20,5 +20,8 @@ namespace ToolTestIPCamera_Ver1.Function
         public static ObservableCollection<logfileinfo> datagridlogdetail = new ObservableCollection<logfileinfo>();
         public static ObservableCollection<logfileinfo> datagridloguart = new ObservableCollection<logfileinfo>();
 
+        public static string loginUser = "";
+        public static string loginPass = "";
+
     }
 }

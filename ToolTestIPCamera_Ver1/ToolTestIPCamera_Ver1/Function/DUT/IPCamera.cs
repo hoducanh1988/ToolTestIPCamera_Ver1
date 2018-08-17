@@ -83,7 +83,7 @@ namespace ToolTestIPCamera_Ver1.Function.DUT {
                 //GlobalData.testingDataDUT.SYSTEMLOG += "Đang cấu hình IP, NETMASK, GATEWAY";
                 //GlobalData.testingDataDUT.CAMERALOG += "";
                 //GlobalData.testingDataDUT.SYSTEMLOG += "Phầm mềm gửi lệnh: nm_cfg wan dhcp 0 ipaddr 192.168.1.253 netmask 255.255.255.0 gateway 192.168.1.1";
-                //GlobalData.camera.WriteLine("nm_cfg wan dhcp 0 ipaddr 192.168.1.253 netmask 255.255.255.0 gateway 192.168.1.1");
+                //GlobalData.camera.WriteLine("nm_cfg wan dhcp 0 ipaddr 192.168.1.250 netmask 255.255.255.0 gateway 192.168.1.1");
                 //GlobalData.testingDataDUT.SYSTEMLOG += "Delay 3000 ms";
                 //Thread.Sleep(3000);
                 //REP:
@@ -385,6 +385,37 @@ namespace ToolTestIPCamera_Ver1.Function.DUT {
             }
         }
 
+
+        /// <summary>
+        /// GHI DI CHI IP TINH CHO CAMERA
+        /// </summary>
+        /// <returns></returns>
+        protected bool WriteStaticIP() {
+            try {
+                bool ret = false;
+                int count = 0;
+                GlobalData.testingDataDUT.SYSTEMLOG += string.Format("Set địa chỉ IP tĩnh {0} cho IP Camera\r\n", GlobalData.initSetting.dutip);
+                GlobalData.testingDataDUT.CAMERALOG = "";
+                GlobalData.camera.WriteLine(string.Format("nm_cfg wan dhcp 0 ipaddr {0} netmask 255.255.255.0 gateway 192.168.1.1", GlobalData.initSetting.dutip));
+                Thread.Sleep(1000);
+                REP:
+                count++;
+                ret = GlobalData.testingDataDUT.CAMERALOG.Contains("entry: 0x1000003");
+                if (!ret) {
+                    if (count < 5) {
+                        Thread.Sleep(1000);
+                        goto REP;
+                    }
+                }
+                GlobalData.testingDataDUT.SYSTEMLOG += "CAMERA Feedback: \r\n" + GlobalData.testingDataDUT.CAMERALOG + "\r\n";
+                GlobalData.testingDataDUT.SYSTEMLOG += string.Format("Set IP {0}\r\n", ret == true ? "thành công" : "thất bại");
+                return ret;
+            } catch (Exception ex) {
+                GlobalData.testingDataDUT.SYSTEMLOG += ex.ToString() + "\r\n";
+                GlobalData.testingDataDUT.SYSTEMLOG += string.Format("Set IP thất bại \r\n");
+                return false;
+            }
+        }
 
         /// <summary>
         /// CHECK CONNECT USB

@@ -139,3 +139,7 @@ D:\Git\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\bin\Deb
 D:\Git\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\bin\Debug\NAudio.xml
 D:\Git\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\obj\Debug\SubWindow\ReButtonWindow.g.cs
 D:\Git\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\obj\Debug\SubWindow\ReButtonWindow.baml
+C:\Users\anhho\source\repos\GitHub\IPCamera_Project\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\obj\Debug\SubWindow\ReButtonWindow.g.cs
+C:\Users\anhho\source\repos\GitHub\IPCamera_Project\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\obj\Debug\SubWindow\ReButtonWindow.baml
+C:\Users\anhho\source\repos\GitHub\IPCamera_Project\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\obj\Debug\SubWindow\Login.g.cs
+C:\Users\anhho\source\repos\GitHub\IPCamera_Project\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\obj\Debug\SubWindow\Login.baml

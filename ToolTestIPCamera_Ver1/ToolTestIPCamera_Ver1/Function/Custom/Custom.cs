@@ -55,6 +55,7 @@ namespace ToolTestIPCamera_Ver1.Function {
                 Properties.Settings.Default.Station = value;
                 GlobalData.mainWindowInfo.windowtitle = string.Format("TOOL TEST IP CAMERA / STATION : {0}", value);
                 GlobalData.testingDataDUT.station = value;
+                GlobalData.manualData.station = value;
                 OnPropertyChanged(nameof(station));
             }
         }
@@ -97,6 +98,7 @@ namespace ToolTestIPCamera_Ver1.Function {
             get { return Properties.Settings.Default.DutIP; }
             set {
                 Properties.Settings.Default.DutIP = value;
+                GlobalData.manualData.dutip = value;
                 OnPropertyChanged(nameof(dutip));
             }
         }
@@ -104,6 +106,7 @@ namespace ToolTestIPCamera_Ver1.Function {
             get { return Properties.Settings.Default.DutUser; }
             set {
                 Properties.Settings.Default.DutUser = value;
+                GlobalData.manualData.dutuser = value;
                 OnPropertyChanged(nameof(dutuser));
             }
         }
@@ -118,6 +121,7 @@ namespace ToolTestIPCamera_Ver1.Function {
             get { return Properties.Settings.Default.Usbdebug1; }
             set {
                 Properties.Settings.Default.Usbdebug1 = value;
+                GlobalData.manualData.usbdebug1 = value;
                 OnPropertyChanged(nameof(usbdebug1));
             }
         }
@@ -132,6 +136,7 @@ namespace ToolTestIPCamera_Ver1.Function {
             get { return Properties.Settings.Default.RouterSSID; }
             set {
                 Properties.Settings.Default.RouterSSID = value;
+                GlobalData.manualData.routerssid = value;
                 OnPropertyChanged(nameof(routerssid));
             }
         }
@@ -664,6 +669,14 @@ namespace ToolTestIPCamera_Ver1.Function {
                 OnPropertyChanged(nameof(station));
             }
         }
+        string _ssid;
+        public string routerssid {
+            get { return _ssid; }
+            set {
+                _ssid = value;
+                OnPropertyChanged(nameof(routerssid));
+            }
+        }
 
         string _fw_manuallog;
         public string fw_manuallog {
@@ -713,6 +726,14 @@ namespace ToolTestIPCamera_Ver1.Function {
                 OnPropertyChanged(nameof(audio_manuallog));
             }
         }
+        string _imagesensor_manuallog;
+        public string imagesensor_manuallog {
+            get { return _imagesensor_manuallog; }
+            set {
+                _imagesensor_manuallog = value;
+                OnPropertyChanged(nameof(imagesensor_manuallog));
+            }
+        }
         string _rgbled_manuallog;
         public string rgbled_manuallog {
             get { return _rgbled_manuallog; }
@@ -746,4 +767,5 @@ namespace ToolTestIPCamera_Ver1.Function {
         public string DateCreated { get; set; }
         public string DateModified { get; set; }
     }
+
 }

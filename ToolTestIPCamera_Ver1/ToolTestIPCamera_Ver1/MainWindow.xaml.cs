@@ -35,25 +35,25 @@ namespace ToolTestIPCamera_Ver1 {
             List<Control> list = new List<Control>() { ucTesting, ucManual, ucSetting, ucLog, ucHelp, ucAbout, ucLogin };
 
             switch (index) {
-                case 10: {
+                case 2: {
                         //disable all
                         for (int i = 0; i < list.Count; i++) {
                             list[i].Visibility = Visibility.Collapsed;
                             Canvas.SetZIndex(list[i], 0);
                         }
-                        //Login li = new Login();
-                        //li.ShowDialog();
-                        ////visible login
-                        //if (GlobalData.loginUser == "admin" && GlobalData.loginPass == "vnpt") {
-                        //    ucSetting.Visibility = Visibility.Visible;
-                        //    Canvas.SetZIndex(ucSetting, 1);
-                        //    GlobalData.loginUser = "";
-                        //    GlobalData.loginPass = "";
-                        //}
-                        //else {
-                        //    ucLogin.Visibility = Visibility.Visible;
-                        //    Canvas.SetZIndex(ucLogin, 1);
-                        //}
+                        Login li = new Login();
+                        li.ShowDialog();
+                        //visible login
+                        if (GlobalData.loginUser == "admin" && GlobalData.loginPass == "vnpt") {
+                            ucSetting.Visibility = Visibility.Visible;
+                            Canvas.SetZIndex(ucSetting, 1);
+                            GlobalData.loginUser = "";
+                            GlobalData.loginPass = "";
+                        }
+                        else {
+                            ucLogin.Visibility = Visibility.Visible;
+                            Canvas.SetZIndex(ucLogin, 1);
+                        }
                         break;
                     }
                 default: {

@@ -762,3 +762,994 @@ PHÁN ĐỊNH TỔNG LÀ : PASS
 
 Tổng thời gian test là: 108 giây
 
+
+KIỂM TRA ĐỊA CHỈ MAC ADDRESS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+MAC: A4F4C2909090
+KẾT QUẢ KIỂM TRA MAC ADDRESS: PASS
+
+MỞ CỔNG COM IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+System.UnauthorizedAccessException: Access to the port 'COM10' is denied.
+   at System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   at System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   at System.IO.Ports.SerialPort.Open()
+   at ToolTestIPCamera_Ver1.Function.Protocol.Serial.Open(String& _message) in C:\Users\anhho\source\repos\GitHub\IPCamera_Project\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\Function\Protocol\Serial.cs:line 41
+
+Không thể kết nối tới cổng COM
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+PHÁN ĐỊNH TỔNG LÀ : FAIL
+
+Tổng thời gian test là: 0 giây
+
+
+KIỂM TRA ĐỊA CHỈ MAC ADDRESS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+MAC: A4F4C2909090
+KẾT QUẢ KIỂM TRA MAC ADDRESS: PASS
+
+MỞ CỔNG COM IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Login to comport COM10 success.
+
+
+KIỂM TRA KẾT NỐI USB CỦA IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Kiểm tra USB lần thứ 1
+Phần mềm gửi lệnh: ifconfig
+Delay 3000 ms
+CAMERA Feedback:
+ifconfig
+br0       Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          inet addr:192.168.1.253  Bcast:192.168.1.255  Mask:255.255.255.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:485 errors:0 dropped:214 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:40908 (39.9 KiB)  TX bytes:0 (0.0 B)
+
+eth0      Link encap:Ethernet  HWaddr A4:F4:C2:91:92:95  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:484 errors:0 dropped:3 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:47500 (46.3 KiB)  TX bytes:0 (0.0 B)
+          Interrupt:10 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:6762 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:6762 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:493626 (482.0 KiB)  TX bytes:493626 (482.0 KiB)
+
+wlan0     Link encap:Ethernet  HWaddr A0:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:16 errors:0 dropped:76877 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:896 (896.0 B)  TX bytes:0 (0.0 B)
+
+wlan1     Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:76841 errors:0 dropped:41 overruns:0 frame:0
+          TX packets:136 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:15400 (15.0 KiB)
+
+~ # 
+KẾT QUẢ KIỂM TRA USB: PASS
+
+KIỂM TRA CẢM BIẾN ÁNH SÁNG CỦA IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Kiểm tra mức sáng:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1824
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1789
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1917
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1737
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+90
+~ # 
+Light Level: PASS
+Dark Level: PASS
+KẾT QUẢ KIỂM TRA CẢM BIẾN ÁNH SÁNG: PASS
+
+KIỂM TRA SPEAKER, MICROPHONE CỦA IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Phần mềm gửi lệnh: killall lark
+Gửi lệnh yêu cầu IP Camera thu âm:
+arecord -D hw:0,1 /tmp/audio_record.wav & 
+Máy tính phát âm thanh ra loa:
+delay 3000 ms
+Phần mềm gửi lệnh dừng thu âm: killall arecord 
+Gửi lệnh phát âm thanh ra loa IP Camera:
+aplay - D hw: 0,1 / tmp / audio_record.wav
+delay 5000ms
+Người thao tác phán định: PASS
+KẾT QUẢ KIỂM TRA SPEAKER, MICROPHONE: PASS
+Set địa chỉ IP tĩnh 192.168.1.253 cho IP Camera
+CAMERA Feedback: 
+nm_cfg wan dhcp 0 ipaddr 192.168.1.253 netmask 255.255.255.0 gateway 192.168
+.1.1
+entry: 0x1000002 type 0 len 4: c0 a8 01 fd 
+entry: 0x1000004 type 0 len 4: ff ff ff 00 
+entry: 0x1000003 type 0 len 4: c0 a8 01 01 
+
+Set IP thành công
+
+KIỂM TRA IMAGE SENSOR CỦA IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Lưu địa chỉ MAC vào MAC.txt
+Lọc file Result.txt
+Mở chương trình LiveCamera.exe
+Delay 100 ms
+Kiểm tra đã Image sensor.....
+Chờ 1 s 
+Chờ 2 s 
+Chờ 3 s 
+Chờ 4 s 
+Chờ 5 s 
+Chờ 6 s 
+Chờ 7 s 
+Chờ 8 s 
+Chờ 9 s 
+Chờ 10 s 
+Chờ 11 s 
+Chờ 12 s 
+Chờ 13 s 
+Chờ 14 s 
+Chờ 15 s 
+Chờ 16 s 
+Chờ 17 s 
+Chờ 18 s 
+Chờ 19 s 
+Chờ 20 s 
+Chờ 21 s 
+Chờ 22 s 
+Chờ 23 s 
+Chờ 24 s 
+Chờ 25 s 
+Chờ 26 s 
+Chờ 27 s 
+Chờ 28 s 
+Chờ 29 s 
+Chờ 30 s 
+Chờ 31 s 
+Chờ 32 s 
+Chờ 33 s 
+Chờ 34 s 
+Chờ 35 s 
+Chờ 36 s 
+Chờ 37 s 
+Chờ 38 s 
+Chờ 39 s 
+Chờ 40 s 
+Chờ 41 s 
+Chờ 42 s 
+Đã lưu ảnh của Image Sensor
+KẾT QUẢ KIỂM TRA IMAGE SENSOR: PASS 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+PHÁN ĐỊNH TỔNG LÀ : PASS
+
+Tổng thời gian test là: 68 giây
+
+
+KIỂM TRA ĐỊA CHỈ MAC ADDRESS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+MAC: A4F4C2909098
+KẾT QUẢ KIỂM TRA MAC ADDRESS: PASS
+
+MỞ CỔNG COM IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Login to comport COM10 success.
+
+
+KIỂM TRA KẾT NỐI USB CỦA IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Kiểm tra USB lần thứ 1
+Phần mềm gửi lệnh: ifconfig
+Delay 3000 ms
+CAMERA Feedback:
+ifconfig
+br0       Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          inet addr:192.168.1.253  Bcast:192.168.1.255  Mask:255.255.255.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:2395 errors:0 dropped:860 overruns:0 frame:0
+          TX packets:6300 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:225428 (220.1 KiB)  TX bytes:7971682 (7.6 MiB)
+
+eth0      Link encap:Ethernet  HWaddr A4:F4:C2:91:92:95  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:2433 errors:0 dropped:24 overruns:0 frame:0
+          TX packets:6300 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:262176 (256.0 KiB)  TX bytes:7971682 (7.6 MiB)
+          Interrupt:10 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:14262 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:14262 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:1041126 (1016.7 KiB)  TX bytes:1041126 (1016.7 KiB)
+
+wlan0     Link encap:Ethernet  HWaddr A0:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:34 errors:0 dropped:162645 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:1946 (1.9 KiB)  TX bytes:0 (0.0 B)
+
+wlan1     Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:162612 errors:0 dropped:41 overruns:0 frame:0
+          TX packets:464 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:52164 (50.9 KiB)
+
+~ # 
+KẾT QUẢ KIỂM TRA USB: PASS
+
+KIỂM TRA CẢM BIẾN ÁNH SÁNG CỦA IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Kiểm tra mức sáng:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+2001
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1743
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1753
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+164
+~ # 
+Light Level: PASS
+Dark Level: PASS
+KẾT QUẢ KIỂM TRA CẢM BIẾN ÁNH SÁNG: PASS
+
+KIỂM TRA SPEAKER, MICROPHONE CỦA IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Phần mềm gửi lệnh: killall lark
+Gửi lệnh yêu cầu IP Camera thu âm:
+arecord -D hw:0,1 /tmp/audio_record.wav & 
+Máy tính phát âm thanh ra loa:
+delay 3000 ms
+Phần mềm gửi lệnh dừng thu âm: killall arecord 
+Gửi lệnh phát âm thanh ra loa IP Camera:
+aplay - D hw: 0,1 / tmp / audio_record.wav
+delay 5000ms
+Người thao tác phán định: PASS
+KẾT QUẢ KIỂM TRA SPEAKER, MICROPHONE: PASS
+Set địa chỉ IP tĩnh 192.168.1.253 cho IP Camera
+CAMERA Feedback: 
+nm_cfg wan dhcp 0 ipaddr 192.168.1.253 netmask 255.255.255.0 gateway 192.168
+.1.1
+entry: 0x1000002 type 0 len 4: c0 a8 01 fd 
+entry: 0x1000004 type 0 len 4: ff ff ff 00 
+entry: 0x1000003 type 0 len 4: c0 a8 01 01 
+
+Set IP thành công
+
+KIỂM TRA IMAGE SENSOR CỦA IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Lưu địa chỉ MAC vào MAC.txt
+Lọc file Result.txt
+Mở chương trình LiveCamera.exe
+Delay 100 ms
+Kiểm tra đã Image sensor.....
+Chờ 1 s 
+Chờ 2 s 
+Chờ 3 s 
+Chờ 4 s 
+Chờ 5 s 
+Chờ 6 s 
+Chờ 7 s 
+Chờ 8 s 
+Chờ 9 s 
+Chờ 10 s 
+Chờ 11 s 
+Chờ 12 s 
+Chờ 13 s 
+Đã lưu ảnh của Image Sensor
+KẾT QUẢ KIỂM TRA IMAGE SENSOR: PASS 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+PHÁN ĐỊNH TỔNG LÀ : PASS
+
+Tổng thời gian test là: 39 giây
+
+
+KIỂM TRA ĐỊA CHỈ MAC ADDRESS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+MAC: A4F4C2909091
+KẾT QUẢ KIỂM TRA MAC ADDRESS: PASS
+
+MỞ CỔNG COM IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+System.UnauthorizedAccessException: Access to the port 'COM10' is denied.
+   at System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   at System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   at System.IO.Ports.SerialPort.Open()
+   at ToolTestIPCamera_Ver1.Function.Protocol.Serial.Open(String& _message) in C:\Users\anhho\source\repos\GitHub\IPCamera_Project\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\ToolTestIPCamera_Ver1\Function\Protocol\Serial.cs:line 41
+
+Không thể kết nối tới cổng COM
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+PHÁN ĐỊNH TỔNG LÀ : FAIL
+
+Tổng thời gian test là: 0 giây
+
+
+KIỂM TRA ĐỊA CHỈ MAC ADDRESS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+MAC: A4F4C2909090
+KẾT QUẢ KIỂM TRA MAC ADDRESS: PASS
+
+MỞ CỔNG COM IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Login to comport COM10 success.
+
+
+KIỂM TRA KẾT NỐI USB CỦA IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Kiểm tra USB lần thứ 1
+Phần mềm gửi lệnh: ifconfig
+Delay 3000 ms
+CAMERA Feedback:
+ifconfig
+br0       Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          inet addr:192.168.1.253  Bcast:192.168.1.255  Mask:255.255.255.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:2943 errors:0 dropped:960 overruns:0 frame:0
+          TX packets:20811 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:275110 (268.6 KiB)  TX bytes:26779250 (25.5 MiB)
+
+eth0      Link encap:Ethernet  HWaddr A4:F4:C2:91:92:95  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:2985 errors:0 dropped:28 overruns:0 frame:0
+          TX packets:20811 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:319770 (312.2 KiB)  TX bytes:26779250 (25.5 MiB)
+          Interrupt:10 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:54882 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:54882 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:4006386 (3.8 MiB)  TX bytes:4006386 (3.8 MiB)
+
+wlan0     Link encap:Ethernet  HWaddr A0:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:34 errors:0 dropped:620357 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:1946 (1.9 KiB)  TX bytes:0 (0.0 B)
+
+wlan1     Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:620324 errors:0 dropped:41 overruns:0 frame:0
+          TX packets:507 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:57951 (56.5 KiB)
+
+~ # 
+KẾT QUẢ KIỂM TRA USB: PASS
+
+KIỂM TRA CẢM BIẾN ÁNH SÁNG CỦA IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Kiểm tra mức sáng:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1785
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1908
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1653
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1669
+~ # 
+Light Level: PASS
+Dark Level: FAIL
+KẾT QUẢ KIỂM TRA CẢM BIẾN ÁNH SÁNG: FAIL
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+PHÁN ĐỊNH TỔNG LÀ : FAIL
+
+Tổng thời gian test là: 6 giây
+
+
+KIỂM TRA ĐỊA CHỈ MAC ADDRESS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+MAC: A4F4C2909091
+KẾT QUẢ KIỂM TRA MAC ADDRESS: PASS
+
+MỞ CỔNG COM IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Login to comport COM10 success.
+
+
+KIỂM TRA KẾT NỐI USB CỦA IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Kiểm tra USB lần thứ 1
+Phần mềm gửi lệnh: ifconfig
+Delay 3000 ms
+CAMERA Feedback:
+ifconfig
+br0       Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          inet addr:192.168.1.253  Bcast:192.168.1.255  Mask:255.255.255.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:2943 errors:0 dropped:960 overruns:0 frame:0
+          TX packets:20811 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:275110 (268.6 KiB)  TX bytes:26779250 (25.5 MiB)
+
+eth0      Link encap:Ethernet  HWaddr A4:F4:C2:91:92:95  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:2985 errors:0 dropped:28 overruns:0 frame:0
+          TX packets:20811 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:319770 (312.2 KiB)  TX bytes:26779250 (25.5 MiB)
+          Interrupt:10 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:55350 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:55350 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:4040550 (3.8 MiB)  TX bytes:4040550 (3.8 MiB)
+
+wlan0     Link encap:Ethernet  HWaddr A0:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:34 errors:0 dropped:623954 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:1946 (1.9 KiB)  TX bytes:0 (0.0 B)
+
+wlan1     Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:623921 errors:0 dropped:41 overruns:0 frame:0
+          TX packets:507 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:57951 (56.5 KiB)
+
+~ # 
+KẾT QUẢ KIỂM TRA USB: PASS
+
+KIỂM TRA CẢM BIẾN ÁNH SÁNG CỦA IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Kiểm tra mức sáng:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1624
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1956
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1943
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1615
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1940
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+132
+~ # 
+Light Level: PASS
+Dark Level: PASS
+KẾT QUẢ KIỂM TRA CẢM BIẾN ÁNH SÁNG: PASS
+
+KIỂM TRA SPEAKER, MICROPHONE CỦA IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Phần mềm gửi lệnh: killall lark
+Gửi lệnh yêu cầu IP Camera thu âm:
+arecord -D hw:0,1 /tmp/audio_record.wav & 
+Máy tính phát âm thanh ra loa:
+delay 3000 ms
+Phần mềm gửi lệnh dừng thu âm: killall arecord 
+Gửi lệnh phát âm thanh ra loa IP Camera:
+aplay - D hw: 0,1 / tmp / audio_record.wav
+delay 5000ms
+Người thao tác phán định: PASS
+KẾT QUẢ KIỂM TRA SPEAKER, MICROPHONE: PASS
+Set địa chỉ IP tĩnh 192.168.1.253 cho IP Camera
+CAMERA Feedback: 
+nm_cfg wan dhcp 0 ipaddr 192.168.1.253 netmask 255.255.255.0 gateway 192.168
+.1.1
+entry: 0x1000002 type 0 len 4: c0 a8 01 fd 
+entry: 0x1000004 type 0 len 4: ff ff ff 00 
+entry: 0x1000003 type 0 len 4: c0 a8 01 01 
+
+Set IP thành công
+
+KIỂM TRA IMAGE SENSOR CỦA IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Lưu địa chỉ MAC vào MAC.txt
+Lọc file Result.txt
+Mở chương trình LiveCamera.exe
+Delay 100 ms
+Kiểm tra đã Image sensor.....
+Chờ 1 s 
+Chờ 2 s 
+Chờ 3 s 
+Chờ 4 s 
+Chờ 5 s 
+Chờ 6 s 
+Chờ 7 s 
+Đã lưu ảnh của Image Sensor
+KẾT QUẢ KIỂM TRA IMAGE SENSOR: PASS 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+PHÁN ĐỊNH TỔNG LÀ : PASS
+
+Tổng thời gian test là: 34 giây
+
+
+KIỂM TRA ĐỊA CHỈ MAC ADDRESS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+MAC: A4F4C2919293
+KẾT QUẢ KIỂM TRA MAC ADDRESS: PASS
+
+MỞ CỔNG COM IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Login to comport COM10 success.
+
+
+KIỂM TRA KẾT NỐI USB CỦA IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Kiểm tra USB lần thứ 1
+Phần mềm gửi lệnh: ifconfig
+Delay 3000 ms
+CAMERA Feedback:
+ifconfig
+br0       Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          inet addr:192.168.1.253  Bcast:192.168.1.255  Mask:255.255.255.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:3005 errors:0 dropped:968 overruns:0 frame:0
+          TX packets:22088 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:281605 (275.0 KiB)  TX bytes:28383952 (27.0 MiB)
+
+eth0      Link encap:Ethernet  HWaddr A4:F4:C2:91:92:95  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:3048 errors:0 dropped:29 overruns:0 frame:0
+          TX packets:22088 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:327193 (319.5 KiB)  TX bytes:28383952 (27.0 MiB)
+          Interrupt:10 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:56058 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:56058 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:4092234 (3.9 MiB)  TX bytes:4092234 (3.9 MiB)
+
+wlan0     Link encap:Ethernet  HWaddr A0:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:34 errors:0 dropped:633220 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:1946 (1.9 KiB)  TX bytes:0 (0.0 B)
+
+wlan1     Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:633187 errors:0 dropped:41 overruns:0 frame:0
+          TX packets:507 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:57951 (56.5 KiB)
+
+~ # 
+KẾT QUẢ KIỂM TRA USB: PASS
+Set địa chỉ IP tĩnh 192.168.1.253 cho IP Camera
+CAMERA Feedback: 
+nm_cfg wan dhcp 0 ipaddr 192.168.1.253 netmask 255.255.255.0 gateway 192.168
+.1.1
+entry: 0x1000002 type 0 len 4: c0 a8 01 fd 
+entry: 0x1000004 type 0 len 4: ff ff ff 00 
+entry: 0x1000003 type 0 len 4: c0 a8 01 01 
+
+Set IP thành công
+
+KIỂM TRA IMAGE SENSOR CỦA IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Lưu địa chỉ MAC vào MAC.txt
+Lọc file Result.txt
+Mở chương trình LiveCamera.exe
+Delay 100 ms
+Kiểm tra đã Image sensor.....
+Chờ 1 s 
+Chờ 2 s 
+Chờ 3 s 
+Chờ 4 s 
+Chờ 5 s 
+Đã lưu ảnh của Image Sensor
+KẾT QUẢ KIỂM TRA IMAGE SENSOR: PASS 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+PHÁN ĐỊNH TỔNG LÀ : PASS
+
+Tổng thời gian test là: 10 giây
+
+
+KIỂM TRA ĐỊA CHỈ MAC ADDRESS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+MAC: A4F4C2990102
+KẾT QUẢ KIỂM TRA MAC ADDRESS: PASS
+
+MỞ CỔNG COM IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Login to comport COM10 success.
+
+
+ĐANG GHI MAC VÀO IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Đang chờ thiết bị khởi động...
+Đang chờ thiết bị khởi động...
+Đang chờ thiết bị khởi động...
+Đang chờ thiết bị khởi động...
+Đang chờ thiết bị khởi động...
+Đang chờ thiết bị khởi động...
+Đang chờ thiết bị khởi động...
+Đang chờ thiết bị khởi động...
+Đang chờ thiết bị khởi động...
+Đang chờ thiết bị khởi động...
+Đang chờ thiết bị khởi động...
+Đang chờ thiết bị khởi động...
+Đang chờ thiết bị khởi động...
+Đang chờ thiết bị khởi động...
+Đang chờ thiết bị khởi động...
+Đang chờ thiết bị khởi động...
+Đang chờ thiết bị khởi động...
+Đang chờ thiết bị khởi động...
+Đã đăng nhập được vào uboot
+Địa chỉ MAC bắn vào: A4:F4:C2:99:01:02
+Phần mềm gửi lệnh: setethaddr A4:F4:C2:99:01:02
+Delay 500 ms
+CAMERA Feedback:
+setethaddr A4:F4:C2:99:01:02
+New MAC address: A4:F4:C2:99:01:02
+rlxboot# 
+Phần mềm gửi lệnh: saveenv
+Delay 1000 ms
+CAMERA Feedback:
+saveenv
+ethaddr: A4:F4:C2:99:01:02
+ipaddr: 192.168.1.253
+netmask: 255.255.255.0
+50 bytes written, 0 bytes skipped in 0.359s, speed 140 B/s
+saveenv done
+rlxboot# 
+KẾT QUẢ GHI MAC: PASS
+
+ĐANG NẠP FIRMWARE CHO IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Phần mềm gửi lệnh: setipaddr 192.168.1.253 
+Delay 500 ms
+CAMERA Feedback:
+setipaddr 192.168.1.253
+New IP address: 192.168.1.253
+rlxboot# 
+Phần mềm gửi lệnh: saveenv
+Delay 500 ms
+CAMERA Feedback:
+saveenv
+ethaddr: A4:F4:C2:99:01:02
+ipaddr: 192.168.1.253
+netmask: 255.255.255.0
+0 bytes written, 50 bytes skipped in 0.7s, speed 4266 B/s
+saveenv done
+rlxboot# 
+Phần mềm gửi lệnh: update all
+Delay 1000 ms
+Đang chờ client gửi FIRMWARE lên thiết bị......
+Chờ 1s
+Chờ 2s
+Chờ 3s
+Chờ 4s
+Chờ 5s
+Chờ 6s
+Chờ 7s
+Chờ 8s
+Chờ 9s
+Chờ 10s
+Chờ 11s
+Chờ 12s
+Chờ 13s
+Chờ 14s
+Chờ 15s
+Chờ 16s
+Chờ 17s
+Chờ 18s
+Chờ 19s
+CAMERA Feedback: 
+#################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 ######################################################
+	 372.1 KiB/s
+done
+Bytes transferred = 8261312 (7e0ec0 hex)
+offset is 120000
+   Updating, 50% 8637774 B/s   Updating, 99% 8429132 B/s0 bytes written, 1727860 bytes skipped in 0.219s, speed 7863682 B/s
+offset is 520000
+   Updating, 14% 8470050 B/s   Updating, 27% 8230332 B/s   Updating, 40% 8153413 B/s   Updating, 53% 8134407 B/s   Updating, 66% 4259840 B/s   Updating, 79% 5111808 B/s   Updating, 92% 5963776 B/s0 bytes written, 6533120 bytes skipped in 0.831s, speed 6533120 B/s
+file end
+update all done
+rlxboot# 
+KẾT QUẢ UPLOAD FILE linux.bin: PASS
+Phần mềm gửi lệnh: update fw
+Delay 1000 ms
+Đang chờ client gửi FIRMWARE lên thiết bị......
+Chờ 1s
+CAMERA Feedback: 
+##########################
+	 36.1 KiB/s
+done
+Bytes transferred = 131072 (20000 hex)
+0 bytes written, 131072 bytes skipped in 0.15s, speed 6391320 B/s
+update fw done
+rlxboot# 
+KẾT QUẢ UPLOAD FILE mcu.bin: PASS
+Phần mềm gửi lệnh: update ldc
+Delay 1000 ms
+Đang chờ client gửi FIRMWARE lên thiết bị......
+Chờ 1s
+Chờ 2s
+CAMERA Feedback: 
+#################################################################
+	 ######################################
+	 20.5 KiB/s
+done
+Bytes transferred = 522816 (7fa40 hex)
+0 bytes written, 522816 bytes skipped in 0.62s, speed 7872993 B/s
+update ldc done
+rlxboot# 
+KẾT QUẢ UPLOAD FILE ldc.bin: PASS
+KẾT QUẢ UPLOAD FIRMWARE: PASS
+Reboot IP Camera...
+bootm 0xbc120000
+## Booting kernel from Legacy Image at bc120000 ...
+get header OKimage_get_kernel check hcrc
+image_get_kernel print contents
+   Image Name:   linux_3.10
+   Created:      2018-07-30   2:29:48 UTC
+   Image Type:   MIPS Linux Kernel Image (uncompressed)
+   Data Size:    1727794 Bytes = 1.6 MiB
+   Load Address: 804f8780
+   Entry Point:  804f8780
+   Verifying Checksum ... OK
+   Loading Kernel Image ... OK
+
+Starting kernel ...
+
+Linux version 3.10.27 (aidenn@anhnt4-pc) (gcc version 4.8.5 20150209 (prerelease) (Realtek RSDK-4.8.5p1 Build 2278) ) #1 PREEMPT Thu May 31 14:37:29 +07 2018
+prom cpufreq = 500000000
+prom memsize = 134217728
+hw_ver: 0x1, hw_rev: 0x2, isp_ver: 0x0
+bootconsole [early0] enabled
+CPU revision is: 0000dc02
+Determined physical RAM map:
+ memory: 08000000 @ 00000000 (usable)
+Reserved contiguous memory at 0x513000
+Zone ranges:
+  Normal   [mem 0x00000000-0x07ffffff]
+Movable zone start for each node
+Early memory node ranges
+  node   0: [mem 0x00000000-0x07ffffff]
+icache: 32kB/32B, dcache: 16kB/32B, scache: 0kB/0B
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 32512
+Kernel command line: console=ttyS1,57600 root=/dev/mtdblock5 rts_hconf.hconf_mtd_idx=2 mtdparts=m25p80:256k(boot),128k(mcu),256k(hconf),512k(userdata),4096k(kernel),8192k(rootfs),512k(ldc)
+PID hash table entries: 512 (order: -1, 2048 bytes)
+Dentry cache hash table entries: 16384 (order: 4, 65536 bytes)
+Inode-cache hash table entries: 8192 (order: 3, 32768 bytes)
+Memory: 93992k/131072k available (3976k kernel code, 37080k reserved, 900k data, 176k init, 0k highmem)
+SLUB: HWalign=32, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+Preemptible hierarchical RCU implementation.
+NR_IRQS:49
+Calibrating delay loop... 497.66 BogoMIPS (lpj=248832)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 512
+pinctrl core: initialized pinctrl subsystem
+regulator-dummy: no parameters
+NET: Registered protocol family 16
+rtsxb2 registered with IRQs
+INFO: initializing USB host ...
+INFO: initializing spi host ...0
+spi platform id is 0
+INFO: initializing I2C master ...
+INFO: initializing DMA controller ...
+INFO: initializing adc ...
+INFO: initializing SD controller ...
+INFO: initializing snd device ...
+snd resvd mem size : 1048576
+INFO: initializing pinctrl device ...
+pinctrl_platform pinctrl_platform: rtspc registered with IRQs
+INFO: initializing led device - 9...
+INFO: initializing ethernet devices ...
+INFO: initializing dwc_otg devices ...
+INFO: initializing USB phy ...
+INFO: initializing ISP device ...
+isp resvd mem addr : 0x00613000, size : 0x1d00000
+ISP camera platform devices added
+INFO: initializing watchdog controller ...
+INFO: initializing PWM controller ...
+INFO: initializing pmu device ...
+INFO: initializing cpu dvfs device ...
+bio: create slab <bio-0> at 0
+rts_dmac rts_dmac: DesignWare DMA Controller, 1 channels
+INFO: realtek DMA engine inited
+SCSI subsystem initialized
+spic-platform spic-platform.0: master is unqueued, this is deprecated
+INFO:allocate spi master 0, 0
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+usbphy-platform usbphy-platform: Initialized Realtek IPCam USB Phy module
+Linux video capture interface: v2.00
+Advanced Linux Sound Architecture Driver Initialized.
+NET: Registered protocol family 2
+cfg80211: Calling CRDA to update world regulatory domain
+TCP established hash table entries: 1024 (order: 1, 8192 bytes)
+TCP bind hash table entries: 1024 
+
+KIỂM TRA KẾT NỐI USB CỦA IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Kiểm tra USB lần thứ 1
+Phần mềm gửi lệnh: ifconfig
+Delay 3000 ms
+Kiểm tra USB lần thứ 2
+Phần mềm gửi lệnh: ifconfig
+Delay 3000 ms
+CAMERA Feedback:
+ifconfig
+br0       Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          inet addr:192.168.1.253  Bcast:192.168.1.255  Mask:255.255.255.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:304 errors:0 dropped:129 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:36815 (35.9 KiB)  TX bytes:0 (0.0 B)
+
+eth0      Link encap:Ethernet  HWaddr A4:F4:C2:99:01:02  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:307 errors:0 dropped:3 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:41251 (40.2 KiB)  TX bytes:0 (0.0 B)
+          Interrupt:10 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:186 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:186 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:13578 (13.2 KiB)  TX bytes:13578 (13.2 KiB)
+
+wlan0     Link encap:Ethernet  HWaddr A0:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:932 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+wlan1     Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:910 errors:0 dropped:22 overruns:0 frame:0
+          TX packets:35 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:3972 (3.8 KiB)
+
+~ # 
+KẾT QUẢ KIỂM TRA USB: PASS
+
+KIỂM TRA CẢM BIẾN ÁNH SÁNG CỦA IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Kiểm tra mức sáng:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1808
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1505
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1505
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1557
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1769
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1486
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+103
+~ # 
+Light Level: PASS
+Dark Level: PASS
+KẾT QUẢ KIỂM TRA CẢM BIẾN ÁNH SÁNG: PASS
+
+KIỂM TRA SPEAKER, MICROPHONE CỦA IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Phần mềm gửi lệnh: killall lark
+Gửi lệnh yêu cầu IP Camera thu âm:
+arecord -D hw:0,1 /tmp/audio_record.wav & 
+Máy tính phát âm thanh ra loa:
+delay 3000 ms
+Phần mềm gửi lệnh dừng thu âm: killall arecord 
+Gửi lệnh phát âm thanh ra loa IP Camera:
+aplay - D hw: 0,1 / tmp / audio_record.wav
+delay 5000ms
+Người thao tác phán định: PASS
+KẾT QUẢ KIỂM TRA SPEAKER, MICROPHONE: PASS
+Set địa chỉ IP tĩnh 192.168.1.253 cho IP Camera
+CAMERA Feedback: 
+nm_cfg wan dhcp 0 ipaddr 192.168.1.253 netmask 255.255.255.0 gateway 192.168
+.1.1
+entry: 0x1000002 type 0 len 4: c0 a8 01 fd 
+entry: 0x1000004 type 0 len 4: ff ff ff 00 
+entry: 0x1000003 type 0 len 4: c0 a8 01 01 
+
+Set IP thành công
+
+KIỂM TRA IMAGE SENSOR CỦA IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Lưu địa chỉ MAC vào MAC.txt
+Lọc file Result.txt
+Mở chương trình LiveCamera.exe
+Delay 100 ms
+Kiểm tra đã Image sensor.....
+Chờ 1 s 
+Chờ 2 s 
+Chờ 3 s 
+Chờ 4 s 
+Chờ 5 s 
+Chờ 6 s 
+Chờ 7 s 
+Chờ 8 s 
+Chờ 9 s 
+Chờ 10 s 
+Chờ 11 s 
+Chờ 12 s 
+Chờ 13 s 
+Chờ 14 s 
+Chờ 15 s 
+Chờ 16 s 
+Đã lưu ảnh của Image Sensor
+KẾT QUẢ KIỂM TRA IMAGE SENSOR: PASS 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+PHÁN ĐỊNH TỔNG LÀ : PASS
+
+Tổng thời gian test là: 107 giây
+

@@ -132,7 +132,7 @@
                             <Label FontSize="15" FontWeight="Bold" Content="-"></Label>
 
                             <!--DUT-->
-                            <Grid Height="210">
+                            <Grid Height="160">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="3*"/>
                                     <ColumnDefinition Width="*"/>
@@ -144,8 +144,8 @@
                                     <TextBox Background="#fffdbf" CharacterCasing="Normal" FontSize="13" FontWeight="Bold" Padding="5,0,0,0" Text="{Binding Path=dutip, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></TextBox>
                                     <Label Content="Tên đăng nhập" FontSize="13"></Label>
                                     <TextBox Background="#fffdbf" CharacterCasing="Normal" FontSize="13" FontWeight="Bold" Padding="5,0,0,0" Text="{Binding Path=dutuser, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></TextBox>
-                                    <Label Content="Mã đăng nhập" FontSize="13"></Label>
-                                    <TextBox Background="#fffdbf" CharacterCasing="Normal" FontSize="13" FontWeight="Bold" Padding="5,0,0,0" Text="{Binding Path=dutpass, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></TextBox>
+                                    <Label Visibility="Collapsed" Content="Mã đăng nhập" FontSize="13"></Label>
+                                    <TextBox Visibility="Collapsed" Background="#fffdbf" CharacterCasing="Normal" FontSize="13" FontWeight="Bold" Padding="5,0,0,0" Text="{Binding Path=dutpass, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></TextBox>
 
                                 </StackPanel>
                                 <Grid Grid.Column="1" Margin="10">

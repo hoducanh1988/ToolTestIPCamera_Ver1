@@ -43,7 +43,6 @@ namespace ToolTestIPCamera_Ver1.Function.Excute
                     Thread.Sleep(3000);
                 }
 
-
                 //Check USB
                 if(GlobalData.initSetting.checkusboption == true) {
                     if (!CheckUSB(ref message)) goto NG;
@@ -61,10 +60,10 @@ namespace ToolTestIPCamera_Ver1.Function.Excute
 
                 //Check Image Sensor
                 if (GlobalData.initSetting.checkimagesensoroption == true) {
-                    if (!CheckImageSensor
-                        
-                        
-                        (ref message)) goto NG;
+                    //Write Static IP For Camera
+                    if (!WriteStaticIP()) goto NG;
+                    //Check Image sensor
+                    if (!CheckImageSensor(ref message)) goto NG;
                 }
 
                 goto OK;
