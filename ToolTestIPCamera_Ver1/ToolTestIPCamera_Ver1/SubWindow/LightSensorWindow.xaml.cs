@@ -123,11 +123,12 @@ namespace ToolTestIPCamera_Ver1 {
                 GlobalData.testingDataDUT.SYSTEMLOG += "Kiểm tra mức sáng:\r\n";
                 window.initLightLevel();
                 bool ret = false;
+                GlobalData.testingDataDUT.CAMERALOG = "";
                 GlobalData.testingDataDUT.SYSTEMLOG += "cat /sys/devices/platform/rts_saradc.0/in0_input";
                 GlobalData.camera.WriteLine("cat /sys/devices/platform/rts_saradc.0/in0_input");
-                Thread.Sleep(100);
+                Thread.Sleep(500);
                 GlobalData.testingDataDUT.SYSTEMLOG += "delay 500ms";
-                string data = GlobalData.camera.Read0();
+                string data = GlobalData.initSetting.station == "SAU-DONG-VO" ? GlobalData.camera.Read0() : GlobalData.testingDataDUT.CAMERALOG;
                 GlobalData.testingDataDUT.SYSTEMLOG += string.Format("{0}\r\n", data);
 
                 data = data.Replace("\r", "").Replace("\n", "").Trim();
@@ -146,11 +147,12 @@ namespace ToolTestIPCamera_Ver1 {
                 GlobalData.testingDataDUT.SYSTEMLOG += "Kiểm tra mức tối:\r\n";
                 window.initDarkLevel();
                 bool ret = false;
+                GlobalData.testingDataDUT.CAMERALOG = "";
                 GlobalData.testingDataDUT.SYSTEMLOG += "cat /sys/devices/platform/rts_saradc.0/in0_input";
                 GlobalData.camera.WriteLine("cat /sys/devices/platform/rts_saradc.0/in0_input");
-                Thread.Sleep(100);
+                Thread.Sleep(500);
                 GlobalData.testingDataDUT.SYSTEMLOG += "delay 500ms";
-                string data = GlobalData.camera.Read0();
+                string data = GlobalData.initSetting.station == "SAU-DONG-VO" ? GlobalData.camera.Read0() : GlobalData.testingDataDUT.CAMERALOG;
                 GlobalData.testingDataDUT.SYSTEMLOG += string.Format("{0}\r\n", data);
                 data = data.Replace("\r", "").Replace("\n", "").Trim();
                 data = data.Replace("cat /sys/devices/platform/rts_saradc.0/in0_input", "");
@@ -158,7 +160,7 @@ namespace ToolTestIPCamera_Ver1 {
                 window.ADCVALUE = data;
                 ret = int.Parse(data) < int.Parse(GlobalData.initSetting.adcvalue);
                 DarkLevelResult = ret;
-                if (ret == true) { this._count = _maxcount * 2; }
+                if (ret == true) { this.Close(); }
             }
         }
 

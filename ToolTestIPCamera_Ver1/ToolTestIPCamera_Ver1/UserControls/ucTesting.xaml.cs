@@ -71,10 +71,12 @@ namespace ToolTestIPCamera_Ver1.UserControls {
                     switch (GlobalData.initSetting.station) {
                         case "PCBA-LAYER2": {
                                 ret = new Function.Excute.ExcuteTestLayer2().Excute();
+                                Function.IO.UARTLog.Save();
                                 break;
                             }
                         case "PCBA-LAYER3": {
                                 ret = new Function.Excute.ExcuteTestLayer3().Excute();
+                                Function.IO.UARTLog.Save();
                                 break;
                             }
                         case "SAU-DONG-VO": {
@@ -82,13 +84,20 @@ namespace ToolTestIPCamera_Ver1.UserControls {
                                 break;
                             }
                     }
-                    GlobalData.testingDataDUT.MACADDRESS = "";
-                    GlobalData.testingDataDUT.ENABLETEXTBOX = true;
-                    GlobalData.testingDataDUT.OLDMAC = string.Format("Old MAC: {0}, {1}", _mac, ret == true ? "PASS" : "FAIL");
+                    
                     GlobalData.testingDataDUT.TOTALRESULT = ret == true ? Parameters.testStatus.PASS.ToString() : Parameters.testStatus.FAIL.ToString();
                     GlobalData.testingDataDUT.FinishCheck();
                     st.Stop();
                     GlobalData.testingDataDUT.SYSTEMLOG += string.Format("\r\nTổng thời gian test là: {0} giây\r\n", st.ElapsedMilliseconds / 1000);
+                    
+                    //Save Log
+                    Function.IO.SystemLog.Save();
+                    Function.IO.TestLog.Save();
+
+                    //clear display
+                    GlobalData.testingDataDUT.MACADDRESS = "";
+                    GlobalData.testingDataDUT.OLDMAC = string.Format("Old MAC: {0}, {1}", _mac, ret == true ? "PASS" : "FAIL");
+                    GlobalData.testingDataDUT.ENABLETEXTBOX = true;
                 }));
                 t.IsBackground = true;
                 t.Start();

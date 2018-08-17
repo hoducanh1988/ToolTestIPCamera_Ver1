@@ -78,6 +78,22 @@ namespace ToolTestIPCamera_Ver1.Function.DUT {
         /// <returns>TRUE/FALSE</returns>
         protected bool CheckLAN(ref string _message) {
             try {
+                //Fix IP Address
+                //int count = 0;
+                //GlobalData.testingDataDUT.SYSTEMLOG += "Đang cấu hình IP, NETMASK, GATEWAY";
+                //GlobalData.testingDataDUT.CAMERALOG += "";
+                //GlobalData.testingDataDUT.SYSTEMLOG += "Phầm mềm gửi lệnh: nm_cfg wan dhcp 0 ipaddr 192.168.1.253 netmask 255.255.255.0 gateway 192.168.1.1";
+                //GlobalData.camera.WriteLine("nm_cfg wan dhcp 0 ipaddr 192.168.1.253 netmask 255.255.255.0 gateway 192.168.1.1");
+                //GlobalData.testingDataDUT.SYSTEMLOG += "Delay 3000 ms";
+                //Thread.Sleep(3000);
+                //REP:
+                //count++;
+                //bool ret1 = GlobalData.testingDataDUT.CAMERALOG.Contains("");
+                //if (!ret1) {
+                //    Thread.Sleep(500);
+                //    goto REP;
+                //}
+                //
                 GlobalData.testingDataDUT.SYSTEMLOG += "\r\nKIỂM TRA CỔNG LAN CỦA IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\r\n";
                 GlobalData.testingDataDUT.SYSTEMLOG += "Phần mềm gửi lệnh: ifconfig eth0 up\r\n";
                 GlobalData.testingDataDUT.CAMERALOG = "";
@@ -384,7 +400,7 @@ namespace ToolTestIPCamera_Ver1.Function.DUT {
                 GlobalData.testingDataDUT.SYSTEMLOG += "\r\nKIỂM TRA KẾT NỐI USB CỦA IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\r\n";
                 REP:
                 count++;
-                GlobalData.testingDataDUT.SYSTEMLOG += string.Format("Kiểm tra USB lần thứ {0}\r\n", count + 1);
+                GlobalData.testingDataDUT.SYSTEMLOG += string.Format("Kiểm tra USB lần thứ {0}\r\n", count);
                 GlobalData.testingDataDUT.CAMERALOG = "";
                 GlobalData.testingDataDUT.SYSTEMLOG += "Phần mềm gửi lệnh: ifconfig\r\n";
                 GlobalData.camera.WriteLine("ifconfig");
@@ -399,6 +415,18 @@ namespace ToolTestIPCamera_Ver1.Function.DUT {
                 GlobalData.testingDataDUT.SYSTEMLOG += "CAMERA Feedback:\r\n" + GlobalData.testingDataDUT.CAMERALOG + "\r\n";
                 GlobalData.testingDataDUT.SYSTEMLOG += string.Format("KẾT QUẢ KIỂM TRA USB: {0}\r\n", ret == true ? "PASS" : "FAIL");
                 GlobalData.testingDataDUT.USBRESULT = ret == true ? Parameters.testStatus.PASS.ToString() : Parameters.testStatus.FAIL.ToString();
+                
+                if (GlobalData.initSetting.uploadfirmwareoption == true) {
+                    GlobalData.camera.WriteLine("\n");
+                    Thread.Sleep(100);
+                    GlobalData.camera.WriteLine("killall lark");
+                    Thread.Sleep(500);
+                    GlobalData.camera.WriteLine("killall lark");
+                    Thread.Sleep(500);
+                    GlobalData.camera.WriteLine("killall lark");
+                    Thread.Sleep(500);
+                }
+
                 return ret;
             }
             catch (Exception ex) {

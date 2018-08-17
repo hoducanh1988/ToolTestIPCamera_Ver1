@@ -55,11 +55,16 @@ namespace ToolTestIPCamera_Ver1.Function.Excute
                 }
 
                 //Check Speaker & MIC
-
+                if(GlobalData.initSetting.checkspeakermicoption == true) {
+                    if (!CheckSpeakerMIC(ref message)) goto NG;
+                }
 
                 //Check Image Sensor
                 if (GlobalData.initSetting.checkimagesensoroption == true) {
-                    if (!CheckImageSensor(ref message)) goto NG;
+                    if (!CheckImageSensor
+                        
+                        
+                        (ref message)) goto NG;
                 }
 
                 goto OK;
@@ -84,12 +89,35 @@ namespace ToolTestIPCamera_Ver1.Function.Excute
 
         #region SubFunction
 
+        SpeakerMicWindow smWindow = null;
+
         protected override bool CheckSDCard(ref string _message) {
             throw new NotImplementedException();
         }
 
         protected override bool CheckSpeakerMIC(ref string _message) {
-            throw new NotImplementedException();
+            try {
+                //string message = "";
+                GlobalData.testingDataDUT.SYSTEMLOG += "\r\nKIỂM TRA SPEAKER, MICROPHONE CỦA IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\r\n";
+
+                bool ret = false;
+                App.Current.Dispatcher.Invoke(new Action(() => {
+                    smWindow = new SpeakerMicWindow();
+                    smWindow.ShowDialog();
+                    ret = smWindow.Result;
+                }));
+
+                GlobalData.testingDataDUT.SPEAKERMICRESULT = ret == true ? Parameters.testStatus.PASS.ToString() : Parameters.testStatus.FAIL.ToString();
+                GlobalData.testingDataDUT.SYSTEMLOG += string.Format("KẾT QUẢ KIỂM TRA SPEAKER, MICROPHONE: {0}\r\n", ret == true ? "PASS" : "FAIL");
+                return ret;
+            }
+            catch (Exception ex) {
+                _message = ex.ToString();
+                GlobalData.testingDataDUT.SYSTEMLOG += _message + "\r\n";
+                GlobalData.testingDataDUT.SYSTEMLOG += string.Format("KẾT QUẢ KIỂM TRA SPEAKER, MICROPHONE: FAIL\r\n");
+                GlobalData.testingDataDUT.SPEAKERMICRESULT = Parameters.testStatus.FAIL.ToString();
+                return false;
+            }
         }
 
         protected override bool CheckWIFI(ref string _message) {

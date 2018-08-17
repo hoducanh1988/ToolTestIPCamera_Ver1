@@ -21,7 +21,7 @@ namespace ToolTestIPCamera_Ver1 {
     /// </summary>
     public partial class SpeakerMicWindow : Window {
 
-        
+
         class windowContent : INotifyPropertyChanged {
 
             public event PropertyChangedEventHandler PropertyChanged;
@@ -154,14 +154,22 @@ namespace ToolTestIPCamera_Ver1 {
                         if (count == 1) {
                             Thread t = new Thread(new ThreadStart(() => {
                                 wcontent.StartRecord();
+                                GlobalData.camera.WriteLine("\n");
+                                GlobalData.testingDataDUT.SYSTEMLOG += "Phần mềm gửi lệnh: killall lark\r\n";
+                                GlobalData.camera.WriteLine("killall lark");
+                                Thread.Sleep(500);
                                 GlobalData.testingDataDUT.SYSTEMLOG += "Gửi lệnh yêu cầu IP Camera thu âm:\r\n";
-                                GlobalData.testingDataDUT.SYSTEMLOG += "arecord -D hw:0,1 /tmp/audio_record.wav\r\n";
-                                GlobalData.camera.WriteLine("arecord -D hw:0,1 /tmp/audio_record.wav");
+                                GlobalData.testingDataDUT.SYSTEMLOG += "arecord -D hw:0,1 /tmp/audio_record.wav & \r\n";
+                                GlobalData.camera.WriteLine("arecord -D hw:0,1 /tmp/audio_record.wav &");
+                                Thread.Sleep(500);
+                                GlobalData.camera.WriteLine("\n");
                                 GlobalData.testingDataDUT.SYSTEMLOG += "Máy tính phát âm thanh ra loa:\r\n";
                                 Speaker speaker = new Speaker();
                                 speaker.PlaySound(ref message);
                                 Thread.Sleep(3000);
                                 GlobalData.testingDataDUT.SYSTEMLOG += "delay 3000 ms\r\n";
+                                GlobalData.testingDataDUT.SYSTEMLOG += "Phần mềm gửi lệnh dừng thu âm: killall arecord \r\n";
+                                GlobalData.camera.WriteLine("killall arecord");
                             }));
                             t.IsBackground = true;
                             t.Start();
@@ -176,9 +184,9 @@ namespace ToolTestIPCamera_Ver1 {
                         //delay 3000ms
                         if (count == 1) {
                             wcontent.StartDelay();
-                            GlobalData.camera.Close();
+                            //GlobalData.camera.Close();
                         }
-                        
+
                         if (count > 6) {
                             stepcheck = 2;
                             count = 0;
@@ -187,28 +195,28 @@ namespace ToolTestIPCamera_Ver1 {
                     }
                 case 2: {
                         if (count == 1) {
-                            wcontent.Relogin();
-                            //Connection toi IP Camera
-                            GlobalData.testingDataDUT.SYSTEMLOG += "\r\nRECONNECT TO IP CAMERA \r\n";
+                            //wcontent.Relogin();
+                            ////Connection toi IP Camera
+                            //GlobalData.testingDataDUT.SYSTEMLOG += "\r\nRECONNECT TO IP CAMERA \r\n";
 
-                            bool ret = GlobalData.camera.Connection(ref message);
-                            GlobalData.testingDataDUT.SYSTEMLOG += message + "\r\n\r\n";
-                            if (!ret) GlobalData.testingDataDUT.SYSTEMLOG += "Không thể kết nối telnet tới IP Camera\r\n";
+                            //bool ret = GlobalData.camera.Connection(ref message);
+                            //GlobalData.testingDataDUT.SYSTEMLOG += message + "\r\n\r\n";
+                            //if (!ret) GlobalData.testingDataDUT.SYSTEMLOG += "Không thể kết nối telnet tới IP Camera\r\n";
+                            ////if (!ret) return false;
+
+                            //////Login to IP camera
+                            //GlobalData.testingDataDUT.SYSTEMLOG += "\r\nRELOGIN TO IP CAMERA\r\n";
+                            //ret = GlobalData.camera.LoginToCamera(ref message);
+                            //GlobalData.testingDataDUT.SYSTEMLOG += message + "\r\n\r\n";
+                            //if (!ret) GlobalData.testingDataDUT.SYSTEMLOG += "Không thể login vào IP Camera\r\n";
                             //if (!ret) return false;
 
-                            ////Login to IP camera
-                            GlobalData.testingDataDUT.SYSTEMLOG += "\r\nRELOGIN TO IP CAMERA\r\n";
-                            ret = GlobalData.camera.LoginToCamera(ref message);
-                            GlobalData.testingDataDUT.SYSTEMLOG += message + "\r\n\r\n";
-                            if (!ret) GlobalData.testingDataDUT.SYSTEMLOG += "Không thể login vào IP Camera\r\n";
-                            //if (!ret) return false;
-
-                            if (ret) {
-                                count = 0;
-                                stepcheck = 3;
-                            }
+                            //if (ret) {
+                            count = 0;
+                            stepcheck = 3;
+                            //}
                         }
-                        
+
                         break;
                     }
                 case 3: {
@@ -226,17 +234,17 @@ namespace ToolTestIPCamera_Ver1 {
                             t.IsBackground = true;
                             t.Start();
                         }
-                        
+
                         if (count >= 10) {
                             stepcheck = 4;
                             count = 0;
                         }
-                       
+
                         break;
                     }
                 case 4: {
                         //Phan dinh
-                        wcontent.TIME = 30 -  (count / 2);
+                        wcontent.TIME = 30 - (count / 2);
                         if (count == 1) {
                             wcontent.Judged();
                         }

@@ -622,4 +622,128 @@ namespace ToolTestIPCamera_Ver1.Function {
 
     }
 
+    public class manualtestinfo : INotifyPropertyChanged {
+        //INotifyPropertyChanged implement
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected virtual void OnPropertyChanged(string propertyName = null) {
+            PropertyChangedEventHandler handler = PropertyChanged;
+            if (handler != null) {
+                handler(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
+
+        string _dutip;
+        public string dutip {
+            get { return _dutip; }
+            set {
+                _dutip = value;
+                OnPropertyChanged(nameof(dutip));
+            }
+        }
+        string _dutuser;
+        public string dutuser {
+            get { return _dutuser; }
+            set {
+                _dutuser = value;
+                OnPropertyChanged(nameof(dutuser));
+            }
+        }
+        string _usbdebug1;
+        public string usbdebug1 {
+            get { return _usbdebug1; }
+            set {
+                _usbdebug1 = value;
+                OnPropertyChanged(nameof(usbdebug1));
+            }
+        }
+        string _station;
+        public string station {
+            get { return _station; }
+            set {
+                _station = value;
+                OnPropertyChanged(nameof(station));
+            }
+        }
+
+        string _fw_manuallog;
+        public string fw_manuallog {
+            get { return _fw_manuallog; }
+            set {
+                _fw_manuallog = value;
+                OnPropertyChanged(nameof(fw_manuallog));
+            }
+        }
+        string _mac_manuallog;
+        public string mac_manuallog {
+            get { return _mac_manuallog; }
+            set {
+                _mac_manuallog = value;
+                OnPropertyChanged(nameof(mac_manuallog));
+            }
+        }
+        string _wifi_manuallog;
+        public string wifi_manuallog {
+            get { return _wifi_manuallog; }
+            set {
+                _wifi_manuallog = value;
+                OnPropertyChanged(nameof(wifi_manuallog));
+            }
+        }
+        string _sdcard_manuallog;
+        public string sdcard_manuallog {
+            get { return _sdcard_manuallog; }
+            set {
+                _sdcard_manuallog = value;
+                OnPropertyChanged(nameof(sdcard_manuallog));
+            }
+        }
+        string _lan_manuallog;
+        public string lan_manuallog {
+            get { return _lan_manuallog; }
+            set {
+                _lan_manuallog = value;
+                OnPropertyChanged(nameof(lan_manuallog));
+            }
+        }
+        string _audio_manuallog;
+        public string audio_manuallog {
+            get { return _audio_manuallog; }
+            set {
+                _audio_manuallog = value;
+                OnPropertyChanged(nameof(audio_manuallog));
+            }
+        }
+        string _rgbled_manuallog;
+        public string rgbled_manuallog {
+            get { return _rgbled_manuallog; }
+            set {
+                _rgbled_manuallog = value;
+                OnPropertyChanged(nameof(rgbled_manuallog));
+            }
+        }
+        string _button_manuallog;
+        public string button_manuallog {
+            get { return _button_manuallog; }
+            set {
+                _button_manuallog = value;
+                OnPropertyChanged(nameof(button_manuallog));
+            }
+        }
+        string _lightsensor_manuallog;
+        public string lightsensor_manuallog {
+            get { return _lightsensor_manuallog; }
+            set {
+                _lightsensor_manuallog = value;
+                OnPropertyChanged(nameof(lightsensor_manuallog));
+            }
+        }
+    }
+
+    public class logfileinfo {
+        public int ID { get; set; }
+        public string FileName { get; set; }
+        public string MemorySize { get; set; }
+        public string DateCreated { get; set; }
+        public string DateModified { get; set; }
+    }
 }

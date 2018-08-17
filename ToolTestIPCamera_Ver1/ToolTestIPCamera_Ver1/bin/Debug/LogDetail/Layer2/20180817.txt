@@ -1,0 +1,318 @@
+
+KIỂM TRA ĐỊA CHỈ MAC ADDRESS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+MAC: A4F4C2909090
+KẾT QUẢ KIỂM TRA MAC ADDRESS: PASS
+
+MỞ CỔNG COM IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Login to comport COM14 success.
+
+
+KIỂM TRA CỔNG LAN CỦA IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Phần mềm gửi lệnh: ifconfig eth0 up
+Delay 500 ms
+CAMERA Feedback:
+ifconfig eth0 up
+~ # 
+Phần mềm gửi lệnh: ping -c 4 192.168.1.100
+Delay 5000 ms
+CAMERA Feedback:
+ping -c 4 192.168.1.100
+PING 192.168.1.100 (192.168.1.100): 56 data bytes
+64 bytes from 192.168.1.100: seq=0 ttl=128 time=3.691 ms
+64 bytes from 192.168.1.100: seq=1 ttl=128 time=1.269 ms
+64 bytes from 192.168.1.100: seq=2 ttl=128 time=1.081 ms
+64 bytes from 192.168.1.100: seq=3 ttl=128 time=1.282 ms
+
+--- 192.168.1.100 ping statistics ---
+4 packets transmitted, 4 packets received, 0% packet loss
+round-trip min/avg/max = 1.081/1.830/3.691 ms
+~ # 
+KẾT QUẢ KIỂM TRA CỔNG LAN: PASS
+
+KIỂM TRA THẺ NHỚ SD CARD CỦA IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Phần mềm gửi lệnh: mount  LẦN 1
+Delay 1000 ms 
+CAMERA Feedback:
+mount
+rootfs on / type rootfs (rw)
+/dev/root on / type squashfs (ro,relatime)
+proc on /proc type proc (rw,relatime)
+sysfs on /sys type sysfs (rw,relatime)
+ramfs on /var type ramfs (rw,relatime)
+ramfs on /dev type ramfs (rw,relatime)
+tmpfs on /dev/shm type tmpfs (rw,relatime)
+devpts on /dev/pts type devpts (rw,relatime,mode=600)
+tmpfs on /media type tmpfs (rw,relatime,size=64k,mode=755)
+/dev/mtdblock3 on /usr/conf type jffs2 (rw,relatime)
+/dev/mmcblk0p1 on /media/sdcard type vfat (rw,relatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro)
+~ # 
+KẾT QUẢ KIỂM TRA THẺ NHỚ SD card: PASS
+
+KIỂM TRA RGB LED CỦA IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+GREEN LED: PASS
+RED LED: PASS
+KẾT QUẢ KIỂM TRA RGB LED: PASS
+
+KIỂM TRA KẾT NỐI WIFI CỦA IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Phần mềm gửi lệnh: ifconfig eth0 down  
+Delay 1000 ms 
+CAMERA Feedback:
+echo 1000000 > /sys/devices/platform/pwm_platform/settings/pwm2/duty_ns
+cho 1 >~ # echo 1 > /sys/devices/platform/pwm_platform/settings/pwm2/enable
+~ # echo 0 > /sys/devices/platform/pwm_platform/settings/pwm1/duty_ns
+~ # echo 1 > /sys/devices/platform/pwm_platform/settings/pwm1/enable
+~ # ifconfig eth0 down
+br0: port 1(eth0) entered disabled state
+~ # device eth0 left promiscuous mode
+br0: port 1(eth0) entered disabled state
+
+Phần mềm gửi lệnh: nm_cfg client IPCAM-Test-1  
+Delay 1000 ms 
+CAMERA Feedback:
+nm_cfg client IPCAM-Test-1
+~ # 
+Kiểm tra kết nối LẦN 0
+Phần mềm gửi lệnh: nm_cfg status  
+Delay 500 ms 
+CAMERA Feedback:
+nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= scanning
+
+******Wi-Fi SoftAP******
+enable = 1
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # 
+Kiểm tra kết nối LẦN 1
+Phần mềm gửi lệnh: nm_cfg status  
+Delay 500 ms 
+CAMERA Feedback:
+nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= scanning
+
+******Wi-Fi SoftAP******
+enable = 1
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # 
+Kiểm tra kết nối LẦN 2
+Phần mềm gửi lệnh: nm_cfg status  
+Delay 500 ms 
+CAMERA Feedback:
+nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= scanning
+
+******Wi-Fi SoftAP******
+enable = 1
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # 
+Kiểm tra kết nối LẦN 3
+Phần mềm gửi lệnh: nm_cfg status  
+Delay 500 ms 
+CAMERA Feedback:
+nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= scanning
+
+******Wi-Fi SoftAP******
+enable = 1
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # 
+Kiểm tra kết nối LẦN 4
+Phần mềm gửi lệnh: nm_cfg status  
+Delay 500 ms 
+CAMERA Feedback:
+nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= connect
+
+******Wi-Fi SoftAP******
+enable = 1
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # 
+KẾT QUẢ KIỂM TRA WIFI: PASS
+
+KIỂM TRA NÚT BẤM CỦA IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Đang chờ người dùng thực hiện nhấn nút bấm...  
+Thời gian chờ 1 s ...  
+CAMERA Feedback:
+
+Thời gian chờ 2 s ...  
+CAMERA Feedback:
+
+Thời gian chờ 3 s ...  
+CAMERA Feedback:
+
+Thời gian chờ 4 s ...  
+CAMERA Feedback:
+
+Thời gian chờ 5 s ...  
+CAMERA Feedback:
+
+Thời gian chờ 6 s ...  
+CAMERA Feedback:
+time_process = 1
+
+KẾT QUẢ KIỂM TRA NÚT BẤM: PASS
+>>>
+
+PHÁN ĐỊNH TỔNG LÀ : PASS
+
+Tổng thời gian test là: 24 giây
+
+
+KIỂM TRA ĐỊA CHỈ MAC ADDRESS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+MAC: A4F4C2909192
+KẾT QUẢ KIỂM TRA MAC ADDRESS: PASS
+
+MỞ CỔNG COM IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Login to comport COM14 success.
+
+
+KIỂM TRA CỔNG LAN CỦA IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Phần mềm gửi lệnh: ifconfig eth0 up
+Delay 500 ms
+CAMERA Feedback:
+
+Phần mềm gửi lệnh: ping -c 4 192.168.1.100
+Delay 5000 ms
+CAMERA Feedback:
+
+KẾT QUẢ KIỂM TRA CỔNG LAN: FAIL
+>>>
+
+PHÁN ĐỊNH TỔNG LÀ : FAIL
+
+Tổng thời gian test là: 5 giây
+
