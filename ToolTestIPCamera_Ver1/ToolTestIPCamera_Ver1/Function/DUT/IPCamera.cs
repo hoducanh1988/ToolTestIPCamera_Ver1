@@ -78,34 +78,18 @@ namespace ToolTestIPCamera_Ver1.Function.DUT {
         /// <returns>TRUE/FALSE</returns>
         protected bool CheckLAN(ref string _message) {
             try {
-                //Fix IP Address
-                //int count = 0;
-                //GlobalData.testingDataDUT.SYSTEMLOG += "Đang cấu hình IP, NETMASK, GATEWAY";
-                //GlobalData.testingDataDUT.CAMERALOG += "";
-                //GlobalData.testingDataDUT.SYSTEMLOG += "Phầm mềm gửi lệnh: nm_cfg wan dhcp 0 ipaddr 192.168.1.253 netmask 255.255.255.0 gateway 192.168.1.1";
-                //GlobalData.camera.WriteLine("nm_cfg wan dhcp 0 ipaddr 192.168.1.250 netmask 255.255.255.0 gateway 192.168.1.1");
-                //GlobalData.testingDataDUT.SYSTEMLOG += "Delay 3000 ms";
-                //Thread.Sleep(3000);
-                //REP:
-                //count++;
-                //bool ret1 = GlobalData.testingDataDUT.CAMERALOG.Contains("");
-                //if (!ret1) {
-                //    Thread.Sleep(500);
-                //    goto REP;
-                //}
-                //
                 GlobalData.testingDataDUT.SYSTEMLOG += "\r\nKIỂM TRA CỔNG LAN CỦA IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\r\n";
-                GlobalData.testingDataDUT.SYSTEMLOG += "Phần mềm gửi lệnh: ifconfig eth0 up\r\n";
+                GlobalData.testingDataDUT.SYSTEMLOG += "Phần mềm gửi lệnh Link up cổng LAN: ifconfig eth0 up\r\n";
                 GlobalData.testingDataDUT.CAMERALOG = "";
                 GlobalData.camera.WriteLine("ifconfig eth0 up");
-                GlobalData.testingDataDUT.SYSTEMLOG += "Delay 500 ms\r\n";
-                Thread.Sleep(500);
+                GlobalData.testingDataDUT.SYSTEMLOG += "Delay 1000 ms\r\n";
+                Thread.Sleep(1000);
                 GlobalData.testingDataDUT.SYSTEMLOG += "CAMERA Feedback:\r\n" + GlobalData.testingDataDUT.CAMERALOG + "\r\n";
                 GlobalData.testingDataDUT.CAMERALOG = "";
                 GlobalData.testingDataDUT.SYSTEMLOG += "Phần mềm gửi lệnh: ping -c 4 192.168.1.100\r\n";
                 GlobalData.camera.WriteLine("ping -c 4 192.168.1.100");
-                GlobalData.testingDataDUT.SYSTEMLOG += "Delay 5000 ms\r\n";
-                Thread.Sleep(5000);
+                GlobalData.testingDataDUT.SYSTEMLOG += "Delay 4000 ms\r\n";
+                Thread.Sleep(4000);
                 GlobalData.testingDataDUT.SYSTEMLOG += "CAMERA Feedback:\r\n" + GlobalData.testingDataDUT.CAMERALOG + "\r\n";
                 bool ret = GlobalData.testingDataDUT.UARTLOG.Contains("64 bytes from 192.168.1.100:");
                 GlobalData.testingDataDUT.LANRESULT = ret == true ? Parameters.testStatus.PASS.ToString() : Parameters.testStatus.FAIL.ToString();
@@ -198,10 +182,10 @@ namespace ToolTestIPCamera_Ver1.Function.DUT {
         protected bool WriteMAC(ref string _message) {
             try {
                 bool ret = false;
-                int count = 0, _max = 200;
+                int count = 0, _max = 100;
                 GlobalData.testingDataDUT.SYSTEMLOG += "\r\nĐANG GHI MAC VÀO IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\r\n";
                 REP:
-                //Access to uboot (timeout = 20s)
+                //Access to uboot (timeout = 10s)
                 GlobalData.testingDataDUT.SYSTEMLOG += "Đang chờ thiết bị khởi động...\r\n";
                 count++;
                 ret = GlobalData.testingDataDUT.CAMERALOG.Contains("Hit any key to stop autoboot:");
@@ -402,15 +386,16 @@ namespace ToolTestIPCamera_Ver1.Function.DUT {
                 count++;
                 ret = GlobalData.testingDataDUT.CAMERALOG.Contains("entry: 0x1000003");
                 if (!ret) {
-                    if (count < 5) {
-                        Thread.Sleep(1000);
+                    if (count < 50) {
+                        Thread.Sleep(100);
                         goto REP;
                     }
                 }
                 GlobalData.testingDataDUT.SYSTEMLOG += "CAMERA Feedback: \r\n" + GlobalData.testingDataDUT.CAMERALOG + "\r\n";
                 GlobalData.testingDataDUT.SYSTEMLOG += string.Format("Set IP {0}\r\n", ret == true ? "thành công" : "thất bại");
                 return ret;
-            } catch (Exception ex) {
+            }
+            catch (Exception ex) {
                 GlobalData.testingDataDUT.SYSTEMLOG += ex.ToString() + "\r\n";
                 GlobalData.testingDataDUT.SYSTEMLOG += string.Format("Set IP thất bại \r\n");
                 return false;
@@ -435,8 +420,8 @@ namespace ToolTestIPCamera_Ver1.Function.DUT {
                 GlobalData.testingDataDUT.CAMERALOG = "";
                 GlobalData.testingDataDUT.SYSTEMLOG += "Phần mềm gửi lệnh: ifconfig\r\n";
                 GlobalData.camera.WriteLine("ifconfig");
-                GlobalData.testingDataDUT.SYSTEMLOG += "Delay 3000 ms\r\n";
-                Thread.Sleep(3000);
+                GlobalData.testingDataDUT.SYSTEMLOG += "Delay 1000 ms\r\n";
+                Thread.Sleep(500);
                 ret = GlobalData.testingDataDUT.CAMERALOG.Contains("wlan0     Link encap:Ethernet  HWaddr") && GlobalData.testingDataDUT.CAMERALOG.Contains("wlan1     Link encap:Ethernet  HWaddr");
                 if (!ret) {
                     if (count < 3) {
@@ -446,17 +431,10 @@ namespace ToolTestIPCamera_Ver1.Function.DUT {
                 GlobalData.testingDataDUT.SYSTEMLOG += "CAMERA Feedback:\r\n" + GlobalData.testingDataDUT.CAMERALOG + "\r\n";
                 GlobalData.testingDataDUT.SYSTEMLOG += string.Format("KẾT QUẢ KIỂM TRA USB: {0}\r\n", ret == true ? "PASS" : "FAIL");
                 GlobalData.testingDataDUT.USBRESULT = ret == true ? Parameters.testStatus.PASS.ToString() : Parameters.testStatus.FAIL.ToString();
-                
-                if (GlobalData.initSetting.uploadfirmwareoption == true) {
-                    GlobalData.camera.WriteLine("\n");
-                    Thread.Sleep(100);
-                    GlobalData.camera.WriteLine("killall lark");
-                    Thread.Sleep(500);
-                    GlobalData.camera.WriteLine("killall lark");
-                    Thread.Sleep(500);
-                    GlobalData.camera.WriteLine("killall lark");
-                    Thread.Sleep(500);
-                }
+
+                //if (GlobalData.initSetting.uploadfirmwareoption == true) {
+
+                //}
 
                 return ret;
             }
@@ -524,8 +502,16 @@ namespace ToolTestIPCamera_Ver1.Function.DUT {
                 File.WriteAllText("MAC.txt", GlobalData.testingDataDUT.MACADDRESS);
                 GlobalData.testingDataDUT.SYSTEMLOG += "Lọc file Result.txt\r\n";
                 if (File.Exists("Result.txt")) File.Delete("Result.txt");
-                GlobalData.testingDataDUT.SYSTEMLOG += "Mở chương trình LiveCamera.exe\r\n";
-                Process.Start("LiveCam\\LiveCamera.exe");
+                if (GlobalData.initSetting.station == "SAU-DONG-VO") {
+                    GlobalData.testingDataDUT.SYSTEMLOG += "Mở chương trình LiveCamera.exe\r\n";
+                    Process.Start("LiveCam\\LiveCamera.exe");
+                }
+                else {
+                    GlobalData.testingDataDUT.SYSTEMLOG += "Mở chương trình LiveCamera_3.exe\r\n";
+                    Process.Start("LiveCam\\LiveCamera_3.exe");
+                }
+
+
                 GlobalData.testingDataDUT.SYSTEMLOG += "Delay 100 ms\r\n";
                 Thread.Sleep(100);
                 //
@@ -584,7 +570,7 @@ namespace ToolTestIPCamera_Ver1.Function.DUT {
                     data = data.Split(new string[] { "lo" }, StringSplitOptions.None)[0];
                     data = data.Split(new string[] { "Link encap:Ethernet  HWaddr" }, StringSplitOptions.None)[1];
                     data = data.Trim();
-                    _macincamera = data.Substring(0, 17).Replace(":","").Trim();
+                    _macincamera = data.Substring(0, 17).Replace(":", "").Trim();
                 }
 
                 //

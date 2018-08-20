@@ -156,18 +156,25 @@ namespace ToolTestIPCamera_Ver1 {
                                 wcontent.StartRecord();
                                 GlobalData.camera.WriteLine("\n");
                                 GlobalData.testingDataDUT.SYSTEMLOG += "Phần mềm gửi lệnh: killall lark\r\n";
+                                Thread.Sleep(100);
                                 GlobalData.camera.WriteLine("killall lark");
-                                Thread.Sleep(500);
+                                Thread.Sleep(100);
+                                GlobalData.camera.WriteLine("killall lark");
+                                Thread.Sleep(100);
+                                GlobalData.camera.WriteLine("killall lark");
+                                Thread.Sleep(100);
+                                GlobalData.camera.WriteLine("killall lark");
+                                Thread.Sleep(100);
                                 GlobalData.testingDataDUT.SYSTEMLOG += "Gửi lệnh yêu cầu IP Camera thu âm:\r\n";
                                 GlobalData.testingDataDUT.SYSTEMLOG += "arecord -D hw:0,1 /tmp/audio_record.wav & \r\n";
                                 GlobalData.camera.WriteLine("arecord -D hw:0,1 /tmp/audio_record.wav &");
-                                Thread.Sleep(500);
+                                Thread.Sleep(100);
                                 GlobalData.camera.WriteLine("\n");
                                 GlobalData.testingDataDUT.SYSTEMLOG += "Máy tính phát âm thanh ra loa:\r\n";
                                 Speaker speaker = new Speaker();
                                 speaker.PlaySound(ref message);
-                                Thread.Sleep(3000);
-                                GlobalData.testingDataDUT.SYSTEMLOG += "delay 3000 ms\r\n";
+                                Thread.Sleep(5000);
+                                GlobalData.testingDataDUT.SYSTEMLOG += "delay 5000 ms\r\n";
                                 GlobalData.testingDataDUT.SYSTEMLOG += "Phần mềm gửi lệnh dừng thu âm: killall arecord \r\n";
                                 GlobalData.camera.WriteLine("killall arecord");
                             }));
@@ -187,7 +194,7 @@ namespace ToolTestIPCamera_Ver1 {
                             //GlobalData.camera.Close();
                         }
 
-                        if (count > 6) {
+                        if (count > 2) {
                             stepcheck = 2;
                             count = 0;
                         }

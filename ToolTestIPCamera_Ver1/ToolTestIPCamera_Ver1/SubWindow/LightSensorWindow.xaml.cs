@@ -126,16 +126,21 @@ namespace ToolTestIPCamera_Ver1 {
                 GlobalData.testingDataDUT.CAMERALOG = "";
                 GlobalData.testingDataDUT.SYSTEMLOG += "cat /sys/devices/platform/rts_saradc.0/in0_input";
                 GlobalData.camera.WriteLine("cat /sys/devices/platform/rts_saradc.0/in0_input");
-                Thread.Sleep(500);
+                Thread.Sleep(300);
                 GlobalData.testingDataDUT.SYSTEMLOG += "delay 500ms";
                 string data = GlobalData.initSetting.station == "SAU-DONG-VO" ? GlobalData.camera.Read0() : GlobalData.testingDataDUT.CAMERALOG;
                 GlobalData.testingDataDUT.SYSTEMLOG += string.Format("{0}\r\n", data);
 
-                data = data.Replace("\r", "").Replace("\n", "").Trim();
-                data = data.Replace("cat /sys/devices/platform/rts_saradc.0/in0_input", "");
-                data = data.Replace("~ #", "");
-                window.ADCVALUE = data;
-                ret = int.Parse(data) > int.Parse(GlobalData.initSetting.adcvalue);
+                try {
+                    data = data.Replace("\r", "").Replace("\n", "").Trim();
+                    data = data.Replace("cat /sys/devices/platform/rts_saradc.0/in0_input", "");
+                    data = data.Replace("~ #", "");
+                    window.ADCVALUE = data;
+                    ret = int.Parse(data) > int.Parse(GlobalData.initSetting.adcvalue);
+                } catch {
+                }
+
+                
                 LightLevelResult = ret;
                 if (ret == true) { _stepcheck = 1; }
             }
@@ -150,15 +155,18 @@ namespace ToolTestIPCamera_Ver1 {
                 GlobalData.testingDataDUT.CAMERALOG = "";
                 GlobalData.testingDataDUT.SYSTEMLOG += "cat /sys/devices/platform/rts_saradc.0/in0_input";
                 GlobalData.camera.WriteLine("cat /sys/devices/platform/rts_saradc.0/in0_input");
-                Thread.Sleep(500);
+                Thread.Sleep(300);
                 GlobalData.testingDataDUT.SYSTEMLOG += "delay 500ms";
                 string data = GlobalData.initSetting.station == "SAU-DONG-VO" ? GlobalData.camera.Read0() : GlobalData.testingDataDUT.CAMERALOG;
                 GlobalData.testingDataDUT.SYSTEMLOG += string.Format("{0}\r\n", data);
-                data = data.Replace("\r", "").Replace("\n", "").Trim();
-                data = data.Replace("cat /sys/devices/platform/rts_saradc.0/in0_input", "");
-                data = data.Replace("~ #", "");
-                window.ADCVALUE = data;
-                ret = int.Parse(data) < int.Parse(GlobalData.initSetting.adcvalue);
+
+                try {
+                    data = data.Replace("\r", "").Replace("\n", "").Trim();
+                    data = data.Replace("cat /sys/devices/platform/rts_saradc.0/in0_input", "");
+                    data = data.Replace("~ #", "");
+                    window.ADCVALUE = data;
+                    ret = int.Parse(data) < int.Parse(GlobalData.initSetting.adcvalue);
+                } catch { }
                 DarkLevelResult = ret;
                 if (ret == true) { this.Close(); }
             }

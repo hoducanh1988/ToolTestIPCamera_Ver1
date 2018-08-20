@@ -22,9 +22,9 @@ namespace ToolTestIPCamera_Ver1.UserControls {
 
         public ucHelp() {
             InitializeComponent();
-            //XpsDocument xpsDocument = new XpsDocument(string.Format("{0}Help\\UserGuide.xps", System.AppDomain.CurrentDomain.BaseDirectory), System.IO.FileAccess.Read);
-            //FixedDocumentSequence fds = xpsDocument.GetFixedDocumentSequence();
-            //docViewer.Document = fds;
+            XpsDocument xpsDocument = new XpsDocument(string.Format("{0}Help\\UserGuide.xps", System.AppDomain.CurrentDomain.BaseDirectory), System.IO.FileAccess.Read);
+            FixedDocumentSequence fds = xpsDocument.GetFixedDocumentSequence();
+            docViewer.Document = fds;
         }
 
     }

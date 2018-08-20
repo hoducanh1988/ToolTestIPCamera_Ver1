@@ -89,12 +89,11 @@ namespace ToolTestIPCamera_Ver1.Function.Excute
                 GlobalData.testingDataDUT.CAMERALOG = "";
                 GlobalData.camera.WriteLine("mount");
                 GlobalData.testingDataDUT.SYSTEMLOG += "Delay 1000 ms \r\n";
-                Thread.Sleep(1000);
+                Thread.Sleep(300);
                 GlobalData.testingDataDUT.SYSTEMLOG += "CAMERA Feedback:\r\n" + GlobalData.testingDataDUT.CAMERALOG + "\r\n";
                 ret = GlobalData.testingDataDUT.UARTLOG.Contains("/dev/mmcblk0p1 on /media/sdcard type vfat (rw,relatime,fmask=0000,dmask=0000");
                 if (!ret) {
                     if (count < 5) {
-                        Thread.Sleep(1000);
                         goto REP;
                     }
                 }
@@ -115,17 +114,17 @@ namespace ToolTestIPCamera_Ver1.Function.Excute
         protected override bool CheckWIFI(ref string _message) {
             try {
                 GlobalData.testingDataDUT.SYSTEMLOG += "\r\nKIỂM TRA KẾT NỐI WIFI CỦA IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\r\n";
-                GlobalData.testingDataDUT.SYSTEMLOG += string.Format("Phần mềm gửi lệnh: ifconfig eth0 down  \r\n");
+                GlobalData.testingDataDUT.SYSTEMLOG += string.Format("Phần mềm gửi lệnh off LAN: ifconfig eth0 down  \r\n");
                 GlobalData.testingDataDUT.CAMERALOG = "";
                 GlobalData.camera.WriteLine("ifconfig eth0 down");
-                GlobalData.testingDataDUT.SYSTEMLOG += "Delay 1000 ms \r\n";
-                Thread.Sleep(1000);
+                GlobalData.testingDataDUT.SYSTEMLOG += "Delay 500 ms \r\n";
+                Thread.Sleep(500);
                 GlobalData.testingDataDUT.SYSTEMLOG += "CAMERA Feedback:\r\n" + GlobalData.testingDataDUT.CAMERALOG + "\r\n";
                 GlobalData.testingDataDUT.SYSTEMLOG += string.Format("Phần mềm gửi lệnh: nm_cfg client IPCAM-Test-1  \r\n");
                 GlobalData.testingDataDUT.CAMERALOG = "";
                 GlobalData.camera.WriteLine("nm_cfg client IPCAM-Test-1");
-                GlobalData.testingDataDUT.SYSTEMLOG += "Delay 1000 ms \r\n";
-                Thread.Sleep(1000);
+                GlobalData.testingDataDUT.SYSTEMLOG += "Delay 500 ms \r\n";
+                Thread.Sleep(500);
                 GlobalData.testingDataDUT.SYSTEMLOG += "CAMERA Feedback:\r\n" + GlobalData.testingDataDUT.CAMERALOG + "\r\n";
                 bool ret = false;
                 int count = 0;
@@ -140,8 +139,8 @@ namespace ToolTestIPCamera_Ver1.Function.Excute
                 GlobalData.testingDataDUT.SYSTEMLOG += "CAMERA Feedback:\r\n" + GlobalData.testingDataDUT.CAMERALOG + "\r\n";
                 ret = GlobalData.testingDataDUT.UARTLOG.Contains("status	= connect");
                 if (!ret) {
-                    if (count < 20) {
-                        Thread.Sleep(500);
+                    if (count < 30) {
+                        //Thread.Sleep(500);
                         goto REP;
                     }
                 }

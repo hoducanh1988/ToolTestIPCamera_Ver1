@@ -1,0 +1,3734 @@
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+ifconfig eth0 up
+~ # ping -c 4 192.168.1.100
+PING 192.168.1.100 (192.168.1.100): 56 data bytes
+
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+ifconfig eth0 up
+~ # ping -c 4 192.168.1.100
+PING 192.168.1.100 (192.168.1.100): 56 data bytes
+
+MAC ADDRESS: A4F4C2909102
+---------------------------------------------------------
+ifconfig eth0 up
+~ # ping -c 4 192.168.1.100
+PING 192.168.1.100 (192.168.1.100): 56 data bytes
+64 bytes from 192.168.1.100: seq=0 ttl=128 time=10.203 ms
+64 bytes from 192.168.1.100: seq=1 ttl=128 time=2.172 ms
+64 bytes from 192.168.1.100: seq=2 ttl=128 time=1.437 ms
+64 bytes from 192.168.1.100: seq=3 ttl=128 time=1.751 ms
+
+--- 192.168.1.100 ping statistics ---
+4 packets transmitted, 4 packets received, 0% packet loss
+round-trip min/avg/max = 1.437/3.890/10.203 ms
+~ # mount
+rootfs on / type rootfs (rw)
+/dev/root on / type squashfs (ro,relatime)
+proc on /proc type proc (rw,relatime)
+sysfs on /sys type sysfs (rw,relatime)
+ramfs on /var type ramfs (rw,relatime)
+ramfs on /dev type ramfs (rw,relatime)
+tmpfs on /dev/shm type tmpfs (rw,relatime)
+devpts on /dev/pts type devpts (rw,relatime,mode=600)
+tmpfs on /media type tmpfs (rw,relatime,size=64k,mode=755)
+/dev/mtdblock3 on /usr/conf type jffs2 (rw,relatime)
+/dev/mmcblk0p1 on /media/sdcard type vfat (rw,relatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro)
+~ # killall vnptledindicator
+echo 1> /sys/devices/platform/pwm_platform/settings/pwm/request
+~ # echo 1> /sys/devices/platform/pwm_platform/settings/pwm/request
+-/bin/sh: can't create /sys/devices/platform/pwm_platform/settings/pwm/request: nonexistent directory
+~ # echo 1000000 > /sys/devices/platform/pwm_platform/settings/pwm1/duty_ns
+ /sys/devices/platform/pwm_platform/se~ # echo 1 > /sys/devices/platform/pwm_platform/settings/pwm1/enable
+~ # echo 0 > /sys/devices/platform/pwm_platform/settings/pwm2/duty_ns
+~ # echo 1 > /sys/devices/platform/pwm_platform/settings/pwm2/enable
+~ # killall vnptledindicator
+killall: vnptledindicator: no process killedecho 1> /sys/
+~ # echo 1> /sys/devices/platform/pwm_platform/settings/pwm/request
+-/bin/sh: can't create /sys/devices/platform/pwm_platform/settings/pwm/request: nonexistent directory
+~ # echo 1000000 > /sys/devices/platform/pwm_platform/settings/pwm2/duty_ns
+tform/pwm_platform~ # echo 1 > /sys/devices/platform/pwm_platform/settings/pwm2/enable
+~ # echo 0 > /sys/devices/platform/pwm_platform/settings/pwm1/duty_ns
+~ # echo 1 > /sys/devices/platform/pwm_platform/settings/pwm1/enable
+~ # killall vnptledindicator
+killall: vnptledindicator: no process killed
+~ # echo 1> /sys/devices/platform/pwm_platform/settings/pwm/request
+-/bin/sh: can't create /sys/devices/platform/pwm_platform/settings/pwm/request: nonexistent directory
+~ # echo 1000000 > /sys/devices/platform/pwm_platform/settings/pwm1/duty_ns
+tform/settings/pw~ # echo 1 > /sys/devices/platform/pwm_platform/settings/pwm1/enable
+rm/pwm_platform/setti~ # echo 0 > /sys/devices/platform/pwm_platform/settings/pwm2/duty_ns
+~ # echo 1 > /sys/devices/platform/pwm_platform/settings/pwm2/enable
+~ # killall vnptledindicator
+killall: vnptledindicator: no process killed
+~ # echo 1> /sys/devices/platform/pwm_platform/settings/pwm/request
+-/bin/sh: can't create /sys/devices/platform/pwm_platform/settings/pwm/request: nonexistent directory
+~ # echo 1000000 > /sys/devices/platform/pwm_platform/settings/pwm2/duty_ns
+~ # echo 1 > /sys/devices/platform/pwm_platform/settings/pwm2/enable
+s/devi~ # echo 0 > /sys/devices/platform/pwm_platform/settings/pwm1/duty_ns
+ /sys/devices/platform/pwm_platf~ # echo 1 > /sys/devices/platform/pwm_platform/settings/pwm1/enable
+~ # killall vnptledindicator
+killall: vnptledindicator: no process killed
+~ # echo 1> /sys/devices/platform/pwm_platform/settings/pwm/request
+-/bin/sh: can't create /sys/devices/platform/pwm_platform/settings/pwm/request: nonexistent directory
+~ # echo 1000000 > /sys/devices/platform/pwm_platform/settings/pwm1/duty_ns
+~ # echo 1 > /sys/devices/platform/pwm_platform/settings/pwm1/enable
+echo 0 ~ # echo 0 > /sys/devices/platform/pwm_platform/settings/pwm2/duty_ns
+ings/pwm2/ena~ # echo 1 > /sys/devices/platform/pwm_platform/settings/pwm2/enable
+~ # ifconfig eth0 down
+br0: port 1(eth0) entered disabled state
+~ # device eth0 left promiscuous mode
+br0: port 1(eth0) entered disabled state
+nm_cfg client IPCAM-Test-1
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= scanning
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= scanning
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= scanning
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= scanning
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= connect
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # device wlan0 entered promiscuous mode
+br0: port 1(wlan0) entered forwarding state
+br0: port 1(wlan0) entered forwarding state
+time_process = 1
+
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+ifconfig eth0 up
+~ # rtk_restart_simple_config() is called in line 7
+shell:  echo 8 2 1 > /proc/net/rtl8821au/wlan0/monitor 
+
+rtk_restart_simple_config() is called in line 7
+shell:  echo 9 2 1 > /proc/net/rtl8821au/wlan0/monitor 
+
+ping -c 4 192.168.1.100
+PING 192.168.1.100 (192.168.1.100): 56 data bytes
+bc_pkt status=1, pktlen=104
+rtk_restart_simple_config() is called in line 7
+shell:  echo 10 2 1 > /proc/net/rtl8821au/wlan0/monitor 
+
+bc_pkt status=1, pktlen=100
+rtk_restart_simple_config() is called in line 7
+shell:  echo 12 2 1 > /proc/net/rtl8821au/wlan0/monitor 
+
+bc_pkt status=1, pktlen=136
+bc_pkt status=1, pktlen=136
+rtl8168: eth0: link up
+bc_pkt status=1, pktlen=104
+rtk_restart_simple_config() is called in line 7
+shell:  echo 13 2 1 > /proc/net/rtl8821au/wlan0/monitor 
+
+rtk_restart_simple_config() is called in line 7
+shell:  echo 1 1 1 > /proc/net/rtl8821au/wlan0/monitor 
+
+bc_pkt status=1, pktlen=132
+bc_pkt status=1, pktlen=132
+bc_pkt status=1, pktlen=132
+bc_pkt status=1, pktlen=132
+bc_pkt status=1, pktlen=132
+bc_pkt status=1, pktlen=100
+bc_pkt status=1, pktlen=84
+bc_pkt status=1, pktlen=116
+rtk_restart_simple_config() is called in line 7
+shell:  echo 6 2 1 > /proc/net/rtl8821au/wlan0/monitor 
+
+bc_pkt status=1, pktlen=136
+rtk_restart_simple_config() is called in line 7
+shell:  echo 11 2 1 > /proc/net/rtl8821au/wlan0/monitor 
+
+bc_pkt status=1, pktlen=136
+bc_pkt status=1, pktlen=104
+bc_pkt status=1, pktlen=235
+bc_pkt status=1, pktlen=235
+bc_pkt status=1, pktlen=84
+bc_pkt status=1, pktlen=235
+bc_pkt status=1, pktlen=235
+bc_pkt status=1, pktlen=84
+bcdevice eth0 entered promiscuous mode
+_pkt status=1, pktlen=235
+br0: port 1(eth0) entered forwarding state
+br0: port 1(eth0) entered forwarding state
+bc_pkt status=1, pktlen=100
+bc_pkt status=1, pktlen=84
+bc_pkt status=1, pktlen=235
+bc_pkt status=1, pktlen=84
+bc_pkt status=1, pktlen=235
+bc_pkt status=1, pktlen=218
+bc_pkt status=1, pktlen=104
+bc_pkt status=1, pktlen=218
+bc_pkt status=1, pktlen=218
+rtk_restart_simple_config() is called in line 7
+shell:  echo 2 1 1 > /proc/net/rtl8821au/wlan0/monitor 
+
+bc_pkt status=1, pktlen=116
+bc_pkt status=1, pktlen=116
+bc_pkt status=1, pktlen=84
+bc_pkt status=1, pktlen=154
+rtk_restart_simple_config() is called in line 7
+shell:  echo 3 1 1 > /proc/net/rtl8821au/wlan0/monitor 
+
+bc_pkt status=1, pktlen=132
+bc_pkt status=1, pktlen=84
+bc_pkt status=1, pktlen=100
+bc_pkt status=1, pktlen=136
+rtk_restart_simple_config() is called in line 7
+shell:  echo 4 1 1 > /proc/net/rtl8821au/wlan0/monitor 
+
+rtk_restart_simple_config() is called in line 7
+shell:  echo 5 2 1 > /proc/net/rtl8821au/wlan0/monitor 
+
+rtl8168: eth0: link down
+bc_pkt status=1, pktlen=211
+bc_pkt status=1, pktlen=211
+device eth0 left promiscuous mode
+br0: port 1(eth0) entered disabled state
+rtk_restart_simple_config() is called in line 7
+shell:  echo 7 2 1 > /proc/net/rtl8821au/wlan0/monitor 
+
+rtk_restart_simple_config() is called in line 7
+shell:  echo 8 2 1 > /proc/net/rtl8821au/wlan0/monitor 
+
+rtk_restart_simple_config() is called in line 7
+shell:  echo 9 2 1 > /proc/net/rtl8821au/wlan0/monitor 
+
+bc_pkt status=1, pktlen=154
+bc_pkt status=1, pktlen=154
+bc_pkt status=1, pktlen=154
+bc_pkt status=1, pktlen=136
+bc_pkt status=1, pktlen=136
+rtk_restart_simple_config() is called in line 7
+bc_pkt status=1, pktlen=104
+shell:  echo 10 2 1 > /proc/net/rtl8821au/wlan0/monitor 
+
+bc_pkt status=1, pktlen=104
+bc_pkt status=1, pktlen=96
+bc_pkt status=1, pktlen=84
+bc_pkt status=1, pktlen=240
+bc_pkt status=1, pktlen=136
+rtk_restart_simple_config() is called in line 7
+shell:  echo 12 2 1 > /proc/net/rtl8821au/wlan0/monitor 
+
+bc_pkt status=1, pktlen=242
+bc_pkt status=1, pktlen=136
+rtk_restart_simple_config() is called in line 7
+shell:  echo 13 2 1 > /proc/net/rtl8821au/wlan0/monitor 
+
+bc_pkt status=1, pktlen=104
+bc_pkt status=1, pktlen=136
+bc_pkt status=1, pktlen=150
+bc_pkt status=1, pktlen=150
+bc_pkt status=1, pktlen=132
+bc_pkt status=1, pktlen=136
+rtk_restart_simple_config() is called in line 7
+shell:  echo 1 1 1 > /proc/net/rtl8821au/wlan0/monitor 
+
+bc_pkt status=1, pktlen=271
+bc_pkt status=1, pktlen=104
+bc_pkt status=1, pktlen=132
+bc_pkt status=1, pktlen=84
+bc_pkt status=1, pktlen=84
+bc_pkt status=1, pktlen=136
+bc_pkt status=1, pktlen=104
+bc_pkt status=1, pktlen=136
+bc_pkt status=1, pktlen=104
+rtk_restart_simple_config() is called in line 7
+shell:  echo 6 2 1 > /proc/net/rtl8821au/wlan0/monitor 
+
+bc_pkt status=1, pktlen=104
+bc_pkt status=1, pktlen=84
+bc_pkt status=1, pktlen=100
+bc_pkt status=1, pktlen=100
+bc_pkt status=1, pktlen=100
+bc_pkt status=1, pktlen=76
+rtk_restart_simple_config() is called in line 7
+shell:  echo 11 2 1 > /proc/net/rtl8821au/wlan0/monitor 
+
+
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+ifconfig eth0 up
+~ # ping -c 4 192.168.1.100
+PING 192.168.1.100 (192.168.1.100): 56 data bytes
+64 bytes from 192.168.1.100: seq=0 ttl=128 time=1.845 ms
+64 bytes from 192.168.1.100: seq=1 ttl=128 time=2.427 ms
+64 bytes from 192.168.1.100: seq=2 ttl=128 time=2.406 ms
+64 bytes from 192.168.1.100: seq=3 ttl=128 time=2.352 ms
+
+--- 192.168.1.100 ping statistics ---
+4 packets transmitted, 4 packets received, 0% packet loss
+round-trip min/avg/max = 1.845/2.257/2.427 ms
+~ # mount
+rootfs on / type rootfs (rw)
+/dev/root on / type squashfs (ro,relatime)
+proc on /proc type proc (rw,relatime)
+sysfs on /sys type sysfs (rw,relatime)
+ramfs on /var type ramfs (rw,relatime)
+ramfs on /dev type ramfs (rw,relatime)
+tmpfs on /dev/shm type tmpfs (rw,relatime)
+devpts on /dev/pts type devpts (rw,relatime,mode=600)
+tmpfs on /media type tmpfs (rw,relatime,size=64k,mode=755)
+/dev/mtdblock3 on /usr/conf type jffs2 (rw,relatime)
+/dev/mmcblk0p1 on /media/sdcard type vfat (rw,relatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro)
+~ # killall vnptledindicator
+echo 1> /sys/devices/platform/pwm_platform/settings/pwm/request
+~ # echo 1> /sys/devices/platform/pwm_platform/settings/pwm/request
+evic-/bin/sh: can't create /sys/devices/platform/pwm_platform/settings/pwm/request: nonexistent directory
+~ # echo 1000000 > /sys/devices/platform/pwm_platform/settings/pwm1/duty_ns
+~ # echo 1 > /sys/devices/platform/pwm_platform/settings/pwm1/enable
+~ # echo 0 > /sys/devices/platform/pwm_platform/settings/pwm2/duty_ns
+s/devices/pla~ # echo 1 > /sys/devices/platform/pwm_platform/settings/pwm2/enable
+~ # killall vnptledindicator
+killall: vnptledindicator: no process killed
+~ # echo 1> /sys/devices/platform/pwm_platform/settings/pwm/request
+-/bin/sh: can't create /sys/devices/platform/pwm_platform/settings/pwm/request: nonexistent directory
+~ # echo 1000000 > /sys/devices/platform/pwm_platform/settings/pwm2/duty_ns
+~ # echo 1 > /sys/devices/platform/pwm_platform/settings/pwm2/enable
+~ # echo 0 > /sys/devices/platform/pwm_platform/settings/pwm1/duty_ns
+~ # echo 1 > /sys/devices/platform/pwm_platform/settings/pwm1/enable
+~ # killall vnptledindicator
+killall: vnptledindicator: no process killedec
+ho 1> /sys/devic~ # echo 1> /sys/devices/platform/pwm_platform/settings/pwm/request
+-/bin/sh: can't create /sys/devices/platform/pwm_platform/settings/pwm/request: nonexistent directory
+~ # echo 1000000 > /sys/devices/platform/pwm_platform/settings/pwm1/duty_ns
+/platform/pwm_platform~ # echo 1 > /sys/devices/platform/pwm_platform/settings/pwm1/enable
+> /sys/devices/p~ # echo 0 > /sys/devices/platform/pwm_platform/settings/pwm2/duty_ns
+~ # echo 1 > /sys/devices/platform/pwm_platform/settings/pwm2/enable
+~ # killall vnptledindicator
+killall: vnptledindicator: no process killed
+~ # echo 1> /sys/devices/platform/pwm_platform/settings/pwm/request
+-/bin/sh: can't create /sys/devices/platform/pwm_platform/settings/pwm/request: nonexistent directory
+~ # echo 1000000 > /sys/devices/platform/pwm_platform/settings/pwm2/duty_ns
+echo 1~ # echo 1 > /sys/devices/platform/pwm_platform/settings/pwm2/enable
+ 0 > /sys/devices/platform/pwm_p~ # echo 0 > /sys/devices/platform/pwm_platform/settings/pwm1/duty_ns
+~ # echo 1 > /sys/devices/platform/pwm_platform/settings/pwm1/enable
+~ # killall vnptledindicator
+killall: vnptledindicator: no process killed
+~ # echo 1> /sys/devices/platform/pwm_platform/settings/pwm/request
+-/bin/sh: can't create /sys/devices/platform/pwm_platform/settings/pwm/request: nonexistent directory
+~ # echo 1000000 > /sys/devices/platform/pwm_platform/settings/pwm1/duty_ns
+o 1 > /sys/devices/platform/pwm_plat~ # echo 1 > /sys/devices/platform/pwm_platform/settings/pwm1/enable
+ys/devic~ # echo 0 > /sys/devices/platform/pwm_platform/settings/pwm2/duty_ns
+~ # echo 1 > /sys/devices/platform/pwm_platform/settings/pwm2/enable
+~ # killall vnptledindicator
+killall: vnptledindicator: no process killed
+~ # echo 1> /sys/devices/platform/pwm_platform/settings/pwm/request
+-/bin/sh: can't create /sys/devices/platform/pwm_platform/settings/pwm/request: nonexistent directory
+~ # echo 1000000 > /sys/devices/platform/pwm_platform/settings/pwm2/duty_ns
+s/platform/pwm_~ # echo 1 > /sys/devices/platform/pwm_platform/settings/pwm2/enable
+~ # echo 0 > /sys/devices/platform/pwm_platform/settings/pwm1/duty_ns
+~ # echo 1 > /sys/devices/platform/pwm_platform/settings/pwm1/enable
+~ # killall vnptledindicator
+killall: vnptledindicator: no process killed
+~ # echo 1> /sys/devices/platform/pwm_platform/settings/pwm/request
+-/bin/sh: can't create /sys/devices/platform/pwm_platform/settings/pwm/request: nonexistent directory
+~ # echo 1000000 > /sys/devices/platform/pwm_platform/settings/pwm1/duty_ns
+rm/settings/pwm1/e~ # echo 1 > /sys/devices/platform/pwm_platform/settings/pwm1/enable
+evices/platform/pwm_platfo~ # echo 0 > /sys/devices/platform/pwm_platform/settings/pwm2/duty_ns
+ 1 > /sys/dev~ # echo 1 > /sys/devices/platform/pwm_platform/settings/pwm2/enable
+~ # killall vnptledindicator
+killall: vnptledindicator: no process killed
+~ # echo 1> /sys/devices/platform/pwm_platform/settings/pwm/request
+-/bin/sh: can't create /sys/devices/platform/pwm_platform/settings/pwm/request: nonexistent directory
+~ # echo 1000000 > /sys/devices/platform/pwm_platform/settings/pwm2/duty_ns
+~ # echo 1 > /sys/devices/platform/pwm_platform/settings/pwm2/enable
+echo~ # echo 0 > /sys/devices/platform/pwm_platform/settings/pwm1/duty_ns
+~ # echo 1 > /sys/devices/platform/pwm_platform/settings/pwm1/enable
+~ # killall vnptledindicator
+killall: vnptledindicator: no process killed
+~ # echo 1> /sys/devices/platform/pwm_platform/settings/pwm/request
+-/bin/sh: can't create /sys/devices/platform/pwm_platform/settings/pwm/request: nonexistent directory
+~ # echo 1000000 > /sys/devices/platform/pwm_platform/settings/pwm1/duty_ns
+echo 1 > /sys~ # echo 1 > /sys/devices/platform/pwm_platform/settings/pwm1/enable
+~ # echo 0 > /sys/devices/platform/pwm_platform/settings/pwm2/duty_ns
+pwm_platform/settings/pwm2/enable
+~ # echo 1 > /sys/devices/platform/pwm_platform/settings/pwm2/enable
+~ # killall vnptledindicator
+killall: vnptledindicator: no process killedecho 1> 
+~ # echo 1> /sys/devices/platform/pwm_platform/settings/pwm/request
+-/bin/sh: can't create /sys/devices/platform/pwm_platform/settings/pwm/request: nonexistent directory
+~ # echo 1000000 > /sys/devices/platform/pwm_platform/settings/pwm2/duty_ns
+ 1 > /sys/dev~ # echo 1 > /sys/devices/platform/pwm_platform/settings/pwm2/enable
+form/setti~ # echo 0 > /sys/devices/platform/pwm_platform/settings/pwm1/duty_ns
+~ # echo 1 > /sys/devices/platform/pwm_platform/settings/pwm1/enable
+~ # killall vnptledindicator
+killall: vnptledindicator: no process killed
+~ # echo 1> /sys/devices/platform/pwm_platform/settings/pwm/request
+-/bin/sh: can't create /sys/devices/platform/pwm_platform/settings/pwm/request: nonexistent directory
+~ # echo 1000000 > /sys/devices/platform/pwm_platform/settings/pwm1/duty_ns
+ttings/pwm1/enable
+echo ~ # echo 1 > /sys/devices/platform/pwm_platform/settings/pwm1/enable
+~ # echo 0 > /sys/devices/platform/pwm_platform/settings/pwm2/duty_ns
+> /sys/devices/p~ # echo 1 > /sys/devices/platform/pwm_platform/settings/pwm2/enable
+~ # killall vnptledindicator
+killall: vnptledindicator: no process killed
+~ # echo 1> /sys/devices/platform/pwm_platform/settings/pwm/request
+-/bin/sh: can't create /sys/devices/platform/pwm_platform/settings/pwm/request: nonexistent directory
+~ # echo 1000000 > /sys/devices/platform/pwm_platform/settings/pwm2/duty_ns
+~ # echo 1 > /sys/devices/platform/pwm_platform/settings/pwm2/enable
+~ # echo 0 > /sys/devices/platform/pwm_platform/settings/pwm1/duty_ns
+~ # echo 1 > /sys/devices/platform/pwm_platform/settings/pwm1/enable
+~ # killall vnptledindicator
+killall: vnptledindicator: no process killedecho 1> 
+~ # echo 1> /sys/devices/platform/pwm_platform/settings/pwm/request
+-/bin/sh: can't create /sys/devices/platform/pwm_platform/settings/pwm/request: nonexistent directory
+~ # echo 1000000 > /sys/devices/platform/pwm_platform/settings/pwm1/duty_ns
+_platform/setting~ # echo 1 > /sys/devices/platform/pwm_platform/settings/pwm1/enable
+atform/s~ # echo 0 > /sys/devices/platform/pwm_platform/settings/pwm2/duty_ns
+~ # echo 1 > /sys/devices/platform/pwm_platform/settings/pwm2/enable
+~ # killall vnptledindicator
+killall: vnptledindicator: no process killed
+~ # echo 1> /sys/devices/platform/pwm_platform/settings/pwm/request
+-/bin/sh: can't create /sys/devices/platform/pwm_platform/settings/pwm/request: nonexistent directory
+~ # echo 1000000 > /sys/devices/platform/pwm_platform/settings/pwm2/duty_ns
+latform/settings/pw~ # echo 1 > /sys/devices/platform/pwm_platform/settings/pwm2/enable
+evices/platform/~ # echo 0 > /sys/devices/platform/pwm_platform/settings/pwm1/duty_ns
+~ # echo 1 > /sys/devices/platform/pwm_platform/settings/pwm1/enable
+~ # killall vnptledindicator
+echo 1> /sys/devikillall: vnptledindicator: no process killed
+ces/platform/~ # echo 1> /sys/devices/platform/pwm_platform/settings/pwm/request
+-/bin/sh: can't create /sys/devices/platform/pwm_platform/settings/pwm/request: nonexistent directory
+~ # echo 1000000 > /sys/devices/platform/pwm_platform/settings/pwm1/duty_ns
+ > /sys/devices/platfor~ # echo 1 > /sys/devices/platform/pwm_platform/settings/pwm1/enable
+~ # echo 0 > /sys/devices/platform/pwm_platform/settings/pwm2/duty_ns
+~ # echo 1 > /sys/devices/platform/pwm_platform/settings/pwm2/enable
+~ # killall vnptledindicator
+killall: vnptledindicator: no process killed
+~ # echo 1> /sys/devices/platform/pwm_platform/settings/pwm/request
+-/bin/sh: can't create /sys/devices/platform/pwm_platform/settings/pwm/request: nonexistent directory
+~ # echo 1000000 > /sys/devices/platform/pwm_platform/settings/pwm2/duty_ns
+o 1 > /sys/devices/platform/pwm_platform/settings/pwm2/e~ # echo 1 > /sys/devices/platform/pwm_platform/settings/pwm2/enable
+evices/platform/~ # echo 0 > /sys/devices/platform/pwm_platform/settings/pwm1/duty_ns
+~ # echo 1 > /sys/devices/platform/pwm_platform/settings/pwm1/enable
+~ # ifconfig eth0 down
+br0: port 1(eth0) entered disabled state
+~ # device eth0 left promiscuous mode
+br0: port 1(eth0) entered disabled state
+nm_cfg client IPCAM-Test-1
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= scanning
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= scanning
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= scanning
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= scanning
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= scanning
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # device wlan0 entered promiscuous mode
+br0: port 1(wlan0) entered forwarding state
+br0: port 1(wlan0) entered forwarding state
+nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= connect
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # time_process = 0
+
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+ifconfig eth0 up
+~ # ping -c 4 192.168.1.100
+PING 192.168.1.100 (192.168.1.100): 56 data bytes
+64 bytes from 192.168.1.100: seq=0 ttl=128 time=8.068 ms
+64 bytes from 192.168.1.100: seq=1 ttl=128 time=9.314 ms
+64 bytes from 192.168.1.100: seq=2 ttl=128 time=2.405 ms
+64 bytes from 192.168.1.100: seq=3 ttl=128 time=1.989 ms
+
+--- 192.168.1.100 ping statistics ---
+4 packets transmitted, 4 packets received, 0% packet loss
+round-trip min/avg/max = 1.989/5.444/9.314 ms
+~ # 
+MAC ADDRESS: A4F4C2909090
+---------------------------------------------------------
+ifconfig eth0 up
+~ # ping -c 4 192.168.1.100
+PING 192.168.1.100 (192.168.1.100): 56 data bytes
+64 bytes from 192.168.1.100: seq=0 ttl=128 time=3.454 ms
+64 bytes from 192.168.1.100: seq=1 ttl=128 time=2.204 ms
+64 bytes from 192.168.1.100: seq=2 ttl=128 time=1.644 ms
+64 bytes from 192.168.1.100: seq=3 ttl=128 time=3.314 ms
+
+--- 192.168.1.100 ping statistics ---
+4 packets transmitted, 4 packets received, 0% packet loss
+round-trip min/avg/max = 1.644/2.654/3.454 ms
+~ # 
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+ifconfig eth0 up
+~ # ping -c 4 192.168.1.100
+PING 192.168.1.100 (192.168.1.100): 56 data bytes
+64 bytes from 192.168.1.100: seq=0 ttl=128 time=6.334 ms
+64 bytes from 192.168.1.100: seq=1 ttl=128 time=2.045 ms
+64 bytes from 192.168.1.100: seq=2 ttl=128 time=3.475 ms
+64 bytes from 192.168.1.100: seq=3 ttl=128 time=1.460 ms
+
+--- 192.168.1.100 ping statistics ---
+4 packets transmitted, 4 packets received, 0% packet loss
+round-trip min/avg/max = 1.460/3.328/6.334 ms
+~ # 
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+mount
+rootfs on / type rootfs (rw)
+/dev/root on / type squashfs (ro,relatime)
+proc on /proc type proc (rw,relatime)
+sysfs on /sys type sysfs (rw,relatime)
+ramfs on /var type ramfs (rw,relatime)
+ramfs on /dev type ramfs (rw,relatime)
+tmpfs on /dev/shm type tmpfs (rw,relatime)
+devpts on /dev/pts type devpts (rw,relatime,mode=600)
+tmpfs on /media type tmpfs (rw,relatime,size=64k,mode=755)
+/dev/mtdblock3 on /usr/conf type jffs2 (rw,relatime)
+/dev/mmcblk0p1 on /media/sdcard type vfat (rw,relatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro)
+~ # 
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+mount
+rootfs on / type rootfs (rw)
+/dev/root on / type squashfs (ro,relatime)
+proc on /proc type proc (rw,relatime)
+sysfs on /sys type sysfs (rw,relatime)
+ramfs on /var type ramfs (rw,relatime)
+ramfs on /dev type ramfs (rw,relatime)
+tmpfs on /dev/shm type tmpfs (rw,relatime)
+devpts on /dev/pts type devpts (rw,relatime,mode=600)
+tmpfs on /media type tmpfs (rw,relatime,size=64k,mode=755)
+/dev/mtdblock3 on /usr/conf type jffs2 (rw,relatime)
+/dev/mmcblk0p1 on /media/sdcard type vfat (rw,relatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro)
+~ # 
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+mount
+rootfs on / type rootfs (rw)
+/dev/root on / type squashfs (ro,relatime)
+proc on /proc type proc (rw,relatime)
+sysfs on /sys type sysfs (rw,relatime)
+ramfs on /var type ramfs (rw,relatime)
+ramfs on /dev type ramfs (rw,relatime)
+tmpfs on /dev/shm type tmpfs (rw,relatime)
+devpts on /dev/pts type devpts (rw,relatime,mode=600)
+tmpfs on /media type tmpfs (rw,relatime,size=64k,mode=755)
+/dev/mtdblock3 on /usr/conf type jffs2 (rw,relatime)
+/dev/mmcblk0p1 on /media/sdcard type vfat (rw,relatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro)
+~ # 
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+mount
+rootfs on / type rootfs (rw)
+/dev/root on / type squashfs (ro,relatime)
+proc on /proc type proc (rw,relatime)
+sysfs on /sys type sysfs (rw,relatime)
+ramfs on /var type ramfs (rw,relatime)
+ramfs on /dev type ramfs (rw,relatime)
+tmpfs on /dev/shm type tmpfs (rw,relatime)
+devpts on /dev/pts type devpts (rw,relatime,mode=600)
+tmpfs on /media type tmpfs (rw,relatime,size=64k,mode=755)
+/dev/mtdblock3 on /usr/conf type jffs2 (rw,relatime)
+/dev/mmcblk0p1 on /media/sdcard type vfat (rw,relatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro)
+~ # 
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+mount
+rootfs on / type rootfs (rw)
+/dev/root on / type squashfs (ro,relatime)
+proc on /proc type proc (rw,relatime)
+sysfs on /sys type sysfs (rw,relatime)
+ramfs on /var type ramfs (rw,relatime)
+ramfs on /dev type ramfs (rw,relatime)
+tmpfs on /dev/shm type tmpfs (rw,relatime)
+devpts on /dev/pts type devpts (rw,relatime,mode=600)
+tmpfs on /media type tmpfs (rw,relatime,size=64k,mode=755)
+/dev/mtdblock3 on /usr/conf type jffs2 (rw,relatime)
+/dev/mmcblk0p1 on /media/sdcard type vfat (rw,relatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro)
+~ # 
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+mount
+rootfs on / type rootfs (rw)
+/dev/root on / type squashfs (ro,relatime)
+proc on /proc type proc (rw,relatime)
+sysfs on /sys type sysfs (rw,relatime)
+ramfs on /var type ramfs (rw,relatime)
+ramfs on /dev type ramfs (rw,relatime)
+tmpfs on /dev/shm type tmpfs (rw,relatime)
+devpts on /dev/pts type devpts (rw,relatime,mode=600)
+tmpfs on /media type tmpfs (rw,relatime,size=64k,mode=755)
+/dev/mtdblock3 on /usr/conf type jffs2 (rw,relatime)
+/dev/mmcblk0p1 on /media/sdcard type vfat (rw,relatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro)
+~ # 
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+mount
+rootfs on / type rootfs (rw)
+/dev/root on / type squashfs (ro,relatime)
+proc on /proc type proc (rw,relatime)
+sysfs on /sys type sysfs (rw,relatime)
+ramfs on /var type ramfs (rw,relatime)
+ramfs on /dev type ramfs (rw,relatime)
+tmpfs on /dev/shm type tmpfs (rw,relatime)
+devpts on /dev/pts type devpts (rw,relatime,mode=600)
+tmpfs on /media type tmpfs (rw,relatime,size=64k,mode=755)
+/dev/mtdblock3 on /usr/conf type jffs2 (rw,relatime)
+/dev/mmcblk0p1 on /media/sdcard type vfat (rw,relatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro)
+~ # mount
+rootfs on / type rootfs (rw)
+/dev/root on / type squashfs (ro,relatime)
+proc on /proc type proc (rw,relatime)
+sysfs on /sys type sysfs (rw,relatime)
+ramfs on /var type ramfs (rw,relatime)
+ramfs on /dev type ramfs (rw,relatime)
+tmpfs on /dev/shm type tmpfs (rw,relatime)
+devpts on /dev/pts type devpts (rw,relatime,mode=600)
+tmpfs on /media type tmpfs (rw,relatime,size=64k,mode=755)
+/dev/mtdblock3 on /usr/conf type jffs2 (rw,relatime)
+/dev/mmcblk0p1 on /media/sdcard type vfat (rw,relatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+mount
+rootfs on / type rootfs (rw)
+/dev/root on / type squashfs (ro,relatime)
+proc on /proc type proc (rw,relatime)
+sysfs on /sys type sysfs (rw,relatime)
+ramfs on /var type ramfs (rw,relatime)
+ramfs on /dev type ramfs (rw,relatime)
+tmpfs on /dev/shm type tmpfs (rw,relatime)
+devpts on /dev/pts type devpts (rw,relatime,mode=600)
+tmpfs on /media type tmpfs (rw,relatime,size=64k,mode=755)
+/dev/mtdblock3 on /usr/conf type jffs2 (rw,relatime)
+/dev/mmcblk0p1 on /media/sdcard type vfat (rw,relatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro)
+~ # 
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+mount
+rootfs on / type rootfs (rw)
+/dev/root on / type squashfs (ro,relatime)
+proc on /proc type proc (rw,relatime)
+sysfs on /sys type sysfs (rw,relatime)
+ramfs on /var type ramfs (rw,relatime)
+ramfs on /dev type ramfs (rw,relatime)
+tmpfs on /dev/shm type tmpfs (rw,relatime)
+devpts on /dev/pts type devpts (rw,relatime,mode=600)
+tmpfs on /media type tmpfs (rw,relatime,size=64k,mode=755)
+/dev/mtdblock3 on /usr/conf type jffs2 (rw,relatime)
+/dev/mmcblk0p1 on /media/sdcard type vfat (rw,relatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro)
+~ # 
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+mount
+rootfs on / type rootfs (rw)
+/dev/root on / type squashfs (ro,relatime)
+proc on /proc type proc (rw,relatime)
+sysfs on /sys type sysfs (rw,relatime)
+ramfs on /var type ramfs (rw,relatime)
+ramfs on /dev type ramfs (rw,relatime)
+tmpfs on /dev/shm type tmpfs (rw,relatime)
+devpts on /dev/pts type devpts (rw,relatime,mode=600)
+tmpfs on /media type tmpfs (rw,relatime,size=64k,mode=755)
+/dev/mtdblock3 on /usr/conf type jffs2 (rw,relatime)
+/dev/mmcblk0p1 on /media/sdcard type vfat (rw,relatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro)
+~ # 
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+mount
+rootfs on / type rootfs (rw)
+/dev/root on / type squashfs (ro,relatime)
+proc on /proc type proc (rw,relatime)
+sysfs on /sys type sysfs (rw,relatime)
+ramfs on /var type ramfs (rw,relatime)
+ramfs on /dev type ramfs (rw,relatime)
+tmpfs on /dev/shm type tmpfs (rw,relatime)
+devpts on /dev/pts type devpts (rw,relatime,mode=600)
+tmpfs on /media type tmpfs (rw,relatime,size=64k,mode=755)
+/dev/mtdblock3 on /usr/conf type jffs2 (rw,relatime)
+/dev/mmcblk0p1 on /media/sdcard type vfat (rw,relatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro)
+~ # 
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+mount
+rootfs on / type rootfs (rw)
+/dev/root on / type squashfs (ro,relatime)
+proc on /proc type proc (rw,relatime)
+sysfs on /sys type sysfs (rw,relatime)
+ramfs on /var type ramfs (rw,relatime)
+ramfs on /dev type ramfs (rw,relatime)
+tmpfs on /dev/shm type tmpfs (rw,relatime)
+devpts on /dev/pts type devpts (rw,relatime,mode=600)
+tmpfs on /media type tmpfs (rw,relatime,size=64k,mode=755)
+/dev/mtdblock3 on /usr/conf type jffs2 (rw,relatime)
+/dev/mmcblk0p1 on /media/sdcard type vfat (rw,relatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro)
+~ # 
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+mount
+rootfs on / type rootfs (rw)
+/dev/root on / type squashfs (ro,relatime)
+proc on /proc type proc (rw,relatime)
+sysfs on /sys type sysfs (rw,relatime)
+ramfs on /var type ramfs (rw,relatime)
+ramfs on /dev type ramfs (rw,relatime)
+tmpfs on /dev/shm type tmpfs (rw,relatime)
+devpts on /dev/pts type devpts (rw,relatime,mode=600)
+tmpfs on /media type tmpfs (rw,relatime,size=64k,mode=755)
+/dev/mtdblock3 on /usr/conf type jffs2 (rw,relatime)
+/dev/mmcblk0p1 on /media/sdcard type vfat (rw,relatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro)
+~ # 
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+mount
+rootfs on / type rootfs (rw)
+/dev/root on / type squashfs (ro,relatime)
+proc on /proc type proc (rw,relatime)
+sysfs on /sys type sysfs (rw,relatime)
+ramfs on /var type ramfs (rw,relatime)
+ramfs on /dev type ramfs (rw,relatime)
+tmpfs on /dev/shm type tmpfs (rw,relatime)
+devpts on /dev/pts type devpts (rw,relatime,mode=600)
+tmpfs on /media type tmpfs (rw,relatime,size=64k,mode=755)
+/dev/mtdblock3 on /usr/conf type jffs2 (rw,relatime)
+/dev/mmcblk0p1 on /media/sdcard type vfat (rw,relatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro)
+~ # 
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+mount
+rootfs on / type rootfs (rw)
+/dev/root on / type squashfs (ro,relatime)
+proc on /proc type proc (rw,relatime)
+sysfs on /sys type sysfs (rw,relatime)
+ramfs on /var type ramfs (rw,relatime)
+ramfs on /dev type ramfs (rw,relatime)
+tmpfs on /dev/shm type tmpfs (rw,relatime)
+devpts on /dev/pts type devpts (rw,relatime,mode=600)
+tmpfs on /media type tmpfs (rw,relatime,size=64k,mode=755)
+/dev/mtdblock3 on /usr/conf type jffs2 (rw,relatime)
+/dev/mmcblk0p1 on /media/sdcard type vfat (rw,relatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro)
+~ # 
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+mount
+rootfs on / type rootfs (rw)
+/dev/root on / type squashfs (ro,relatime)
+proc on /proc type proc (rw,relatime)
+sysfs on /sys type sysfs (rw,relatime)
+ramfs on /var type ramfs (rw,relatime)
+ramfs on /dev type ramfs (rw,relatime)
+tmpfs on /dev/shm type tmpfs (rw,relatime)
+devpts on /dev/pts type devpts (rw,relatime,mode=600)
+tmpfs on /media type tmpfs (rw,relatime,size=64k,mode=755)
+/dev/mtdblock3 on /usr/conf type jffs2 (rw,relatime)
+/dev/mmcblk0p1 on /media/sdcard type vfat (rw,relatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro)
+~ # 
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+mount
+rootfs on / type rootfs (rw)
+/dev/root on / type squashfs (ro,relatime)
+proc on /proc type proc (rw,relatime)
+sysfs on /sys type sysfs (rw,relatime)
+ramfs on /var type ramfs (rw,relatime)
+ramfs on /dev type ramfs (rw,relatime)
+tmpfs on /dev/shm type tmpfs (rw,relatime)
+devpts on /dev/pts type devpts (rw,relatime,mode=600)
+tmpfs on /media type tmpfs (rw,relatime,size=64k,mode=755)
+/dev/mtdblock3 on /usr/conf type jffs2 (rw,relatime)
+/dev/mmcblk0p1 on /media/sdcard type vfat (rw,relatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro)
+~ # 
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+mount
+rootfs on / type rootfs (rw)
+/dev/root on / type squashfs (ro,relatime)
+proc on /proc type proc (rw,relatime)
+sysfs on /sys type sysfs (rw,relatime)
+ramfs on /var type ramfs (rw,relatime)
+ramfs on /dev type ramfs (rw,relatime)
+tmpfs on /dev/shm type tmpfs (rw,relatime)
+devpts on /dev/pts type devpts (rw,relatime,mode=600)
+tmpfs on /media type tmpfs (rw,relatime,size=64k,mode=755)
+/dev/mtdblock3 on /usr/conf type jffs2 (rw,relatime)
+/dev/mmcblk0p1 on /media/sdcard type vfat (rw,relatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro)
+~ # 
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+mount
+rootfs on / type rootfs (rw)
+/dev/root on / type squashfs (ro,relatime)
+proc on /proc type proc (rw,relatime)
+sysfs on /sys type sysfs (rw,relatime)
+ramfs on /var type ramfs (rw,relatime)
+ramfs on /dev type ramfs (rw,relatime)
+tmpfs on /dev/shm type tmpfs (rw,relatime)
+devpts on /dev/pts type devpts (rw,relatime,mode=600)
+tmpfs on /media type tmpfs (rw,relatime,size=64k,mode=755)
+/dev/mtdblock3 on /usr/conf type jffs2 (rw,relatime)
+/dev/mmcblk0p1 on /media/sdcard type vfat (rw,relatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro)
+~ # 
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+mount
+rootfs on / type rootfs (rw)
+/dev/root on / type squashfs (ro,relatime)
+proc on /proc type proc (rw,relatime)
+sysfs on /sys type sysfs (rw,relatime)
+ramfs on /var type ramfs (rw,relatime)
+ramfs on /dev type ramfs (rw,relatime)
+tmpfs on /dev/shm type tmpfs (rw,relatime)
+devpts on /dev/pts type devpts (rw,relatime,mode=600)
+tmpfs on /media type tmpfs (rw,relatime,size=64k,mode=755)
+/dev/mtdblock3 on /usr/conf type jffs2 (rw,relatime)
+/dev/mmcblk0p1 on /media/sdcard type vfat (rw,relatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro)
+~ # 
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+mount
+rootfs on / type rootfs (rw)
+/dev/root on / type squashfs (ro,relatime)
+proc on /proc type proc (rw,relatime)
+sysfs on /sys type sysfs (rw,relatime)
+ramfs on /var type ramfs (rw,relatime)
+ramfs on /dev type ramfs (rw,relatime)
+tmpfs on /dev/shm type tmpfs (rw,relatime)
+devpts on /dev/pts type devpts (rw,relatime,mode=600)
+tmpfs on /media type tmpfs (rw,relatime,size=64k,mode=755)
+/dev/mtdblock3 on /usr/conf type jffs2 (rw,relatime)
+/dev/mmcblk0p1 on /media/sdcard type vfat (rw,relatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro)
+~ # 
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+mount
+rootfs on / type rootfs (rw)
+/dev/root on / type squashfs (ro,relatime)
+proc on /proc type proc (rw,relatime)
+sysfs on /sys type sysfs (rw,relatime)
+ramfs on /var type ramfs (rw,relatime)
+ramfs on /dev type ramfs (rw,relatime)
+tmpfs on /dev/shm type tmpfs (rw,relatime)
+devpts on /dev/pts type devpts (rw,relatime,mode=600)
+tmpfs on /media type tmpfs (rw,relatime,size=64k,mode=755)
+/dev/mtdblock3 on /usr/conf type jffs2 (rw,relatime)
+/dev/mmcblk0p1 on /media/sdcard type vfat (rw,relatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro)
+~ # 
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+mount
+rootfs on / type rootfs (rw)
+/dev/root on / type squashfs (ro,relatime)
+proc on /proc type proc (rw,relatime)
+sysfs on /sys type sysfs (rw,relatime)
+ramfs on /var type ramfs (rw,relatime)
+ramfs on /dev type ramfs (rw,relatime)
+tmpfs on /dev/shm type tmpfs (rw,relatime)
+devpts on /dev/pts type devpts (rw,relatime,mode=600)
+tmpfs on /media type tmpfs (rw,relatime,size=64k,mode=755)
+/dev/mtdblock3 on /usr/conf type jffs2 (rw,relatime)
+/dev/mmcblk0p1 on /media/sdcard type vfat (rw,relatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro)
+~ # 
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+ifconfig eth0 down
+br0: port 1(eth0) entered disabled state
+~ # nm_cfg client IPCAM-Test-1
+device eth0 left promiscuous mode
+br0: port 1(eth0) entered disabled state
+nm_cfg status
+nm_cfg status
+nm_cfg status
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= scanning
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= scanning
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+nm_cfg status
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= scanning
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+nm_cfg status
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= scanning
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= scanning
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+nm_cfg status
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= scanning
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+nm_cfg status
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= scanning
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= scanning
+
+******Wi-Fi SoftAP******
+nm_cfg status
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= scanning
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= scanning
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= scanning
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= scanning
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+nm_cfg status
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+nm_cfg status
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= scanning
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+device wlan0 entered promiscuous mode
+br0: port 1(wlan0) entered forwarding state
+br0: port 1(wlan0) entered forwarding state
+nm_cfg status
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= connect
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= connect
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+ifconfig eth0 down
+~ # nm_cfg client IPCAM-Test-1
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= scanning
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # device wlan0 left promiscuous mode
+br0: port 1(wlan0) entered disabled state
+nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= disable
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= disable
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= disable
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= disable
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= disable
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= disable
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= disable
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= disable
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= disable
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+nm_cfg status
+nm_cfg status
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= connect
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+ifconfig eth0 down
+~ # nm_cfg client IPCAM-Test-1
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+device wlan0 left promiscuous mode
+br0: port 1(wlan0) entered disabled state
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= disable
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= disable
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= disable
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= disable
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= disable
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= disable
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= disable
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= disable
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= disable
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= disable
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+nm_cfg status
+nm_cfg status
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= scanning
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+nm_cfg status
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= connect
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= connect
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ 
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+ifconfig eth0 up
+~ # ping -c 4 192.168.1.100
+PING 192.168.1.100 (192.168.1.100): 56 data bytes
+rtl8168: eth0: link up
+device wlan0 left promiscuous mode
+br0: port 1(wlan0) entered disabled state
+device eth0 entered promiscuous mode
+br0: port 1(eth0) entered forwarding state
+br0: port 1(eth0) entered forwarding state
+rtl8168: eth0: link down
+device eth0 left promiscuous mode
+br0: port 1(eth0) entered disabled state
+
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+ifconfig eth0 up
+ping -c 4 192.168.1.100
+
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+ifconfig eth0 up
+~ # ping -c 4 192.168.1.100
+PING 192.168.1.100 (192.168.1.100): 56 data bytes
+64 bytes from 192.168.1.100: seq=0 ttl=128 time=5.207 ms
+64 bytes from 192.168.1.100: seq=1 ttl=128 time=0.908 ms
+64 bytes from 192.168.1.100: seq=2 ttl=128 time=0.670 ms
+64 bytes from 192.168.1.100: seq=3 ttl=128 time=2.047 ms
+
+--- 192.168.1.100 ping statistics ---
+4 packets transmitted, 4 packets received, 0% packet loss
+round-trip min/avg/max = 0.670/2.208/5.207 ms
+~ # mount
+rootfs on / type rootfs (rw)
+/dev/root on / type squashfs (ro,relatime)
+proc on /proc type proc (rw,relatime)
+sysfs on /sys type sysfs (rw,relatime)
+ramfs on /var type ramfs (rw,relatime)
+ramfs on /dev type ramfs (rw,relatime)
+tmpfs on /dev/shm type tmpfs (rw,relatime)
+devpts on /dev/pts type devpts (rw,relatime,mode=600)
+tmpfs on /media type tmpfs (rw,relatime,size=64k,mode=755)
+/dev/mtdblock3 on /usr/conf type jffs2 (rw,relatime)
+/dev/mmcblk0p1 on /media/sdcard type vfat (rw,relatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro)
+~ # killall vnptledindicator
+echo 1> /sys/devices/platform/pwm_platform/settings/pwm/request
+~ # echo 1> /sys/devices/platform/pwm_platform/settings/pwm/request
+-/bin/sh: can't create /sys/devices/platform/pwm_platform/settings/pwm/request: nonexistent directory
+~ # echo 1000000 > /sys/devices/platform/pwm_platform/settings/pwm1/duty_ns
+~ # echo 1 > /sys/devices/platform/pwm_platform/settings/pwm1/enable
+~ # echo 0 > /sys/devices/platform/pwm_platform/settings/pwm2/duty_ns
+~ # echo 1 > /sys/devices/platform/pwm_platform/settings/pwm2/enable
+~ # killall vnptledindicator
+killall: vnptledindicator: no process killed
+~ # echo 1> /sys/devices/platform/pwm_platform/settings/pwm/request
+-/bin/sh: can't create /sys/devices/platform/pwm_platform/settings/pwm/request: nonexistent directory
+~ # echo 1000000 > /sys/devices/platform/pwm_platform/settings/pwm2/duty_ns
+ > /sys/devices/platfor~ # echo 1 > /sys/devices/platform/pwm_platform/settings/pwm2/enable
+/sys/de~ # echo 0 > /sys/devices/platform/pwm_platform/settings/pwm1/duty_ns
+~ # echo 1 > /sys/devices/platform/pwm_platform/settings/pwm1/enable
+~ # killall vnptledindicator
+killall: vnptledindicator: no process killed
+~ # echo 1> /sys/devices/platform/pwm_platform/settings/pwm/request
+-/bin/sh: can't create /sys/devices/platform/pwm_platform/settings/pwm/request: nonexistent directory
+~ # echo 1000000 > /sys/devices/platform/pwm_platform/settings/pwm1/duty_ns
+ho 1~ # echo 1 > /sys/devices/platform/pwm_platform/settings/pwm1/enable
+~ # echo 0 > /sys/devices/platform/pwm_platform/settings/pwm2/duty_ns
+~ # echo 1 > /sys/devices/platform/pwm_platform/settings/pwm2/enable
+~ # killall vnptledindicator
+killall: vnptledindicator: no process killed
+~ # echo 1> /sys/devices/platform/pwm_platform/settings/pwm/request
+-/bin/sh: can't create /sys/devices/platform/pwm_platform/settings/pwm/request: nonexistent directory
+~ # echo 1000000 > /sys/devices/platform/pwm_platform/settings/pwm2/duty_ns
+echo 1 > /sys/~ # echo 1 > /sys/devices/platform/pwm_platform/settings/pwm2/enable
+cho 0 > /sy~ # echo 0 > /sys/devices/platform/pwm_platform/settings/pwm1/duty_ns
+/sys/devices/platform/pwm_platform/settings/pwm1/enable
+~ # echo 1 > /sys/devices/platform/pwm_platform/settings/pwm1/enable
+~ # killall vnptledindicator
+killall: vnptledindicator: no process killed
+~ # echo 1> /sys/devices/platform/pwm_platform/settings/pwm/request
+-/bin/sh: can't create /sys/devices/platform/pwm_platform/settings/pwm/request: nonexistent directory
+~ # echo 1000000 > /sys/devices/platform/pwm_platform/settings/pwm1/duty_ns
+orm/settings/pwm1/enable
+echo~ # echo 1 > /sys/devices/platform/pwm_platform/settings/pwm1/enable
+~ # echo 0 > /sys/devices/platform/pwm_platform/settings/pwm2/duty_ns
+~ # echo 1 > /sys/devices/platform/pwm_platform/settings/pwm2/enable
+~ # killall vnptledindicator
+killall: vnptledindicator: no process killed
+~ # echo 1> /sys/devices/platform/pwm_platform/settings/pwm/request
+-/bin/sh: can't create /sys/devices/platform/pwm_platform/settings/pwm/request: nonexistent directory
+~ # echo 1000000 > /sys/devices/platform/pwm_platform/settings/pwm2/duty_ns
+~ # echo 1 > /sys/devices/platform/pwm_platform/settings/pwm2/enable
+m/pwm_platform/sett~ # echo 0 > /sys/devices/platform/pwm_platform/settings/pwm1/duty_ns
+~ # echo 1 > /sys/devices/platform/pwm_platform/settings/pwm1/enable
+~ # killall vnptledindicator
+killall: vnptledindicator: no process killed
+~ # echo 1> /sys/devices/platform/pwm_platform/settings/pwm/request
+-/bin/sh: can't create /sys/devices/platform/pwm_platform/settings/pwm/request: nonexistent directory
+~ # echo 1000000 > /sys/devices/platform/pwm_platform/settings/pwm1/duty_ns
+~ # echo 1 > /sys/devices/platform/pwm_platform/settings/pwm1/enable
+~ # echo 0 > /sys/devices/platform/pwm_platform/settings/pwm2/duty_ns
+~ # echo 1 > /sys/devices/platform/pwm_platform/settings/pwm2/enable
+~ # killall vnptledindicator
+killall: vnptledindicator: no process killed
+~ # echo 1> /sys/devices/platform/pwm_platform/settings/pwm/request
+-/bin/sh: can't create /sys/devices/platform/pwm_platform/settings/pwm/request: nonexistent directory
+~ # echo 1000000 > /sys/devices/platform/pwm_platform/settings/pwm2/duty_ns
+ces/plat~ # echo 1 > /sys/devices/platform/pwm_platform/settings/pwm2/enable
+ho 1~ # echo 0 > /sys/devices/platform/pwm_platform/settings/pwm1/duty_ns
+~ # echo 1 > /sys/devices/platform/pwm_platform/settings/pwm1/enable
+~ # ifconfig eth0 down
+br0: port 1(eth0) entered disabled state
+~ # device eth0 left promiscuous mode
+br0: port 1(eth0) entered disabled state
+nm_cfg client IPCAM-Test-1
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= scanning
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= scanning
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= scanning
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= scanning
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= scanning
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= scanning
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= scanning
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= scanning
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= scanning
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= scanning
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= scanning
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= scanning
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= scanning
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= scanning
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= scanning
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= scanning
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= scanning
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= scanning
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= scanning
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= connect
+
+******Wi-Fi SoftAP******
+device wlan0 entered promiscuous mode
+br0: port 1(wlan0) entered forwarding state
+br0: port 1(wlan0) entered forwarding state
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # time_process = 1
+
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+ifconfig eth0 up
+~ # ping -c 4 192.168.1.100
+PING 192.168.1.100 (192.168.1.100): 56 data bytes
+64 bytes from 192.168.1.100: seq=0 ttl=128 time=4.356 ms
+64 bytes from 192.168.1.100: seq=1 ttl=128 time=0.744 ms
+64 bytes from 192.168.1.100: seq=2 ttl=128 time=1.186 ms
+64 bytes from 192.168.1.100: seq=3 ttl=128 time=1.120 ms
+
+--- 192.168.1.100 ping statistics ---
+4 packets transmitted, 4 packets received, 0% packet loss
+round-trip min/avg/max = 0.744/1.851/4.356 ms
+~ # mount
+rootfs on / type rootfs (rw)
+/dev/root on / type squashfs (ro,relatime)
+proc on /proc type proc (rw,relatime)
+sysfs on /sys type sysfs (rw,relatime)
+ramfs on /var type ramfs (rw,relatime)
+ramfs on /dev type ramfs (rw,relatime)
+tmpfs on /dev/shm type tmpfs (rw,relatime)
+devpts on /dev/pts type devpts (rw,relatime,mode=600)
+tmpfs on /media type tmpfs (rw,relatime,size=64k,mode=755)
+/dev/mtdblock3 on /usr/conf type jffs2 (rw,relatime)
+/dev/mmcblk0p1 on /media/sdcard type vfat (rw,relatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro)
+~ # killall vnptledindicator
+echo 1> /sys/devices/platform/pwm_platform/settings/pwm/request
+~ # echo 1> /sys/devices/platform/pwm_platform/settings/pwm/request
+-/bin/sh: can't create /sys/devices/platform/pwm_platform/settings/pwm/request: nonexistent directory
+0 > /sys/devices~ # echo 1000000 > /sys/devices/platform/pwm_platform/settings/pwm1/duty_ns
+/devices/plat~ # echo 1 > /sys/devices/platform/pwm_platform/settings/pwm1/enable
+~ # echo 0 > /sys/devices/platform/pwm_platform/settings/pwm2/duty_ns
+~ # echo 1 > /sys/devices/platform/pwm_platform/settings/pwm2/enable
+~ # killall vnptledindicator
+killall: vnptledindicator: no process killedecho 1>
+~ # echo 1> /sys/devices/platform/pwm_platform/settings/pwm/request
+-/bin/sh: can't create /sys/devices/platform/pwm_platform/settings/pwm/request: nonexistent directory
+~ # echo 1000000 > /sys/devices/platform/pwm_platform/settings/pwm2/duty_ns
+~ # echo 1 > /sys/devices/platform/pwm_platform/settings/pwm2/enable
+atform/settings/pw~ # echo 0 > /sys/devices/platform/pwm_platform/settings/pwm1/duty_ns
+~ # echo 1 > /sys/devices/platform/pwm_platform/settings/pwm1/enable
+~ # ifconfig eth0 down
+br0: port 1(eth0) entered disabled state
+~ # device eth0 left promiscuous mode
+br0: port 1(eth0) entered disabled state
+nm_cfg client IPCAM-Test-1
+nm_cfg status
+~ # nm_cfg status
+nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= scanning
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= scanning
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= scanning
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= scanning
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= scanning
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= scanning
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= scanning
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= scanning
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= scanning
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= scanning
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= scanning
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # nm_cfg status
+******BASIC INFO******
+Eth_type = 0(WAN)
+Bridge_Enable = 1
+
+******WAN INFO******
+DHCPC = 0
+IPAddr = 192.168.1.253
+NetMask = 255.255.255.0
+Gateway = 192.168.1.1
+DNS1 = 0.0.0.0
+DNS2 = 0.0.0.0
+
+******LAN INFO******
+DHCPD = 1
+IPAddr = 192.168.0.1
+NetMask = 255.255.255.0
+Begin_IP = 192.168.0.2
+End_IP = 192.168.0.254
+
+******Wi-Fi Client******
+enable	= 1
+ssid	= IPCAM-Test-1
+auth	= OPEN
+status	= connect
+
+******Wi-Fi SoftAP******
+enable = 0
+ssid = IPCAM_2F5347
+hide_ssid = 0
+hw_mode = 2(802.11b/g/n)
+channel = 1
+auth = 0(OPEN)
+~ # device wlan0 entered promiscuous mode
+br0: port 1(wlan0) entered forwarding state
+br0: port 1(wlan0) entered forwarding state
+time_process = 0
+

@@ -1,0 +1,3870 @@
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+i??????5
+~ # ifconfig
+br0       Link encap:Ethernet  HWaddr A0:2C:36:2F:53:47  
+          inet addr:192.168.1.253  Bcast:192.168.1.255  Mask:255.255.255.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+eth0      Link encap:Ethernet  HWaddr A4:F4:C2:99:01:02  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+          Interrupt:10 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:678 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:678 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:49590 (48.4 KiB)  TX bytes:49590 (48.4 KiB)
+
+wlan0     Link encap:Ethernet  HWaddr A0:2C:36:2F:53:47  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:1 errors:0 dropped:101 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:26 (26.0 B)  TX bytes:0 (0.0 B)
+
+wlan1     Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:101 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+251
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+235
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+222
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+222
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+248
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+222
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+226
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+226
+~ # cat /
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+-?config
+br0       Link encap:Ethernet  HWaddr A0:2C:36:2F:53:47  
+          inet addr:192.168.1.253  Bcast:192.168.1.255  Mask:255.255.255.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+eth0      Link encap:Ethernet  HWaddr A4:F4:C2:99:01:02  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+?     ?H*????????0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+          Interrupt:10 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:1062 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:1062 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:77622 (75.8 KiB)  TX bytes:77622 (75.8 KiB)
+
+wlan0     Link encap:Ethernet  HWaddr A0:2C:36:2F:53:47  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:2 errors:0 dropped:101 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:52 (52.0 B)  TX bytes:0 (0.0 B)
+
+wlan1     Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:101 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1676
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1921
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1888
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1869
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1975
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1785
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+322
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+258
+~ # 
+~ # 
+~ # killall lark
+~ # arecord -D hw:0,1 /tmp/audio_record.wav &
+~ # audio-platform audio-platform: ASoC: can't open platform audio-platform: -16
+arecord: main:722: audio open error: Device or resource busy
+
+[1]+  Done(1)                    arecord -D hw:0,1 /tmp/audio_record.wav
+~ # 
+~ # killall arecord
+killall: arecord: no process killed
+~ # aplay  -D hw:0,1 /tmp/audio_record.wav
+/tmp/audio_record.wav: No such file or directory
+~ # nm_cfg wan dhcp 0 ipaddr 192.168.1.253 netmask 255.255.255.0 gateway 192.168
+.1.1
+entry: 0x1000002 type 0 len 4: c0 a8 01 fd 
+entry: 0x1000004 type 0 len 4: ff ff ff 00 
+entry: 0x1000003 type 0 len 4: c0 a8 01 01 
+~ # 
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+ifconfig
+br0       Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          inet addr:192.168.1.253  Bcast:192.168.1.255  Mask:255.255.255.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:558 errors:0 dropped:241 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:58600 (57.2 KiB)  TX bytes:0 (0.0 B)
+
+eth0      Link encap:Ethernet  HWaddr A4:F4:C2:99:01:02  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:563 errors:0 dropped:5 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:67067 (65.4 KiB)  TX bytes:0 (0.0 B)
+          Interrupt:10 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:1962 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:1962 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:143322 (139.9 KiB)  TX bytes:143322 (139.9 KiB)
+
+wlan0     Link encap:Ethernet  HWaddr A0:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:5 errors:0 dropped:101 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:250 (250.0 B)  TX bytes:0 (0.0 B)
+
+wlan1     Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:103 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1753
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1753
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1637
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1676
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1611
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+335
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+177
+~ # 
+~ # 
+~ # killall lark
+killall: lark: no process killed
+~ # arecord -D hw:0,1 /tmp/audio_record.wav &
+~ # Recording WAVE '/tmp/audio_record.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
+
+~ # 
+~ # killall arecord
+Aborted by signal Terminated...
+~ # aplay  -D hw:0,1 /tmp/audio_record.wav
+Playing WAVE '/tmp/audio_record.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
+[1]+  Done                       arecord -D hw:0,1 /tmp/audio_record.wav
+~ # nm_cfg wan dhcp 0 ipaddr 192.168.1.253 netmask 255.255.255.0 gateway 192.168
+.1.1
+entry: 0x1000002 type 0 len 4: c0 a8 01 fd 
+entry: 0x1000004 type 0 len 4: ff ff ff 00 
+entry: 0x1000003 type 0 len 4: c0 a8 01 01 
+~ # 
+MAC ADDRESS: A4F4C2989898
+---------------------------------------------------------
+
+
+U-Boot 2014.01-rc2-V1.1 (Oct 30 2017 - 17:12:54)
+
+rx5281 prid=0xdc02
+DRAM:  128 MiB @ 1066 MHz
+Skipping flash_init
+Flash: 0 Bytes
+flash status is 40, 6
+SF: Detected MX25L12835F with page size 256 Bytes, erase size 64 KiB, total 16 MiB
+Using default environment
+
+In:    serial
+Out:   serial
+Err:   serial
+Net:   Realtek PCIe GBE Family Controller mcfg = 0024
+set ethaddr = a4:f4:c2:90:90:91
+r8168#0
+set ipaddr = 192.168.1.253
+set netmask = 255.255.255.0
+Hit any key to stop autoboot:  3  0 
+rlxboot# setethaddr A4:F4:C2:98:98:98
+New MAC address: A4:F4:C2:98:98:98
+rlxboot# saveenv
+ethaddr: A4:F4:C2:98:98:98
+ipaddr: 192.168.1.253
+netmask: 255.255.255.0
+50 bytes written, 0 bytes skipped in 0.361s, speed 139 B/s
+saveenv done
+rlxboot# setipaddr 192.168.1.253
+New IP address: 192.168.1.253
+rlxboot# saveenv
+ethaddr: A4:F4:C2:98:98:98
+ipaddr: 192.168.1.253
+netmask: 255.255.255.0
+0 bytes written, 50 bytes skipped in 0.7s, speed 4266 B/s
+saveenv done
+rlxboot# update all
+Using r8168#0 device
+Listening for TFTP transfer on 192.168.1.253
+Load address: 0x82000000
+Loading: *#################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 ######################################################
+	 380.9 KiB/s
+done
+Bytes transferred = 8261312 (7e0ec0 hex)
+offset is 120000
+   Updating, 50% 8637774 B/s   Updating, 99% 8470050 B/s0 bytes written, 1727860 bytes skipped in 0.218s, speed 7863682 B/s
+offset is 520000
+   Updating, 14% 8388608 B/s   Updating, 27% 8230332 B/s   Updating, 40% 8153413 B/s   Updating, 53% 8134407 B/s   Updating, 66% 4259840 B/s   Updating, 79% 5111808 B/s   Updating, 92% 5963776 B/s0 bytes written, 6533120 bytes skipped in 0.831s, speed 6533120 B/s
+file end
+update all done
+rlxboot# update fw
+Using r8168#0 device
+Listening for TFTP transfer on 192.168.1.253
+Load address: 0x82000000
+Loading: *##########################
+	 43.9 KiB/s
+done
+Bytes transferred = 131072 (20000 hex)
+0 bytes written, 131072 bytes skipped in 0.15s, speed 6100805 B/s
+update fw done
+rlxboot# update ldc
+Using r8168#0 device
+Listening for TFTP transfer on 192.168.1.253
+Load address: 0x82000000
+Loading: *#################################################################
+	 ######################################
+	 20.5 KiB/s
+done
+Bytes transferred = 522816 (7fa40 hex)
+0 bytes written, 522816 bytes skipped in 0.62s, speed 7758892 B/s
+update ldc done
+rlxboot# bootm 0xbc120000
+## Booting kernel from Legacy Image at bc120000 ...
+get header OKimage_get_kernel check hcrc
+image_get_kernel print contents
+   Image Name:   linux_3.10
+   Created:      2018-07-30   2:29:48 UTC
+   Image Type:   MIPS Linux Kernel Image (uncompressed)
+   Data Size:    1727794 Bytes = 1.6 MiB
+   Load Address: 804f8780
+   Entry Point:  804f8780
+   Verifying Checksum ... OK
+   Loading Kernel Image ... OK
+
+Starting kernel ...
+
+Linux version 3.10.27 (aidenn@anhnt4-pc) (gcc version 4.8.5 20150209 (prerelease) (Realtek RSDK-4.8.5p1 Build 2278) ) #1 PREEMPT Thu May 31 14:37:29 +07 2018
+prom cpufreq = 500000000
+prom memsize = 134217728
+hw_ver: 0x1, hw_rev: 0x2, isp_ver: 0x0
+bootconsole [early0] enabled
+CPU revision is: 0000dc02
+Determined physical RAM map:
+ memory: 08000000 @ 00000000 (usable)
+Reserved contiguous memory at 0x513000
+Zone ranges:
+  Normal   [mem 0x00000000-0x07ffffff]
+Movable zone start for each node
+Early memory node ranges
+  node   0: [mem 0x00000000-0x07ffffff]
+icache: 32kB/32B, dcache: 16kB/32B, scache: 0kB/0B
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 32512
+Kernel command line: console=ttyS1,57600 root=/dev/mtdblock5 rts_hconf.hconf_mtd_idx=2 mtdparts=m25p80:256k(boot),128k(mcu),256k(hconf),512k(userdata),4096k(kernel),8192k(rootfs),512k(ldc)
+PID hash table entries: 512 (order: -1, 2048 bytes)
+Dentry cache hash table entries: 16384 (order: 4, 65536 bytes)
+Inode-cache hash table entries: 8192 (order: 3, 32768 bytes)
+Memory: 93992k/131072k available (3976k kernel code, 37080k reserved, 900k data, 176k init, 0k highmem)
+SLUB: HWalign=32, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+Preemptible hierarchical RCU implementation.
+NR_IRQS:49
+Calibrating delay loop... 497.66 BogoMIPS (lpj=248832)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 512
+pinctrl core: initialized pinctrl subsystem
+regulator-dummy: no parameters
+NET: Registered protocol family 16
+rtsxb2 registered with IRQs
+INFO: initializing USB host ...
+INFO: initializing spi host ...0
+spi platform id is 0
+INFO: initializing I2C master ...
+INFO: initializing DMA controller ...
+INFO: initializing adc ...
+INFO: initializing SD controller ...
+INFO: initializing snd device ...
+snd resvd mem size : 1048576
+INFO: initializing pinctrl device ...
+pinctrl_platform pinctrl_platform: rtspc registered with IRQs
+INFO: initializing led device - 9...
+INFO: initializing ethernet devices ...
+INFO: initializing dwc_otg devices ...
+INFO: initializing USB phy ...
+INFO: initializing ISP device ...
+isp resvd mem addr : 0x00613000, size : 0x1d00000
+ISP camera platform devices added
+INFO: initializing watchdog controller ...
+INFO: initializing PWM controller ...
+INFO: initializing pmu device ...
+INFO: initializing cpu dvfs device ...
+bio: create slab <bio-0> at 0
+rts_dmac rts_dmac: DesignWare DMA Controller, 1 channels
+INFO: realtek DMA engine inited
+SCSI subsystem initialized
+spic-platform spic-platform.0: master is unqueued, this is deprecated
+INFO:allocate spi master 0, 0
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+usbphy-platform usbphy-platform: Initialized Realtek IPCam USB Phy module
+Linux video capture interface: v2.00
+Advanced Linux Sound Architecture Driver Initialized.
+NET: Registered protocol family 2
+cfg80211: Calling CRDA to update world regulatory domain
+TCP established hash table entries: 1024 (order: 1, 8192 bytes)
+TCP bind hash table entries: 1024 (order: 0, 4096 bytes)
+TCP: Hash tables configured (established 1024 bind 1024)
+TCP: reno registered
+UDP hash table entries: 256 (order: 0, 4096 bytes)
+UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+NET: Registered protocol family 1
+RPC: Registered named UNIX socket transport module.
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+squashfs: version 4.0 (2009/01/31) Phillip Lougher
+NFS: Registering the id_resolver key type
+Key type id_resolver registered
+Key type id_legacy registered
+jffs2: version 2.2. (NAND) ?? 2001-2006 Red Hat, Inc.
+msgmni has been set to 183
+Block layer SCSI generic (bsg) driver version 0.4 loaded (major 253)
+io scheduler noop registered
+io scheduler deadline registered
+io scheduler cfq registered (default)
+Serial: 8250/16550 driver, 3 ports, IRQ sharing disabled
+serial8250: ttyS0 at MMIO 0x18810000 (irq = 6) is a 16550A
+console [ttyS1] enabled, bootconsole disabled
+console [ttyS1] enabled, bootconsole disabled
+serial8250: ttyS1 at MMIO 0x18810100 (irq = 6) is a 16550A
+serial8250: ttyS2 at MMIO 0x18810200 (irq = 6) is a 16550A
+dbg_iomem initialized!
+m25p80 spi0.0: unrecognized id mx25l12845e
+m25p80 spi0.0: found mx25l12835f, expected m25p80
+m25p80 spi0.0: mx25l12835f (16384 Kbytes)
+7 cmdlinepart partitions found on MTD device m25p80
+Creating 7 MTD partitions on "m25p80":
+0x000000000000-0x000000040000 : "boot"
+0x000000040000-0x000000060000 : "mcu"
+0x000000060000-0x0000000a0000 : "hconf"
+0x0000000a0000-0x000000120000 : "userdata"
+0x000000120000-0x000000520000 : "kernel"
+0x000000520000-0x000000d20000 : "rootfs"
+0x000000d20000-0x000000da0000 : "ldc"
+hconf type 3, size 0x40000, ebsize 0x10000
+hconf_init hconf init success
+pinctrl_platform pinctrl_platform: pin PWMGPIO2 already requested by pwm_platform; cannot claim for rtl8168
+pinctrl_platform pinctrl_platform: pin-10 (rtl8168) status -22
+pinctrl_platform pinctrl_platform: could not request pin 10 on device pinctrl-rts
+rtl8168 rtl8168: Error applying setting, reverse things back
+rtl8168 Gigabit Ethernet driver 8.038.00-NAPI loaded
+rtl8168 rtl8168 (unregistered net_device): Get invalid MAC address from flash!
+eth%d: 0xb8400000, 00:00:00:00:00:00, IRQ 10
+PPP generic driver version 2.4.2
+PPP MPPE Compression module registered
+NET: Registered protocol family 24
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+ehci-rts: ehci-rts platform driver
+ehci-platform ehci-platform: EHCI Host Controller
+ehci-platform ehci-platform: new USB bus registered, assigned bus number 1
+ehci-platform ehci-platform: irq 11, io mem 0x18100000
+ehci-platform ehci-platform: USB 2.0 started, EHCI 1.00
+usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+usb usb1: Product: EHCI Host Controller
+usb usb1: Manufacturer: Linux 3.10.27 ehci_hcd
+usb usb1: SerialNumber: ehci-platform
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 1 port detected
+ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+ohci-platform ohci-platform: Generic Platform OHCI Controller
+ohci-platform ohci-platform: new USB bus registered, assigned bus number 2
+ohci-platform ohci-platform: irq 11, io mem 0x18180000
+usb usb2: New USB device found, idVendor=1d6b, idProduct=0001
+usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+usb usb2: Product: Generic Platform OHCI Controller
+usb usb2: Manufacturer: Linux 3.10.27 ohci_hcd
+usb usb2: SerialNumber: ohci-platform
+hub 2-0:1.0: USB hub found
+hub 2-0:1.0: 1 port detected
+dwc_otg: version 3.10b 20-MAY-2013
+Core Release: 3.10a
+Setting default values for core params
+WARN::dwc_otg_set_param_dev_tx_fifo_size:6354: Value is larger then power-on FIFO size
+
+WARN::dwc_otg_set_param_dev_tx_fifo_size:6354: Value is larger then power-on FIFO size
+
+Using Buffer DMA mode
+Periodic Transfer Interrupt Enhancement - disabled
+Multiprocessor Interrupt Enhancement - disabled
+OTG VER PARAM: 0, OTG VER FLAG: 0
+Shared Tx FIFO mode
+usbcore: registered new interface driver usb-storage
+g_mass_storage gadget: Mass Storage Function, version: 2009/09/11
+g_mass_storage gadget: Number of LUNs=1
+ lun0: LUN: removable file: (no medium)
+g_mass_storage gadget: Mass Storage Gadget, version: 2009/09/11
+g_mass_storage gadget: g_mass_storage ready
+usb device pull 1
+rtpg_pre_init,line=450
+rtpg_pre_init,line=450
+rtp_mfd 0-0030: No interrupt support, no core IRQ
+usb 1-1: new high-speed USB device number 2 using ehci-platform
+LDO1: 1800 <--> 3300 mV at 1800 mV 
+LDO2: 1800 <--> 3300 mV at 3300 mV 
+DC_1V0: 700 <--> 2275 mV at 1000 mV 
+SWR_OUT_RSV: 700 <--> 2275 mV at 1200 mV 
+DC_1V5: 700 <--> 2275 mV at 1500 mV 
+DC_3V3: 1700 <--> 3500 mV at 3300 mV 
+rtp_mfd 0-0030: regulator rtp_ldo get failed
+rtp_mfd 0-0030: regulator rtp_ldo4 get failed
+rtp_post_init, DC_1V0 = 1000000, mV end
+rtp_post_init, DC_1V5 = 1500000, mV end
+rtp_post_init, DC_3V3 = 3300000, mV end
+Stopped watchdog timer
+timer margin: 8 sec
+leds-gpio leds-gpio: pins are not configured from the driver
+pinctrl_platform pinctrl_platform: request() failed for pin 9
+pinctrl_platform pinctrl_platform: pin-9 (pinctrl-rts:9) status -16
+leds-gpio: probe of leds-gpio failed with error -16
+usb 1-1: New USB device found, idVendor=0bda, idProduct=0811
+nf_conntrack version 0.5.0 (1468 buckets, 5872 max)
+usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+ip_tables: (C) 2000-2006 Netfilter Core Team
+TCP: cubic registered
+usb 1-1: Product: 802.11ac WLAN Adapter 
+NET: Registered protocol family 17
+usb 1-1: Manufacturer: Realtek 
+Key type dns_resolver registered
+usb 1-1: SerialNumber: 00e04c000001
+ALSA device list:
+  No soundcards found.
+VFS: Mounted root (squashfs filesystem) readonly on device 31:5.
+Freeing unused kernel memory: 176K (804d4000 - 80500000)
+soc-audio soc-audio.0: ASoC: machine RLX_INTERN_CARD should use snd_soc_register_card()
+soc-audio soc-audio.0:  rlx-codec-digital <-> pcm-platform mapping ok
+soc-audio soc-audio.0:  rlx-codec-analog <-> pcm-platform mapping ok
+usbcore: registered new interface driver rtl8821au
+rtscam:rtscam_soc_probe
+rtscam:copy fw from flash
+rtscam:Found ISP 1.008 device
+rtscam:video device <rts3901-isp> registered
+rtscam:rts3901-isp initialized
+rtscam:rtscam_hx280_probe
+rtscam:hx280enc:HW at base <0x18060000> with ID <0x48314810>
+rtscam:rtscam_jpgenc_probe
+rtscam:rtstream_init
+Wed Dec  6 11:30:00 UTC 2017
+entry: 0x1000001 type 0 len 6: a4 f4 c2 98 98 98 
+get macaddr from flash:a4:f4:c2:98:98:98
+mmc0: new ultra high speed SDR50 SDHC card at address aaaa
+mmcblk0: mmc0:aaaa SC16G 14.8 GiB 
+ mmcblk0: p1
+FAT-fs (mmcblk0p1): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+time.nist.gov: Unknown host
+__hconf_entry_to_buf entry not found
+device eth0 entered promiscuous mode
+2017-12-06 18:30:05: (server.c.790) I run as root
+ 
+2017-12-06 18:30:05: (server.c.804) I run as root
+ 
+rtl8168: eth0: link up
+rtl8168: eth0: link down
+device wlan1 entered promiscuous mode
+br0: port 2(wlan1) entered forwarding state
+br0: port 2(wlan1) entered forwarding state
+br0: port 1(eth0) entered forwarding state
+br0: port 1(eth0) entered forwarding state
+__hconf_entry_to_buf entry not found
+rts_hconf_read_entry: ERROR: read entry failed
+get TUTK UID from flash fail
+rtl8168: eth0: link up
+Alarm Manager ver.( 0.1)
+Sending message to kernel
+Waiting for message from kernel
+Loop
+aplay: main:722: audio open error: Device or resource busy
+__     ___   _ ____ _____   _____         _                 _                   
+ \ \   / / \ | |  _ \_   _| |_   _|__  ___| |__  _ __   ___ | | ___   __ _ _   _ 
+  \ \ / /|  \| | |_) || |     | |/ _ \/ __| '_ \| '_ \ / _ \| |/ _ \ / _` | | | |
+   \ V / | |\  |  __/ | |     | |  __/ (__| | | | | | | (_) | | (_) | (_| | |_| |
+    \_/  |_| \_|_|    |_|     |_|\___|\___|_| |_|_| |_|\___/|_|\___/ \__, |\__, |
+                                                                     |___/ |___/                     
+                        
+
+Please press Enter to activate this console. md configuration done.
+ifconfig
+~ # aplay: main:722: audio open error: Device or resource busy
+ifconfig
+br0       Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          inet addr:192.168.1.253  Bcast:192.168.1.255  Mask:255.255.255.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:276 errors:0 dropped:117 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:35039 (34.2 KiB)  TX bytes:0 (0.0 B)
+
+eth0      Link encap:Ethernet  HWaddr A4:F4:C2:98:98:98  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:279 errors:0 dropped:3 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:39083 (38.1 KiB)  TX bytes:0 (0.0 B)
+          Interrupt:10 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:186 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:186 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:13578 (13.2 KiB)  TX bytes:13578 (13.2 KiB)
+
+wlan0     Link encap:Ethernet  HWaddr A0:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:47 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+wlan1     Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:47 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+~ # ERROR, no such host
+
+~ # 
+~ # killall lark
+~ # killall lark
+~ # killall lark
+killall: lark: no process killed
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1450
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1544
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1505
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1453
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1492
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+541
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+177
+~ # 
+~ # 
+~ # killall lark
+killall: lark: no process killed
+~ # arecord -D hw:0,1 /tmp/audio_record.wav &
+~ # Recording WAVE '/tmp/audio_record.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
+
+~ # 
+~ # killall arecord
+Aborted by signal Terminated...
+~ # aplay  -D hw:0,1 /tmp/audio_record.wav
+Playing WAVE '/tmp/audio_record.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
+[1]+  Done                       arecord -D hw:0,1 /tmp/audio_record.wav
+~ # nm_cfg wan dhcp 0 ipaddr 192.168.1.253 netmask 255.255.255.0 gateway 192.168
+.1.1
+entry: 0x1000002 type 0 len 4: c0 a8 01 fd 
+entry: 0x1000004 type 0 len 4: ff ff ff 00 
+entry: 0x1000003 type 0 len 4: c0 a8 01 01 
+~ # 
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+
+
+U-Boot 2014.01-rc2-V1.1 (Oct 30 2017 - 17:12:54)
+
+rx5281 prid=0xdc02
+DRAM:  128 MiB @ 1066 MHz
+Skipping flash_init
+Flash: 0 Bytes
+flash status is 40, 6
+SF: Detected MX25L12835F with page size 256 Bytes, erase size 64 KiB, total 16 MiB
+Using default environment
+
+In:    serial
+Out:   serial
+Err:   serial
+Net:   Realtek PCIe GBE Family Controller mcfg = 0024
+set ethaddr = a4:f4:c2:98:98:98
+r8168#0
+set ipaddr = 192.168.1.253
+set netmask = 255.255.255.0
+set gateway = 192.168.1.1
+Hit any key to stop autoboot:  3  0 
+rlxboot# setethaddr A4:F4:C2:90:90:91
+New MAC address: A4:F4:C2:90:90:91
+rlxboot# saveenv
+ethaddr: A4:F4:C2:90:90:91
+ipaddr: 192.168.1.253
+netmask: 255.255.255.0
+50 bytes written, 0 bytes skipped in 0.361s, speed 139 B/s
+saveenv done
+rlxboot# setipaddr 192.168.1.253
+New IP address: 192.168.1.253
+rlxboot# saveenv
+ethaddr: A4:F4:C2:90:90:91
+ipaddr: 192.168.1.253
+netmask: 255.255.255.0
+0 bytes written, 50 bytes skipped in 0.7s, speed 4266 B/s
+saveenv done
+rlxboot# update all
+Using r8168#0 device
+Listening for TFTP transfer on 192.168.1.253
+Load address: 0x82000000
+Loading: *#################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 ######################################################
+	 376 KiB/s
+done
+Bytes transferred = 8261312 (7e0ec0 hex)
+offset is 120000
+   Updating, 50% 8388608 B/s   Updating, 99% 8230332 B/s0 bytes written, 1727860 bytes skipped in 0.224s, speed 7692733 B/s
+offset is 520000
+   Updating, 14% 8388608 B/s   Updating, 27% 8230332 B/s   Updating, 40% 8153413 B/s   Updating, 53% 8134407 B/s   Updating, 66% 4259840 B/s   Updating, 79% 5111808 B/s   Updating, 92% 5963776 B/s0 bytes written, 6533120 bytes skipped in 0.831s, speed 6533120 B/s
+file end
+update all done
+rlxboot# update fw
+Using r8168#0 device
+Listening for TFTP transfer on 192.168.1.253
+Load address: 0x82000000
+Loading: *##########################
+	 34.2 KiB/s
+done
+Bytes transferred = 131072 (20000 hex)
+0 bytes written, 131072 bytes skipped in 0.16s, speed 6100805 B/s
+update fw done
+rlxboot# update ldc
+Using r8168#0 device
+Listening for TFTP transfer on 192.168.1.253
+Load address: 0x82000000
+Loading: *#################################################################
+	 ######################################
+	 20.5 KiB/s
+done
+Bytes transferred = 522816 (7fa40 hex)
+0 bytes written, 522816 bytes skipped in 0.64s, speed 7648051 B/s
+update ldc done
+rlxboot# bootm 0xbc120000
+## Booting kernel from Legacy Image at bc120000 ...
+get header OKimage_get_kernel check hcrc
+image_get_kernel print contents
+   Image Name:   linux_3.10
+   Created:      2018-07-30   2:29:48 UTC
+   Image Type:   MIPS Linux Kernel Image (uncompressed)
+   Data Size:    1727794 Bytes = 1.6 MiB
+   Load Address: 804f8780
+   Entry Point:  804f8780
+   Verifying Checksum ... OK
+   Loading Kernel Image ... OK
+
+Starting kernel ...
+
+Linux version 3.10.27 (aidenn@anhnt4-pc) (gcc version 4.8.5 20150209 (prerelease) (Realtek RSDK-4.8.5p1 Build 2278) ) #1 PREEMPT Thu May 31 14:37:29 +07 2018
+prom cpufreq = 500000000
+prom memsize = 134217728
+hw_ver: 0x1, hw_rev: 0x2, isp_ver: 0x0
+bootconsole [early0] enabled
+CPU revision is: 0000dc02
+Determined physical RAM map:
+ memory: 08000000 @ 00000000 (usable)
+Reserved contiguous memory at 0x513000
+Zone ranges:
+  Normal   [mem 0x00000000-0x07ffffff]
+Movable zone start for each node
+Early memory node ranges
+  node   0: [mem 0x00000000-0x07ffffff]
+icache: 32kB/32B, dcache: 16kB/32B, scache: 0kB/0B
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 32512
+Kernel command line: console=ttyS1,57600 root=/dev/mtdblock5 rts_hconf.hconf_mtd_idx=2 mtdparts=m25p80:256k(boot),128k(mcu),256k(hconf),512k(userdata),4096k(kernel),8192k(rootfs),512k(ldc)
+PID hash table entries: 512 (order: -1, 2048 bytes)
+Dentry cache hash table entries: 16384 (order: 4, 65536 bytes)
+Inode-cache hash table entries: 8192 (order: 3, 32768 bytes)
+Memory: 93992k/131072k available (3976k kernel code, 37080k reserved, 900k data, 176k init, 0k highmem)
+SLUB: HWalign=32, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+Preemptible hierarchical RCU implementation.
+NR_IRQS:49
+Calibrating delay loop... 497.66 BogoMIPS (lpj=248832)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 512
+pinctrl core: initialized pinctrl subsystem
+regulator-dummy: no parameters
+NET: Registered protocol family 16
+rtsxb2 registered with IRQs
+INFO: initializing USB host ...
+INFO: initializing spi host ...0
+spi platform id is 0
+INFO: initializing I2C master ...
+INFO: initializing DMA controller ...
+INFO: initializing adc ...
+INFO: initializing SD controller ...
+INFO: initializing snd device ...
+snd resvd mem size : 1048576
+INFO: initializing pinctrl device ...
+pinctrl_platform pinctrl_platform: rtspc registered with IRQs
+INFO: initializing led device - 9...
+INFO: initializing ethernet devices ...
+INFO: initializing dwc_otg devices ...
+INFO: initializing USB phy ...
+INFO: initializing ISP device ...
+isp resvd mem addr : 0x00613000, size : 0x1d00000
+ISP camera platform devices added
+INFO: initializing watchdog controller ...
+INFO: initializing PWM controller ...
+INFO: initializing pmu device ...
+INFO: initializing cpu dvfs device ...
+bio: create slab <bio-0> at 0
+rts_dmac rts_dmac: DesignWare DMA Controller, 1 channels
+INFO: realtek DMA engine inited
+SCSI subsystem initialized
+spic-platform spic-platform.0: master is unqueued, this is deprecated
+INFO:allocate spi master 0, 0
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+usbphy-platform usbphy-platform: Initialized Realtek IPCam USB Phy module
+Linux video capture interface: v2.00
+Advanced Linux Sound Architecture Driver Initialized.
+NET: Registered protocol family 2
+cfg80211: Calling CRDA to update world regulatory domain
+TCP established hash table entries: 1024 (order: 1, 8192 bytes)
+TCP bind hash table entries: 1024 (order: 0, 4096 bytes)
+TCP: Hash tables configured (established 1024 bind 1024)
+TCP: reno registered
+UDP hash table entries: 256 (order: 0, 4096 bytes)
+UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+NET: Registered protocol family 1
+RPC: Registered named UNIX socket transport module.
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+squashfs: version 4.0 (2009/01/31) Phillip Lougher
+NFS: Registering the id_resolver key type
+Key type id_resolver registered
+Key type id_legacy registered
+jffs2: version 2.2. (NAND) ?? 2001-2006 Red Hat, Inc.
+msgmni has been set to 183
+Block layer SCSI generic (bsg) driver version 0.4 loaded (major 253)
+io scheduler noop registered
+io scheduler deadline registered
+io scheduler cfq registered (default)
+Serial: 8250/16550 driver, 3 ports, IRQ sharing disabled
+serial8250: ttyS0 at MMIO 0x18810000 (irq = 6) is a 16550A
+console [ttyS1] enabled, bootconsole disabled
+console [ttyS1] enabled, bootconsole disabled
+serial8250: ttyS1 at MMIO 0x18810100 (irq = 6) is a 16550A
+serial8250: ttyS2 at MMIO 0x18810200 (irq = 6) is a 16550A
+dbg_iomem initialized!
+m25p80 spi0.0: unrecognized id mx25l12845e
+m25p80 spi0.0: found mx25l12835f, expected m25p80
+m25p80 spi0.0: mx25l12835f (16384 Kbytes)
+7 cmdlinepart partitions found on MTD device m25p80
+Creating 7 MTD partitions on "m25p80":
+0x000000000000-0x000000040000 : "boot"
+0x000000040000-0x000000060000 : "mcu"
+0x000000060000-0x0000000a0000 : "hconf"
+0x0000000a0000-0x000000120000 : "userdata"
+0x000000120000-0x000000520000 : "kernel"
+0x000000520000-0x000000d20000 : "rootfs"
+0x000000d20000-0x000000da0000 : "ldc"
+hconf type 3, size 0x40000, ebsize 0x10000
+hconf_init hconf init success
+pinctrl_platform pinctrl_platform: pin PWMGPIO2 already requested by pwm_platform; cannot claim for rtl8168
+pinctrl_platform pinctrl_platform: pin-10 (rtl8168) status -22
+pinctrl_platform pinctrl_platform: could not request pin 10 on device pinctrl-rts
+rtl8168 rtl8168: Error applying setting, reverse things back
+rtl8168 Gigabit Ethernet driver 8.038.00-NAPI loaded
+rtl8168 rtl8168 (unregistered net_device): Get invalid MAC address from flash!
+eth%d: 0xb8400000, 00:00:00:00:00:00, IRQ 10
+PPP generic driver version 2.4.2
+PPP MPPE Compression module registered
+NET: Registered protocol family 24
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+ehci-rts: ehci-rts platform driver
+ehci-platform ehci-platform: EHCI Host Controller
+ehci-platform ehci-platform: new USB bus registered, assigned bus number 1
+ehci-platform ehci-platform: irq 11, io mem 0x18100000
+ehci-platform ehci-platform: USB 2.0 started, EHCI 1.00
+usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+usb usb1: Product: EHCI Host Controller
+usb usb1: Manufacturer: Linux 3.10.27 ehci_hcd
+usb usb1: SerialNumber: ehci-platform
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 1 port detected
+ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+ohci-platform ohci-platform: Generic Platform OHCI Controller
+ohci-platform ohci-platform: new USB bus registered, assigned bus number 2
+ohci-platform ohci-platform: irq 11, io mem 0x18180000
+usb usb2: New USB device found, idVendor=1d6b, idProduct=0001
+usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+usb usb2: Product: Generic Platform OHCI Controller
+usb usb2: Manufacturer: Linux 3.10.27 ohci_hcd
+usb usb2: SerialNumber: ohci-platform
+hub 2-0:1.0: USB hub found
+hub 2-0:1.0: 1 port detected
+dwc_otg: version 3.10b 20-MAY-2013
+Core Release: 3.10a
+Setting default values for core params
+WARN::dwc_otg_set_param_dev_tx_fifo_size:6354: Value is larger then power-on FIFO size
+
+WARN::dwc_otg_set_param_dev_tx_fifo_size:6354: Value is larger then power-on FIFO size
+
+Using Buffer DMA mode
+Periodic Transfer Interrupt Enhancement - disabled
+Multiprocessor Interrupt Enhancement - disabled
+OTG VER PARAM: 0, OTG VER FLAG: 0
+Shared Tx FIFO mode
+usbcore: registered new interface driver usb-storage
+g_mass_storage gadget: Mass Storage Function, version: 2009/09/11
+g_mass_storage gadget: Number of LUNs=1
+ lun0: LUN: removable file: (no medium)
+g_mass_storage gadget: Mass Storage Gadget, version: 2009/09/11
+g_mass_storage gadget: g_mass_storage ready
+usb device pull 1
+rtpg_pre_init,line=450
+rtpg_pre_init,line=450
+rtp_mfd 0-0030: No interrupt support, no core IRQ
+usb 1-1: new high-speed USB device number 2 using ehci-platform
+LDO1: 1800 <--> 3300 mV at 1800 mV 
+LDO2: 1800 <--> 3300 mV at 3300 mV 
+DC_1V0: 700 <--> 2275 mV at 1000 mV 
+SWR_OUT_RSV: 700 <--> 2275 mV at 1200 mV 
+DC_1V5: 700 <--> 2275 mV at 1500 mV 
+DC_3V3: 1700 <--> 3500 mV at 3300 mV 
+rtp_mfd 0-0030: regulator rtp_ldo get failed
+rtp_mfd 0-0030: regulator rtp_ldo4 get failed
+rtp_post_init, DC_1V0 = 1000000, mV end
+rtp_post_init, DC_1V5 = 1500000, mV end
+rtp_post_init, DC_3V3 = 3300000, mV end
+Stopped watchdog timer
+timer margin: 8 sec
+leds-gpio leds-gpio: pins are not configured from the driver
+pinctrl_platform pinctrl_platform: request() failed for pin 9
+pinctrl_platform pinctrl_platform: pin-9 (pinctrl-rts:9) status -16
+leds-gpio: probe of leds-gpio failed with error -16
+usb 1-1: New USB device found, idVendor=0bda, idProduct=0811
+nf_conntrack version 0.5.0 (1468 buckets, 5872 max)
+usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+ip_tables: (C) 2000-2006 Netfilter Core Team
+TCP: cubic registered
+usb 1-1: Product: 802.11ac WLAN Adapter 
+NET: Registered protocol family 17
+Key type dns_resolver registered
+usb 1-1: Manufacturer: Realtek 
+usb 1-1: SerialNumber: 00e04c000001
+ALSA device list:
+  No soundcards found.
+VFS: Mounted root (squashfs filesystem) readonly on device 31:5.
+Freeing unused kernel memory: 176K (804d4000 - 80500000)
+soc-audio soc-audio.0: ASoC: machine RLX_INTERN_CARD should use snd_soc_register_card()
+soc-audio soc-audio.0:  rlx-codec-digital <-> pcm-platform mapping ok
+soc-audio soc-audio.0:  rlx-codec-analog <-> pcm-platform mapping ok
+usbcore: registered new interface driver rtl8821au
+rtscam:rtscam_soc_probe
+rtscam:copy fw from flash
+rtscam:Found ISP 1.008 device
+rtscam:video device <rts3901-isp> registered
+rtscam:rts3901-isp initialized
+rtscam:rtscam_hx280_probe
+rtscam:hx280enc:HW at base <0x18060000> with ID <0x48314810>
+rtscam:rtscam_jpgenc_probe
+rtscam:rtstream_init
+Wed Dec  6 11:30:00 UTC 2017
+mmc0: new ultra high speed SDR50 SDHC card at address aaaa
+mmcblk0: mmc0:aaaa SC16G 14.8 GiB 
+ mmcblk0: p1
+entry: 0x1000001 type 0 len 6: a4 f4 c2 90 90 91 
+get macaddr from flash:a4:f4:c2:90:90:91
+FAT-fs (mmcblk0p1): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+time.nist.gov: Unknown host
+__hconf_entry_to_buf entry not found
+device eth0 entered promiscuous mode
+rtl8168: eth0: link up
+device wlan1 entered promiscuous mode
+br0: port 2(wlan1) entered forwarding state
+br0: port 2(wlan1) entered forwarding state
+br0: port 1(eth0) entered forwarding state
+br0: port 1(eth0) entered forwarding state
+2017-12-06 18:30:05: (server.c.790) I run as root
+ 
+2017-12-06 18:30:05: (server.c.804) I run as root
+ 
+rtl8168: eth0: link down
+__hconf_entry_to_buf entry not found
+rts_hconf_read_entry: ERROR: read entry failed
+get TUTK UID from flash fail
+rtl8168: eth0: link up
+Alarm Manager ver.( 0.1)
+Sending message to kernel
+Waiting for message from kernel
+Loop
+aplay: main:722: audio open error: Device or resource busy
+__     ___   _ ____ _____   _____         _                 _                   
+ \ \   / / \ | |  _ \_   _| |_   _|__  ___| |__  _ __   ___ | | ___   __ _ _   _ 
+  \ \ / /|  \| | |_) || |     | |/ _ \/ __| '_ \| '_ \ / _ \| |/ _ \ / _` | | | |
+   \ V / | |\  |  __/ | |     | |  __/ (__| | | | | | | (_) | | (_) | (_| | |_| |
+    \_/  |_| \_|_|    |_|     |_|\___|\___|_| |_|_| |_|\___/|_|\___/ \__, |\__, |
+                                                                     |___/ |___/                     
+                        
+
+Please press Enter to activate this console. md configuration done.
+ifconfig
+~ # aplay: main:722: audio open error: Device or resource busy
+ifconfig
+br0       Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          inet addr:192.168.1.253  Bcast:192.168.1.255  Mask:255.255.255.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:292 errors:0 dropped:123 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:36069 (35.2 KiB)  TX bytes:0 (0.0 B)
+
+eth0      Link encap:Ethernet  HWaddr A4:F4:C2:90:90:91  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:295 errors:0 dropped:3 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:40337 (39.3 KiB)  TX bytes:0 (0.0 B)
+          Interrupt:10 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:192 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:192 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:14016 (13.6 KiB)  TX bytes:14016 (13.6 KiB)
+
+wlan0     Link encap:Ethernet  HWaddr A0:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:100 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+wlan1     Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:100 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+~ # ERROR, no such host
+
+~ # 
+~ # killall lark
+~ # killall lark
+~ # killall lark
+killall: lark: no process killed
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1244
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1131
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1257
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1134
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1128
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1263
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1128
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1170
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1244
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1267
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1183
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1170
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1115
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1270
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1202
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1131
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1260
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1183
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1141
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1270
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1263
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1267
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1257
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1257
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1112
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1144
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1250
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1118
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1163
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1150
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1263
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1254
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1267
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1263
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1150
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1138
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1273
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1115
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1125
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1173
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1118
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1125
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1218
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1270
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1231
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1263
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1260
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1163
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1112
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1118
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1205
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1263
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1196
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1125
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1244
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1115
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1244
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1231
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1267
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1141
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1118
+~ # 
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+
+MAC ADDRESS: A4F4C2909090
+---------------------------------------------------------
+ifconfig
+~ # ERROR, no such host
+ifconfig
+br0       Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          inet addr:192.168.1.253  Bcast:192.168.1.255  Mask:255.255.255.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:297 errors:0 dropped:127 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:36319 (35.4 KiB)  TX bytes:0 (0.0 B)
+
+eth0      Link encap:Ethernet  HWaddr A4:F4:C2:90:90:91  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:301 errors:0 dropped:4 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:40717 (39.7 KiB)  TX bytes:0 (0.0 B)
+          Interrupt:10 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:222 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:222 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:16302 (15.9 KiB)  TX bytes:16302 (15.9 KiB)
+
+wlan0     Link encap:Ethernet  HWaddr A0:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:104 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+wlan1     Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:104 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1263
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1296
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1247
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1238
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1270
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1241
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+110
+~ # 
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+ifconfig
+~ # ifconfig
+br0       Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          inet addr:192.168.1.253  Bcast:192.168.1.255  Mask:255.255.255.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:355 errors:0 dropped:149 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:40685 (39.7 KiB)  TX bytes:0 (0.0 B)
+
+eth0      Link encap:Ethernet  HWaddr A4:F4:C2:90:90:91  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:358 errors:0 dropped:3 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:45835 (44.7 KiB)  TX bytes:0 (0.0 B)
+          Interrupt:10 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:414 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:414 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:30318 (29.6 KiB)  TX bytes:30318 (29.6 KiB)
+
+wlan0     Link encap:Ethernet  HWaddr A0:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:192 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+wlan1     Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:192 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1176
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1279
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1283
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1150
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1283
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+203
+~ # 
+~ # 
+~ # killall lark
+~ # arecord -D hw:0,1 /tmp/audio_record.wav &
+~ # audio-platform audio-platform: ASoC: can't open platform audio-platform: -16
+arecord: main:722: audio open error: Device or resource busy
+
+[1]+  Done(1)                    arecord -D hw:0,1 /tmp/audio_record.wav
+~ # 
+~ # killall arecord
+killall: arecord: no process killed
+~ # aplay  -D hw:0,1 /tmp/audio_record.wav
+/tmp/audio_record.wav: No such file or directory
+~ # nm_cfg wan dhcp 0 ipaddr 192.168.1.253 netmask 255.255.255.0 gateway 192.168
+.1.1
+entry: 0x1000002 type 0 len 4: c0 a8 01 fd 
+entry: 0x1000004 type 0 len 4: ff ff ff 00 
+entry: 0x1000003 type 0 len 4: c0 a8 01 01 
+~ # 
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+ifconfig
+br0       Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          inet addr:192.168.1.253  Bcast:192.168.1.255  Mask:255.255.255.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:444 errors:0 dropped:175 overruns:0 frame:0
+          TX packets:688 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:48373 (47.2 KiB)  TX bytes:868052 (847.7 KiB)
+
+eth0      Link encap:Ethernet  HWaddr A4:F4:C2:90:90:91  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:447 errors:0 dropped:3 overruns:0 frame:0
+          TX packets:688 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:54769 (53.4 KiB)  TX bytes:868052 (847.7 KiB)
+          Interrupt:10 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:2766 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:2766 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:202014 (197.2 KiB)  TX bytes:202014 (197.2 KiB)
+
+wlan0     Link encap:Ethernet  HWaddr A0:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:192 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+wlan1     Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:192 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+~ # 
+~ # 
+~ # killall lark
+killall: lark: no process killed
+~ # killall lark
+killall: lark: no process killed
+~ # killall lark
+killall: lark: no process killed
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1179
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1150
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1160
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+222
+~ # 
+~ # 
+~ # killall lark
+killall: lark: no process killed
+~ # arecord -D hw:0,1 /tmp/audio_record.wav &
+~ # Recording WAVE '/tmp/audio_record.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
+
+~ # 
+~ # killall arecord
+Aborted by signal Terminated...
+~ # aplay  -D hw:0,1 /tmp/audio_record.wav
+Playing WAVE '/tmp/audio_record.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
+[1]+  Done                       arecord -D hw:0,1 /tmp/audio_record.wav
+~ # nm_cfg wan dhcp 0 ipaddr 192.168.1.253 netmask 255.255.255.0 gateway 192.168
+.1.1
+entry: 0x1000002 type 0 len 4: c0 a8 01 fd 
+entry: 0x1000004 type 0 len 4: ff ff ff 00 
+entry: 0x1000003 type 0 len 4: c0 a8 01 01 
+~ # 
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+ifconfig
+br0       Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          inet addr:192.168.1.253  Bcast:192.168.1.255  Mask:255.255.255.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:478 errors:0 dropped:175 overruns:0 frame:0
+          TX packets:6730 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:51473 (50.2 KiB)  TX bytes:8728831 (8.3 MiB)
+
+eth0      Link encap:Ethernet  HWaddr A4:F4:C2:90:90:91  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:481 errors:0 dropped:3 overruns:0 frame:0
+          TX packets:6730 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:58345 (56.9 KiB)  TX bytes:8728831 (8.3 MiB)
+          Interrupt:10 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:4038 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:4038 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:294870 (287.9 KiB)  TX bytes:294870 (287.9 KiB)
+
+wlan0     Link encap:Ethernet  HWaddr A0:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:192 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+wlan1     Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:192 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+~ # 
+~ # 
+~ # killall lark
+killall: lark: no process killed
+~ # killall lark
+killall: lark: no process killed
+~ # killall lark
+killall: lark: no process killed
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1128
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1225
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1247
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1115
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+422
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+329
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+541
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+654
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+606
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+303
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+277
+~ # 
+~ # 
+~ # killall lark
+killall: lark: no process killed
+~ # arecord -D hw:0,1 /tmp/audio_record.wav &
+~ # Recording WAVE '/tmp/audio_record.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
+
+~ # 
+~ # killall arecord
+Aborted by signal Terminated...
+~ # aplay  -D hw:0,1 /tmp/audio_record.wav
+Playing WAVE '/tmp/audio_record.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
+[1]+  Done                       arecord -D hw:0,1 /tmp/audio_record.wav
+~ # nm_cfg wan dhcp 0 ipaddr 192.168.1.253 netmask 255.255.255.0 gateway 192.168
+.1.1
+entry: 0x1000002 type 0 len 4: c0 a8 01 fd 
+entry: 0x1000004 type 0 len 4: ff ff ff 00 
+entry: 0x1000003 type 0 len 4: c0 a8 01 01 
+~ # 
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+ifconfig
+br0       Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          inet addr:192.168.1.253  Bcast:192.168.1.255  Mask:255.255.255.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:526 errors:0 dropped:180 overruns:0 frame:0
+          TX packets:12793 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:55828 (54.5 KiB)  TX bytes:16506051 (15.7 MiB)
+
+eth0      Link encap:Ethernet  HWaddr A4:F4:C2:90:90:91  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:529 errors:0 dropped:3 overruns:0 frame:0
+          TX packets:12793 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:63372 (61.8 KiB)  TX bytes:16506051 (15.7 MiB)
+          Interrupt:10 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:5346 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:5346 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:390354 (381.2 KiB)  TX bytes:390354 (381.2 KiB)
+
+wlan0     Link encap:Ethernet  HWaddr A0:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:192 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+wlan1     Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:192 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+~ # 
+~ # 
+~ # killall lark
+killall: lark: no process killed
+~ # killall lark
+killall: lark: no process killed
+~ # killall lark
+killall: lark: no process killed
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1112
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1189
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1144
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1115
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1205
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+606
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+161
+~ # 
+~ # 
+~ # killall lark
+killall: lark: no process killed
+~ # arecord -D hw:0,1 /tmp/audio_record.wav &
+~ # Recording WAVE '/tmp/audio_record.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
+
+~ # 
+~ # killall arecord
+Aborted by signal Terminated...
+~ # aplay  -D hw:0,1 /tmp/audio_record.wav
+Playing WAVE '/tmp/audio_record.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
+[1]+  Done                       arecord -D hw:0,1 /tmp/audio_record.wav
+~ # nm_cfg wan dhcp 0 ipaddr 192.168.1.253 netmask 255.255.255.0 gateway 192.168
+.1.1
+entry: 0x1000002 type 0 len 4: c0 a8 01 fd 
+entry: 0x1000004 type 0 len 4: ff ff ff 00 
+entry: 0x1000003 type 0 len 4: c0 a8 01 01 
+~ # 
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+ifconfig
+br0       Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          inet addr:192.168.1.253  Bcast:192.168.1.255  Mask:255.255.255.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:1224 errors:0 dropped:456 overruns:0 frame:0
+          TX packets:18854 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:136971 (133.7 KiB)  TX bytes:24280300 (23.1 MiB)
+
+eth0      Link encap:Ethernet  HWaddr A4:F4:C2:90:90:91  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:1227 errors:0 dropped:3 overruns:0 frame:0
+          TX packets:18854 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:154287 (150.6 KiB)  TX bytes:24280300 (23.1 MiB)
+          Interrupt:10 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:7062 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:7062 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:515622 (503.5 KiB)  TX bytes:515622 (503.5 KiB)
+
+wlan0     Link encap:Ethernet  HWaddr A0:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:192 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+wlan1     Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:192 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+~ # 
+~ # 
+~ # killall lark
+killall: lark: no process killed
+~ # killall lark
+killall: lark: no process killed
+~ # killall lark
+killall: lark: no process killed
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+864
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+880
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+828
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+880
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+335
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+93
+~ # 
+~ # 
+~ # killall lark
+killall: lark: no process killed
+~ # arecord -D hw:0,1 /tmp/audio_record.wav &
+~ # Recording WAVE '/tmp/audio_record.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
+
+~ # 
+~ # killall arecord
+Aborted by signal Terminated...
+~ # aplay  -D hw:0,1 /tmp/audio_record.wav
+Playing WAVE '/tmp/audio_record.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
+[1]+  Done                       arecord -D hw:0,1 /tmp/audio_record.wav
+~ # nm_cfg wan dhcp 0 ipaddr 192.168.1.253 netmask 255.255.255.0 gateway 192.168
+.1.1
+entry: 0x1000002 type 0 len 4: c0 a8 01 fd 
+entry: 0x1000004 type 0 len 4: ff ff ff 00 
+entry: 0x1000003 type 0 len 4: c0 a8 01 01 
+~ # 
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+ifconfig
+br0       Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          inet addr:192.168.1.253  Bcast:192.168.1.255  Mask:255.255.255.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:1557 errors:0 dropped:561 overruns:0 frame:0
+          TX packets:21955 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:163884 (160.0 KiB)  TX bytes:28318404 (27.0 MiB)
+
+eth0      Link encap:Ethernet  HWaddr A4:F4:C2:90:90:91  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:1563 errors:0 dropped:6 overruns:0 frame:0
+          TX packets:21955 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:186042 (181.6 KiB)  TX bytes:28318404 (27.0 MiB)
+          Interrupt:10 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:27702 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:27702 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:2022342 (1.9 MiB)  TX bytes:2022342 (1.9 MiB)
+
+wlan0     Link encap:Ethernet  HWaddr A0:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:192 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+wlan1     Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:192 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+~ # 
+~ # 
+~ # killall lark
+killall: lark: no process killed
+~ # killall lark
+killall: lark: no process killed
+~ # killall lark
+killall: lark: no process killed
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+741
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+757
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+712
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+358
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+145
+~ # 
+~ # 
+~ # killall lark
+killall: lark: no process killed
+~ # arecord -D hw:0,1 /tmp/audio_record.wav &
+~ # Recording WAVE '/tmp/audio_record.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
+
+~ # 
+~ # killall arecord
+Aborted by signal Terminated...
+~ # aplay  -D hw:0,1 /tmp/audio_record.wav
+Playing WAVE '/tmp/audio_record.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
+[1]+  Done                       arecord -D hw:0,1 /tmp/audio_record.wav
+~ # nm_cfg wan dhcp 0 ipaddr 192.168.1.253 netmask 255.255.255.0 gateway 192.168
+.1.1
+entry: 0x1000002 type 0 len 4: c0 a8 01 fd 
+entry: 0x1000004 type 0 len 4: ff ff ff 00 
+entry: 0x1000003 type 0 len 4: c0 a8 01 01 
+~ # 
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+ifconfig
+~ # ifconfig
+br0       Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          inet addr:192.168.1.253  Bcast:192.168.1.255  Mask:255.255.255.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:636 errors:0 dropped:217 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:66062 (64.5 KiB)  TX bytes:0 (0.0 B)
+
+eth0      Link encap:Ethernet  HWaddr A4:F4:C2:90:90:91  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:641 errors:0 dropped:5 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:75266 (73.5 KiB)  TX bytes:0 (0.0 B)
+          Interrupt:10 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:17448 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:17448 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:1273800 (1.2 MiB)  TX bytes:1273800 (1.2 MiB)
+
+wlan0     Link encap:Ethernet  HWaddr A0:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:226 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+wlan1     Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:226 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+~ # 
+~ # 
+~ # killall lark
+~ # killall lark
+~ # killall lark
+killall: lark: no process killed
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+303
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+290
+~ # 
+~ # 
+~ # killall lark
+killall: lark: no process killed
+~ # arecord -D hw:0,1 /tmp/audio_record.wav &
+~ # Recording WAVE '/tmp/audio_record.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
+
+~ # 
+~ # killall arecord
+Aborted by signal Terminated...
+~ # aplay  -D hw:0,1 /tmp/audio_record.wav
+Playing WAVE '/tmp/audio_record.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
+[1]+  Done                       arecord -D hw:0,1 /tmp/audio_record.wav
+~ # nm_cfg wan dhcp 0 ipaddr 192.168.1.253 netmask 255.255.255.0 gateway 192.168
+.1.1
+entry: 0x1000002 type 0 len 4: c0 a8 01 fd 
+
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+ifconfig
+br0       Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          inet addr:192.168.1.253  Bcast:192.168.1.255  Mask:255.255.255.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:643 errors:0 dropped:219 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:66548 (64.9 KiB)  TX bytes:0 (0.0 B)
+
+eth0      Link encap:Ethernet  HWaddr A4:F4:C2:90:90:91  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:648 errors:0 dropped:5 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:75850 (74.0 KiB)  TX bytes:0 (0.0 B)
+          Interrupt:10 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:17952 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:17952 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:1310592 (1.2 MiB)  TX bytes:1310592 (1.2 MiB)
+
+wlan0     Link encap:Ethernet  HWaddr A0:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:226 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+wlan1     Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:226 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+~ # 
+~ # 
+~ # killall lark
+killall: lark: no process killed
+~ # killall lark
+killall: lark: no process killed
+~ # killall lark
+killall: lark: no process killed
+~ # 
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+ifconfig
+br0       Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          inet addr:192.168.1.253  Bcast:192.168.1.255  Mask:255.255.255.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:643 errors:0 dropped:219 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:66548 (64.9 KiB)  TX bytes:0 (0.0 B)
+
+eth0      Link encap:Ethernet  HWaddr A4:F4:C2:90:90:91  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:648 errors:0 dropped:5 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:75850 (74.0 KiB)  TX bytes:0 (0.0 B)
+          Interrupt:10 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:18024 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:18024 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:1315848 (1.2 MiB)  TX bytes:1315848 (1.2 MiB)
+
+wlan0     Link encap:Ethernet  HWaddr A0:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:226 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+wlan1     Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:226 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+~ # 
+~ # 
+~ # killall lark
+killall: lark: no process killed
+~ # killall lark
+killall: lark: no process killed
+~ # killall lark
+killall: lark: no process killed
+~ # 
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+ifconfig
+br0       Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          inet addr:192.168.1.253  Bcast:192.168.1.255  Mask:255.255.255.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:643 errors:0 dropped:219 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:66548 (64.9 KiB)  TX bytes:0 (0.0 B)
+
+eth0      Link encap:Ethernet  HWaddr A4:F4:C2:90:90:91  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:648 errors:0 dropped:5 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:75850 (74.0 KiB)  TX bytes:0 (0.0 B)
+          Interrupt:10 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:18096 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:18096 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:1321104 (1.2 MiB)  TX bytes:1321104 (1.2 MiB)
+
+wlan0     Link encap:Ethernet  HWaddr A0:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:226 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+wlan1     Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:226 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+~ # 
+~ # 
+~ # killall lark
+killall: lark: no process killed
+~ # killall lark
+killall: lark: no process killed
+~ # killall lark
+killall: lark: no process killed
+~ # 
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+ifconfig
+br0       Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          inet addr:192.168.1.253  Bcast:192.168.1.255  Mask:255.255.255.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:643 errors:0 dropped:219 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:66548 (64.9 KiB)  TX bytes:0 (0.0 B)
+
+eth0      Link encap:Ethernet  HWaddr A4:F4:C2:90:90:91  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:648 errors:0 dropped:5 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:75850 (74.0 KiB)  TX bytes:0 (0.0 B)
+          Interrupt:10 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:18132 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:18132 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:1323732 (1.2 MiB)  TX bytes:1323732 (1.2 MiB)
+
+wlan0     Link encap:Ethernet  HWaddr A0:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:226 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+wlan1     Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:226 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+~ # 
+~ # 
+~ # killall lark
+killall: lark: no process killed
+~ # killall lark
+killall: lark: no process killed
+~ # killall lark
+killall: lark: no process killed
+~ # 
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+ifconfig
+br0       Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          inet addr:192.168.1.253  Bcast:192.168.1.255  Mask:255.255.255.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:643 errors:0 dropped:219 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:66548 (64.9 KiB)  TX bytes:0 (0.0 B)
+
+eth0      Link encap:Ethernet  HWaddr A4:F4:C2:90:90:91  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:648 errors:0 dropped:5 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:75850 (74.0 KiB)  TX bytes:0 (0.0 B)
+          Interrupt:10 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:18276 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:18276 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:1334244 (1.2 MiB)  TX bytes:1334244 (1.2 MiB)
+
+wlan0     Link encap:Ethernet  HWaddr A0:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:226 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+wlan1     Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:226 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+~ # 
+~ # 
+~ # killall lark
+killall: lark: no process killed
+~ # killall lark
+killall: lark: no process killed
+~ # killall lark
+killall: lark: no process killed
+~ # 
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+ifconfig
+br0       Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          inet addr:192.168.1.253  Bcast:192.168.1.255  Mask:255.255.255.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:643 errors:0 dropped:219 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:66548 (64.9 KiB)  TX bytes:0 (0.0 B)
+
+eth0      Link encap:Ethernet  HWaddr A4:F4:C2:90:90:91  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:648 errors:0 dropped:5 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:75850 (74.0 KiB)  TX bytes:0 (0.0 B)
+          Interrupt:10 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:18312 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:18312 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:1336872 (1.2 MiB)  TX bytes:1336872 (1.2 MiB)
+
+wlan0     Link encap:Ethernet  HWaddr A0:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:226 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+wlan1     Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:226 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+~ # 
+~ # 
+~ # killall lark
+killall: lark: no process killed
+~ # killall lark
+killall: lark: no process killed
+~ # killall lark
+killall: lark: no process killed
+~ # 
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+ifconfig
+br0       Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          inet addr:192.168.1.253  Bcast:192.168.1.255  Mask:255.255.255.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:643 errors:0 dropped:219 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:66548 (64.9 KiB)  TX bytes:0 (0.0 B)
+
+eth0      Link encap:Ethernet  HWaddr A4:F4:C2:90:90:91  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:648 errors:0 dropped:5 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:75850 (74.0 KiB)  TX bytes:0 (0.0 B)
+          Interrupt:10 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:18348 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:18348 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:1339500 (1.2 MiB)  TX bytes:1339500 (1.2 MiB)
+
+wlan0     Link encap:Ethernet  HWaddr A0:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:226 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+wlan1     Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:226 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+~ # 
+~ # 
+~ # killall lark
+killall: lark: no process killed
+~ # killall lark
+killall: lark: no process killed
+~ # killall lark
+killall: lark: no process killed
+~ # 
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+ifconfig
+br0       Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          inet addr:192.168.1.253  Bcast:192.168.1.255  Mask:255.255.255.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:643 errors:0 dropped:219 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:66548 (64.9 KiB)  TX bytes:0 (0.0 B)
+
+eth0      Link encap:Ethernet  HWaddr A4:F4:C2:90:90:91  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:648 errors:0 dropped:5 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:75850 (74.0 KiB)  TX bytes:0 (0.0 B)
+          Interrupt:10 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:18576 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:18576 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:1356144 (1.2 MiB)  TX bytes:1356144 (1.2 MiB)
+
+wlan0     Link encap:Ethernet  HWaddr A0:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:226 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+wlan1     Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:226 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+~ # 
+~ # 
+~ # killall lark
+killall lark
+killall: lark: no process killed
+~ # killall lark
+killall lark
+killall: lark: no process killed
+
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+ifconfig
+br0       Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          inet addr:192.168.1.253  Bcast:192.168.1.255  Mask:255.255.255.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:643 errors:0 dropped:219 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:66548 (64.9 KiB)  TX bytes:0 (0.0 B)
+
+eth0      Link encap:Ethernet  HWaddr A4:F4:C2:90:90:91  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:648 errors:0 dropped:5 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:75850 (74.0 KiB)  TX bytes:0 (0.0 B)
+          Interrupt:10 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:18648 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:18648 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:1361400 (1.2 MiB)  TX bytes:1361400 (1.2 MiB)
+
+wlan0     Link encap:Ethernet  HWaddr A0:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:226 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+wlan1     Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:226 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+~ # 
+~ # 
+~ # killall lark
+killall lark
+killall: lark: no process killed
+~ # killall lark
+killall lark
+
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+ifconfig
+br0       Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          inet addr:192.168.1.253  Bcast:192.168.1.255  Mask:255.255.255.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:643 errors:0 dropped:219 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:66548 (64.9 KiB)  TX bytes:0 (0.0 B)
+
+eth0      Link encap:Ethernet  HWaddr A4:F4:C2:90:90:91  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:648 errors:0 dropped:5 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:75850 (74.0 KiB)  TX bytes:0 (0.0 B)
+          Interrupt:10 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:18672 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:18672 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:1363152 (1.2 MiB)  TX bytes:1363152 (1.2 MiB)
+
+wlan0     Link encap:Ethernet  HWaddr A0:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:226 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+wlan1     Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:226 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+~ # 
+~ # 
+~ # killall lark
+killall lark
+killall: lark: no process killed
+~ # killall lark
+killall lark
+
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+cat /sys/devices/platform/rts_saradc.0/in0_input
+296
+~ # cat /sys/devices/platform/rts_s?WH?309
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+332
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+293
+~ # 
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+cat /sys/devices/platform/rts_saradc.0/in0_input
+322
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+303
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+303
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+306
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+325
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+290
+~ # 
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+cat /sys/devices/platform/rts_saradc.0/in0_input
+309
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+322
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+290
+~ # 
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+cat /sys/devices/platform/rts_saradc.0/in0_input
+316
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+290
+~ # 
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+cat /sys/devices/platform/rts_saradc.0/in0_input
+284
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+280
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+303
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+303
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+325
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+309
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+303
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+293
+~ # 
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+cat /sys/devices/platform/rts_saradc.0/in0_input
+319
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+303
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+322
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+290
+~ # 
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+cat /sys/devices/platform/rts_saradc.0/in0_input
+306
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+287
+~ # 
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+
+~ # 
+~ # killall lark
+killall lark
+killall: lark: no process killed
+~ # killall lark
+killall lark
+killall: lark: no process killed
+~ # killall lark
+killall lark
+killall: lark: no process killed
+~ # killall lark
+arecord -D hw:0,1 /tmp/audio_record.wav &
+
+
+killall: lark: no process killed
+~ # arecord -D hw:0,1 /tmp/audio_record.wav &
+~ # 
+~ # 
+~ # Recording WAVE '/tmp/audio_record.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
+killall arecord
+Aborted by signal Terminated...
+~ # aplay  -D hw:0,1 /tmp/audio_record.wav
+Playing WAVE '/tmp/audio_record.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
+[1]+  Done                       arecord -D hw:0,1 /tmp/audio_record.wav
+~ # 
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+
+~ # 
+~ # killall lark
+killall lark
+killall: lark: no process killed
+~ # killall lark
+killall lark
+killall: lark: no process killed
+~ # killall lark
+killall lark
+killall: lark: no process killed
+~ # killall lark
+arecord -D hw:0,1 /tmp/audio_record.wav &
+killall: lark: no process killed
+~ # arecord -D hw:0,1 /tmp/audio_record.wav &
+~ # 
+~ # 
+~ # Recording WAVE '/tmp/audio_record.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
+killall arecord
+Aborted by signal Terminated...
+~ # aplay  -D hw:0,1 /tmp/audio_record.wav
+Playing WAVE '/tmp/audio_record.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
+[1]+  Done                       arecord -D hw:0,1 /tmp/audio_record.wav
+~ # 
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+)~ # 
+~ # killall lark
+killall lark
+killall: lark: no process killed
+~ # killall lark
+killall lark
+killall: lark: no process killed
+~ # killall lark
+killall lark
+killall: lark: no process killed
+~ # killall lark
+arecord -D hw:0,1 /tmp/audio_record.wav &
+killall: lark: no process killed
+
+
+~ # arecord -D hw:0,1 /tmp/audio_record.wav &
+~ # 
+~ # 
+~ # Recording WAVE '/tmp/audio_record.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
+killall arecord
+Aborted by signal Terminated...
+~ # aplay  -D hw:0,1 /tmp/audio_record.wav
+Playing WAVE '/tmp/audio_record.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
+
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+
+~ # 
+~ # killall lark
+killall lark
+killall: lark: no process killed
+~ # killall lark
+killall lark
+killall: lark: no process killed
+~ # killall lark
+killall lark
+killall: lark: no process killed
+~ # killall lark
+arecord -D hw:0,1 /tmp/audio_record.wav &
+killall: lark: no process killed
+~ # arecord -D hw:0,1 /tmp/audio_record.wav &
+
+
+~ # 
+~ # 
+~ # Recording WAVE '/tmp/audio_record.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
+killall arecord
+Aborted by signal Terminated...
+~ # aplay  -D hw:0,1 /tmp/audio_record.wav
+Playing WAVE '/tmp/audio_record.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
+[1]+  Done                       arecord -D hw:0,1 /tmp/audio_record.wav
+~ # 
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+
+~ # 
+~ # killall lark
+killall lark
+killall: lark: no process killed
+~ # killall lark
+killall lark
+killall: lark: no process killed
+~ # killall lark
+killall lark
+killall: lark: no process killed
+~ # killall lark
+arecord -D hw:0,1 /tmp/audio_record.wav &
+killall: lark: no process killed
+~ # arecord -D hw:0,1 /tmp/audio_record.wav &
+~ # 
+~ # 
+~ # Recording WAVE '/tmp/audio_record.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
+killall arecord
+Aborted by signal Terminated...
+~ # aplay  -D hw:0,1 /tmp/audio_record.wav
+Playing WAVE '/tmp/audio_record.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
+[1]+  Done                       arecord -D hw:0,1 /tmp/audio_record.wav
+~ # 
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+
+~ # 
+~ # killall lark
+killall lark
+killall: lark: no process killed
+~ # killall lark
+killall lark
+killall: lark: no process killed
+~ # killall lark
+killall lark
+killall: lark: no process killed
+~ # killall lark
+arecord -D hw:0,1 /tmp/audio_record.wav &
+
+
+killall: lark: no process killed
+~ # arecord -D hw:0,1 /tmp/audio_record.wav &
+~ # 
+~ # 
+~ # Recording WAVE '/tmp/audio_record.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
+killall arecord
+Aborted by signal Terminated...
+~ # aplay  -D hw:0,1 /tmp/audio_record.wav
+Playing WAVE '/tmp/audio_record.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
+[1]+  Done                       arecord -D hw:0,1 /tmp/audio_record.wav
+~ # aplay  -D hw:0,1 /tmp/audio_record.wav
+Playing WAVE '/tmp/audio_record.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
+~ # aplay  -D hw:0,1 /tmp/audio_record.wav
+Playing WAVE '/tmp/audio_record.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
+
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+ifconfig
+br0       Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          inet addr:192.168.1.253  Bcast:192.168.1.255  Mask:255.255.255.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:998 errors:0 dropped:333 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:94075 (91.8 KiB)  TX bytes:0 (0.0 B)
+
+eth0      Link encap:Ethernet  HWaddr A4:F4:C2:90:90:91  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:1004 errors:0 dropped:6 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:108407 (105.8 KiB)  TX bytes:0 (0.0 B)
+          Interrupt:10 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:26016 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:26016 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:1899264 (1.8 MiB)  TX bytes:1899264 (1.8 MiB)
+
+wlan0     Link encap:Ethernet  HWaddr A0:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:226 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+wlan1     Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:226 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+245
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+287
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+280
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+255
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+274
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+274
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+267
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+245
+~ # cat /sys/devices/pl?tform/rts_saradc.0/in0_input
+290
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+248
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+293
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+242
+~ # cat /sys/devices/?X??K??rts_saradc.0/in0_input
+255
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+255
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+232
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+203
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+232
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+255
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+284
+~ # ???/sys/devices/platform/rts_saradc.0/in0_input
+274
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+280
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+245
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+251
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+280
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+464
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+532
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+654
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+374
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+251
+~ # 
+~ # 
+~ # killall lark
+killall lark
+killall: lark: no process killed
+~ # killall lark
+killall lark
+killall: lark: no process killed
+~ # killall lark
+killall lark
+killall: lark: no process killed
+~ # killall lark
+arecord -D hw:0,1 /tmp/audio_record.wav &
+killall: lark: no process killed
+~ # arecord -D hw:0,1 /tmp/audio_record.wav &
+~ # 
+~ # 
+~ # Recording WAVE '/tmp/audio_record.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
+killall arecord
+Aborted by signal Terminated...
+~ # aplay  -D hw:0,1 /tmp/audio_record.wav
+Playing WAVE '/tmp/audio_record.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
+[1]+  Done                       arecord -D hw:0,1 /tmp/audio_record.wav
+~ # nm_cfg wan dhcp 0 ipaddr 192.168.1.253 netmask 255.255.255.0 gateway 192.168
+.1.1
+entry: 0x1000002 type 0 len 4: c0 a8 01 fd 
+
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+ifconfig
+br0       Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          inet addr:192.168.1.253  Bcast:192.168.1.255  Mask:255.255.255.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:1053 errors:0 dropped:347 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:98269 (95.9 KiB)  TX bytes:0 (0.0 B)
+
+eth0      Link encap:Ethernet  HWaddr A4:F4:C2:90:90:91  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:1059 errors:0 dropped:6 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:113371 (110.7 KiB)  TX bytes:0 (0.0 B)
+          Interrupt:10 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:26976 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:26976 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:1969344 (1.8 MiB)  TX bytes:1969344 (1.8 MiB)
+
+wlan0     Link encap:Ethernet  HWaddr A0:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:226 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+wlan1     Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:226 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+242
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+284
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+255
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+245
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+277
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+284
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+284
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+280
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+258
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+284
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+242
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+577
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+596
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+570
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+248
+~ # 
+~ # 
+~ # killall lark
+killall lark
+killall: lark: no process killed
+~ # killall lark
+killall lark
+killall: lark: no process killed
+~ # killall lark
+killall lark
+killall: lark: no process killedarecord
+~ # killall lark
+audio_record.wav &
+
+
+killall: lark: no process killed
+~ # arecord -D hw:0,1 /tmp/audio_record.wav &
+~ # 
+~ # 
+~ # Recording WAVE '/tmp/audio_record.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
+killall arecord
+Aborted by signal Terminated...
+~ # aplay  -D hw:0,1 /tmp/audio_record.wav
+Playing WAVE '/tmp/audio_record.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
+[1]+  Done                       arecord -D hw:0,1 /tmp/audio_record.wav
+~ # nm_cfg wan dhcp 0 ipaddr 192.168.1.253 netmask 255.255.255.0 gateway 192.168
+.1.1
+entry: 0x1000002 type 0 len 4: c0 a8 01 fd 
+entry: 0x1000004 type 0 len 4: ff ff ff 00 
+entry: 0x1000003 type 0 len 4: c0 a8 01 01 
+~ # 
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+ifconfig
+br0       Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          inet addr:192.168.1.253  Bcast:192.168.1.255  Mask:255.255.255.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:1095 errors:0 dropped:349 overruns:0 frame:0
+          TX packets:6086 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:101810 (99.4 KiB)  TX bytes:7918325 (7.5 MiB)
+
+eth0      Link encap:Ethernet  HWaddr A4:F4:C2:90:90:91  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:1101 errors:0 dropped:6 overruns:0 frame:0
+          TX packets:6086 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:117500 (114.7 KiB)  TX bytes:7918325 (7.5 MiB)
+          Interrupt:10 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:27960 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:27960 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:2041176 (1.9 MiB)  TX bytes:2041176 (1.9 MiB)
+
+wlan0     Link encap:Ethernet  HWaddr A0:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:226 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+wlan1     Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:226 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1105
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+922
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+931
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+928
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+986
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+935
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1112
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1057
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+999
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+483
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+132
+~ # 
+~ # 
+~ # killall lark
+killall lark
+killall: lark: no process killed
+~ # killall lark
+killall lark
+killall: lark: no process killed
+~ # killall lark
+killall lark
+killall: lark: no process killed
+~ # killall lark
+arecord -D hw:0,1 /tmp/audio_record.wav &
+
+
+killall: lark: no process killed
+~ # arecord -D hw:0,1 /tmp/audio_record.wav &
+~ # 
+~ # 
+~ # Recording WAVE '/tmp/audio_record.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
+killall arecord
+Aborted by signal Terminated...
+~ # aplay  -D hw:0,1 /tmp/audio_record.wav
+Playing WAVE '/tmp/audio_record.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
+[1]+  Done                       arecord -D hw:0,1 /tmp/audio_record.wav
+~ # nm_cfg wan dhcp 0 ipaddr 192.168.1.253 netmask 255.255.255.0 gateway 192.168
+.1.1
+entry: 0x1000002 type 0 len 4: c0 a8 01 fd 
+entry: 0x1000004 type 0 len 4: ff ff ff 00 
+entry: 0x1000003 type 0 len 4: c0 a8 01 01 
+~ # 
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+ifconfig
+br0       Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          inet addr:192.168.1.253  Bcast:192.168.1.255  Mask:255.255.255.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:1152 errors:0 dropped:356 overruns:0 frame:0
+          TX packets:12146 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:106550 (104.0 KiB)  TX bytes:15820976 (15.0 MiB)
+
+eth0      Link encap:Ethernet  HWaddr A4:F4:C2:90:90:91  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:1158 errors:0 dropped:6 overruns:0 frame:0
+          TX packets:12146 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:123038 (120.1 KiB)  TX bytes:15820976 (15.0 MiB)
+          Interrupt:10 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:28752 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:28752 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:2098992 (2.0 MiB)  TX bytes:2098992 (2.0 MiB)
+
+wlan0     Link encap:Ethernet  HWaddr A0:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:226 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+wlan1     Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:226 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1018
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+906
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+918
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+902
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+947
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1041
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1025
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+960
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1041
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+918
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+896
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+831
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+264
+~ # 
+~ # 
+~ # killall lark
+killall lark
+killall: lark: no process killed
+~ # killall lark
+killall lark
+killall: lark: no process killed
+~ # killall lark
+killall lark
+killall: lark: no process killed
+~ # killall lark
+arecord -D hw:0,1 /tmp/audio_record.wav &
+killall: lark: no process killed
+~ # arecord -D hw:0,1 /tmp/audio_record.wav &
+~ # 
+~ # 
+~ # Recording WAVE '/tmp/audio_record.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
+killall arecord
+Aborted by signal Terminated...
+~ # aplay  -D hw:0,1 /tmp/audio_record.wav
+Playing WAVE '/tmp/audio_record.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
+[1]+  Done                       arecord -D hw:0,1 /tmp/audio_record.wav
+~ # nm_cfg wan dhcp 0 ipaddr 192.168.1.253 netmask 255.255.255.0 gateway 192.168
+.1.1
+entry: 0x1000002 type 0 len 4: c0 a8 01 fd 
+entry: 0x1000004 type 0 len 4: ff ff ff 00 
+entry: 0x1000003 type 0 len 4: c0 a8 01 01 
+~ # 
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+ifconfig
+br0       Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          inet addr:192.168.1.253  Bcast:192.168.1.255  Mask:255.255.255.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:1207 errors:0 dropped:363 overruns:0 frame:0
+          TX packets:18379 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:111590 (108.9 KiB)  TX bytes:23902893 (22.7 MiB)
+
+eth0      Link encap:Ethernet  HWaddr A4:F4:C2:90:90:91  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:1213 errors:0 dropped:6 overruns:0 frame:0
+          TX packets:18379 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:128848 (125.8 KiB)  TX bytes:23902893 (22.7 MiB)
+          Interrupt:10 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:29640 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:29640 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:2163816 (2.0 MiB)  TX bytes:2163816 (2.0 MiB)
+
+wlan0     Link encap:Ethernet  HWaddr A0:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:226 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+wlan1     Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:226 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+860
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+867
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+993
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1025
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1018
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+970
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+880
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+802
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+319
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+860
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+893
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+264
+~ # 
+~ # 
+~ # killall lark
+killall lark
+killall: lark: no process killed
+~ # killall lark
+killall lark
+killall: lark: no process killed
+~ # killall lark
+killall lark
+killall: lark: no process killed
+~ # killall lark
+arecord -D hw:0,1 /tmp/audio_record.wav &
+
+
+killall: lark: no process killed
+~ # arecord -D hw:0,1 /tmp/audio_record.wav &
+~ # 
+~ # 
+~ # Recording WAVE '/tmp/audio_record.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
+killall arecord
+Aborted by signal Terminated...
+~ # aplay  -D hw:0,1 /tmp/audio_record.wav
+Playing WAVE '/tmp/audio_record.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
+[1]+  Done                       arecord -D hw:0,1 /tmp/audio_record.wav
+~ # nm_cfg wan dhcp 0 ipaddr 192.168.1.253 netmask 255.255.255.0 gateway 192.168
+.1.1
+entry: 0x1000002 type 0 len 4: c0 a8 01 fd 
+entry: 0x1000004 type 0 len 4: ff ff ff 00 
+entry: 0x1000003 type 0 len 4: c0 a8 01 01 
+~ # 
+MAC ADDRESS:  A4F4C2909091
+---------------------------------------------------------
+ifconfig
+br0       Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          inet addr:192.168.1.253  Bcast:192.168.1.255  Mask:255.255.255.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:1250 errors:0 dropped:365 overruns:0 frame:0
+          TX packets:24530 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:115326 (112.6 KiB)  TX bytes:31846663 (30.3 MiB)
+
+eth0      Link encap:Ethernet  HWaddr A4:F4:C2:90:90:91  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:1256 errors:0 dropped:6 overruns:0 frame:0
+          TX packets:24530 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:133186 (130.0 KiB)  TX bytes:31846663 (30.3 MiB)
+          Interrupt:10 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:30468 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:30468 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:2224260 (2.1 MiB)  TX bytes:2224260 (2.1 MiB)
+
+wlan0     Link encap:Ethernet  HWaddr A0:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:226 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+wlan1     Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:226 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+951
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+931
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+851
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1012
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+902
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+889
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+838
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+258
+~ # 
+~ # 
+~ # killall lark
+killall lark
+killall: lark: no process killed
+~ # killall lark
+killall lark
+killall: lark: no process killed
+~ # killall lark
+killall lark
+killall: lark: no process killed
+~ # killall lark
+arecord -D hw:0,1 /tmp/audio_record.wav &
+
+
+killall: lark: no process killed
+~ # arecord -D hw:0,1 /tmp/audio_record.wav &
+~ # 
+~ # 
+~ # Recording WAVE '/tmp/audio_record.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
+killall arecord
+Aborted by signal Terminated...
+~ # aplay  -D hw:0,1 /tmp/audio_record.wav
+Playing WAVE '/tmp/audio_record.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
+[1]+  Done                       arecord -D hw:0,1 /tmp/audio_record.wav
+~ # nm_cfg wan dhcp 0 ipaddr 192.168.1.253 netmask 255.255.255.0 gateway 192.168
+.1.1
+entry: 0x1000002 type 0 len 4: c0 a8 01 fd 
+entry: 0x1000004 type 0 len 4: ff ff ff 00 
+entry: 0x1000003 type 0 len 4: c0 a8 01 01 
+~ # 
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+ifconfig
+br0       Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          inet addr:192.168.1.253  Bcast:192.168.1.255  Mask:255.255.255.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:1285 errors:0 dropped:365 overruns:0 frame:0
+          TX packets:30610 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:118411 (115.6 KiB)  TX bytes:39743871 (37.9 MiB)
+
+eth0      Link encap:Ethernet  HWaddr A4:F4:C2:90:90:91  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:1291 errors:0 dropped:6 overruns:0 frame:0
+          TX packets:30610 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:136761 (133.5 KiB)  TX bytes:39743871 (37.9 MiB)
+          Interrupt:10 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:31536 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:31536 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:2302224 (2.1 MiB)  TX bytes:2302224 (2.1 MiB)
+
+wlan0     Link encap:Ethernet  HWaddr A0:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:226 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+wlan1     Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:226 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+854
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+857
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1025
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+848
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+964
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+886
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+857
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+883
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+293
+~ # 
+~ # 
+~ # killall lark
+killall lark
+killall: lark: no process killed
+~ # killall lark
+killall lark
+killall: lark: no process killed
+~ # killall lark
+killall lark
+killall: lark: no process killed
+~ # killall lark
+arecord -D hw:0,1 /tmp/audio_record.wav &
+
+
+killall: lark: no process killed
+~ # arecord -D hw:0,1 /tmp/audio_record.wav &
+~ # 
+~ # 
+~ # Recording WAVE '/tmp/audio_record.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
+killall arecord
+Aborted by signal Terminated...
+~ # aplay  -D hw:0,1 /tmp/audio_record.wav
+Playing WAVE '/tmp/audio_record.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
+[1]+  Done                       arecord -D hw:0,1 /tmp/audio_record.wav
+~ # nm_cfg wan dhcp 0 ipaddr 192.168.1.253 netmask 255.255.255.0 gateway 192.168
+.1.1
+entry: 0x1000002 type 0 len 4: c0 a8 01 fd 
+entry: 0x1000004 type 0 len 4: ff ff ff 00 
+entry: 0x1000003 type 0 len 4: c0 a8 01 01 
+~ # 
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+ifconfig
+br0       Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          inet addr:192.168.1.253  Bcast:192.168.1.255  Mask:255.255.255.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:1309 errors:0 dropped:365 overruns:0 frame:0
+          TX packets:33814 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:120645 (117.8 KiB)  TX bytes:43847174 (41.8 MiB)
+
+eth0      Link encap:Ethernet  HWaddr A4:F4:C2:90:90:91  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:1315 errors:0 dropped:6 overruns:0 frame:0
+          TX packets:33814 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:139331 (136.0 KiB)  TX bytes:43847174 (41.8 MiB)
+          Interrupt:10 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:32064 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:32064 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:2340768 (2.2 MiB)  TX bytes:2340768 (2.2 MiB)
+
+wlan0     Link encap:Ethernet  HWaddr A0:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:226 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+wlan1     Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:226 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+870
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+986
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+989
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+854
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+1009
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+960
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+822
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+258
+~ # 
+~ # 
+~ # killall lark
+killall lark
+killall: lark: no process killed
+~ # killall lark
+killall lark
+killall: lark: no process killed
+~ # killall lark
+killall lark
+killall: lark: no process killed
+~ # killall lark
+arecord -D hw:0,1 /tmp/audio_record.wav &
+killall: lark: no process killed
+
+
+~ # arecord -D hw:0,1 /tmp/audio_record.wav &
+~ # 
+~ # 
+~ # Recording WAVE '/tmp/audio_record.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
+killall arecord
+Aborted by signal Terminated...
+~ # aplay  -D hw:0,1 /tmp/audio_record.wav
+Playing WAVE '/tmp/audio_record.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
+[1]+  Done                       arecord -D hw:0,1 /tmp/audio_record.wav
+~ # nm_cfg wan dhcp 0 ipaddr 192.168.1.253 netmask 255.255.255.0 gateway 192.168
+.1.1
+entry: 0x1000002 type 0 len 4: c0 a8 01 fd 
+entry: 0x1000004 type 0 len 4: ff ff ff 00 
+entry: 0x1000003 type 0 len 4: c0 a8 01 01 
+~ # 
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+ifconfig
+br0       Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          inet addr:192.168.1.253  Bcast:192.168.1.255  Mask:255.255.255.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:1328 errors:0 dropped:365 overruns:0 frame:0
+          TX packets:34515 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:123059 (120.1 KiB)  TX bytes:44743864 (42.6 MiB)
+
+eth0      Link encap:Ethernet  HWaddr A4:F4:C2:90:90:91  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:1334 errors:0 dropped:6 overruns:0 frame:0
+          TX packets:34515 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:142011 (138.6 KiB)  TX bytes:44743864 (42.6 MiB)
+          Interrupt:10 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:32424 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:32424 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:2367048 (2.2 MiB)  TX bytes:2367048 (2.2 MiB)
+
+wlan0     Link encap:Ethernet  HWaddr A0:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:226 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+wlan1     Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:226 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+880
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+954
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+844
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+838
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+880
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+967
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+896
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+229
+~ # 
+~ # 
+~ # killall lark
+killall lark
+killall: lark: no process killed
+~ # killall lark
+killall lark
+killall: lark: no process killed
+~ # killall lark
+killall lark
+killall: lark: no process killedare
+~ # killall lark
+tmp/audio_record.wav &
+
+
+killall: lark: no process killed
+~ # arecord -D hw:0,1 /tmp/audio_record.wav &
+~ # 
+~ # 
+~ # Recording WAVE '/tmp/audio_record.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
+killall arecord
+Aborted by signal Terminated...
+~ # aplay  -D hw:0,1 /tmp/audio_record.wav
+Playing WAVE '/tmp/audio_record.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
+nm_cfg wan dhcp 0 ipaddr 192.168.1.253 netmask 255.255.255.0 gateway 192.168.1.1
+[1]+  Done                       arecord -D hw:0,1 /tmp/audio_record.wav
+~ # nm_cfg wan dhcp 0 ipaddr 192.168.1.253 netmask 255.255.255.0 gateway 192.168
+.1.1
+entry: 0x1000002 type 0 len 4: c0 a8 01 fd 
+entry: 0x1000004 type 0 len 4: ff ff ff 00 
+entry: 0x1000003 type 0 len 4: c0 a8 01 01 
+~ # 
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+ifconfig
+br0       Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          inet addr:192.168.1.253  Bcast:192.168.1.255  Mask:255.255.255.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:1346 errors:0 dropped:365 overruns:0 frame:0
+          TX packets:34950 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:125397 (122.4 KiB)  TX bytes:45298587 (43.1 MiB)
+
+eth0      Link encap:Ethernet  HWaddr A4:F4:C2:90:90:91  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:1352 errors:0 dropped:6 overruns:0 frame:0
+          TX packets:34950 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:144601 (141.2 KiB)  TX bytes:45298587 (43.1 MiB)
+          Interrupt:10 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:32784 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:32784 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:2393328 (2.2 MiB)  TX bytes:2393328 (2.2 MiB)
+
+wlan0     Link encap:Ethernet  HWaddr A0:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:226 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+wlan1     Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:226 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+841
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+835
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+835
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+896
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+918
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+928
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+512
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+922
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+860
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+184
+~ # 
+~ # 
+~ # killall lark
+killall lark
+killall: lark: no process killed
+~ # killall lark
+killall lark
+killall: lark: no process killed
+~ # killall lark
+killall lark
+killall: lark: no process killed
+~ # killall lark
+arecord -D hw:0,1 /tmp/audio_record.wav &
+
+
+killall: lark: no process killed
+~ # arecord -D hw:0,1 /tmp/audio_record.wav &
+~ # 
+~ # 
+~ # Recording WAVE '/tmp/audio_record.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
+killall arecord
+Aborted by signal Terminated...
+~ # aplay  -D hw:0,1 /tmp/audio_record.wav
+Playing WAVE '/tmp/audio_record.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
+[1]+  Done                       arecord -D hw:0,1 /tmp/audio_record.wav
+~ # nm_cfg wan dhcp 0 ipaddr 192.168.1.253 netmask 255.255.255.0 gateway 192.168
+.1.1
+entry: 0x1000002 type 0 len 4: c0 a8 01 fd 
+entry: 0x1000004 type 0 len 4: ff ff ff 00 
+entry: 0x1000003 type 0 len 4: c0 a8 01 01 
+~ # 
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+ifconfig
+br0       Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          inet addr:192.168.1.253  Bcast:192.168.1.255  Mask:255.255.255.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:1365 errors:0 dropped:365 overruns:0 frame:0
+          TX packets:36097 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:127811 (124.8 KiB)  TX bytes:46784299 (44.6 MiB)
+
+eth0      Link encap:Ethernet  HWaddr A4:F4:C2:90:90:91  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:1371 errors:0 dropped:6 overruns:0 frame:0
+          TX packets:36097 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:147281 (143.8 KiB)  TX bytes:46784299 (44.6 MiB)
+          Interrupt:10 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:33192 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:33192 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:2423112 (2.3 MiB)  TX bytes:2423112 (2.3 MiB)
+
+wlan0     Link encap:Ethernet  HWaddr A0:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:226 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+wlan1     Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:226 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+873
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+831
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+838
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+980
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+206
+~ # 
+~ # 
+~ # killall lark
+killall lark
+killall: lark: no process killed
+~ # killall lark
+killall lark
+killall: lark: no process killed
+~ # killall lark
+killall lark
+killall: lark: no process killed
+~ # killall lark
+arecord -D hw:0,1 /tmp/audio_record.wav &
+
+
+killall: lark: no process killed
+~ # arecord -D hw:0,1 /tmp/audio_record.wav &
+~ # 
+~ # 
+~ # Recording WAVE '/tmp/audio_record.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
+killall arecord
+Aborted by signal Terminated...
+~ # aplay  -D hw:0,1 /tmp/audio_record.wav
+Playing WAVE '/tmp/audio_record.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
+nm_cfg wan dhcp 0 ipaddr 192.168.1.253 netmask 255.255.255.0 gateway 192.168.1.1
+[1]+  Done                       arecord -D hw:0,1 /tmp/audio_record.wav
+~ # nm_cfg wan dhcp 0 ipaddr 192.168.1.253 netmask 255.255.255.0 gateway 192.168
+.1.1
+entry: 0x1000002 type 0 len 4: c0 a8 01 fd 
+entry: 0x1000004 type 0 len 4: ff ff ff 00 
+entry: 0x1000003 type 0 len 4: c0 a8 01 01 
+~ # 
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+ifconfig
+br0       Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          inet addr:192.168.1.253  Bcast:192.168.1.255  Mask:255.255.255.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:1392 errors:0 dropped:368 overruns:0 frame:0
+          TX packets:36662 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:130755 (127.6 KiB)  TX bytes:47518679 (45.3 MiB)
+
+eth0      Link encap:Ethernet  HWaddr A4:F4:C2:90:90:91  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:1399 errors:0 dropped:7 overruns:0 frame:0
+          TX packets:36662 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:150663 (147.1 KiB)  TX bytes:47518679 (45.3 MiB)
+          Interrupt:10 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:34152 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:34152 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:2493192 (2.3 MiB)  TX bytes:2493192 (2.3 MiB)
+
+wlan0     Link encap:Ethernet  HWaddr A0:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:226 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+wlan1     Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:226 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+864
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+986
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+883
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+989
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+967
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+996
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+848
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+989
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+931
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+790
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+258
+~ # 
+~ # 
+~ # killall lark
+killall lark
+killall: lark: no process killed
+~ # killall lark
+killall lark
+killall: lark: no process killed
+~ # killall lark
+killall lark
+killall: lark: no process killed
+~ # killall lark
+arecord -D hw:0,1 /tmp/audio_record.wav &
+
+
+killall: lark: no process killed
+~ # arecord -D hw:0,1 /tmp/audio_record.wav &
+~ # 
+~ # 
+~ # Recording WAVE '/tmp/audio_record.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
+killall arecord
+Aborted by signal Terminated...
+~ # aplay  -D hw:0,1 /tmp/audio_record.wav
+Playing WAVE '/tmp/audio_record.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
+[1]+  Done                       arecord -D hw:0,1 /tmp/audio_record.wav
+~ # nm_cfg wan dhcp 0 ipaddr 192.168.1.253 netmask 255.255.255.0 gateway 192.168
+.1.1
+entry: 0x1000002 type 0 len 4: c0 a8 01 fd 
+entry: 0x1000004 type 0 len 4: ff ff ff 00 
+entry: 0x1000003 type 0 len 4: c0 a8 01 01 
+~ # 
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+ifconfig
+br0       Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          inet addr:192.168.1.253  Bcast:192.168.1.255  Mask:255.255.255.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:1427 errors:0 dropped:368 overruns:0 frame:0
+          TX packets:42864 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:133993 (130.8 KiB)  TX bytes:55648542 (53.0 MiB)
+
+eth0      Link encap:Ethernet  HWaddr A4:F4:C2:90:90:91  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:1434 errors:0 dropped:7 overruns:0 frame:0
+          TX packets:42864 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:154391 (150.7 KiB)  TX bytes:55648542 (53.0 MiB)
+          Interrupt:10 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:35052 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:35052 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:2558892 (2.4 MiB)  TX bytes:2558892 (2.4 MiB)
+
+wlan0     Link encap:Ethernet  HWaddr A0:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:226 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+wlan1     Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:226 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+973
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+877
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+986
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+957
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+986
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+880
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+864
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+864
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+854
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+245
+~ # 
+~ # 
+~ # killall lark
+killall lark
+killall: lark: no process killed
+~ # killall lark
+killall lark
+killall: lark: no process killed
+~ # killall lark
+killall lark
+arecord -D hw:0,1 /tmp/audio_record.wav &
+killall: lark: no process killed
+~ # killall lark
+
+
+killall: lark: no process killed
+~ # arecord -D hw:0,1 /tmp/audio_record.wav &
+~ # 
+~ # 
+~ # Recording WAVE '/tmp/audio_record.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
+killall arecord
+Aborted by signal Terminated...
+~ # aplay  -D hw:0,1 /tmp/audio_record.wav
+Playing WAVE '/tmp/audio_record.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
+[1]+  Done                       arecord -D hw:0,1 /tmp/audio_record.wav
+~ # nm_cfg wan dhcp 0 ipaddr 192.168.1.253 netmask 255.255.255.0 gateway 192.168
+.1.1
+entry: 0x1000002 type 0 len 4: c0 a8 01 fd 
+entry: 0x1000004 type 0 len 4: ff ff ff 00 
+entry: 0x1000003 type 0 len 4: c0 a8 01 01 
+~ # 
+MAC ADDRESS: A4F4C2909091
+---------------------------------------------------------
+ifconfig
+br0       Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          inet addr:192.168.1.253  Bcast:192.168.1.255  Mask:255.255.255.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:1445 errors:0 dropped:368 overruns:0 frame:0
+          TX packets:43923 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:135831 (132.6 KiB)  TX bytes:57010835 (54.3 MiB)
+
+eth0      Link encap:Ethernet  HWaddr A4:F4:C2:90:90:91  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:1452 errors:0 dropped:7 overruns:0 frame:0
+          TX packets:43923 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:156481 (152.8 KiB)  TX bytes:57010835 (54.3 MiB)
+          Interrupt:10 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:35412 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:35412 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:2585172 (2.4 MiB)  TX bytes:2585172 (2.4 MiB)
+
+wlan0     Link encap:Ethernet  HWaddr A0:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:226 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+wlan1     Link encap:Ethernet  HWaddr A2:2C:36:2F:53:47  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:226 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+851
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+748
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+777
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+880
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+857
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+841
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+735
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+764
+~ # cat /sys/devices/platform/rts_saradc.0/in0_input
+235
+~ # 
+~ # 
+~ # killall lark
+killall lark
+killall: lark: no process killed
+~ # killall lark
+killall lark
+killall: lark: no process killed
+~ # killall lark
+killall lark
+killall: lark: no process killed
+~ # killall lark
+arecord -D hw:0,1 /tmp/audio_record.wav &
+
+
+killall: lark: no process killed
+~ # arecord -D hw:0,1 /tmp/audio_record.wav &
+~ # 
+~ # 
+~ # Recording WAVE '/tmp/audio_record.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
+killall arecord
+Aborted by signal Terminated...
+~ # aplay  -D hw:0,1 /tmp/audio_record.wav
+Playing WAVE '/tmp/audio_record.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
+nm_cfg wan dhcp 0 ipaddr 192.168.1.253 netmask 255.255.255.0 gateway 192.168.1.1
+[1]+  Done                       arecord -D hw:0,1 /tmp/audio_record.wav
+~ # nm_cfg wan dhcp 0 ipaddr 192.168.1.253 netmask 255.255.255.0 gateway 192.168
+.1.1
+entry: 0x1000002 type 0 len 4: c0 a8 01 fd 
+entry: 0x1000004 type 0 len 4: ff ff ff 00 
+entry: 0x1000003 type 0 len 4: c0 a8 01 01 
+~ # 

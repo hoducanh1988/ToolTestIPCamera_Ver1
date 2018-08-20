@@ -1,0 +1,462 @@
+
+KIỂM TRA ĐỊA CHỈ MAC ADDRESS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+MAC: A4F4C2909090
+KẾT QUẢ KIỂM TRA MAC ADDRESS: PASS
+
+CONNECT TO IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Connect to Camera success.
+
+
+LOGIN TO IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+IPCAM-909090 login: 
+root
+__     ___   _ ____ _____   _____         _                 _                   
+ \ \   / / \ | |  _ \_   _| |_   _|__  ___| |__  _ __   ___ | | ___   __ _ _   _ 
+  \ \ / /|  \| | |_) || |     | |/ _ \/ __| '_ \| '_ \ / _ \| |/ _ \ / _` | | | |
+   \ V / | |\  |  __/ | |     | |  __/ (__| | | | | | | (_) | | (_) | (_| | |_| |
+    \_/  |_| \_|_|    |_|     |_|\___|\___|_| |_|_| |_|\___/|_|\___/ \__, |\__, |
+                                                                     |___/ |___/                     
+                        
+~ # 
+Login to Camera success.
+
+
+KIỂM TRA MAC ADDRESS CỦA IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+KẾT QUẢ KIỂM TRA MAC: FAIL 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+PHÁN ĐỊNH TỔNG LÀ : FAIL
+
+Tổng thời gian test là: 2 giây
+
+
+KIỂM TRA ĐỊA CHỈ MAC ADDRESS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+MAC: A4F4C2909091
+KẾT QUẢ KIỂM TRA MAC ADDRESS: PASS
+
+CONNECT TO IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Connect to Camera success.
+
+
+LOGIN TO IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+IPCAM-909090 login: 
+root
+__     ___   _ ____ _____   _____         _                 _                   
+ \ \   / / \ | |  _ \_   _| |_   _|__  ___| |__  _ __   ___ | | ___   __ _ _   _ 
+  \ \ / /|  \| | |_) || |     | |/ _ \/ __| '_ \| '_ \ / _ \| |/ _ \ / _` | | | |
+   \ V / | |\  |  __/ | |     | |  __/ (__| | | | | | | (_) | | (_) | (_| | |_| |
+    \_/  |_| \_|_|    |_|     |_|\___|\___|_| |_|_| |_|\___/|_|\___/ \__, |\__, |
+                                                                     |___/ |___/                     
+                        
+~ # 
+Login to Camera success.
+
+
+KIỂM TRA MAC ADDRESS CỦA IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+KẾT QUẢ KIỂM TRA MAC: PASS 
+
+KIỂM TRA THẺ NHỚ SD CARD CỦA IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Phần mềm gửi lệnh: mount  LẦN 1
+Delay 1000 ms 
+CAMERA Feedback:
+mount
+rootfs on / type rootfs (rw)
+/dev/root on / type squashfs (ro,relatime)
+proc on /proc type proc (rw,relatime)
+sysfs on /sys type sysfs (rw,relatime)
+ramfs on /var type ramfs (rw,relatime)
+ramfs on /dev type ramfs (rw,relatime)
+tmpfs on /dev/shm type tmpfs (rw,relatime)
+devpts on /dev/pts type devpts (rw,relatime,mode=600)
+tmpfs on /media type tmpfs (rw,relatime,size=64k,mode=755)
+/dev/mtdblock3 on /usr/conf type jffs2 (rw,relatime)
+/dev/mmcblk0p1 on /media/sdcard type vfat (rw,relatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro)
+~ # 
+KẾT QUẢ KIỂM TRA THẺ NHỚ SD card: PASS
+
+KIỂM TRA CẢM BIẾN ÁNH SÁNG CỦA IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Kiểm tra mức sáng:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1441
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1331
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1370
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+148
+~ # 
+Light Level: PASS
+Dark Level: PASS
+KẾT QUẢ KIỂM TRA CẢM BIẾN ÁNH SÁNG: PASS
+
+KIỂM TRA SPEAKER, MICROPHONE CỦA IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Phần mềm gửi lệnh: killall lark
+Gửi lệnh yêu cầu IP Camera thu âm:
+arecord -D hw:0,1 /tmp/audio_record.wav & 
+Máy tính phát âm thanh ra loa:
+delay 3000 ms
+Phần mềm gửi lệnh dừng thu âm: killall arecord 
+Gửi lệnh phát âm thanh ra loa IP Camera:
+aplay - D hw: 0,1 / tmp / audio_record.wav
+delay 5000ms
+Người thao tác phán định: PASS
+KẾT QUẢ KIỂM TRA SPEAKER, MICROPHONE: PASS
+
+KIỂM TRA IMAGE SENSOR CỦA IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Lưu địa chỉ MAC vào MAC.txt
+Lọc file Result.txt
+Mở chương trình LiveCamera.exe
+Delay 100 ms
+Kiểm tra đã Image sensor.....
+Chờ 1 s 
+Chờ 2 s 
+Chờ 3 s 
+Chờ 4 s 
+Chờ 5 s 
+Chờ 6 s 
+Chờ 7 s 
+Chờ 8 s 
+Chờ 9 s 
+Đã lưu ảnh của Image Sensor
+KẾT QUẢ KIỂM TRA IMAGE SENSOR: PASS 
+
+KIỂM TRA WIFI CỦA IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Gửi lệnh kết nối WIFI
+nm_cfg client IPCAM-Test-1
+Gửi lệnh disable LAN
+KẾT QUẢ KIỂM TRA WIFI: PASS
+
+KIỂM TRA NÚT NHẤN CỦA IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+KẾT QUẢ KIỂM TRA NÚT NHẤN: PASS
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+PHÁN ĐỊNH TỔNG LÀ : PASS
+
+Tổng thời gian test là: 53 giây
+
+
+KIỂM TRA ĐỊA CHỈ MAC ADDRESS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+MAC: A4F4C2909091
+KẾT QUẢ KIỂM TRA MAC ADDRESS: PASS
+
+CONNECT TO IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Connect to Camera success.
+
+Không thể kết nối telnet tới IP Camera
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+PHÁN ĐỊNH TỔNG LÀ : FAIL
+
+Tổng thời gian test là: 1 giây
+
+
+KIỂM TRA ĐỊA CHỈ MAC ADDRESS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+MAC: A4F4C2909091
+KẾT QUẢ KIỂM TRA MAC ADDRESS: PASS
+
+CONNECT TO IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Connect to Camera success.
+
+
+LOGIN TO IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+IPCAM-909090 login: 
+root
+__     ___   _ ____ _____   _____         _                 _                   
+ \ \   / / \ | |  _ \_   _| |_   _|__  ___| |__  _ __   ___ | | ___   __ _ _   _ 
+  \ \ / /|  \| | |_) || |     | |/ _ \/ __| '_ \| '_ \ / _ \| |/ _ \ / _` | | | |
+   \ V / | |\  |  __/ | |     | |  __/ (__| | | | | | | (_) | | (_) | (_| | |_| |
+    \_/  |_| \_|_|    |_|     |_|\___|\___|_| |_|_| |_|\___/|_|\___/ \__, |\__, |
+                                                                     |___/ |___/                     
+                        
+~ # 
+Login to Camera success.
+
+
+KIỂM TRA MAC ADDRESS CỦA IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+KẾT QUẢ KIỂM TRA MAC: PASS 
+
+KIỂM TRA THẺ NHỚ SD CARD CỦA IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Phần mềm gửi lệnh: mount  LẦN 1
+Delay 1000 ms 
+CAMERA Feedback:
+mount
+rootfs on / type rootfs (rw)
+/dev/root on / type squashfs (ro,relatime)
+proc on /proc type proc (rw,relatime)
+sysfs on /sys type sysfs (rw,relatime)
+ramfs on /var type ramfs (rw,relatime)
+ramfs on /dev type ramfs (rw,relatime)
+tmpfs on /dev/shm type tmpfs (rw,relatime)
+devpts on /dev/pts type devpts (rw,relatime,mode=600)
+tmpfs on /media type tmpfs (rw,relatime,size=64k,mode=755)
+/dev/mtdblock3 on /usr/conf type jffs2 (rw,relatime)
+/dev/mmcblk0p1 on /media/sdcard type vfat (rw,relatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro)
+~ # 
+KẾT QUẢ KIỂM TRA THẺ NHỚ SD card: PASS
+
+KIỂM TRA CẢM BIẾN ÁNH SÁNG CỦA IP CAMERA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Kiểm tra mức sáng:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1292
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1437
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1328
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1296
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1379
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1360
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1473
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1395
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1363
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1395
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1366
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1486
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1408
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1466
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1366
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1360
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1479
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1383
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1376
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1363
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1457
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1502
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1447
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1357
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1350
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1457
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1502
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1463
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1489
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1453
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1370
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1350
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1444
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1431
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1508
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1357
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1482
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1402
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1366
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1354
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1373
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1354
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1479
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1379
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1347
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1373
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1418
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1466
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1489
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1405
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1357
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1402
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1347
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1354
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1492
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1347
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1379
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1495
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1347
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1476
+~ # 
+Kiểm tra mức tối:
+cat /sys/devices/platform/rts_saradc.0/in0_inputdelay 500mscat /sys/devices/platform/rts_saradc.0/in0_input
+1347
+~ # 
+Light Level: PASS
+Dark Level: FAIL
+KẾT QUẢ KIỂM TRA CẢM BIẾN ÁNH SÁNG: FAIL
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+PHÁN ĐỊNH TỔNG LÀ : FAIL
+
+Tổng thời gian test là: 83 giây
+
